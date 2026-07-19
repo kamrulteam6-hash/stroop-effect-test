@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf9fd;
+  --surface: #ffffff;
+  --surface-2: #f2f0fa;
+  --border: #e6e3f2;
+  --foreground: #17152b;
+  --muted: #5f5b78;
+  --muted-2: #938fb0;
+  --primary: #5b3df0;
+  --primary-hover: #4c2fe0;
+  --primary-foreground: #ffffff;
+  --accent: #ff6b52;
+  --accent-foreground: #ffffff;
+  --gold: #f5a524;
+  --success: #16a672;
+  --danger: #e0374b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #100e1f;
+    --surface: #181530;
+    --surface-2: #1f1b3d;
+    --border: #2d2852;
+    --foreground: #f1eefb;
+    --muted: #b3aed4;
+    --muted-2: #7c76a8;
+    --primary: #8d7bff;
+    --primary-hover: #a394ff;
+    --primary-foreground: #100e1f;
+    --accent: #ff9a7d;
+    --accent-foreground: #1a0f0a;
+    --gold: #ffc866;
+    --success: #3ddc9a;
+    --danger: #ff6b7a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 35%, transparent);
+  color: var(--foreground);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes blob-float-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(4%, 6%) scale(1.08); }
+  66% { transform: translate(-3%, 3%) scale(0.95); }
+}
+
+@keyframes blob-float-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-5%, -4%) scale(1.05); }
+  66% { transform: translate(3%, -5%) scale(0.92); }
+}
+
+.hero-blob-a { animation: blob-float-a 20s ease-in-out infinite; }
+.hero-blob-b { animation: blob-float-b 24s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob-a, .hero-blob-b {
+    animation: none;
+  }
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.92); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.22s ease-out;
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.4s ease-out both;
+}
