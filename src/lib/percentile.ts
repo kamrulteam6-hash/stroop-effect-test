@@ -23,6 +23,18 @@ const MODELS: Record<string, PercentileModel> = {
   "mental-math-test": { mean: 20, stdev: 8, direction: "higher" },
   "color-perception-test": { mean: 10, stdev: 6, direction: "lower" },
   "attention-span-test": { mean: 85, stdev: 10, direction: "higher" },
+  "schulte-table-test": { mean: 35, stdev: 12, direction: "lower" },
+  "trail-making-test": { mean: 35, stdev: 15, direction: "lower" },
+  "pitch-discrimination-test": { mean: 40, stdev: 25, direction: "lower" },
+  "color-memory-game": { mean: 10, stdev: 4, direction: "higher" },
+  "rhythm-tapping-test": { mean: 70, stdev: 30, direction: "lower" },
+  "n-back-test": { mean: 78, stdev: 12, direction: "higher" },
+  "multiple-object-tracking-test": { mean: 2.5, stdev: 1, direction: "higher" },
+  "emotional-intelligence-test": { mean: 65, stdev: 15, direction: "higher" },
+  "peripheral-vision-test": { mean: 70, stdev: 15, direction: "higher" },
+  "symbol-digit-test": { mean: 50, stdev: 15, direction: "higher" },
+  "pattern-iq-test": { mean: 5.5, stdev: 1.8, direction: "higher" },
+  "finger-tapping-test": { mean: 60, stdev: 15, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

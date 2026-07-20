@@ -23,5 +23,13 @@ export const footerLinks: Record<string, { href: string; label: string }[]> = {
     { href: "/test/hearing-range-test", label: "Hearing Range Test" },
     { href: "/test/mental-math-test", label: "Mental Math Test" },
   ],
+  "New Tests": [
+    { href: "/test/schulte-table-test", label: "Schulte Table Test" },
+    { href: "/test/astigmatism-test", label: "Astigmatism Test" },
+    { href: "/test/trail-making-test", label: "Trail Making Test" },
+    { href: "/test/pitch-discrimination-test", label: "Pitch Discrimination Test" },
+    { href: "/test/color-memory-game", label: "Color Memory Game" },
+    { href: "/test/rhythm-tapping-test", label: "Rhythm Tapping Test" },
+  ],
   Explore: [{ href: "/tests", label: "Browse All Tests" }],
 };

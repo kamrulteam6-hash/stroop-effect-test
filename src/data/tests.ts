@@ -1,10 +1,13 @@
 export type TestCategory =
   | "Perception"
+  | "Vision"
   | "Reaction & Speed"
   | "Memory & Cognition"
   | "Hearing"
   | "Math & Logic"
-  | "Focus & Attention";
+  | "Focus & Attention"
+  | "Personality"
+  | "IQ & Logic";
 
 export type ComponentKey =
   | "stroop"
@@ -20,7 +23,23 @@ export type ComponentKey =
   | "hearing-range"
   | "mental-math"
   | "color-perception"
-  | "attention";
+  | "attention"
+  | "schulte-table"
+  | "astigmatism"
+  | "trail-making"
+  | "pitch-discrimination"
+  | "color-memory"
+  | "rhythm-tapping"
+  | "n-back"
+  | "blind-spot"
+  | "mot"
+  | "big-five"
+  | "eq-test"
+  | "peripheral-vision"
+  | "visual-illusion"
+  | "symbol-digit"
+  | "pattern-iq"
+  | "finger-tapping";
 
 export interface TestDefinition {
   slug: string;
@@ -36,8 +55,8 @@ export interface TestDefinition {
   estTime: string;
   difficulty: "Easy" | "Medium" | "Hard";
   componentKey: ComponentKey;
-  /** Whether a higher or lower score is better, for history/personal-best tracking. */
-  scoreDirection: "higher" | "lower";
+  /** Whether a higher or lower score is better, for history/personal-best tracking. Omit for self-assessment tests with no competitive score (e.g. Astigmatism). */
+  scoreDirection?: "higher" | "lower";
   featured?: boolean;
 }
 
@@ -350,21 +369,358 @@ export const tests: TestDefinition[] = [
     componentKey: "attention",
     scoreDirection: "higher",
   },
+  {
+    slug: "schulte-table-test",
+    title: "Schulte Table Test",
+    metaTitle: "Schulte Table Test — Free Online Concentration Grid",
+    shortTitle: "Schulte Table",
+    category: "Focus & Attention",
+    icon: "🔢",
+    shortDescription: "Click the numbers 1 through 25 in order, as fast as you can, using peripheral vision.",
+    metaDescription:
+      "Free Schulte Table test online with 4×4, 5×5, and 6×6 grids. Click the shuffled numbers in ascending order as fast as you can to train visual scanning and focus.",
+    keywords: [
+      "schulte table",
+      "schulte table test online",
+      "concentration grid test",
+      "visual attention test",
+      "speed reading test",
+    ],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "schulte-table",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "astigmatism-test",
+    title: "Astigmatism Test",
+    metaTitle: "Astigmatism Test Online — Free 1-Minute Vision Self-Check",
+    shortTitle: "Astigmatism",
+    category: "Vision",
+    icon: "👁️",
+    shortDescription: "A quick radial-line self-check for possible signs of astigmatism.",
+    metaDescription:
+      "Free online astigmatism test using a radial line pattern. Check in under a minute whether some lines appear sharper or darker than others — a possible sign of astigmatism.",
+    keywords: [
+      "astigmatism test online",
+      "astigmatism test free",
+      "astigmatism self test",
+      "eye test astigmatism",
+    ],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "astigmatism",
+  },
+  {
+    slug: "trail-making-test",
+    title: "Trail Making Test",
+    metaTitle: "Trail Making Test Online — Free TMT-A & TMT-B",
+    shortTitle: "Trail Making",
+    category: "Focus & Attention",
+    icon: "🔗",
+    shortDescription: "Connect the dots in order — numbers only, or alternating numbers and letters.",
+    metaDescription:
+      "Free Trail Making Test (TMT) online. Part A connects numbers in order; Part B alternates numbers and letters to test cognitive flexibility and processing speed.",
+    keywords: [
+      "trail making test online",
+      "tmt test",
+      "trail making test part a part b",
+      "cognitive flexibility test",
+      "processing speed test",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "trail-making",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "pitch-discrimination-test",
+    title: "Pitch Discrimination Test",
+    metaTitle: "Pitch Discrimination Test — Free Tone Deafness Screening",
+    shortTitle: "Pitch Discrimination",
+    category: "Hearing",
+    icon: "🎵",
+    shortDescription: "Two tones play — can you tell which is higher? The gap narrows as you improve.",
+    metaDescription:
+      "Free online pitch discrimination test and tone deafness screening. Identify which of two tones is higher as the pitch gap narrows, and find your discrimination threshold.",
+    keywords: [
+      "tone deafness test",
+      "pitch discrimination test",
+      "perfect pitch test online",
+      "am i tone deaf",
+      "relative pitch test",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "pitch-discrimination",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "color-memory-game",
+    title: "Color Memory Game",
+    metaTitle: "Color Memory Game — Free Online Color & Sound Pattern Game",
+    shortTitle: "Color Memory",
+    category: "Memory & Cognition",
+    icon: "🔴",
+    shortDescription: "Watch the color and sound pattern grow, then repeat it back from memory.",
+    metaDescription:
+      "Free online color memory game with sound. Watch a growing sequence of colors and tones, then repeat it back — a classic electronic memory game format, right in your browser.",
+    keywords: [
+      "color memory game online",
+      "simon game online free",
+      "color pattern memory game",
+      "sound memory game",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "color-memory",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "rhythm-tapping-test",
+    title: "Rhythm Tapping Test",
+    metaTitle: "Rhythm Tapping Test — Free Online Timing Accuracy Test",
+    shortTitle: "Rhythm Tapping",
+    category: "Reaction & Speed",
+    icon: "🥁",
+    shortDescription: "Tap along to a steady beat and see how close to perfect timing you can get.",
+    metaDescription:
+      "Free online Rhythm Tapping Test. Tap along to a metronome at your chosen BPM and get scored on your average timing accuracy in milliseconds.",
+    keywords: [
+      "rhythm test online",
+      "tempo tapping test",
+      "timing accuracy test",
+      "beat matching test",
+      "rhythm accuracy test",
+    ],
+    estTime: "1 min",
+    difficulty: "Medium",
+    componentKey: "rhythm-tapping",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "n-back-test",
+    title: "N-Back Test",
+    metaTitle: "N-Back Test Online — Free Working Memory Training",
+    shortTitle: "N-Back",
+    category: "Memory & Cognition",
+    icon: "🧠",
+    shortDescription: "Click when the current tile matches the one from N steps earlier. A real working-memory workout.",
+    metaDescription:
+      "Free online N-Back Test with adjustable N-level (1/2/3) and trial count. Train working memory by spotting when the current tile position matches N steps back.",
+    keywords: [
+      "n-back test",
+      "n-back test online",
+      "working memory training",
+      "dual n-back",
+      "n-back game free",
+    ],
+    estTime: "3 min",
+    difficulty: "Hard",
+    componentKey: "n-back",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "blind-spot-test",
+    title: "Blind Spot Test",
+    metaTitle: "Blind Spot Test Online — Find Your Eye's Blind Spot",
+    shortTitle: "Blind Spot",
+    category: "Vision",
+    icon: "⚫",
+    shortDescription: "An interactive version of the classic demonstration — find the blind spot in each eye.",
+    metaDescription:
+      "Free interactive online blind spot test. Slide the dot and find the exact point where it disappears — a classic optic nerve demonstration for each eye.",
+    keywords: [
+      "blind spot test online",
+      "find your blind spot",
+      "eye blind spot test",
+      "optic nerve test",
+    ],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "blind-spot",
+  },
+  {
+    slug: "multiple-object-tracking-test",
+    title: "Multiple Object Tracking Test",
+    metaTitle: "Multiple Object Tracking Test — Free Online MOT Test",
+    shortTitle: "Object Tracking",
+    category: "Focus & Attention",
+    icon: "🔵",
+    shortDescription: "Track the highlighted dots as they move and scatter among identical distractors.",
+    metaDescription:
+      "Free online Multiple Object Tracking (MOT) test. Track 2-4 moving targets among distractors, then pick them out again — a real visual attention research paradigm.",
+    keywords: [
+      "multiple object tracking test",
+      "mot test online",
+      "visual attention test",
+      "object tracking test free",
+    ],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "mot",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "big-five-personality-test",
+    title: "Big Five Personality Test",
+    metaTitle: "Big Five Personality Test — Free OCEAN Test Online",
+    shortTitle: "Big Five",
+    category: "Personality",
+    icon: "🌟",
+    shortDescription: "A short, free version of the most scientifically supported personality model in psychology.",
+    metaDescription:
+      "Free Big Five (OCEAN) personality test online. Answer 25 quick questions to see your Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism scores.",
+    keywords: [
+      "big five personality test",
+      "ocean personality test",
+      "free personality test online",
+      "big 5 test",
+    ],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "big-five",
+  },
+  {
+    slug: "emotional-intelligence-test",
+    title: "Emotional Intelligence Test",
+    metaTitle: "Emotional Intelligence Test — Free EQ Quiz Online",
+    shortTitle: "EQ Test",
+    category: "Personality",
+    icon: "💬",
+    shortDescription: "A quick self-assessment of your emotional awareness, regulation, and social skills.",
+    metaDescription:
+      "Free Emotional Intelligence (EQ) test online. Answer 20 quick questions across 4 core skills and get an instant EQ score with a plain-language breakdown.",
+    keywords: [
+      "emotional intelligence test",
+      "eq test online free",
+      "emotional intelligence quiz",
+      "eq quiz",
+    ],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "eq-test",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "peripheral-vision-test",
+    title: "Peripheral Vision Test",
+    metaTitle: "Peripheral Vision Test — Free Online Visual Field Check",
+    shortTitle: "Peripheral Vision",
+    category: "Vision",
+    icon: "👀",
+    shortDescription: "Keep your eyes on the center and catch flashes appearing in your peripheral vision.",
+    metaDescription:
+      "Free online Peripheral Vision Test. Keep your eyes fixed on the center and detect flashes at the edge of your visual field — see your detection rate by zone.",
+    keywords: [
+      "peripheral vision test online",
+      "visual field test",
+      "field of view test",
+      "useful field of view test",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "peripheral-vision",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "visual-illusion-test",
+    title: "Visual Illusion Test",
+    metaTitle: "Visual Illusion Test — Free Müller-Lyer Illusion Online",
+    shortTitle: "Visual Illusion",
+    category: "Perception",
+    icon: "🔀",
+    shortDescription: "Adjust a line until it looks equal to another — then see how much the illusion fooled you.",
+    metaDescription:
+      "Free online Visual Illusion Test featuring the classic Müller-Lyer illusion. Adjust a line to match another by eye and measure your personal illusion susceptibility.",
+    keywords: [
+      "visual illusion test online",
+      "muller-lyer illusion test",
+      "optical illusion test free",
+      "perception illusion test",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "visual-illusion",
+  },
+  {
+    slug: "symbol-digit-test",
+    title: "Symbol Digit Modalities Test",
+    metaTitle: "Symbol Digit Modalities Test — Free Online SDMT",
+    shortTitle: "Symbol Digit",
+    category: "Focus & Attention",
+    icon: "🔣",
+    shortDescription: "Match each symbol to its digit using the key, as fast as you can, for 90 seconds.",
+    metaDescription:
+      "Free online Symbol Digit Modalities Test (SDMT) — a simplified version of the real processing-speed test. Match symbols to digits as fast as you can in 90 seconds.",
+    keywords: [
+      "symbol digit modalities test",
+      "sdmt online",
+      "processing speed test",
+      "symbol digit test free",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "symbol-digit",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "pattern-iq-test",
+    title: "Pattern IQ Test",
+    metaTitle: "Pattern IQ Test — Free Online Matrix Reasoning Test",
+    shortTitle: "Pattern IQ",
+    category: "IQ & Logic",
+    icon: "🧩",
+    shortDescription: "Spot the rule in a sequence of shapes and pick what comes next.",
+    metaDescription:
+      "Free online Pattern IQ Test with procedurally generated matrix-reasoning puzzles — a new set every time. Spot the pattern and pick the shape that completes it.",
+    keywords: [
+      "pattern iq test",
+      "matrix reasoning test online",
+      "pattern recognition test free",
+      "logic puzzle test online",
+    ],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "pattern-iq",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "finger-tapping-test",
+    title: "Finger Tapping Test",
+    metaTitle: "Finger Tapping Test — Free Online Motor Speed Test",
+    shortTitle: "Finger Tapping",
+    category: "Reaction & Speed",
+    icon: "👆",
+    shortDescription: "Tap as fast as you can for 10 seconds with each hand and compare the results.",
+    metaDescription:
+      "Free online Finger Tapping Test — a simplified version of the real neuropsychological motor speed test. Compare your dominant and non-dominant hand tap counts.",
+    keywords: [
+      "finger tapping test",
+      "finger tapping test online",
+      "motor speed test",
+      "tapping speed test",
+    ],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "finger-tapping",
+    scoreDirection: "higher",
+  },
 ];
 
 export const categories: TestCategory[] = [
   "Perception",
+  "Vision",
   "Reaction & Speed",
   "Memory & Cognition",
   "Hearing",
   "Math & Logic",
   "Focus & Attention",
+  "Personality",
+  "IQ & Logic",
 ];
 
 export const comingSoonCategories: { name: string; examples: string[] }[] = [
-  { name: "Personality", examples: ["Big 5 personality", "Introvert vs extrovert"] },
-  { name: "IQ & Logic", examples: ["Pattern IQ test", "Logic puzzle test"] },
-  { name: "Vision", examples: ["Astigmatism test", "Depth perception test"] },
   { name: "Motor Skills", examples: ["Hand-eye coordination", "Typing accuracy test"] },
 ];
 

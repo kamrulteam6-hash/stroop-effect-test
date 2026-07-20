@@ -15,8 +15,7 @@ const otherTests = tests.filter((t) => t.slug !== "stroop-effect-test");
 
 export const metadata: Metadata = {
   title: { absolute: "Stroop Effect Test — Free Online, Instant Results" },
-  description:
-    "Take the free Stroop Effect Test online and measure your cognitive control and selective attention in under 2 minutes. Instant results, no sign-up, plus 13 more free cognitive tests.",
+  description: `Take the free Stroop Effect Test online and measure your cognitive control and selective attention in under 2 minutes. Instant results, no sign-up, plus ${otherTests.length} more free cognitive tests.`,
   keywords: [
     "stroop effect test",
     "stroop test online",
@@ -40,7 +39,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "Stroop Effect Test",
   url: "https://www.stroopeffecttest.com/",
-  description: "Free online Stroop Effect Test plus 13 more cognitive, reaction, memory, and perception tests.",
+  description: `Free online Stroop Effect Test plus ${otherTests.length} more cognitive, reaction, memory, vision, and hearing tests.`,
 };
 
 const homeFaqs = [
@@ -66,7 +65,7 @@ const homeFaqs = [
   },
   {
     question: "How many tests are on this site?",
-    answer: "We currently have 14 fully interactive cognitive, reaction, memory, and perception tests, with more being added regularly.",
+    answer: `We currently have ${tests.length} fully interactive cognitive, reaction, memory, vision, and hearing tests, with more being added regularly.`,
   },
   {
     question: "Do I need to create an account?",
@@ -87,13 +86,13 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex flex-col items-center gap-6 py-8 text-center">
         <HeroBackground />
-        <SectionLabel>14 Free Online Tests · No Sign-up</SectionLabel>
+        <SectionLabel>{tests.length} Free Online Tests · No Sign-up</SectionLabel>
         <h1 className="max-w-3xl text-balance text-4xl font-black tracking-tight text-foreground sm:text-6xl">
           Test Your Mind with the <span className="text-primary">Stroop Effect Test</span>
         </h1>
         <p className="max-w-xl text-balance text-lg text-muted">
-          Name the ink color, not the word. Try the classic Stroop Effect Test below, then explore 13 more free
-          reaction, memory, and perception tests.
+          Name the ink color, not the word. Try the classic Stroop Effect Test below, then explore {otherTests.length}{" "}
+          more free reaction, memory, vision, and hearing tests.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button href="#stroop-test" size="lg">
@@ -133,7 +132,7 @@ export default function Home() {
       <section className="mt-20 border-t border-border pt-12">
         <div className="flex flex-col items-center gap-3 text-center">
           <SectionLabel>More Free Tests</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Explore 13 More Free Cognitive Tests</h2>
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Explore {otherTests.length} More Free Cognitive Tests</h2>
           <p className="max-w-xl text-balance text-muted">
             Reaction speed, memory, perception, hearing, and math — each test gives instant results, no sign-up.
           </p>

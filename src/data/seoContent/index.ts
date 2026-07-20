@@ -13,6 +13,22 @@ import { content as hearingRangeTest } from "@/data/seoContent/hearing-range-tes
 import { content as mentalMathTest } from "@/data/seoContent/mental-math-test";
 import { content as colorPerceptionTest } from "@/data/seoContent/color-perception-test";
 import { content as attentionSpanTest } from "@/data/seoContent/attention-span-test";
+import { content as schulteTableTest } from "@/data/seoContent/schulte-table-test";
+import { content as astigmatismTest } from "@/data/seoContent/astigmatism-test";
+import { content as trailMakingTest } from "@/data/seoContent/trail-making-test";
+import { content as pitchDiscriminationTest } from "@/data/seoContent/pitch-discrimination-test";
+import { content as colorMemoryGame } from "@/data/seoContent/color-memory-game";
+import { content as rhythmTappingTest } from "@/data/seoContent/rhythm-tapping-test";
+import { content as nBackTest } from "@/data/seoContent/n-back-test";
+import { content as blindSpotTest } from "@/data/seoContent/blind-spot-test";
+import { content as multipleObjectTrackingTest } from "@/data/seoContent/multiple-object-tracking-test";
+import { content as bigFivePersonalityTest } from "@/data/seoContent/big-five-personality-test";
+import { content as emotionalIntelligenceTest } from "@/data/seoContent/emotional-intelligence-test";
+import { content as peripheralVisionTest } from "@/data/seoContent/peripheral-vision-test";
+import { content as visualIllusionTest } from "@/data/seoContent/visual-illusion-test";
+import { content as symbolDigitTest } from "@/data/seoContent/symbol-digit-test";
+import { content as patternIqTest } from "@/data/seoContent/pattern-iq-test";
+import { content as fingerTappingTest } from "@/data/seoContent/finger-tapping-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -29,4 +45,20 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "mental-math-test": mentalMathTest,
   "color-perception-test": colorPerceptionTest,
   "attention-span-test": attentionSpanTest,
+  "schulte-table-test": schulteTableTest,
+  "astigmatism-test": astigmatismTest,
+  "trail-making-test": trailMakingTest,
+  "pitch-discrimination-test": pitchDiscriminationTest,
+  "color-memory-game": colorMemoryGame,
+  "rhythm-tapping-test": rhythmTappingTest,
+  "n-back-test": nBackTest,
+  "blind-spot-test": blindSpotTest,
+  "multiple-object-tracking-test": multipleObjectTrackingTest,
+  "big-five-personality-test": bigFivePersonalityTest,
+  "emotional-intelligence-test": emotionalIntelligenceTest,
+  "peripheral-vision-test": peripheralVisionTest,
+  "visual-illusion-test": visualIllusionTest,
+  "symbol-digit-test": symbolDigitTest,
+  "pattern-iq-test": patternIqTest,
+  "finger-tapping-test": fingerTappingTest,
 };

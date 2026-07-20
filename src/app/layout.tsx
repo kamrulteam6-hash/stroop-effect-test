@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     template: "%s | Stroop Effect Test",
   },
   description:
-    "Take the classic Stroop Effect Test online for free, plus 13+ other cognitive, reaction, memory, and perception tests. Instant results, no sign-up.",
+    "Take the classic Stroop Effect Test online for free, plus 19+ other cognitive, reaction, memory, vision, and hearing tests. Instant results, no sign-up.",
   openGraph: {
     title: "Stroop Effect Test — Free Online Cognitive & Reaction Tests",
     description:
-      "Take the classic Stroop Effect Test online for free, plus 13+ other cognitive, reaction, memory, and perception tests. Instant results, no sign-up.",
+      "Take the classic Stroop Effect Test online for free, plus 19+ other cognitive, reaction, memory, vision, and hearing tests. Instant results, no sign-up.",
     url: "https://www.stroopeffecttest.com",
     siteName: "Stroop Effect Test",
     type: "website",
