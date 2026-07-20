@@ -39,7 +39,17 @@ export type ComponentKey =
   | "visual-illusion"
   | "symbol-digit"
   | "pattern-iq"
-  | "finger-tapping";
+  | "finger-tapping"
+  | "ruler-drop"
+  | "flanker"
+  | "memory-match"
+  | "pop-up-target"
+  | "vocabulary-size"
+  | "handedness"
+  | "personality-type"
+  | "risk-taking"
+  | "enneagram"
+  | "love-language";
 
 export interface TestDefinition {
   slug: string;
@@ -705,6 +715,212 @@ export const tests: TestDefinition[] = [
     difficulty: "Easy",
     componentKey: "finger-tapping",
     scoreDirection: "higher",
+  },
+  {
+    slug: "ruler-drop-test",
+    title: "Ruler Drop Reaction Test",
+    metaTitle: "Ruler Drop Reaction Test — Free Online Reflex Test",
+    shortTitle: "Ruler Drop",
+    category: "Reaction & Speed",
+    icon: "📏",
+    shortDescription: "The classic ruler-drop reflex trick, digitized — catch the falling ruler as fast as you can.",
+    metaDescription:
+      "Free online Ruler Drop Reaction Test — a digital version of the classic falling-ruler reflex trick. Catch it as fast as you can and see your reaction time.",
+    keywords: [
+      "ruler drop test",
+      "reaction time ruler test",
+      "ruler reflex test online",
+      "reaction distance test",
+    ],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "ruler-drop",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "flanker-test",
+    title: "Flanker Test",
+    metaTitle: "Flanker Test — Free Online Eriksen Flanker Task",
+    shortTitle: "Flanker Test",
+    category: "Focus & Attention",
+    icon: "➡️",
+    shortDescription: "Identify the direction of the center arrow while ignoring the arrows around it.",
+    metaDescription:
+      "Free online Flanker Test based on the classic Eriksen flanker task. Respond to the center arrow's direction while surrounding arrows try to distract you.",
+    keywords: [
+      "flanker test",
+      "eriksen flanker task online",
+      "flanker task test",
+      "selective attention test",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "flanker",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "memory-match-game",
+    title: "Memory Match Game",
+    metaTitle: "Memory Match Game — Free Online Card Matching Game",
+    shortTitle: "Memory Match",
+    category: "Memory & Cognition",
+    icon: "🃏",
+    shortDescription: "Flip cards to find matching pairs in as few moves as possible.",
+    metaDescription:
+      "Free online Memory Match card game. Flip cards to find all the matching pairs in as few moves as possible — classic concentration gameplay with instant results.",
+    keywords: [
+      "memory match game",
+      "concentration card game online",
+      "memory card game free",
+      "matching pairs game",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "memory-match",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "pop-up-target-test",
+    title: "Pop-Up Target Test",
+    metaTitle: "Pop-Up Target Test — Free Online Reaction Game",
+    shortTitle: "Pop-Up Target",
+    category: "Reaction & Speed",
+    icon: "🎯",
+    shortDescription: "Targets pop up at random spots — click as many as you can before time runs out.",
+    metaDescription:
+      "Free online Pop-Up Target reaction game. Targets appear randomly across a grid — click as many as you can in 30 seconds and track your hit rate.",
+    keywords: [
+      "reaction game online",
+      "pop up target game",
+      "whack a mole reaction test",
+      "click reaction speed game",
+    ],
+    estTime: "1 min",
+    difficulty: "Medium",
+    componentKey: "pop-up-target",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "vocabulary-size-test",
+    title: "Vocabulary Size Test",
+    metaTitle: "Vocabulary Size Test — Free Online Word Knowledge Test",
+    shortTitle: "Vocabulary Size",
+    category: "Memory & Cognition",
+    icon: "📚",
+    shortDescription: "Mark which words you actually know to get an estimate of your vocabulary size.",
+    metaDescription:
+      "Free online Vocabulary Size Test. Mark which words you genuinely know — including decoy fake words — to get an estimate of your total English vocabulary size.",
+    keywords: [
+      "vocabulary size test",
+      "vocabulary test online free",
+      "word knowledge test",
+      "how many words do you know",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "vocabulary-size",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "handedness-test",
+    title: "Handedness Test",
+    metaTitle: "Handedness Test — Free Online Hand Dominance Quiz",
+    shortTitle: "Handedness",
+    category: "Personality",
+    icon: "✋",
+    shortDescription: "A short quiz measuring how strongly you favor your dominant hand across everyday tasks.",
+    metaDescription:
+      "Free online Handedness Test inspired by the Edinburgh Handedness Inventory. Answer questions about everyday tasks to get your hand dominance score.",
+    keywords: [
+      "handedness test",
+      "edinburgh handedness inventory online",
+      "am i left or right handed test",
+      "hand dominance test",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "handedness",
+  },
+  {
+    slug: "personality-type-test",
+    title: "Personality Type Test",
+    metaTitle: "Personality Type Test — Free Online 4-Letter Type Quiz",
+    shortTitle: "Personality Type",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "A short quiz sorting your preferences into a 4-letter personality type.",
+    metaDescription:
+      "Free online Personality Type Test. Answer quick questions across 4 preference dimensions to get your 4-letter personality type, inspired by the popular typing system.",
+    keywords: [
+      "personality type test",
+      "16 personality types quiz",
+      "mbti test free",
+      "personality type quiz online",
+    ],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "personality-type",
+  },
+  {
+    slug: "risk-taking-test",
+    title: "Risk-Taking Test",
+    metaTitle: "Risk-Taking Test — Free Online Balloon Risk Task",
+    shortTitle: "Risk-Taking",
+    category: "Personality",
+    icon: "🎈",
+    shortDescription: "Pump up a virtual balloon for points — but don't let it pop before you cash out.",
+    metaDescription:
+      "Free online Risk-Taking Test based on the Balloon Analogue Risk Task (BART). Pump a virtual balloon for points, but cash out before it pops.",
+    keywords: [
+      "risk taking test online",
+      "balloon analogue risk task",
+      "bart test online",
+      "risk tolerance test",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "risk-taking",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "enneagram-test",
+    title: "Enneagram Test",
+    metaTitle: "Enneagram Test — Free Online 9 Personality Types Quiz",
+    shortTitle: "Enneagram",
+    category: "Personality",
+    icon: "🔯",
+    shortDescription: "A short quiz estimating your dominant Enneagram type from the 9 core types.",
+    metaDescription:
+      "Free online Enneagram Test. Answer quick questions to estimate your dominant type among the 9 core Enneagram personality types.",
+    keywords: [
+      "enneagram test free",
+      "enneagram test online",
+      "what enneagram type am i",
+      "9 personality types quiz",
+    ],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "enneagram",
+  },
+  {
+    slug: "love-language-test",
+    title: "Love Language Test",
+    metaTitle: "Love Language Test — Free Online 5 Love Languages Quiz",
+    shortTitle: "Love Language",
+    category: "Personality",
+    icon: "💌",
+    shortDescription: "Discover how you prefer to give and receive love across 5 categories.",
+    metaDescription:
+      "Free online Love Language Test. Answer quick questions to find out which of the 5 love languages matters most to you in relationships.",
+    keywords: [
+      "love language test free",
+      "5 love languages test",
+      "love language quiz",
+      "what is my love language",
+    ],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "love-language",
   },
 ];
 

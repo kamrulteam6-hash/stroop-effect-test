@@ -30,6 +30,16 @@ import { VisualIllusionTest } from "@/components/tests/VisualIllusionTest";
 import { SymbolDigitTest } from "@/components/tests/SymbolDigitTest";
 import { PatternIqTest } from "@/components/tests/PatternIqTest";
 import { FingerTappingTest } from "@/components/tests/FingerTappingTest";
+import { RulerDropTest } from "@/components/tests/RulerDropTest";
+import { FlankerTest } from "@/components/tests/FlankerTest";
+import { MemoryMatchTest } from "@/components/tests/MemoryMatchTest";
+import { PopUpTargetTest } from "@/components/tests/PopUpTargetTest";
+import { VocabularySizeTest } from "@/components/tests/VocabularySizeTest";
+import { HandednessTest } from "@/components/tests/HandednessTest";
+import { PersonalityTypeTest } from "@/components/tests/PersonalityTypeTest";
+import { RiskTakingTest } from "@/components/tests/RiskTakingTest";
+import { EnneagramTest } from "@/components/tests/EnneagramTest";
+import { LoveLanguageTest } from "@/components/tests/LoveLanguageTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -62,4 +72,14 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "symbol-digit": SymbolDigitTest,
   "pattern-iq": PatternIqTest,
   "finger-tapping": FingerTappingTest,
+  "ruler-drop": RulerDropTest,
+  flanker: FlankerTest,
+  "memory-match": MemoryMatchTest,
+  "pop-up-target": PopUpTargetTest,
+  "vocabulary-size": VocabularySizeTest,
+  handedness: HandednessTest,
+  "personality-type": PersonalityTypeTest,
+  "risk-taking": RiskTakingTest,
+  enneagram: EnneagramTest,
+  "love-language": LoveLanguageTest,
 };

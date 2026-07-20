@@ -35,6 +35,12 @@ const MODELS: Record<string, PercentileModel> = {
   "symbol-digit-test": { mean: 50, stdev: 15, direction: "higher" },
   "pattern-iq-test": { mean: 5.5, stdev: 1.8, direction: "higher" },
   "finger-tapping-test": { mean: 60, stdev: 15, direction: "higher" },
+  "ruler-drop-test": { mean: 280, stdev: 50, direction: "lower" },
+  "flanker-test": { mean: 82, stdev: 10, direction: "higher" },
+  "memory-match-game": { mean: 14, stdev: 5, direction: "lower" },
+  "pop-up-target-test": { mean: 20, stdev: 6, direction: "higher" },
+  "vocabulary-size-test": { mean: 20000, stdev: 7000, direction: "higher" },
+  "risk-taking-test": { mean: 550, stdev: 150, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

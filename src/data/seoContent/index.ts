@@ -29,6 +29,16 @@ import { content as visualIllusionTest } from "@/data/seoContent/visual-illusion
 import { content as symbolDigitTest } from "@/data/seoContent/symbol-digit-test";
 import { content as patternIqTest } from "@/data/seoContent/pattern-iq-test";
 import { content as fingerTappingTest } from "@/data/seoContent/finger-tapping-test";
+import { content as rulerDropTest } from "@/data/seoContent/ruler-drop-test";
+import { content as flankerTest } from "@/data/seoContent/flanker-test";
+import { content as memoryMatchGame } from "@/data/seoContent/memory-match-game";
+import { content as popUpTargetTest } from "@/data/seoContent/pop-up-target-test";
+import { content as vocabularySizeTest } from "@/data/seoContent/vocabulary-size-test";
+import { content as handednessTest } from "@/data/seoContent/handedness-test";
+import { content as personalityTypeTest } from "@/data/seoContent/personality-type-test";
+import { content as riskTakingTest } from "@/data/seoContent/risk-taking-test";
+import { content as enneagramTest } from "@/data/seoContent/enneagram-test";
+import { content as loveLanguageTest } from "@/data/seoContent/love-language-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -61,4 +71,14 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "symbol-digit-test": symbolDigitTest,
   "pattern-iq-test": patternIqTest,
   "finger-tapping-test": fingerTappingTest,
+  "ruler-drop-test": rulerDropTest,
+  "flanker-test": flankerTest,
+  "memory-match-game": memoryMatchGame,
+  "pop-up-target-test": popUpTargetTest,
+  "vocabulary-size-test": vocabularySizeTest,
+  "handedness-test": handednessTest,
+  "personality-type-test": personalityTypeTest,
+  "risk-taking-test": riskTakingTest,
+  "enneagram-test": enneagramTest,
+  "love-language-test": loveLanguageTest,
 };
