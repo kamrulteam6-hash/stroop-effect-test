@@ -39,6 +39,22 @@ import { content as personalityTypeTest } from "@/data/seoContent/personality-ty
 import { content as riskTakingTest } from "@/data/seoContent/risk-taking-test";
 import { content as enneagramTest } from "@/data/seoContent/enneagram-test";
 import { content as loveLanguageTest } from "@/data/seoContent/love-language-test";
+import { content as serialPositionTest } from "@/data/seoContent/serial-position-test";
+import { content as falseMemoryTest } from "@/data/seoContent/false-memory-test";
+import { content as barnumEffectTest } from "@/data/seoContent/barnum-effect-test";
+import { content as neckerCubeTest } from "@/data/seoContent/necker-cube-test";
+import { content as anchoringBiasTest } from "@/data/seoContent/anchoring-bias-test";
+import { content as levelsOfProcessingTest } from "@/data/seoContent/levels-of-processing-test";
+import { content as framingEffectTest } from "@/data/seoContent/framing-effect-test";
+import { content as sunkCostTest } from "@/data/seoContent/sunk-cost-test";
+import { content as ebbinghausIllusionTest } from "@/data/seoContent/ebbinghaus-illusion-test";
+import { content as semanticPrimingTest } from "@/data/seoContent/semantic-priming-test";
+import { content as vonRestorffEffectTest } from "@/data/seoContent/von-restorff-effect-test";
+import { content as conjunctionFallacyTest } from "@/data/seoContent/conjunction-fallacy-test";
+import { content as haloEffectTest } from "@/data/seoContent/halo-effect-test";
+import { content as gamblersFallacyTest } from "@/data/seoContent/gamblers-fallacy-test";
+import { content as iowaGamblingTask } from "@/data/seoContent/iowa-gambling-task";
+import { content as availabilityHeuristicTest } from "@/data/seoContent/availability-heuristic-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -81,4 +97,20 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "risk-taking-test": riskTakingTest,
   "enneagram-test": enneagramTest,
   "love-language-test": loveLanguageTest,
+  "serial-position-test": serialPositionTest,
+  "false-memory-test": falseMemoryTest,
+  "barnum-effect-test": barnumEffectTest,
+  "necker-cube-test": neckerCubeTest,
+  "anchoring-bias-test": anchoringBiasTest,
+  "levels-of-processing-test": levelsOfProcessingTest,
+  "framing-effect-test": framingEffectTest,
+  "sunk-cost-test": sunkCostTest,
+  "ebbinghaus-illusion-test": ebbinghausIllusionTest,
+  "semantic-priming-test": semanticPrimingTest,
+  "von-restorff-effect-test": vonRestorffEffectTest,
+  "conjunction-fallacy-test": conjunctionFallacyTest,
+  "halo-effect-test": haloEffectTest,
+  "gamblers-fallacy-test": gamblersFallacyTest,
+  "iowa-gambling-task": iowaGamblingTask,
+  "availability-heuristic-test": availabilityHeuristicTest,
 };

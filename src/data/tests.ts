@@ -7,7 +7,8 @@ export type TestCategory =
   | "Math & Logic"
   | "Focus & Attention"
   | "Personality"
-  | "IQ & Logic";
+  | "IQ & Logic"
+  | "Cognitive Biases";
 
 export type ComponentKey =
   | "stroop"
@@ -49,7 +50,23 @@ export type ComponentKey =
   | "personality-type"
   | "risk-taking"
   | "enneagram"
-  | "love-language";
+  | "love-language"
+  | "serial-position"
+  | "false-memory"
+  | "barnum-effect"
+  | "necker-cube"
+  | "anchoring-bias"
+  | "levels-of-processing"
+  | "framing-effect"
+  | "sunk-cost"
+  | "ebbinghaus-illusion"
+  | "semantic-priming"
+  | "von-restorff"
+  | "conjunction-fallacy"
+  | "halo-effect"
+  | "gamblers-fallacy"
+  | "iowa-gambling"
+  | "availability-heuristic";
 
 export interface TestDefinition {
   slug: string;
@@ -922,6 +939,333 @@ export const tests: TestDefinition[] = [
     difficulty: "Easy",
     componentKey: "love-language",
   },
+  {
+    slug: "serial-position-test",
+    title: "Serial Position Effect Test",
+    metaTitle: "Serial Position Effect Test — Free Online Memory Test",
+    shortTitle: "Serial Position",
+    category: "Memory & Cognition",
+    icon: "📃",
+    shortDescription: "Study a list of words, then see how well you remember the start, middle, and end.",
+    metaDescription:
+      "Free online Serial Position Effect Test. Study a word list, then see your personal primacy and recency memory curve — a classic memory science demonstration.",
+    keywords: [
+      "serial position effect test",
+      "primacy recency test online",
+      "memory position test free",
+      "serial position curve test",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "serial-position",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "false-memory-test",
+    title: "False Memory Test",
+    metaTitle: "False Memory Test — Free Online Memory Illusion (DRM)",
+    shortTitle: "False Memory",
+    category: "Memory & Cognition",
+    icon: "🌀",
+    shortDescription: "Study related word lists, then see if you 'remember' a word that was never actually shown.",
+    metaDescription:
+      "Free online False Memory Test based on the DRM paradigm. Study word lists, then take a recognition test to see if your brain creates a convincing false memory.",
+    keywords: [
+      "false memory test online",
+      "DRM test free",
+      "false memory illusion test",
+      "memory illusion test online",
+    ],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "false-memory",
+  },
+  {
+    slug: "barnum-effect-test",
+    title: "Barnum Effect Test",
+    metaTitle: "Barnum Effect Test — Free Online Forer Effect Demonstration",
+    shortTitle: "Barnum Effect",
+    category: "Cognitive Biases",
+    icon: "🔮",
+    shortDescription: "Get a 'personalized' reading, rate how accurate it feels, then see the trick behind it.",
+    metaDescription:
+      "Free online Barnum Effect Test (Forer Effect). Get a personalized-sounding reading, rate its accuracy, then discover why vague statements feel so personally true.",
+    keywords: [
+      "barnum effect test",
+      "forer effect test online",
+      "personality reading accuracy test",
+      "cold reading test free",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "barnum-effect",
+  },
+  {
+    slug: "necker-cube-test",
+    title: "Necker Cube Test",
+    metaTitle: "Necker Cube Test — Free Online Bistable Illusion Test",
+    shortTitle: "Necker Cube",
+    category: "Perception",
+    icon: "🧊",
+    shortDescription: "Stare at an ambiguous wireframe cube and click every time your perception of it flips.",
+    metaDescription:
+      "Free online Necker Cube Test. Watch a classic ambiguous wireframe cube and track how often your perception spontaneously flips between two interpretations.",
+    keywords: [
+      "necker cube test online",
+      "ambiguous figure test",
+      "bistable perception test",
+      "necker cube illusion",
+    ],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "necker-cube",
+  },
+  {
+    slug: "anchoring-bias-test",
+    title: "Anchoring Bias Test",
+    metaTitle: "Anchoring Bias Test — Free Online Cognitive Bias Test",
+    shortTitle: "Anchoring Bias",
+    category: "Cognitive Biases",
+    icon: "⚓",
+    shortDescription: "Answer a few trivia estimates and see how a random starting number quietly pulled your guess.",
+    metaDescription:
+      "Free online Anchoring Bias Test. Estimate trivia answers after seeing a random anchor number, then see how far your guesses were pulled toward it.",
+    keywords: [
+      "anchoring bias test online",
+      "anchoring effect test",
+      "cognitive bias test free",
+      "decision bias test online",
+    ],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "anchoring-bias",
+  },
+  {
+    slug: "levels-of-processing-test",
+    title: "Levels of Processing Test",
+    metaTitle: "Levels of Processing Test — Free Online Memory Test",
+    shortTitle: "Levels of Processing",
+    category: "Memory & Cognition",
+    icon: "🧠",
+    shortDescription: "Judge some words by appearance and others by meaning, then see which ones you remember better.",
+    metaDescription:
+      "Free online Levels of Processing Test. Compare shallow (visual) and deep (meaning-based) word encoding to see which one gives you better memory recall.",
+    keywords: [
+      "levels of processing test",
+      "deep vs shallow memory test",
+      "encoding memory test online",
+      "memory processing test free",
+    ],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "levels-of-processing",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "framing-effect-test",
+    title: "Framing Effect Test",
+    metaTitle: "Framing Effect Test — Free Online Decision Bias Test",
+    shortTitle: "Framing Effect",
+    category: "Cognitive Biases",
+    icon: "🪟",
+    shortDescription: "Make a few quick decisions, then see how the way each choice was worded may have swayed you.",
+    metaDescription:
+      "Free online Framing Effect Test. Make decisions framed as gains or losses, then see how wording alone can shift choices — a classic behavioral economics demonstration.",
+    keywords: [
+      "framing effect test online",
+      "gain loss framing test",
+      "decision framing test",
+      "cognitive bias test free",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "framing-effect",
+  },
+  {
+    slug: "sunk-cost-test",
+    title: "Sunk Cost Fallacy Test",
+    metaTitle: "Sunk Cost Fallacy Test — Free Online Decision Bias Test",
+    shortTitle: "Sunk Cost Fallacy",
+    category: "Cognitive Biases",
+    icon: "💸",
+    shortDescription: "Work through 5 everyday scenarios and see how often already-spent costs sway your choices.",
+    metaDescription:
+      "Free online Sunk Cost Fallacy Test. Work through 5 everyday scenarios to see how often you let money or effort already spent influence a decision it shouldn't.",
+    keywords: [
+      "sunk cost fallacy test",
+      "sunk cost test online",
+      "decision making bias test",
+      "escalation of commitment test",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "sunk-cost",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "ebbinghaus-illusion-test",
+    title: "Ebbinghaus Illusion Test",
+    metaTitle: "Ebbinghaus Illusion Test — Free Online Size Perception Test",
+    shortTitle: "Ebbinghaus Illusion",
+    category: "Perception",
+    icon: "⭕",
+    shortDescription: "Adjust a circle to match another — then see how much the surrounding circles fooled your eyes.",
+    metaDescription:
+      "Free online Ebbinghaus Illusion Test (Titchener circles). Match two center circles by eye while surrounding circles distort your sense of their size.",
+    keywords: [
+      "ebbinghaus illusion test",
+      "titchener circles test online",
+      "size perception illusion test",
+      "optical illusion test free",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "ebbinghaus-illusion",
+  },
+  {
+    slug: "semantic-priming-test",
+    title: "Semantic Priming Test",
+    metaTitle: "Semantic Priming Test — Free Online Word Association Test",
+    shortTitle: "Semantic Priming",
+    category: "Focus & Attention",
+    icon: "💭",
+    shortDescription: "Decide if each string is a real word — a related word shown just before may quietly speed you up.",
+    metaDescription:
+      "Free online Semantic Priming Test (lexical decision task). See how a related word flashed just before a target speeds up your word recognition.",
+    keywords: [
+      "semantic priming test online",
+      "lexical decision task test",
+      "word association speed test",
+      "priming effect test free",
+    ],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "semantic-priming",
+  },
+  {
+    slug: "von-restorff-effect-test",
+    title: "Von Restorff Effect Test",
+    metaTitle: "Von Restorff Effect Test — Free Online Isolation Effect Test",
+    shortTitle: "Von Restorff Effect",
+    category: "Memory & Cognition",
+    icon: "✨",
+    shortDescription: "Study a list of words with one that visually stands out, then see how much better you remember it.",
+    metaDescription:
+      "Free online Von Restorff Effect Test (isolation effect). Study a word list with one visually distinctive item and see how much it boosts your recall.",
+    keywords: [
+      "von restorff effect test",
+      "isolation effect test online",
+      "memory distinctiveness test",
+      "free memory test online",
+    ],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "von-restorff",
+  },
+  {
+    slug: "conjunction-fallacy-test",
+    title: "Conjunction Fallacy Test",
+    metaTitle: "Conjunction Fallacy Test — Free Online Logic Bias Test",
+    shortTitle: "Conjunction Fallacy",
+    category: "Cognitive Biases",
+    icon: "🧮",
+    shortDescription: "Judge a few short scenarios and see if a vivid story tricks you into breaking a basic rule of probability.",
+    metaDescription:
+      "Free online Conjunction Fallacy Test, based on the famous 'Linda problem.' See how a compelling story can make an impossible probability feel likely.",
+    keywords: [
+      "conjunction fallacy test",
+      "linda problem test online",
+      "probability bias test",
+      "cognitive bias test free",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "conjunction-fallacy",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "halo-effect-test",
+    title: "Halo Effect Test",
+    metaTitle: "Halo Effect Test — Free Online Perception Bias Test",
+    shortTitle: "Halo Effect",
+    category: "Cognitive Biases",
+    icon: "😇",
+    shortDescription: "Rate two strangers on traits you have zero information about, then see how one detail secretly swayed you.",
+    metaDescription:
+      "Free online Halo Effect Test. Rate two fictional people on unrelated traits and see how a single detail about each one quietly shapes your whole impression.",
+    keywords: [
+      "halo effect test online",
+      "halo effect demonstration",
+      "perception bias test free",
+      "cognitive bias test online",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "halo-effect",
+  },
+  {
+    slug: "gamblers-fallacy-test",
+    title: "Gambler's Fallacy Test",
+    metaTitle: "Gambler's Fallacy Test — Free Online Probability Bias Test",
+    shortTitle: "Gambler's Fallacy",
+    category: "Cognitive Biases",
+    icon: "🎲",
+    shortDescription: "After a streak of coin flips, guess what comes next — and see if a 'hot streak' feeling fools your logic.",
+    metaDescription:
+      "Free online Gambler's Fallacy Test. After seeing coin flip streaks, guess what comes next and see whether you fall for the illusion that random events even out.",
+    keywords: [
+      "gambler's fallacy test",
+      "gamblers fallacy test online",
+      "probability bias test free",
+      "coin flip fallacy test",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "gamblers-fallacy",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "iowa-gambling-task",
+    title: "Iowa Gambling Task",
+    metaTitle: "Iowa Gambling Task — Free Online Decision-Making Test",
+    shortTitle: "Iowa Gambling Task",
+    category: "Cognitive Biases",
+    icon: "🎰",
+    shortDescription: "Draw cards from 4 decks to earn money — some decks feel more exciting but quietly lose you money over time.",
+    metaDescription:
+      "Free online Iowa Gambling Task. Draw cards from 4 decks with hidden reward and penalty patterns to see how well you learn to avoid the risky decks.",
+    keywords: [
+      "iowa gambling task online",
+      "iowa gambling task free",
+      "decision making test online",
+      "risk learning test free",
+    ],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "iowa-gambling",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "availability-heuristic-test",
+    title: "Availability Heuristic Test",
+    metaTitle: "Availability Heuristic Test — Free Online Judgment Bias Test",
+    shortTitle: "Availability Heuristic",
+    category: "Cognitive Biases",
+    icon: "📰",
+    shortDescription: "Guess which of two things is actually more common — the more memorable answer isn't always the right one.",
+    metaDescription:
+      "Free online Availability Heuristic Test. Judge which of two things is more common and see how memorable, vivid examples can distort your sense of frequency.",
+    keywords: [
+      "availability heuristic test",
+      "availability bias test online",
+      "judgment bias test free",
+      "cognitive bias test online",
+    ],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "availability-heuristic",
+    scoreDirection: "higher",
+  },
 ];
 
 export const categories: TestCategory[] = [
@@ -934,6 +1278,7 @@ export const categories: TestCategory[] = [
   "Focus & Attention",
   "Personality",
   "IQ & Logic",
+  "Cognitive Biases",
 ];
 
 export const comingSoonCategories: { name: string; examples: string[] }[] = [

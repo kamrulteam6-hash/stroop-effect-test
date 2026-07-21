@@ -41,6 +41,13 @@ const MODELS: Record<string, PercentileModel> = {
   "pop-up-target-test": { mean: 20, stdev: 6, direction: "higher" },
   "vocabulary-size-test": { mean: 20000, stdev: 7000, direction: "higher" },
   "risk-taking-test": { mean: 550, stdev: 150, direction: "higher" },
+  "serial-position-test": { mean: 9, stdev: 2.5, direction: "higher" },
+  "levels-of-processing-test": { mean: 10, stdev: 2.5, direction: "higher" },
+  "sunk-cost-test": { mean: 3, stdev: 1.2, direction: "lower" },
+  "conjunction-fallacy-test": { mean: 2, stdev: 0.8, direction: "lower" },
+  "gamblers-fallacy-test": { mean: 2, stdev: 1, direction: "higher" },
+  "iowa-gambling-task": { mean: 200, stdev: 500, direction: "higher" },
+  "availability-heuristic-test": { mean: 2, stdev: 1, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

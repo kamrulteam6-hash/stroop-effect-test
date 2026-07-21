@@ -40,6 +40,22 @@ import { PersonalityTypeTest } from "@/components/tests/PersonalityTypeTest";
 import { RiskTakingTest } from "@/components/tests/RiskTakingTest";
 import { EnneagramTest } from "@/components/tests/EnneagramTest";
 import { LoveLanguageTest } from "@/components/tests/LoveLanguageTest";
+import { SerialPositionTest } from "@/components/tests/SerialPositionTest";
+import { FalseMemoryTest } from "@/components/tests/FalseMemoryTest";
+import { BarnumEffectTest } from "@/components/tests/BarnumEffectTest";
+import { NeckerCubeTest } from "@/components/tests/NeckerCubeTest";
+import { AnchoringBiasTest } from "@/components/tests/AnchoringBiasTest";
+import { LevelsOfProcessingTest } from "@/components/tests/LevelsOfProcessingTest";
+import { FramingEffectTest } from "@/components/tests/FramingEffectTest";
+import { SunkCostTest } from "@/components/tests/SunkCostTest";
+import { EbbinghausIllusionTest } from "@/components/tests/EbbinghausIllusionTest";
+import { SemanticPrimingTest } from "@/components/tests/SemanticPrimingTest";
+import { VonRestorffTest } from "@/components/tests/VonRestorffTest";
+import { ConjunctionFallacyTest } from "@/components/tests/ConjunctionFallacyTest";
+import { HaloEffectTest } from "@/components/tests/HaloEffectTest";
+import { GamblersFallacyTest } from "@/components/tests/GamblersFallacyTest";
+import { IowaGamblingTest } from "@/components/tests/IowaGamblingTest";
+import { AvailabilityHeuristicTest } from "@/components/tests/AvailabilityHeuristicTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -82,4 +98,20 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "risk-taking": RiskTakingTest,
   enneagram: EnneagramTest,
   "love-language": LoveLanguageTest,
+  "serial-position": SerialPositionTest,
+  "false-memory": FalseMemoryTest,
+  "barnum-effect": BarnumEffectTest,
+  "necker-cube": NeckerCubeTest,
+  "anchoring-bias": AnchoringBiasTest,
+  "levels-of-processing": LevelsOfProcessingTest,
+  "framing-effect": FramingEffectTest,
+  "sunk-cost": SunkCostTest,
+  "ebbinghaus-illusion": EbbinghausIllusionTest,
+  "semantic-priming": SemanticPrimingTest,
+  "von-restorff": VonRestorffTest,
+  "conjunction-fallacy": ConjunctionFallacyTest,
+  "halo-effect": HaloEffectTest,
+  "gamblers-fallacy": GamblersFallacyTest,
+  "iowa-gambling": IowaGamblingTest,
+  "availability-heuristic": AvailabilityHeuristicTest,
 };
