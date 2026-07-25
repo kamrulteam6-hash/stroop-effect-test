@@ -50,6 +50,7 @@ export function MultipleObjectTrackingTest() {
   const [dots, setDots] = useState<Dot[]>([]);
   const [targetIds, setTargetIds] = useState<Set<number>>(new Set());
   const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
+  const [moveProgress, setMoveProgress] = useState(0);
   const areaRef = useRef<HTMLDivElement>(null);
   const dotsRef = useRef<Dot[]>([]);
   const rafRef = useRef<number | undefined>(undefined);
@@ -74,6 +75,7 @@ export function MultipleObjectTrackingTest() {
     setDots(newDots);
     setTargetIds(targets);
     setSelectedIds(new Set());
+    setMoveProgress(0);
     setPhase("highlight");
   };
 
@@ -108,6 +110,7 @@ export function MultipleObjectTrackingTest() {
       });
       dotsRef.current = next;
       setDots(next);
+      setMoveProgress(Math.min(1, elapsed / MOVE_MS));
 
       if (elapsed >= MOVE_MS) {
         setPhase("selecting");
@@ -159,6 +162,7 @@ export function MultipleObjectTrackingTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🎯</span>
           <p className="max-w-sm text-sm text-muted">
             A few dots will highlight briefly, then all dots look identical and start moving. Track the highlighted
             ones with your eyes, then click them once they stop.
@@ -185,10 +189,22 @@ export function MultipleObjectTrackingTest() {
 
   return (
     <TestFrame className="p-0">
-      <div className="absolute left-3 top-3 z-10 rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
-        {phase === "highlight" && "Memorize the highlighted dots…"}
-        {phase === "moving" && "Tracking…"}
-        {phase === "selecting" && `Click the ${targetCount} targets (${selectedIds.size}/${targetCount})`}
+      <div className="absolute left-0 top-0 z-10 w-full px-3 pt-3">
+        <div className="mx-auto flex max-w-xs justify-center">
+          <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
+            {phase === "highlight" && "👀 Memorize the highlighted dots…"}
+            {phase === "moving" && "🌀 Tracking…"}
+            {phase === "selecting" && `👉 Click the ${targetCount} targets (${selectedIds.size}/${targetCount})`}
+          </span>
+        </div>
+        {phase === "moving" && (
+          <div className="mx-auto mt-1.5 h-1.5 max-w-xs overflow-hidden rounded-full bg-surface-2">
+            <div
+              className="h-full rounded-full bg-primary transition-[width] duration-100"
+              style={{ width: `${moveProgress * 100}%` }}
+            />
+          </div>
+        )}
       </div>
       <div ref={areaRef} className="relative h-full min-h-[420px] w-full">
         {dots.map((d) => {
@@ -200,15 +216,17 @@ export function MultipleObjectTrackingTest() {
               onClick={() => toggleSelect(d.id)}
               disabled={phase !== "selecting"}
               aria-label={`dot ${d.id}`}
-              className={`absolute rounded-full border-2 transition-colors ${
+              className={`absolute flex items-center justify-center rounded-full border-2 shadow-sm transition-colors ${
                 isTarget
-                  ? "border-primary bg-primary"
+                  ? "scale-110 border-primary bg-primary ring-4 ring-primary/30"
                   : isSelected
                     ? "border-success bg-success"
                     : "border-border bg-foreground/70"
               }`}
               style={{ width: DOT_SIZE, height: DOT_SIZE, left: d.x, top: d.y }}
-            />
+            >
+              {isSelected && <span className="text-[10px] font-bold text-white">✓</span>}
+            </button>
           );
         })}
       </div>

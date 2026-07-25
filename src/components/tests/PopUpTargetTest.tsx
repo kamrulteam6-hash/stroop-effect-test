@@ -34,6 +34,7 @@ export function PopUpTargetTest() {
   const [hits, setHits] = useState(0);
   const [misses, setMisses] = useState(0);
   const [timeLeft, setTimeLeft] = useState(DURATION_S);
+  const [missFlash, setMissFlash] = useState<number | null>(null);
   const runningRef = useRef(false);
   const lastSpotRef = useRef<number | null>(null);
   const popTimeoutRef = useRef<number | undefined>(undefined);
@@ -62,6 +63,8 @@ export function PopUpTargetTest() {
       if (!runningRef.current) return;
       setMisses((m) => m + 1);
       setActiveSpot(null);
+      setMissFlash(spot);
+      window.setTimeout(() => setMissFlash((cur) => (cur === spot ? null : cur)), 250);
       scheduleNextPop(spd);
     }, POP_MS[spd]);
   };
@@ -125,6 +128,7 @@ export function PopUpTargetTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🎯</span>
           <p className="max-w-sm text-sm text-muted">
             A target will pop up at a random spot in the grid — click it before it disappears. Hit as many as you
             can in 30 seconds.
@@ -150,23 +154,35 @@ export function PopUpTargetTest() {
 
   return (
     <TestFrame>
-      <div className="flex flex-col items-center gap-6">
-        <div className="flex w-full max-w-xs items-center justify-between text-xs font-semibold text-muted-2">
-          <span>Hits: {hits}</span>
-          <span>Time: {timeLeft}s</span>
+      <div className="flex flex-col items-center gap-5">
+        <div className="flex w-full max-w-xs items-center justify-between">
+          <span className="rounded-full bg-success/10 px-3 py-1 text-xs font-bold text-success">🎯 {hits} hits</span>
+          <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">⏱️ {timeLeft}s</span>
         </div>
-        <div className="grid grid-cols-3 gap-3">
-          {Array.from({ length: GRID_SIZE }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => hitSpot(i)}
-              className="flex h-20 w-20 items-center justify-center rounded-full border border-border bg-surface-2 transition-colors sm:h-24 sm:w-24"
-            >
-              {activeSpot === i && (
-                <span className="h-14 w-14 animate-pop-in rounded-full bg-primary sm:h-16 sm:w-16" />
-              )}
-            </button>
-          ))}
+        <div className="h-1.5 w-full max-w-xs overflow-hidden rounded-full bg-surface-2">
+          <div
+            className="h-full rounded-full bg-primary transition-[width] duration-500 ease-linear"
+            style={{ width: `${(timeLeft / DURATION_S) * 100}%` }}
+          />
+        </div>
+        <div className="rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+          <div className="grid grid-cols-3 gap-3">
+            {Array.from({ length: GRID_SIZE }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => hitSpot(i)}
+                className={`flex h-20 w-20 items-center justify-center rounded-full border-2 transition-colors sm:h-24 sm:w-24 ${
+                  missFlash === i ? "border-danger bg-danger/10" : "border-border bg-surface"
+                }`}
+              >
+                {activeSpot === i && (
+                  <span className="flex h-14 w-14 animate-pop-in items-center justify-center rounded-full bg-primary text-2xl sm:h-16 sm:w-16">
+                    🎯
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </TestFrame>

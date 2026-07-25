@@ -19,6 +19,24 @@ function distanceFromMs(ms: number): number {
   return 0.5 * GRAVITY_CM_PER_S2 * t * t;
 }
 
+function RulerBar({ falling }: { falling: boolean }) {
+  return (
+    <div
+      className={`relative h-40 w-8 overflow-hidden rounded-sm border ${
+        falling ? "animate-pulse border-primary bg-primary" : "border-border bg-surface-2"
+      }`}
+    >
+      {Array.from({ length: 9 }, (_, i) => (
+        <span
+          key={i}
+          className={`absolute left-0 h-px w-full ${falling ? "bg-white/40" : "bg-border"}`}
+          style={{ top: `${(i + 1) * 10}%` }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function RulerDropTest() {
   const [stage, setStage] = useState<Stage>("idle");
   const [rounds, setRounds] = useState<Rounds>(5);
@@ -104,6 +122,7 @@ export function RulerDropTest() {
       <TestFrame>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">📏</span>
           <p className="max-w-sm text-sm text-muted">
             A ruler will drop without warning — click or tap the moment it starts falling. Just like the classic
             playground trick, but timed to the millisecond.
@@ -133,6 +152,15 @@ export function RulerDropTest() {
       className={`cursor-pointer select-none p-0 transition-colors ${stage === "too-soon" ? "bg-danger" : ""}`}
     >
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
+      {stage !== "too-soon" && (
+        <div className="absolute left-0 top-0 z-10 w-full px-3 pt-3">
+          <div className="mx-auto flex max-w-xs justify-center">
+            <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
+              Round {times.length + 1} / {rounds}
+            </span>
+          </div>
+        </div>
+      )}
       <div
         role="button"
         tabIndex={0}
@@ -142,21 +170,34 @@ export function RulerDropTest() {
       >
         {stage === "waiting" && (
           <>
-            <div className="h-40 w-6 rounded-sm border border-border bg-surface-2" />
-            <p className="text-lg font-semibold text-muted-2">Watch the ruler…</p>
+            <RulerBar falling={false} />
+            <p className="text-lg font-semibold text-muted-2">👀 Watch the ruler…</p>
           </>
         )}
         {stage === "ready" && (
           <>
-            <div className="h-40 w-6 animate-pulse rounded-sm border border-primary bg-primary" />
+            <RulerBar falling={true} />
             <p className="text-3xl font-black text-foreground">It&apos;s falling — click now!</p>
           </>
         )}
         {stage === "too-soon" && (
           <>
+            <span className="text-4xl">⏳</span>
             <p className="text-2xl font-black text-white">Too soon!</p>
             <p className="text-sm text-white/80">Click to try this round again</p>
           </>
+        )}
+        {times.length > 0 && stage !== "too-soon" && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {times.map((t, i) => (
+              <span
+                key={i}
+                className="rounded-full bg-surface-2 px-2 py-0.5 text-[10px] font-semibold text-muted-2"
+              >
+                {t}ms
+              </span>
+            ))}
+          </div>
         )}
       </div>
     </TestFrame>

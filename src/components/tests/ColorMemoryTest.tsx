@@ -85,6 +85,8 @@ export function ColorMemoryTest() {
   const tapColor = (index: number) => {
     if (phase !== "input") return;
     playColorTone(index);
+    setLitIndex(index);
+    window.setTimeout(() => setLitIndex((cur) => (cur === index ? null : cur)), 180);
     if (index === sequence[progress]) {
       const nextProgress = progress + 1;
       if (nextProgress >= sequence.length) {
@@ -123,10 +125,16 @@ export function ColorMemoryTest() {
       <TestFrame>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🎨</span>
           <p className="max-w-sm text-sm text-muted">
             Watch the growing pattern of colors and tones, then repeat it back by clicking the buttons in the same
-            order.
+            order. Each round adds one more step — how far can you go?
           </p>
+          <div className="grid grid-cols-2 gap-2 opacity-60">
+            {COLORS.map((c) => (
+              <span key={c.name} className="h-8 w-8 rounded-lg" style={{ backgroundColor: c.hex }} />
+            ))}
+          </div>
           <OptionsBar>
             <Segmented
               label="Speed"
@@ -150,26 +158,39 @@ export function ColorMemoryTest() {
     <TestFrame>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
       <div className="flex flex-col items-center gap-5">
+        <span className="rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary">
+          🎯 Level {level}
+        </span>
         <p className="text-xs font-medium text-muted-2">
-          Level {level} — {phase === "showing" ? "watch and listen" : "repeat the pattern"}
+          {phase === "showing" ? "👀 Watch and listen…" : "👉 Repeat the pattern"}
         </p>
-        <div className="grid grid-cols-2 gap-3">
-          {COLORS.map((c, index) => (
-            <button
-              key={c.name}
-              onClick={() => tapColor(index)}
-              disabled={phase === "showing"}
-              aria-label={c.name}
-              className="h-24 w-24 rounded-2xl border-2 transition-all sm:h-28 sm:w-28"
-              style={{
-                backgroundColor: c.hex,
-                opacity: litIndex === index ? 1 : 0.55,
-                borderColor: litIndex === index ? "white" : "transparent",
-                transform: litIndex === index ? "scale(1.05)" : "scale(1)",
-              }}
-            />
-          ))}
+        <div className="rounded-3xl border-2 border-border bg-surface-2 p-5 shadow-sm sm:p-6">
+          <div className="grid grid-cols-2 gap-3">
+            {COLORS.map((c, index) => (
+              <button
+                key={c.name}
+                onClick={() => tapColor(index)}
+                disabled={phase === "showing"}
+                aria-label={c.name}
+                className="h-24 w-24 rounded-2xl border-2 transition-all sm:h-28 sm:w-28"
+                style={{
+                  backgroundColor: c.hex,
+                  opacity: litIndex === index ? 1 : 0.55,
+                  borderColor: litIndex === index ? "white" : "transparent",
+                  boxShadow: litIndex === index ? "0 0 0 6px rgba(255,255,255,0.25)" : "none",
+                  transform: litIndex === index ? "scale(1.05)" : "scale(1)",
+                }}
+              />
+            ))}
+          </div>
         </div>
+        {sequence.length > 1 && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {Array.from({ length: sequence.length - 1 }, (_, i) => (
+              <span key={i} className="h-2 w-2 rounded-full bg-success" />
+            ))}
+          </div>
+        )}
       </div>
     </TestFrame>
   );

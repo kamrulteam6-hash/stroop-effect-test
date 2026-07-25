@@ -101,6 +101,7 @@ export function SchulteTableTest() {
       <TestFrame>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🔢</span>
           <p className="max-w-sm text-sm text-muted">
             Click the numbers 1 through {GRID_CONFIG[gridOption].total} in ascending order, as fast as you can. Try
             to keep your eyes near the center and use your peripheral vision to spot each number.
@@ -129,32 +130,45 @@ export function SchulteTableTest() {
     <TestFrame>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
       <div className="flex flex-col items-center gap-4">
-        <div className="flex w-full max-w-sm items-center justify-between text-xs font-medium text-muted-2">
-          <span>Next: {next}</span>
-          <span>{elapsed.toFixed(1)}s</span>
+        <div className="flex w-full max-w-sm items-center justify-between">
+          <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
+            🎯 Next: {next}
+          </span>
+          <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
+            ⏱️ {elapsed.toFixed(1)}s
+          </span>
         </div>
-        <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
-          {numbers.map((value) => {
-            const done = value < next;
-            const isWrong = wrongTile === value;
-            return (
-              <button
-                key={value}
-                onClick={() => tapTile(value)}
-                disabled={done}
-                className={`flex items-center justify-center rounded-lg border font-bold transition-colors ${tileClass} ${
-                  isWrong
-                    ? "border-danger bg-danger/20 text-danger"
-                    : done
-                      ? "border-border bg-surface-2 text-muted-2 opacity-40"
-                      : "border-border bg-surface text-foreground hover:border-primary/40"
-                }`}
-              >
-                {value}
-              </button>
-            );
-          })}
+        <div className="h-1.5 w-full max-w-sm overflow-hidden rounded-full bg-surface-2">
+          <div
+            className="h-full rounded-full bg-primary transition-[width] duration-150"
+            style={{ width: `${((next - 1) / total) * 100}%` }}
+          />
         </div>
+        <div className="rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+          <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
+            {numbers.map((value) => {
+              const done = value < next;
+              const isWrong = wrongTile === value;
+              return (
+                <button
+                  key={value}
+                  onClick={() => tapTile(value)}
+                  disabled={done}
+                  className={`flex items-center justify-center rounded-lg border font-bold transition-colors ${tileClass} ${
+                    isWrong
+                      ? "border-danger bg-danger/20 text-danger"
+                      : done
+                        ? "border-success/40 bg-success/10 text-success opacity-60"
+                        : "border-border bg-surface text-foreground hover:border-primary/40"
+                  }`}
+                >
+                  {done ? "✓" : value}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        {errors > 0 && <p className="text-xs text-danger">{errors} wrong tap{errors === 1 ? "" : "s"} so far</p>}
       </div>
     </TestFrame>
   );

@@ -144,6 +144,7 @@ export function FlankerTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🏹</span>
           <p className="max-w-sm text-sm text-muted">
             Respond only to the direction of the <strong className="text-foreground">center</strong> arrow — ignore
             the arrows around it. Use the Left/Right arrow keys or the buttons below.
@@ -169,11 +170,19 @@ export function FlankerTest() {
 
   return (
     <TestFrame>
-      <div className="flex flex-col items-center gap-8">
-        <p className="text-xs font-medium text-muted-2">
-          Trial {Math.min(trialIndex + 1, trialCount)} / {trialCount}
-        </p>
-        <div className="flex h-20 items-center justify-center text-4xl font-black tracking-widest text-foreground sm:text-5xl">
+      <div className="flex flex-col items-center gap-6">
+        <div className="w-full max-w-xs">
+          <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+            Trial {Math.min(trialIndex + 1, trialCount)} / {trialCount}
+          </p>
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+            <div
+              className="h-full rounded-full bg-primary transition-[width] duration-150"
+              style={{ width: `${(Math.min(trialIndex + 1, trialCount) / trialCount) * 100}%` }}
+            />
+          </div>
+        </div>
+        <div className="flex h-24 w-full max-w-sm items-center justify-center rounded-3xl border-2 border-border bg-surface-2 text-4xl font-black tracking-widest text-foreground shadow-sm sm:text-5xl">
           {currentTrial ? renderRow(currentTrial) : ""}
         </div>
         <div className="flex gap-4">
@@ -184,6 +193,13 @@ export function FlankerTest() {
             Right ▶
           </Button>
         </div>
+        {results.length > 0 && (
+          <div className="flex max-w-xs flex-wrap justify-center gap-1.5">
+            {results.map((r, i) => (
+              <span key={i} className={`h-2 w-2 rounded-full ${r.correct ? "bg-success" : "bg-danger"}`} />
+            ))}
+          </div>
+        )}
       </div>
     </TestFrame>
   );

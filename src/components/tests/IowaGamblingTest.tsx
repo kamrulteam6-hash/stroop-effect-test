@@ -26,6 +26,7 @@ export function IowaGamblingTest() {
   const [firstHalfGood, setFirstHalfGood] = useState(0);
   const [secondHalfGood, setSecondHalfGood] = useState(0);
   const [drawsSoFar, setDrawsSoFar] = useState(0);
+  const [flashDeck, setFlashDeck] = useState<{ deck: Deck; good: boolean } | null>(null);
 
   const start = () => {
     setMoney(0);
@@ -44,6 +45,8 @@ export function IowaGamblingTest() {
     setMoney((m) => m + net);
     setDeckCounts((prev) => ({ ...prev, [deck]: prev[deck] + 1 }));
     setLastResult({ deck, net });
+    setFlashDeck({ deck, good: net >= 0 });
+    window.setTimeout(() => setFlashDeck((cur) => (cur?.deck === deck ? null : cur)), 300);
 
     const isGoodDeck = deck === "C" || deck === "D";
     const drawNum = drawsSoFar + 1;
@@ -94,6 +97,7 @@ export function IowaGamblingTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🃏</span>
           <p className="max-w-sm text-sm text-muted">
             Draw {TOTAL_DRAWS} cards total from 4 decks, one at a time. Each card pays out money, but some decks
             hide bigger penalties than others. Try to end up with as much money as possible.
@@ -108,32 +112,53 @@ export function IowaGamblingTest() {
 
   return (
     <TestFrame>
-      <div className="flex flex-col items-center gap-6">
-        <div className="flex w-full max-w-sm items-center justify-between text-xs font-semibold text-muted-2">
-          <span>
-            Balance: <span className={money < 0 ? "text-danger" : "text-foreground"}>${money.toLocaleString()}</span>
+      <div className="flex flex-col items-center gap-5">
+        <div className="flex w-full max-w-sm items-center justify-between">
+          <span className={`rounded-full px-3 py-1 text-xs font-bold ${money < 0 ? "bg-danger/10 text-danger" : "bg-success/10 text-success"}`}>
+            💰 ${money.toLocaleString()}
           </span>
-          <span>Draws left: {drawsLeft}</span>
+          <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
+            🎴 {drawsLeft} draws left
+          </span>
+        </div>
+        <div className="h-1.5 w-full max-w-sm overflow-hidden rounded-full bg-surface-2">
+          <div
+            className="h-full rounded-full bg-primary transition-[width] duration-300"
+            style={{ width: `${(drawsSoFar / TOTAL_DRAWS) * 100}%` }}
+          />
         </div>
 
-        {lastResult && (
-          <p className={`text-sm font-semibold ${lastResult.net < 0 ? "text-danger" : "text-success"}`}>
-            Deck {lastResult.deck}: {lastResult.net >= 0 ? "+" : ""}
-            {lastResult.net.toLocaleString()}
-          </p>
-        )}
+        <p className="min-h-[1.25rem] text-sm font-semibold">
+          {lastResult ? (
+            <span className={lastResult.net < 0 ? "text-danger" : "text-success"}>
+              Deck {lastResult.deck}: {lastResult.net >= 0 ? "+" : ""}
+              {lastResult.net.toLocaleString()}
+            </span>
+          ) : (
+            <span className="text-muted-2">Pick a deck to draw your first card</span>
+          )}
+        </p>
 
-        <div className="grid grid-cols-4 gap-3">
-          {(["A", "B", "C", "D"] as Deck[]).map((deck) => (
-            <button
-              key={deck}
-              onClick={() => draw(deck)}
-              className="flex h-24 w-16 flex-col items-center justify-center gap-1 rounded-xl border-2 border-primary bg-primary/10 text-2xl font-black text-primary transition-transform hover:scale-105 sm:h-28 sm:w-20"
-            >
-              {deck}
-              <span className="text-[10px] font-medium text-muted-2">{deckCounts[deck]} drawn</span>
-            </button>
-          ))}
+        <div className="rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+          <div className="grid grid-cols-4 gap-3">
+            {(["A", "B", "C", "D"] as Deck[]).map((deck) => (
+              <button
+                key={deck}
+                onClick={() => draw(deck)}
+                className={`flex h-24 w-16 flex-col items-center justify-center gap-1 rounded-xl border-2 bg-gradient-to-b from-primary/20 to-primary/5 text-2xl font-black text-primary shadow-sm transition-all hover:scale-105 sm:h-28 sm:w-20 ${
+                  flashDeck?.deck === deck
+                    ? flashDeck.good
+                      ? "border-success ring-4 ring-success/25"
+                      : "border-danger ring-4 ring-danger/25"
+                    : "border-primary/40"
+                }`}
+              >
+                <span className="text-lg">🂠</span>
+                {deck}
+                <span className="text-[10px] font-medium text-muted-2">{deckCounts[deck]} drawn</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </TestFrame>

@@ -28,6 +28,7 @@ export function PitchDiscriminationTest() {
   const [results, setResults] = useState<RoundResult[]>([]);
   const [playing, setPlaying] = useState(false);
   const [answered, setAnswered] = useState<Direction | null>(null);
+  const [activeTone, setActiveTone] = useState<0 | 1 | 2>(0);
   const audioCtxRef = useRef<AudioContext | null>(null);
 
   const getCtx = () => {
@@ -58,6 +59,9 @@ export function PitchDiscriminationTest() {
     playTone(ctx, BASE_FREQ, now);
     playTone(ctx, freqFromCents(BASE_FREQ, gapCents, dir), now + 0.55);
     setPlaying(true);
+    setActiveTone(1);
+    window.setTimeout(() => setActiveTone(2), 550);
+    window.setTimeout(() => setActiveTone(0), 950);
     window.setTimeout(() => setPlaying(false), 1000);
   };
 
@@ -124,9 +128,11 @@ export function PitchDiscriminationTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🎧</span>
           <p className="max-w-sm text-sm text-muted">
-            Headphones recommended. Two tones will play, one after another — tell us whether the second tone was
-            higher or lower than the first. The gap narrows each round.
+            Headphones recommended. Two tones will play, one after another, across 12 rounds — tell us whether the
+            second tone was higher or lower than the first. The gap narrows each round, homing in on the smallest
+            difference you can reliably hear.
           </p>
           <Button size="lg" onClick={start}>
             Start Test
@@ -136,24 +142,80 @@ export function PitchDiscriminationTest() {
     );
   }
 
+  const wasCorrect = answered ? answered === direction : null;
+
   return (
     <TestFrame>
-      <div className="flex flex-col items-center gap-6 text-center">
-        <p className="text-xs font-medium text-muted-2">
-          Round {roundIndex + 1} / {GAPS_CENTS.length}
+      <div className="flex w-full max-w-sm flex-col items-center gap-6 text-center">
+        <div className="w-full">
+          <p className="mb-1.5 text-xs font-medium text-muted-2">
+            Round {roundIndex + 1} / {GAPS_CENTS.length}
+          </p>
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+            <div
+              className="h-full rounded-full bg-primary transition-[width] duration-300"
+              style={{ width: `${((roundIndex + 1) / GAPS_CENTS.length) * 100}%` }}
+            />
+          </div>
+        </div>
+
+        <div className="flex items-center gap-6">
+          <div className="flex flex-col items-center gap-1.5">
+            <span
+              className={`flex h-14 w-14 items-center justify-center rounded-full border-2 text-lg transition-all ${
+                activeTone === 1 ? "scale-110 border-primary bg-primary/15 ring-8 ring-primary/15" : "border-border bg-surface-2"
+              }`}
+            >
+              🎵
+            </span>
+            <span className="text-[10px] font-semibold uppercase tracking-wide text-muted-2">Tone 1</span>
+          </div>
+          <span className="text-xl text-muted-2">→</span>
+          <div className="flex flex-col items-center gap-1.5">
+            <span
+              className={`flex h-14 w-14 items-center justify-center rounded-full border-2 text-lg transition-all ${
+                activeTone === 2 ? "scale-110 border-accent bg-accent/15 ring-8 ring-accent/15" : "border-border bg-surface-2"
+              }`}
+            >
+              🎵
+            </span>
+            <span className="text-[10px] font-semibold uppercase tracking-wide text-muted-2">Tone 2</span>
+          </div>
+        </div>
+
+        <p className="min-h-[1.5rem] text-sm font-medium text-foreground">
+          {answered
+            ? wasCorrect
+              ? "✅ Correct!"
+              : "❌ Not quite"
+            : playing
+              ? "🔊 Playing tones…"
+              : "Was the second tone higher or lower?"}
         </p>
-        <p className="text-sm text-muted">{playing ? "🔊 Playing tones…" : "Was the second tone higher or lower?"}</p>
+
         <div className="flex gap-3">
           <Button variant="secondary" onClick={() => answer("lower")} disabled={!!answered}>
-            Lower
+            ⬇️ Lower
           </Button>
           <Button onClick={() => answer("higher")} disabled={!!answered}>
-            Higher
+            ⬆️ Higher
           </Button>
         </div>
         <Button variant="ghost" size="sm" onClick={replay} disabled={playing || !!answered}>
           🔁 Replay tones
         </Button>
+
+        {results.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {results.map((r, i) => (
+              <span
+                key={i}
+                className={`h-2 w-2 rounded-full ${r.correct ? "bg-success" : "bg-danger"}`}
+                title={`${r.gapCents} cents — ${r.correct ? "correct" : "missed"}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </TestFrame>
   );

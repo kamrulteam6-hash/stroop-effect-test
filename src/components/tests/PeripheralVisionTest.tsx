@@ -150,6 +150,7 @@ export function PeripheralVisionTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">👁️</span>
           <p className="max-w-sm text-sm text-muted">
             Keep your eyes fixed on the cross at the center — don&apos;t look away. Press spacebar the instant you notice
             a flash appear anywhere around it, without moving your eyes to look directly at it.
@@ -164,18 +165,46 @@ export function PeripheralVisionTest() {
 
   return (
     <TestFrame className="p-0">
-      <div className="absolute left-3 top-3 z-10 rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
-        Trial {Math.min(trialIndex + 1, TRIALS)} / {TRIALS}
+      <div className="absolute left-0 top-0 z-10 w-full px-3 pt-3">
+        <div className="mx-auto flex max-w-xs items-center justify-between">
+          <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
+            Trial {Math.min(trialIndex + 1, TRIALS)} / {TRIALS}
+          </span>
+          <span className="rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success">
+            🎯 {detectedCount} caught
+          </span>
+        </div>
+        <div className="mx-auto mt-1.5 h-1.5 max-w-xs overflow-hidden rounded-full bg-surface-2">
+          <div
+            className="h-full rounded-full bg-primary transition-[width] duration-150"
+            style={{ width: `${(Math.min(trialIndex + 1, TRIALS) / TRIALS) * 100}%` }}
+          />
+        </div>
       </div>
       <div ref={areaRef} className="relative h-full min-h-[420px] w-full">
+        <span className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border/60" />
+        <span className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border/30" />
         <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl font-bold text-foreground">
           +
         </span>
         {flash && (
-          <span
-            className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary"
-            style={{ left: flash.x, top: flash.y }}
-          />
+          <>
+            <span
+              className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary"
+              style={{ left: flash.x, top: flash.y }}
+            />
+            <span
+              className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-primary/60"
+              style={{ left: flash.x, top: flash.y }}
+            />
+          </>
+        )}
+        {results.length > 0 && (
+          <div className="absolute bottom-3 left-1/2 flex max-w-xs -translate-x-1/2 flex-wrap justify-center gap-1.5">
+            {results.map((r, i) => (
+              <span key={i} className={`h-2 w-2 rounded-full ${r.detected ? "bg-success" : "bg-danger"}`} />
+            ))}
+          </div>
         )}
       </div>
     </TestFrame>

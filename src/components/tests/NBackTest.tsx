@@ -133,6 +133,7 @@ export function NBackTest() {
       <TestFrame>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🧩</span>
           <p className="max-w-sm text-sm text-muted">
             A tile lights up each round. Click Match (or press spacebar) whenever the current tile is in the same
             position as it was N rounds ago.
@@ -169,24 +170,44 @@ export function NBackTest() {
   return (
     <TestFrame>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
-      <div className="flex flex-col items-center gap-6">
-        <p className="text-xs font-medium text-muted-2">
-          Trial {Math.min(trialIndex + 1, trialCount)} / {trialCount} — remember {nLevel} step{nLevel > 1 ? "s" : ""}{" "}
-          back
-        </p>
-        <div className="grid grid-cols-3 gap-3">
-          {Array.from({ length: GRID_SIZE }).map((_, idx) => (
+      <div className="flex flex-col items-center gap-5">
+        <div className="w-full max-w-xs">
+          <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+            Trial {Math.min(trialIndex + 1, trialCount)} / {trialCount} — remember {nLevel} step{nLevel > 1 ? "s" : ""}{" "}
+            back
+          </p>
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
             <div
-              key={idx}
-              className={`h-20 w-20 rounded-xl border transition-colors sm:h-24 sm:w-24 ${
-                litIndex === idx ? "border-primary bg-primary" : "border-border bg-surface-2"
-              }`}
+              className="h-full rounded-full bg-primary transition-[width] duration-150"
+              style={{ width: `${(Math.min(trialIndex + 1, trialCount) / trialCount) * 100}%` }}
             />
-          ))}
+          </div>
+        </div>
+        <div className="rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+          <div className="grid grid-cols-3 gap-3">
+            {Array.from({ length: GRID_SIZE }).map((_, idx) => (
+              <div
+                key={idx}
+                className={`h-20 w-20 rounded-xl border-2 transition-all sm:h-24 sm:w-24 ${
+                  litIndex === idx
+                    ? "scale-105 border-primary bg-primary ring-4 ring-primary/25"
+                    : "border-border bg-surface"
+                }`}
+              />
+            ))}
+          </div>
         </div>
         <Button size="lg" onClick={respondMatch} disabled={phase !== "stimulus"}>
-          Match
+          🎯 Match
         </Button>
+        {results.length > 0 && (
+          <div className="flex max-w-xs flex-wrap justify-center gap-1.5">
+            {results.map((r, i) => {
+              const wasCorrect = (r.isMatch && r.responded) || (!r.isMatch && !r.responded);
+              return <span key={i} className={`h-2 w-2 rounded-full ${wasCorrect ? "bg-success" : "bg-danger"}`} />;
+            })}
+          </div>
+        )}
       </div>
     </TestFrame>
   );

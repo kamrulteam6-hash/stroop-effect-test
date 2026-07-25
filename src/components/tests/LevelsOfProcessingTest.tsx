@@ -91,6 +91,25 @@ export function LevelsOfProcessingTest() {
           shareLabel={`I recalled ${deepPct}% of deep-encoded words vs ${shallowPct}% of shallow-encoded words on the Levels of Processing Test!`}
           onRetry={start}
         >
+          <div className="flex w-full max-w-xs flex-col gap-2.5">
+            {[
+              { label: "🧠 Deep-encoded (meaning)", value: deepPct },
+              { label: "👁️ Shallow-encoded (appearance)", value: shallowPct },
+            ].map((r) => (
+              <div key={r.label}>
+                <div className="mb-1 flex items-center justify-between text-[11px] font-semibold text-foreground">
+                  <span>{r.label}</span>
+                  <span>{r.value}%</span>
+                </div>
+                <div className="h-2 w-full overflow-hidden rounded-full bg-surface-2">
+                  <div
+                    className="h-full rounded-full bg-primary transition-[width] duration-700"
+                    style={{ width: `${r.value}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
           <p className="max-w-xs text-[11px] text-muted-2">
             Most people recall meaning-based (&quot;deep&quot;) words noticeably better than appearance-based
             (&quot;shallow&quot;) words — a well-established finding, not a personal memory quirk.
@@ -104,6 +123,7 @@ export function LevelsOfProcessingTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🔍</span>
           <p className="max-w-sm text-sm text-muted">
             You&apos;ll judge some words by how they look and others by what they mean. Afterward, a surprise memory
             test reveals which kind of judgment led to better recall.
@@ -121,13 +141,23 @@ export function LevelsOfProcessingTest() {
     const isCaps = shallowCases[index];
     return (
       <TestFrame>
-        <div className="flex flex-col items-center gap-8 text-center">
-          <p className="text-xs font-medium text-muted-2">
-            Appearance check {index + 1} / {SHALLOW_WORDS.length}
-          </p>
-          <span className="text-4xl font-black text-foreground sm:text-5xl">
-            {isCaps ? word.toUpperCase() : word}
-          </span>
+        <div className="flex flex-col items-center gap-6 text-center">
+          <div className="w-full max-w-xs">
+            <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+              👁️ Appearance check {index + 1} / {SHALLOW_WORDS.length}
+            </p>
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+              <div
+                className="h-full rounded-full bg-primary transition-[width] duration-150"
+                style={{ width: `${((index + 1) / SHALLOW_WORDS.length) * 100}%` }}
+              />
+            </div>
+          </div>
+          <div className="flex h-24 w-full max-w-sm items-center justify-center rounded-3xl border-2 border-border bg-surface-2 shadow-sm">
+            <span className="text-4xl font-black text-foreground sm:text-5xl">
+              {isCaps ? word.toUpperCase() : word}
+            </span>
+          </div>
           <p className="text-sm text-muted">Is this word in CAPITAL letters?</p>
           <div className="flex gap-4">
             <Button variant="secondary" onClick={advance}>
@@ -146,11 +176,21 @@ export function LevelsOfProcessingTest() {
     const word = DEEP_WORDS[index];
     return (
       <TestFrame>
-        <div className="flex flex-col items-center gap-8 text-center">
-          <p className="text-xs font-medium text-muted-2">
-            Meaning check {index + 1} / {DEEP_WORDS.length}
-          </p>
-          <span className="text-4xl font-black text-foreground sm:text-5xl">{word}</span>
+        <div className="flex flex-col items-center gap-6 text-center">
+          <div className="w-full max-w-xs">
+            <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+              🧠 Meaning check {index + 1} / {DEEP_WORDS.length}
+            </p>
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+              <div
+                className="h-full rounded-full bg-accent transition-[width] duration-150"
+                style={{ width: `${((index + 1) / DEEP_WORDS.length) * 100}%` }}
+              />
+            </div>
+          </div>
+          <div className="flex h-24 w-full max-w-sm items-center justify-center rounded-3xl border-2 border-border bg-surface-2 shadow-sm">
+            <span className="text-4xl font-black text-foreground sm:text-5xl">{word}</span>
+          </div>
           <p className="text-sm text-muted">Does this word refer to a living thing?</p>
           <div className="flex gap-4">
             <Button variant="secondary" onClick={advance}>
@@ -169,6 +209,7 @@ export function LevelsOfProcessingTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">☕</span>
           <p className="max-w-sm text-sm text-muted">
             Quick break before the memory test — take a breath, then continue when ready.
           </p>
@@ -182,24 +223,30 @@ export function LevelsOfProcessingTest() {
 
   return (
     <TestFrame>
-      <div className="flex w-full max-w-lg flex-col items-center gap-6">
+      <div className="flex w-full max-w-lg flex-col items-center gap-5">
+        <span className="rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary">
+          🧠 {selected.size} word{selected.size === 1 ? "" : "s"} marked
+        </span>
         <p className="max-w-sm text-center text-xs text-muted-2">
           Click every word you remember judging earlier. Some are new words that weren&apos;t shown before.
         </p>
-        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4">
-          {recognitionWords.map((word) => (
-            <button
-              key={word}
-              onClick={() => toggle(word)}
-              className={`rounded-lg border px-2 py-2 text-xs font-medium transition-colors sm:text-sm ${
-                selected.has(word)
-                  ? "border-primary bg-primary/10 text-foreground"
-                  : "border-border bg-surface-2 text-muted hover:border-primary"
-              }`}
-            >
-              {word}
-            </button>
-          ))}
+        <div className="w-full rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+          <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4">
+            {recognitionWords.map((word) => (
+              <button
+                key={word}
+                onClick={() => toggle(word)}
+                className={`flex items-center justify-center gap-1 rounded-lg border px-2 py-2 text-xs font-medium transition-colors sm:text-sm ${
+                  selected.has(word)
+                    ? "border-primary bg-primary/15 text-foreground"
+                    : "border-border bg-surface text-muted hover:border-primary/40"
+                }`}
+              >
+                {selected.has(word) && <span className="text-primary">✓</span>}
+                {word}
+              </button>
+            ))}
+          </div>
         </div>
         <Button size="lg" onClick={submit}>
           Submit

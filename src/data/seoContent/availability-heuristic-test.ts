@@ -13,7 +13,7 @@ export const content: TestSeoContent = {
     },
     {
       type: "paragraph",
-      text: "You'll answer 4 quick questions, each asking you to judge which of two things is more common. Pick whichever option genuinely feels more frequent to you. Your result reveals the actual answer for each one, along with a short explanation of why intuition and reality diverge — some are classic demonstrations from psychology research, and some are things you can verify with basic logic alone.",
+      text: "You'll answer 12 quick questions, each asking you to judge which of two things is more common. Pick whichever option genuinely feels more frequent to you. Your result reveals the actual answer for each one, along with a short explanation of why intuition and reality diverge — some are classic demonstrations from psychology research, and some are things you can verify with basic logic alone.",
     },
     {
       type: "heading",

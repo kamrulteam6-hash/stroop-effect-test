@@ -87,6 +87,7 @@ export function VocabularySizeTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">📖</span>
           <p className="max-w-sm text-sm text-muted">
             You&apos;ll see a list of words — some real, some made-up decoys. Mark only the ones you genuinely know
             the meaning of, then submit to get your estimated vocabulary size.
@@ -101,24 +102,30 @@ export function VocabularySizeTest() {
 
   return (
     <TestFrame>
-      <div className="flex w-full max-w-lg flex-col items-center gap-6">
+      <div className="flex w-full max-w-lg flex-col items-center gap-5">
+        <span className="rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary">
+          📚 {known.size} word{known.size === 1 ? "" : "s"} marked
+        </span>
         <p className="max-w-sm text-center text-xs text-muted-2">
           Click every word you genuinely know the meaning of. Some are made-up — don&apos;t guess.
         </p>
-        <div className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4">
-          {words.map((word) => (
-            <button
-              key={word}
-              onClick={() => toggle(word)}
-              className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
-                known.has(word)
-                  ? "border-primary bg-primary/10 text-foreground"
-                  : "border-border bg-surface-2 text-muted hover:border-primary"
-              }`}
-            >
-              {word}
-            </button>
-          ))}
+        <div className="w-full rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+          <div className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4">
+            {words.map((word) => (
+              <button
+                key={word}
+                onClick={() => toggle(word)}
+                className={`flex items-center justify-center gap-1 rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
+                  known.has(word)
+                    ? "border-primary bg-primary/15 text-foreground"
+                    : "border-border bg-surface text-muted hover:border-primary/40"
+                }`}
+              >
+                {known.has(word) && <span className="text-xs text-primary">✓</span>}
+                {word}
+              </button>
+            ))}
+          </div>
         </div>
         <Button size="lg" onClick={submit}>
           Submit
