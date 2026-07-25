@@ -4,7 +4,7 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "The exact same choice, with the exact same numbers, can lead people to completely different decisions depending purely on how it's worded. This test walks you through two decisions built around identical math but different framing, so you can notice how much wording alone can shape what feels like the \"obvious\" choice.",
+      text: "The exact same choice, with the exact same numbers, can lead people to completely different decisions depending purely on how it's worded. This test walks you through five decisions built around identical math but different framing, so you can notice how much wording alone can shape what feels like the \"obvious\" choice.",
     },
     {
       type: "heading",
@@ -13,7 +13,7 @@ export const content: TestSeoContent = {
     },
     {
       type: "paragraph",
-      text: "You'll face 2 scenarios, each with a guaranteed option and a 50/50 gamble that has the exact same average outcome as the guaranteed one. Each scenario is randomly presented to you as either a gain (something to save or keep) or a loss (something to lose or pay) — pick whichever option you'd genuinely choose. Afterward, you'll see which framing you got and how it compares to the general research pattern.",
+      text: "You'll face 5 scenarios, each with a guaranteed option and a gamble that has the exact same average outcome as the guaranteed one. Each scenario is randomly presented to you as either a gain (something to save or keep) or a loss (something to lose or pay) — pick whichever option you'd genuinely choose. Afterward, you'll see which framing you got and how it compares to the general research pattern.",
     },
     {
       type: "heading",
@@ -50,7 +50,7 @@ export const content: TestSeoContent = {
       icon: "🪟",
       title: "A general pattern, not a verdict on your choice",
       tone: "gold",
-      text: "With just 2 decisions, this test can't prove anything about your personal decision-making style — it's meant to demonstrate a well-replicated pattern found across large research studies.",
+      text: "With just 5 decisions, this test can't prove anything about your personal decision-making style — it's meant to demonstrate a well-replicated pattern found across large research studies.",
     },
     {
       type: "paragraph",

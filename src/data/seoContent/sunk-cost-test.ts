@@ -4,7 +4,7 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "Money or effort you've already spent is gone no matter what you decide next — yet most people let it influence their choices anyway. This test walks you through 5 everyday scenarios built around exactly that pattern, known as the sunk cost fallacy, so you can see how often already-spent resources shape what you'd actually do.",
+      text: "Money or effort you've already spent is gone no matter what you decide next — yet most people let it influence their choices anyway. This test walks you through 8 everyday scenarios built around exactly that pattern, known as the sunk cost fallacy, so you can see how often already-spent resources shape what you'd actually do.",
     },
     {
       type: "heading",
@@ -13,7 +13,7 @@ export const content: TestSeoContent = {
     },
     {
       type: "paragraph",
-      text: "You'll face 5 short scenarios, each involving money or effort already spent on something that's no longer paying off. For each one, pick whichever option you'd honestly choose. Your result shows how many of your 5 choices were driven by the sunk cost rather than by what actually makes sense going forward.",
+      text: "You'll face 8 short scenarios, each involving money, time, or effort already spent on something that's no longer paying off. For each one, pick whichever option you'd honestly choose. Your result shows how many of your 8 choices were driven by the sunk cost rather than by what actually makes sense going forward.",
     },
     {
       type: "heading",

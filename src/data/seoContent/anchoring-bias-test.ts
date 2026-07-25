@@ -13,7 +13,7 @@ export const content: TestSeoContent = {
     },
     {
       type: "paragraph",
-      text: "You'll answer 3 trivia questions. Before each one, you'll see a reference number — randomly either a high or low one — and quickly judge whether the real answer is more or less than it. Then you'll type in your actual best guess. Afterward, you'll see your estimate next to the anchor you saw and the real answer, so you can notice whether your guess landed closer to the anchor than you might expect.",
+      text: "You'll answer 5 trivia questions. Before each one, you'll see a reference number — randomly either a high or low one — and quickly judge whether the real answer is more or less than it. Then you'll type in your actual best guess. Afterward, you'll see your estimate next to the anchor you saw and the real answer, so you can notice whether your guess landed closer to the anchor than you might expect.",
     },
     {
       type: "heading",
@@ -50,7 +50,7 @@ export const content: TestSeoContent = {
       icon: "⚓",
       title: "This is a general finding, not a claim about you specifically",
       tone: "gold",
-      text: "With just 3 questions, this test can't prove your individual bias with certainty — it's meant to give you a felt sense of how the effect generally works, based on decades of replicated research.",
+      text: "With just 5 questions, this test can't prove your individual bias with certainty — it's meant to give you a felt sense of how the effect generally works, based on decades of replicated research.",
     },
     {
       type: "paragraph",
@@ -80,7 +80,7 @@ export const content: TestSeoContent = {
             "Adjustment away from an anchor tends to stop as soon as an answer feels plausible, rather than continuing to a fully unbiased estimate, which makes the effect resistant to willpower alone.",
         },
         {
-          question: "Is 3 questions enough to prove I'm personally biased?",
+          question: "Is 5 questions enough to prove I'm personally biased?",
           answer:
             "Not with statistical certainty for an individual — this test is designed to give you a felt sense of the effect, which has been established through much larger controlled studies across many participants.",
         },

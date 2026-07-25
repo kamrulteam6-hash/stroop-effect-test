@@ -21,6 +21,16 @@ function generateRound(): Round {
   return { streak: Array.from({ length }, () => side) };
 }
 
+function Coin({ side, size = "h-12 w-12 text-lg" }: { side: Side; size?: string }) {
+  return (
+    <span
+      className={`flex ${size} items-center justify-center rounded-full border-2 border-gold bg-gradient-to-br from-gold/40 to-gold/10 font-black text-gold shadow-sm`}
+    >
+      {side}
+    </span>
+  );
+}
+
 export function GamblersFallacyTest() {
   const [phase, setPhase] = useState<Phase>("idle");
   const [index, setIndex] = useState(0);
@@ -57,6 +67,28 @@ export function GamblersFallacyTest() {
           shareLabel={`I correctly recognized ${correctCount}/${ROUNDS} coin flips as truly 50/50 on the Gambler's Fallacy Test!`}
           onRetry={start}
         >
+          <div className="flex w-full max-w-sm flex-col gap-2">
+            {rounds.map((r, i) => {
+              const wasCorrect = answers[i] === "equal";
+              const answerLabel =
+                answers[i] === "equal" ? "50/50" : answers[i] === "same" ? "streak continues" : "due for a change";
+              return (
+                <div
+                  key={i}
+                  className={`flex items-center justify-between gap-2 rounded-xl border px-3 py-2 ${
+                    wasCorrect ? "border-success/30 bg-success/10" : "border-danger/30 bg-danger/10"
+                  }`}
+                >
+                  <span className="flex items-center gap-1 text-xs font-semibold text-foreground">
+                    <Coin side={r.streak[0]} size="h-6 w-6 text-[10px]" />
+                    {r.streak.length}× in a row
+                  </span>
+                  <span className="text-[11px] text-muted-2">You said: {answerLabel}</span>
+                  <span>{wasCorrect ? "✅" : "❌"}</span>
+                </div>
+              );
+            })}
+          </div>
           <p className="max-w-xs text-[11px] text-muted-2">
             A fair coin has no memory — no matter how long a streak runs, the next flip is always exactly 50/50.
           </p>
@@ -69,6 +101,7 @@ export function GamblersFallacyTest() {
     return (
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
+          <span className="text-5xl">🪙</span>
           <p className="max-w-sm text-sm text-muted">
             You&apos;ll see 4 coin-flip streaks. After each one, guess what you think is most likely for the next
             flip.
@@ -94,12 +127,7 @@ export function GamblersFallacyTest() {
         </p>
         <div className="flex flex-wrap justify-center gap-2">
           {round.streak.map((s, i) => (
-            <span
-              key={i}
-              className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-primary/10 text-lg font-bold text-primary"
-            >
-              {s}
-            </span>
+            <Coin key={i} side={s} />
           ))}
         </div>
         <p className="text-lg font-semibold text-foreground">
@@ -110,19 +138,19 @@ export function GamblersFallacyTest() {
             onClick={() => choose("same")}
             className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary"
           >
-            {sideLabel} again — it&apos;s on a streak
+            🔥 {sideLabel} again — it&apos;s on a streak
           </button>
           <button
             onClick={() => choose("flip")}
             className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary"
           >
-            {oppositeLabel} — it&apos;s due for a change
+            🔄 {oppositeLabel} — it&apos;s due for a change
           </button>
           <button
             onClick={() => choose("equal")}
             className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary"
           >
-            Equally likely — 50/50 either way
+            ⚖️ Equally likely — 50/50 either way
           </button>
         </div>
       </div>

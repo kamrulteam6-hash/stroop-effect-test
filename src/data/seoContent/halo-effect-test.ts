@@ -13,7 +13,7 @@ export const content: TestSeoContent = {
     },
     {
       type: "paragraph",
-      text: "You'll read one short detail about two different fictional people — one described in a positive light, one in a more negative light. For each person, you'll then rate them on 5 completely unrelated traits: intelligence, trustworthiness, kindness, competence, and sense of humor. Your result compares your average ratings for each person, even though you were never given any real information relevant to those specific traits.",
+      text: "You'll meet 4 fictional people through a short introduction story, each containing exactly one real detail about them — two in a positive light, two in a more negative light. For each person, you'll rate them on 5 completely unrelated traits: intelligence, trustworthiness, kindness, competence, and sense of humor. Your result shows your personal \"Halo Gap\" — the average rating difference between the positively and negatively introduced people — plus a trait-by-trait breakdown, even though you were never given any real information relevant to those specific traits.",
     },
     {
       type: "heading",

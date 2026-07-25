@@ -13,7 +13,7 @@ export const content: TestSeoContent = {
     },
     {
       type: "paragraph",
-      text: "You'll read 3 short descriptions of fictional people, each written to strongly suggest a particular stereotype. For each one, you'll pick which of two statements about that person seems more likely: a single, general statement, or a more specific statement that combines two conditions. Your result shows how many times you picked the more specific, combined option — the one that's actually mathematically impossible to be more likely than the general one.",
+      text: "You'll read 6 short descriptions of fictional people, each written to strongly suggest a particular stereotype. For each one, you'll pick which of two statements about that person seems more likely: a single, general statement, or a more specific statement that combines two conditions. Your result shows how many times you picked the more specific, combined option — the one that's actually mathematically impossible to be more likely than the general one.",
     },
     {
       type: "heading",
