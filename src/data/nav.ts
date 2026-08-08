@@ -2,6 +2,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/test/stroop-effect-test", label: "Stroop Test" },
   { href: "/tests", label: "All Tests" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export const footerLinks: Record<string, { href: string; label: string }[]> = {
@@ -31,5 +32,8 @@ export const footerLinks: Record<string, { href: string; label: string }[]> = {
     { href: "/test/color-memory-game", label: "Color Memory Game" },
     { href: "/test/rhythm-tapping-test", label: "Rhythm Tapping Test" },
   ],
-  Explore: [{ href: "/tests", label: "Browse All Tests" }],
+  Explore: [
+    { href: "/tests", label: "Browse All Tests" },
+    { href: "/blog", label: "Blog" },
+  ],
 };
