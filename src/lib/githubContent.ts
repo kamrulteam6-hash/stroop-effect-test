@@ -50,6 +50,28 @@ export async function putFile(path: string, content: string, message: string, sh
   if (!res.ok) throw new Error(`GitHub putFile ${path} failed: ${res.status} ${await res.text()}`);
 }
 
+/** Creates or updates a binary file (e.g. an image) from already-base64-encoded content. */
+export async function putBinaryFile(path: string, base64Content: string, message: string): Promise<void> {
+  const { token, repo, branch } = getConfig();
+  const res = await fetch(`${API_BASE}/repos/${repo}/contents/${path}`, {
+    method: "PUT",
+    headers: { ...authHeaders(token), "Content-Type": "application/json" },
+    body: JSON.stringify({ message, content: base64Content, branch }),
+  });
+  if (!res.ok) throw new Error(`GitHub putBinaryFile ${path} failed: ${res.status} ${await res.text()}`);
+}
+
+/** Deletes a file. Requires its current sha (fetch via getFile first). */
+export async function deleteFile(path: string, message: string, sha: string): Promise<void> {
+  const { token, repo, branch } = getConfig();
+  const res = await fetch(`${API_BASE}/repos/${repo}/contents/${path}`, {
+    method: "DELETE",
+    headers: { ...authHeaders(token), "Content-Type": "application/json" },
+    body: JSON.stringify({ message, sha, branch }),
+  });
+  if (!res.ok) throw new Error(`GitHub deleteFile ${path} failed: ${res.status} ${await res.text()}`);
+}
+
 export interface GithubDirEntry {
   name: string;
   path: string;
@@ -66,4 +88,16 @@ export async function listDir(path: string): Promise<GithubDirEntry[]> {
   if (!res.ok) throw new Error(`GitHub listDir ${path} failed: ${res.status} ${await res.text()}`);
   const data = (await res.json()) as { name: string; path: string; type: string }[];
   return data.filter((e) => e.type === "file").map((e) => ({ name: e.name, path: e.path }));
+}
+
+/**
+ * GitHub returns 404 both when a path genuinely doesn't exist AND when the token
+ * lacks access to the repo (to avoid leaking private-repo existence). When a post
+ * list comes back empty, checking this separately helps tell "no posts yet" apart
+ * from "your token can't see this repo at all" for a much clearer error message.
+ */
+export async function checkRepoAccess(): Promise<boolean> {
+  const { token, repo } = getConfig();
+  const res = await fetch(`${API_BASE}/repos/${repo}`, { headers: authHeaders(token), cache: "no-store" });
+  return res.ok;
 }

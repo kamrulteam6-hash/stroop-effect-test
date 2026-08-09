@@ -4,6 +4,7 @@ export interface PostFields {
   excerpt: string;
   date: string;
   tags: string[];
+  featuredImage?: string;
 }
 
 export interface PostInput extends PostFields {
@@ -22,12 +23,15 @@ export function slugify(title: string): string {
 export function buildPostFile(input: PostInput): string {
   const needsTestPromo = /<TestPromo\b/.test(input.body);
   const importLine = needsTestPromo ? `import { TestPromo } from "@/components/blog/TestPromo";\n\n` : "";
+  const featuredImageLine = input.featuredImage
+    ? `\n  featuredImage: ${JSON.stringify(input.featuredImage)},`
+    : "";
   const metadata = `export const metadata = {
   title: ${JSON.stringify(input.title)},
   description: ${JSON.stringify(input.description)},
   excerpt: ${JSON.stringify(input.excerpt)},
   date: ${JSON.stringify(input.date)},
-  tags: ${JSON.stringify(input.tags)},
+  tags: ${JSON.stringify(input.tags)},${featuredImageLine}
 };`;
   return `${importLine}${metadata}\n\n${input.body.trim()}\n`;
 }
@@ -55,6 +59,20 @@ export function addSlugToRegistry(source: string, slug: string): string {
       const trimmed = inner.trim();
       const sep = trimmed.length > 0 ? ", " : "";
       return `${open}${inner}${sep}"${slug}"${close}`;
+    }
+  );
+}
+
+/** Removes a slug from the BLOG_SLUGS array in blog.ts's source. */
+export function removeSlugFromRegistry(source: string, slug: string): string {
+  return source.replace(
+    /(export const BLOG_SLUGS = \[)([^\]]*)(\] as const;)/,
+    (_match, open: string, inner: string, close: string) => {
+      const items = inner
+        .split(",")
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0 && s !== `"${slug}"`);
+      return `${open}${items.join(", ")}${close}`;
     }
   );
 }

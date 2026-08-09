@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_SLUGS, BlogMeta } from "@/data/blog";
@@ -26,7 +27,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const mod = await loadPost(slug);
   if (!mod) return {};
-  const { title, description } = mod.metadata;
+  const { title, description, featuredImage } = mod.metadata;
 
   return {
     title,
@@ -37,6 +38,7 @@ export async function generateMetadata({
       description,
       url: `https://www.stroopeffecttest.com/blog/${slug}`,
       type: "article",
+      ...(featuredImage ? { images: [{ url: featuredImage }] } : {}),
     },
   };
 }
@@ -93,6 +95,19 @@ export default async function BlogPostPage({
       <time dateTime={metadata.date} className="mt-2 block text-xs text-muted-2">
         {new Date(metadata.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
       </time>
+
+      {metadata.featuredImage && (
+        <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-surface-2">
+          <Image
+            src={metadata.featuredImage}
+            alt={metadata.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
 
       <article className="mt-8 flex flex-col gap-5">
         <Post />

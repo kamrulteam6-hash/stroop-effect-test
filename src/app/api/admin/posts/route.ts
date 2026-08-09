@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifySessionToken, SESSION_COOKIE } from "@/lib/adminAuth";
-import { listDir, getFile } from "@/lib/githubContent";
+import { listDir, getFile, checkRepoAccess } from "@/lib/githubContent";
 import { parsePostFile } from "@/lib/blogPostFile";
 
 const CONTENT_DIR = "src/content/blog";
@@ -30,7 +30,12 @@ export async function GET(request: NextRequest) {
     const validPosts = posts.filter((p): p is NonNullable<typeof p> => p !== null);
     validPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-    return NextResponse.json({ posts: validPosts });
+    if (validPosts.length === 0) {
+      const repoAccessible = await checkRepoAccess().catch(() => false);
+      return NextResponse.json({ posts: [], repoAccessible });
+    }
+
+    return NextResponse.json({ posts: validPosts, repoAccessible: true });
   } catch (err) {
     return NextResponse.json({ error: err instanceof Error ? err.message : "Failed to load posts" }, { status: 500 });
   }

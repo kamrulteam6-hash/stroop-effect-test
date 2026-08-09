@@ -22,6 +22,7 @@ export async function POST(request: NextRequest) {
     date: typeof data.date === "string" && data.date ? data.date : new Date().toISOString().slice(0, 10),
     tags: Array.isArray(data.tags) ? data.tags.filter((t: unknown) => typeof t === "string" && t.trim()) : [],
     body: typeof data.body === "string" ? data.body : "",
+    ...(typeof data.featuredImage === "string" && data.featuredImage ? { featuredImage: data.featuredImage } : {}),
   };
 
   const slug: string = (typeof data.slug === "string" && data.slug.trim()) || slugify(input.title);

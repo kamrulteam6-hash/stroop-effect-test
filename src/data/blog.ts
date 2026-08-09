@@ -4,6 +4,7 @@ export interface BlogMeta {
   excerpt: string;
   date: string;
   tags: string[];
+  featuredImage?: string;
 }
 
 /** Every published post's slug. Add new posts here after dropping the .mdx file in src/content/blog/. */
