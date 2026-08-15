@@ -88,6 +88,14 @@ import { NumericalStroopTest } from "@/components/tests/NumericalStroopTest";
 import { EmotionalStroopTest } from "@/components/tests/EmotionalStroopTest";
 import { NavonTest } from "@/components/tests/NavonTest";
 import { NegativePrimingTest } from "@/components/tests/NegativePrimingTest";
+import { InhibitionOfReturnTest } from "@/components/tests/InhibitionOfReturnTest";
+import { FlickerChangeDetectionTest } from "@/components/tests/FlickerChangeDetectionTest";
+import { SpatialSearchTest } from "@/components/tests/SpatialSearchTest";
+import { BackwardSpatialSpanTest } from "@/components/tests/BackwardSpatialSpanTest";
+import { VisualPairedAssociatesTest } from "@/components/tests/VisualPairedAssociatesTest";
+import { VerbalPairedAssociatesTest } from "@/components/tests/VerbalPairedAssociatesTest";
+import { ProspectiveMemoryTest } from "@/components/tests/ProspectiveMemoryTest";
+import { SerialAdditionTest } from "@/components/tests/SerialAdditionTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -178,4 +186,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "emotional-stroop": EmotionalStroopTest,
   navon: NavonTest,
   "negative-priming": NegativePrimingTest,
+  "inhibition-of-return": InhibitionOfReturnTest,
+  "flicker-change-detection": FlickerChangeDetectionTest,
+  "spatial-search": SpatialSearchTest,
+  "backward-spatial-span": BackwardSpatialSpanTest,
+  "visual-paired-associates": VisualPairedAssociatesTest,
+  "verbal-paired-associates": VerbalPairedAssociatesTest,
+  "prospective-memory": ProspectiveMemoryTest,
+  "serial-addition": SerialAdditionTest,
 };

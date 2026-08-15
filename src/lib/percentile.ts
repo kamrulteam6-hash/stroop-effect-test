@@ -80,6 +80,14 @@ const MODELS: Record<string, PercentileModel> = {
   "emotional-stroop-test": { mean: 60, stdev: 40, direction: "lower" },
   "navon-test": { mean: 70, stdev: 35, direction: "lower" },
   "negative-priming-test": { mean: 40, stdev: 30, direction: "lower" },
+  "inhibition-of-return-test": { mean: 25, stdev: 20, direction: "higher" },
+  "flicker-change-detection-test": { mean: 3500, stdev: 2000, direction: "lower" },
+  "spatial-search-test": { mean: 900, stdev: 300, direction: "lower" },
+  "backward-spatial-span-test": { mean: 5, stdev: 1.5, direction: "higher" },
+  "visual-paired-associates-test": { mean: 65, stdev: 18, direction: "higher" },
+  "verbal-paired-associates-test": { mean: 55, stdev: 20, direction: "higher" },
+  "prospective-memory-test": { mean: 65, stdev: 25, direction: "higher" },
+  "serial-addition-test": { mean: 15, stdev: 7, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

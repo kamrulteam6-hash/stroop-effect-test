@@ -87,6 +87,14 @@ import { content as numericalStroopTest } from "@/data/seoContent/numerical-stro
 import { content as emotionalStroopTest } from "@/data/seoContent/emotional-stroop-test";
 import { content as navonTest } from "@/data/seoContent/navon-test";
 import { content as negativePrimingTest } from "@/data/seoContent/negative-priming-test";
+import { content as inhibitionOfReturnTest } from "@/data/seoContent/inhibition-of-return-test";
+import { content as flickerChangeDetectionTest } from "@/data/seoContent/flicker-change-detection-test";
+import { content as spatialSearchTest } from "@/data/seoContent/spatial-search-test";
+import { content as backwardSpatialSpanTest } from "@/data/seoContent/backward-spatial-span-test";
+import { content as visualPairedAssociatesTest } from "@/data/seoContent/visual-paired-associates-test";
+import { content as verbalPairedAssociatesTest } from "@/data/seoContent/verbal-paired-associates-test";
+import { content as prospectiveMemoryTest } from "@/data/seoContent/prospective-memory-test";
+import { content as serialAdditionTest } from "@/data/seoContent/serial-addition-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -177,4 +185,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "emotional-stroop-test": emotionalStroopTest,
   "navon-test": navonTest,
   "negative-priming-test": negativePrimingTest,
+  "inhibition-of-return-test": inhibitionOfReturnTest,
+  "flicker-change-detection-test": flickerChangeDetectionTest,
+  "spatial-search-test": spatialSearchTest,
+  "backward-spatial-span-test": backwardSpatialSpanTest,
+  "visual-paired-associates-test": visualPairedAssociatesTest,
+  "verbal-paired-associates-test": verbalPairedAssociatesTest,
+  "prospective-memory-test": prospectiveMemoryTest,
+  "serial-addition-test": serialAdditionTest,
 };

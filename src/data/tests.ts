@@ -98,7 +98,15 @@ export type ComponentKey =
   | "numerical-stroop"
   | "emotional-stroop"
   | "navon"
-  | "negative-priming";
+  | "negative-priming"
+  | "inhibition-of-return"
+  | "flicker-change-detection"
+  | "spatial-search"
+  | "backward-spatial-span"
+  | "visual-paired-associates"
+  | "verbal-paired-associates"
+  | "prospective-memory"
+  | "serial-addition";
 
 export interface TestDefinition {
   slug: string;
@@ -1809,6 +1817,134 @@ export const tests: TestDefinition[] = [
     difficulty: "Hard",
     componentKey: "negative-priming",
     scoreDirection: "lower",
+  },
+  {
+    slug: "inhibition-of-return-test",
+    title: "Inhibition of Return Test",
+    metaTitle: "Inhibition of Return Test — Free Online Attention Test",
+    shortTitle: "Inhibition of Return",
+    category: "Focus & Attention",
+    icon: "↩️",
+    shortDescription: "React to targets after a cue, revealing how attention resists returning to a previously cued spot.",
+    metaDescription:
+      "Free online Inhibition of Return Test. Measure how your attention resists returning to a previously cued location.",
+    keywords: ["inhibition of return test", "ior test online", "visual attention test", "cueing attention test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "inhibition-of-return",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "flicker-change-detection-test",
+    title: "Flicker Change Detection Test",
+    metaTitle: "Flicker Change Detection Test — Free Online Change Blindness Test",
+    shortTitle: "Flicker Detection",
+    category: "Perception",
+    icon: "✨",
+    shortDescription: "Find the one shape that changes as a grid flickers between two nearly identical versions.",
+    metaDescription:
+      "Free online Flicker Change Detection Test. Find the one item that changes as a scene flickers between two versions.",
+    keywords: ["flicker change detection test", "change blindness test online", "spot the difference test", "visual attention test"],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "flicker-change-detection",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "spatial-search-test",
+    title: "Spatial Search Test",
+    metaTitle: "Spatial Search Test — Free Online Location Memory Test",
+    shortTitle: "Spatial Search",
+    category: "Memory & Cognition",
+    icon: "📍",
+    shortDescription: "Remember a briefly highlighted cell's location and click it once the grid goes blank.",
+    metaDescription:
+      "Free online Spatial Search Test. Measure your spatial location memory and search speed across multiple rounds.",
+    keywords: ["spatial search test", "location memory test online", "spatial memory test", "visual search speed test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "spatial-search",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "backward-spatial-span-test",
+    title: "Backward Spatial Span Test",
+    metaTitle: "Backward Spatial Span Test — Free Online Working Memory Test",
+    shortTitle: "Backward Spatial Span",
+    category: "Memory & Cognition",
+    icon: "🔁",
+    shortDescription: "Watch a sequence of highlighted cells, then click them back in reverse order.",
+    metaDescription:
+      "Free online Backward Spatial Span Test. Measure your visuospatial working memory by recalling sequences in reverse order.",
+    keywords: ["backward spatial span test", "spatial span test online", "corsi block test", "working memory test"],
+    estTime: "3 min",
+    difficulty: "Hard",
+    componentKey: "backward-spatial-span",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "visual-paired-associates-test",
+    title: "Visual Paired Associates Test",
+    metaTitle: "Visual Paired Associates Test — Free Online Visual Memory Test",
+    shortTitle: "Visual Paired Associates",
+    category: "Memory & Cognition",
+    icon: "🎨",
+    shortDescription: "Study shape-color pairs, then recall which color went with each shape.",
+    metaDescription:
+      "Free online Visual Paired Associates Test. Study shape-color pairs and test your visual associative memory.",
+    keywords: ["visual paired associates test", "visual memory test online", "shape color memory test", "associative memory test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "visual-paired-associates",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "verbal-paired-associates-test",
+    title: "Verbal Paired Associates Test",
+    metaTitle: "Verbal Paired Associates Test — Free Online Free Recall Test",
+    shortTitle: "Verbal Paired Associates",
+    category: "Memory & Cognition",
+    icon: "✍️",
+    shortDescription: "Study unrelated word pairs, then type the exact word paired with each cue from memory.",
+    metaDescription:
+      "Free online Verbal Paired Associates Test. Study word pairs and test your free recall of the exact matching word.",
+    keywords: ["verbal paired associates test", "free recall test online", "word pair memory test", "verbal memory test"],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "verbal-paired-associates",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "prospective-memory-test",
+    title: "Prospective Memory Test",
+    metaTitle: "Prospective Memory Test — Free Online Remembering to Remember Test",
+    shortTitle: "Prospective Memory",
+    category: "Memory & Cognition",
+    icon: "⏰",
+    shortDescription: "Do an ongoing word task while remembering a special rule for one particular target word.",
+    metaDescription:
+      "Free online Prospective Memory Test. Measure your ability to remember a delayed intention while performing another task.",
+    keywords: ["prospective memory test", "remembering to remember test", "delayed intention test online", "memory test free"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "prospective-memory",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "serial-addition-test",
+    title: "Serial Addition Test",
+    metaTitle: "Serial Addition Test — Free Online PASAT Mental Math Test",
+    shortTitle: "Serial Addition",
+    category: "Math & Logic",
+    icon: "➕",
+    shortDescription: "Add each new digit to the one before it as fast as you can, in the style of the PASAT test.",
+    metaDescription:
+      "Free online Serial Addition Test (PASAT-style). Add consecutive digits under time pressure to measure processing speed and working memory.",
+    keywords: ["serial addition test", "pasat test online", "mental math test", "processing speed test"],
+    estTime: "1 min",
+    difficulty: "Hard",
+    componentKey: "serial-addition",
+    scoreDirection: "higher",
   },
 ];
 
