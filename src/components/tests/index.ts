@@ -112,6 +112,10 @@ import { ReadingComprehensionTest } from "@/components/tests/ReadingComprehensio
 import { WordFluencyTest } from "@/components/tests/WordFluencyTest";
 import { AnagramTest } from "@/components/tests/AnagramTest";
 import { SpatialReasoningTest } from "@/components/tests/SpatialReasoningTest";
+import { PaperFoldingTest } from "@/components/tests/PaperFoldingTest";
+import { MirrorImageTest } from "@/components/tests/MirrorImageTest";
+import { PatternCompletionTest } from "@/components/tests/PatternCompletionTest";
+import { DeductiveReasoningTest } from "@/components/tests/DeductiveReasoningTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -226,4 +230,8 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "word-fluency": WordFluencyTest,
   anagram: AnagramTest,
   "spatial-reasoning": SpatialReasoningTest,
+  "paper-folding": PaperFoldingTest,
+  "mirror-image": MirrorImageTest,
+  "pattern-completion": PatternCompletionTest,
+  "deductive-reasoning": DeductiveReasoningTest,
 };

@@ -111,6 +111,10 @@ import { content as readingComprehensionTest } from "@/data/seoContent/reading-c
 import { content as wordFluencyTest } from "@/data/seoContent/word-fluency-test";
 import { content as anagramTest } from "@/data/seoContent/anagram-test";
 import { content as spatialReasoningTest } from "@/data/seoContent/spatial-reasoning-test";
+import { content as paperFoldingTest } from "@/data/seoContent/paper-folding-test";
+import { content as mirrorImageTest } from "@/data/seoContent/mirror-image-test";
+import { content as patternCompletionTest } from "@/data/seoContent/pattern-completion-test";
+import { content as deductiveReasoningTest } from "@/data/seoContent/deductive-reasoning-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -225,4 +229,8 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "word-fluency-test": wordFluencyTest,
   "anagram-test": anagramTest,
   "spatial-reasoning-test": spatialReasoningTest,
+  "paper-folding-test": paperFoldingTest,
+  "mirror-image-test": mirrorImageTest,
+  "pattern-completion-test": patternCompletionTest,
+  "deductive-reasoning-test": deductiveReasoningTest,
 };

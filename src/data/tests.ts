@@ -122,7 +122,11 @@ export type ComponentKey =
   | "reading-comprehension"
   | "word-fluency"
   | "anagram"
-  | "spatial-reasoning";
+  | "spatial-reasoning"
+  | "paper-folding"
+  | "mirror-image"
+  | "pattern-completion"
+  | "deductive-reasoning";
 
 export interface TestDefinition {
   slug: string;
@@ -2216,6 +2220,70 @@ export const tests: TestDefinition[] = [
     estTime: "2 min",
     difficulty: "Medium",
     componentKey: "spatial-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "paper-folding-test",
+    title: "Paper Folding Test",
+    metaTitle: "Paper Folding Test — Free Online Spatial Visualization Test",
+    shortTitle: "Paper Folding",
+    category: "IQ & Logic",
+    icon: "📄",
+    shortDescription: "Predict where punched holes will appear when a folded sheet of paper is unfolded.",
+    metaDescription:
+      "Free online Paper Folding Test. Predict hole positions after unfolding paper to measure your spatial visualization ability.",
+    keywords: ["paper folding test", "spatial visualization test online", "iq test paper folding", "mental rotation puzzle"],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "paper-folding",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "mirror-image-test",
+    title: "Mirror Image Test",
+    metaTitle: "Mirror Image Test — Free Online Letter Recognition Test",
+    shortTitle: "Mirror Image",
+    category: "Perception",
+    icon: "🪞",
+    shortDescription: "Decide whether a rotated letter is shown normally or mirror-flipped, as fast as you can.",
+    metaDescription:
+      "Free online Mirror Image Test. Judge whether rotated letters are normal or mirrored to measure visual discrimination speed.",
+    keywords: ["mirror image test", "letter recognition test online", "mirror writing test", "visual discrimination test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "mirror-image",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "pattern-completion-test",
+    title: "Pattern Completion Test",
+    metaTitle: "Pattern Completion Test — Free Online Sequence Test",
+    shortTitle: "Pattern Completion",
+    category: "IQ & Logic",
+    icon: "🔷",
+    shortDescription: "Study a repeating sequence of shapes and colors, then pick the item that continues the pattern.",
+    metaDescription:
+      "Free online Pattern Completion Test. Identify the next item in a repeating shape and color sequence to test pattern recognition.",
+    keywords: ["pattern completion test", "sequence recognition test online", "pattern iq test", "logical sequence test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "pattern-completion",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "deductive-reasoning-test",
+    title: "Deductive Reasoning Test",
+    metaTitle: "Deductive Reasoning Test — Free Online Logic Puzzle Test",
+    shortTitle: "Deductive Reasoning",
+    category: "IQ & Logic",
+    icon: "🕵️",
+    shortDescription: "Read logical clues and answer questions that follow strictly from them, with no outside assumptions.",
+    metaDescription:
+      "Free online Deductive Reasoning Test. Solve logic puzzles using strict deduction from given clues to measure your reasoning ability.",
+    keywords: ["deductive reasoning test", "logic puzzle test online", "deduction test", "critical thinking test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "deductive-reasoning",
     scoreDirection: "higher",
   },
 ];

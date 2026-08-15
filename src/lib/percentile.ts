@@ -104,6 +104,10 @@ const MODELS: Record<string, PercentileModel> = {
   "word-fluency-test": { mean: 14, stdev: 6, direction: "higher" },
   "anagram-test": { mean: 4, stdev: 2, direction: "higher" },
   "spatial-reasoning-test": { mean: 72, stdev: 15, direction: "higher" },
+  "paper-folding-test": { mean: 65, stdev: 18, direction: "higher" },
+  "mirror-image-test": { mean: 78, stdev: 12, direction: "higher" },
+  "pattern-completion-test": { mean: 75, stdev: 15, direction: "higher" },
+  "deductive-reasoning-test": { mean: 68, stdev: 18, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)
