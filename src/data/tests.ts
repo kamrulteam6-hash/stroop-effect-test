@@ -1145,13 +1145,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "von-restorff-effect-test",
     title: "Von Restorff Effect Test",
-    metaTitle: "Von Restorff Effect Test — Free Online Isolation Effect Test",
+    metaTitle: "Von Restorff Effect Test – Free Isolation Effect Memory Test",
     shortTitle: "Von Restorff Effect",
     category: "Memory & Cognition",
     icon: "✨",
     shortDescription: "Study a list of words with one that visually stands out, then see how much better you remember it.",
     metaDescription:
-      "Free online Von Restorff Effect Test (isolation effect). Study a word list with one visually distinctive item and see how much it boosts your recall.",
+      "Take a free Von Restorff Effect Test online. Study 13 words with one distinctive item, then see whether the isolated word stands out in memory.",
     keywords: [
       "von restorff effect test",
       "isolation effect test online",
@@ -1165,13 +1165,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "conjunction-fallacy-test",
     title: "Conjunction Fallacy Test",
-    metaTitle: "Conjunction Fallacy Test — Free Online Logic Bias Test",
+    metaTitle: "Conjunction Fallacy Test – Free Linda Problem Logic Test",
     shortTitle: "Conjunction Fallacy",
     category: "Cognitive Biases",
     icon: "🧮",
     shortDescription: "Judge 6 short scenarios and see if a vivid story tricks you into breaking a basic rule of probability.",
     metaDescription:
-      "Free online Conjunction Fallacy Test, based on the famous 'Linda problem.' See how a compelling story can make an impossible probability feel likely.",
+      "Take a free Conjunction Fallacy Test online. Judge 6 probability scenarios and see whether a vivid description makes a combined outcome seem more likely.",
     keywords: [
       "conjunction fallacy test",
       "linda problem test online",
@@ -1186,13 +1186,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "halo-effect-test",
     title: "Halo Effect Test",
-    metaTitle: "Halo Effect Test — Free Online Perception Bias Test",
+    metaTitle: "Halo Effect Test – Free Online Impression Bias Test",
     shortTitle: "Halo Effect",
     category: "Cognitive Biases",
     icon: "😇",
     shortDescription: "Meet 4 strangers and rate traits you have zero information about, then see how one detail secretly swayed you.",
     metaDescription:
-      "Free online Halo Effect Test. Rate 4 fictional people on unrelated traits and see your personal Halo Gap — how much a single detail quietly shapes your whole impression.",
+      "Take a free Halo Effect Test online. Rate 4 fictional people on unrelated traits and see whether one positive or negative detail shifts your overall impression.",
     keywords: [
       "halo effect test online",
       "halo effect demonstration",
@@ -1206,13 +1206,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "gamblers-fallacy-test",
     title: "Gambler's Fallacy Test",
-    metaTitle: "Gambler's Fallacy Test — Free Online Probability Bias Test",
+    metaTitle: "Gambler's Fallacy Test – Free Coin Toss Probability Test",
     shortTitle: "Gambler's Fallacy",
     category: "Cognitive Biases",
     icon: "🎲",
     shortDescription: "After a streak of coin flips, guess what comes next — and see if a 'hot streak' feeling fools your logic.",
     metaDescription:
-      "Free online Gambler's Fallacy Test. After seeing coin flip streaks, guess what comes next and see whether you fall for the illusion that random events even out.",
+      "Take a free Gambler's Fallacy Test online. Judge 4 coin-flip streaks and see whether you expect a fair independent process to “correct” itself.",
     keywords: [
       "gambler's fallacy test",
       "gamblers fallacy test online",
