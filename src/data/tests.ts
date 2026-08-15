@@ -169,7 +169,15 @@ export type ComponentKey =
   | "dyslexia-screener"
   | "dyscalculia-screener"
   | "reading-level-screener"
-  | "english-level-screener";
+  | "english-level-screener"
+  | "grammar-quiz"
+  | "spelling-quiz"
+  | "listening-comprehension-quiz"
+  | "general-knowledge-quiz"
+  | "brain-age"
+  | "cognitive-age"
+  | "attention-age"
+  | "memory-age";
 
 export interface TestDefinition {
   slug: string;
@@ -2888,6 +2896,126 @@ export const tests: TestDefinition[] = [
     estTime: "3 min",
     difficulty: "Easy",
     componentKey: "english-level-screener",
+  },
+  {
+    slug: "grammar-test",
+    title: "Grammar Test",
+    metaTitle: "Grammar Test – Free Online English Grammar Quiz",
+    shortTitle: "Grammar Test",
+    category: "Learning & Language",
+    icon: "✍️",
+    shortDescription: "Answer 12 multiple-choice questions covering common English grammar rules.",
+    metaDescription: "Take a free Grammar Test online. Answer 12 multiple-choice questions covering common English grammar rules and get an instant score.",
+    keywords: ["grammar test", "english grammar quiz online", "grammar quiz free", "grammar check test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "grammar-quiz",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "spelling-test",
+    title: "Spelling Test",
+    metaTitle: "Spelling Test – Free Online English Spelling Quiz",
+    shortTitle: "Spelling Test",
+    category: "Learning & Language",
+    icon: "🔠",
+    shortDescription: "Choose the correctly spelled word from four options across 12 tricky words.",
+    metaDescription: "Take a free Spelling Test online. Choose the correctly spelled word from commonly misspelled English words and get an instant score.",
+    keywords: ["spelling test", "english spelling quiz online", "spelling bee test free", "spelling checker quiz"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "spelling-quiz",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "listening-comprehension-test",
+    title: "Listening Comprehension Test",
+    metaTitle: "Listening Comprehension Test – Free Online Quiz",
+    shortTitle: "Listening Comprehension",
+    category: "Learning & Language",
+    icon: "🎧",
+    shortDescription: "Listen to a short spoken passage, then answer 5 comprehension questions about it.",
+    metaDescription: "Take a free Listening Comprehension Test online. Listen to a spoken passage and answer questions to measure your listening comprehension.",
+    keywords: ["listening comprehension test", "listening test online free", "english listening quiz", "listening skills test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "listening-comprehension-quiz",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "general-knowledge-test",
+    title: "General Knowledge Test",
+    metaTitle: "General Knowledge Test – Free Online Trivia Quiz",
+    shortTitle: "General Knowledge",
+    category: "Learning & Language",
+    icon: "🌍",
+    shortDescription: "Answer 12 multiple-choice trivia questions spanning geography, science, history, and culture.",
+    metaDescription: "Take a free General Knowledge Test online. Answer 12 trivia questions spanning geography, science, history, and culture for an instant score.",
+    keywords: ["general knowledge test", "trivia quiz online free", "general knowledge quiz", "how much do you know test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "general-knowledge-quiz",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "brain-age-test",
+    title: "Brain Age Test",
+    metaTitle: "Brain Age Test – Free Online Brain Age Game",
+    shortTitle: "Brain Age Test",
+    category: "Memory & Cognition",
+    icon: "🧠",
+    shortDescription: "Complete three quick minigames — reaction, math, and memory — for a fun composite brain age.",
+    metaDescription: "Take a free Brain Age Test online. Complete three quick minigames to get a fun composite brain age estimate.",
+    keywords: ["brain age test", "brain age game online", "what is my brain age quiz", "brain age calculator"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "brain-age",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "cognitive-age-test",
+    title: "Cognitive Age Test",
+    metaTitle: "Cognitive Age Test – Free Online Cognitive Age Quiz",
+    shortTitle: "Cognitive Age Test",
+    category: "Memory & Cognition",
+    icon: "🧩",
+    shortDescription: "Complete two quick tasks — math and memory span — for a fun cognitive age estimate.",
+    metaDescription: "Take a free Cognitive Age Test online. Complete two quick tasks to get a fun cognitive age estimate based on math and memory performance.",
+    keywords: ["cognitive age test", "cognitive age quiz online", "mental age test free", "brain fitness age test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "cognitive-age",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "attention-age-test",
+    title: "Attention Age Test",
+    metaTitle: "Attention Age Test – Free Online Attention Quiz",
+    shortTitle: "Attention Age Test",
+    category: "Focus & Attention",
+    icon: "👁️",
+    shortDescription: "Complete a quick go/no-go attention check for a fun attention age estimate.",
+    metaDescription: "Take a free Attention Age Test online. Complete a quick go/no-go attention check to get a fun attention age estimate.",
+    keywords: ["attention age test", "attention age quiz online", "focus age test free", "sustained attention test"],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "attention-age",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "memory-age-test",
+    title: "Memory Age Test",
+    metaTitle: "Memory Age Test – Free Online Memory Age Quiz",
+    shortTitle: "Memory Age Test",
+    category: "Memory & Cognition",
+    icon: "🔢",
+    shortDescription: "Recall growing digit sequences for a fun memory age estimate.",
+    metaDescription: "Take a free Memory Age Test online. Recall growing digit sequences to get a fun memory age estimate based on your working-memory span.",
+    keywords: ["memory age test", "memory age quiz online", "how old is your memory test", "digit span test free"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "memory-age",
+    scoreDirection: "lower",
   },
 ];
 

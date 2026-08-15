@@ -155,6 +155,14 @@ import { content as dyslexiaTest } from "@/data/seoContent/dyslexia-test";
 import { content as dyscalculiaTest } from "@/data/seoContent/dyscalculia-test";
 import { content as readingLevelTest } from "@/data/seoContent/reading-level-test";
 import { content as englishLevelTest } from "@/data/seoContent/english-level-test";
+import { content as grammarTest } from "@/data/seoContent/grammar-test";
+import { content as spellingTest } from "@/data/seoContent/spelling-test";
+import { content as listeningComprehensionTest } from "@/data/seoContent/listening-comprehension-test";
+import { content as generalKnowledgeTest } from "@/data/seoContent/general-knowledge-test";
+import { content as brainAgeTest } from "@/data/seoContent/brain-age-test";
+import { content as cognitiveAgeTest } from "@/data/seoContent/cognitive-age-test";
+import { content as attentionAgeTest } from "@/data/seoContent/attention-age-test";
+import { content as memoryAgeTest } from "@/data/seoContent/memory-age-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -313,4 +321,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "dyscalculia-test": dyscalculiaTest,
   "reading-level-test": readingLevelTest,
   "english-level-test": englishLevelTest,
+  "grammar-test": grammarTest,
+  "spelling-test": spellingTest,
+  "listening-comprehension-test": listeningComprehensionTest,
+  "general-knowledge-test": generalKnowledgeTest,
+  "brain-age-test": brainAgeTest,
+  "cognitive-age-test": cognitiveAgeTest,
+  "attention-age-test": attentionAgeTest,
+  "memory-age-test": memoryAgeTest,
 };

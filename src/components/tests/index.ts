@@ -156,6 +156,14 @@ import { DyslexiaTest } from "@/components/tests/DyslexiaTest";
 import { DyscalculiaTest } from "@/components/tests/DyscalculiaTest";
 import { ReadingLevelTest } from "@/components/tests/ReadingLevelTest";
 import { EnglishLevelTest } from "@/components/tests/EnglishLevelTest";
+import { GrammarTest } from "@/components/tests/GrammarTest";
+import { SpellingTest } from "@/components/tests/SpellingTest";
+import { ListeningComprehensionTest } from "@/components/tests/ListeningComprehensionTest";
+import { GeneralKnowledgeTest } from "@/components/tests/GeneralKnowledgeTest";
+import { BrainAgeTest } from "@/components/tests/BrainAgeTest";
+import { CognitiveAgeTest } from "@/components/tests/CognitiveAgeTest";
+import { AttentionAgeTest } from "@/components/tests/AttentionAgeTest";
+import { MemoryAgeTest } from "@/components/tests/MemoryAgeTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -314,4 +322,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "dyscalculia-screener": DyscalculiaTest,
   "reading-level-screener": ReadingLevelTest,
   "english-level-screener": EnglishLevelTest,
+  "grammar-quiz": GrammarTest,
+  "spelling-quiz": SpellingTest,
+  "listening-comprehension-quiz": ListeningComprehensionTest,
+  "general-knowledge-quiz": GeneralKnowledgeTest,
+  "brain-age": BrainAgeTest,
+  "cognitive-age": CognitiveAgeTest,
+  "attention-age": AttentionAgeTest,
+  "memory-age": MemoryAgeTest,
 };
