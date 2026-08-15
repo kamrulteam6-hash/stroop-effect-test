@@ -116,13 +116,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "reaction-time-test",
     title: "Reaction Time Test",
-    metaTitle: "Reaction Time Test Online — Free & Instant (No Sign-Up)",
+    metaTitle: "Reaction Time Test – Test Your Reflexes Online in ms",
     shortTitle: "Reaction Time",
     category: "Reaction & Speed",
     icon: "⚡",
     shortDescription: "How fast can you react to a visual cue? Measure your reflexes in milliseconds.",
     metaDescription:
-      "Free online Reaction Time Test — measure your reflexes in milliseconds, see how you compare by age, and track your personal best. No sign-up, instant results.",
+      "Test your reaction time online in milliseconds. See if your score is fast, compare average human reaction times, and learn what can affect your results.",
     keywords: [
       "reaction time test",
       "reaction time test online",

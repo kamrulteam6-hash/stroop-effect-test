@@ -16,6 +16,7 @@ export function ResultScreen({
   formatValue = (v) => `${Math.round(v)}`,
   unitLabel,
   headline = "Test Complete",
+  scoreLabel,
   extraStats = [],
   shareLabel,
   onRetry,
@@ -29,6 +30,7 @@ export function ResultScreen({
   formatValue?: (v: number) => string;
   unitLabel: string;
   headline?: string;
+  scoreLabel?: { text: string; tone?: "primary" | "accent" | "gold" | "muted" | "danger" | "success" };
   extraStats?: { label: string; value: string }[];
   shareLabel?: string;
   onRetry: () => void;
@@ -86,6 +88,8 @@ export function ResultScreen({
         </span>
         <span className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-2">{unitLabel}</span>
       </div>
+
+      {scoreLabel && <Badge tone={scoreLabel.tone ?? "primary"}>{scoreLabel.text}</Badge>}
 
       {extraStats.length > 0 && (
         <div className="grid w-full max-w-md grid-cols-2 gap-3 sm:grid-cols-3">

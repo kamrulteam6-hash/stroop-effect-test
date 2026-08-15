@@ -6,38 +6,46 @@ import { DataTable } from "@/components/seo/DataTable";
 import { Callout } from "@/components/seo/Callout";
 import { SeoFaqBlock } from "@/components/seo/SeoFaqBlock";
 
-const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
+const INLINE_PATTERN = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g;
 
-/** Parses simple `[label](/path)` markdown-style links out of plain content text. */
+/** Parses simple `[label](/path)` links and `**bold**` emphasis out of plain content text. */
 function withInlineLinks(text: string): ReactNode {
   const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let key = 0;
 
-  LINK_PATTERN.lastIndex = 0;
-  while ((match = LINK_PATTERN.exec(text)) !== null) {
+  INLINE_PATTERN.lastIndex = 0;
+  while ((match = INLINE_PATTERN.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(<Fragment key={key++}>{text.slice(lastIndex, match.index)}</Fragment>);
-    const [, label, href] = match;
-    const isInternal = href.startsWith("/");
-    parts.push(
-      isInternal ? (
-        <Link key={key++} href={href} className="font-semibold text-primary hover:underline">
-          {label}
-        </Link>
-      ) : (
-        <a
-          key={key++}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold text-primary hover:underline"
-        >
-          {label}
-        </a>
-      )
-    );
-    lastIndex = LINK_PATTERN.lastIndex;
+    const [, label, href, bold] = match;
+    if (bold !== undefined) {
+      parts.push(
+        <strong key={key++} className="font-semibold text-foreground">
+          {bold}
+        </strong>
+      );
+    } else {
+      const isInternal = href.startsWith("/");
+      parts.push(
+        isInternal ? (
+          <Link key={key++} href={href} className="font-semibold text-primary hover:underline">
+            {label}
+          </Link>
+        ) : (
+          <a
+            key={key++}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-primary hover:underline"
+          >
+            {label}
+          </a>
+        )
+      );
+    }
+    lastIndex = INLINE_PATTERN.lastIndex;
   }
   if (lastIndex < text.length) parts.push(<Fragment key={key++}>{text.slice(lastIndex)}</Fragment>);
   return parts;
