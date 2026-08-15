@@ -1969,13 +1969,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "ponzo-illusion-test",
     title: "Ponzo Illusion Test",
-    metaTitle: "Ponzo Illusion Test — Free Online Size Perception Test",
+    metaTitle: "Ponzo Illusion Test – Free Size Perception Illusion",
     shortTitle: "Ponzo Illusion",
     category: "Perception",
     icon: "🛤️",
     shortDescription: "Adjust a line to match another line's length despite converging perspective lines distorting your perception.",
     metaDescription:
-      "Free online Ponzo Illusion Test. Measure how converging perspective lines distort your judgment of line length.",
+      "Take a free Ponzo Illusion Test online. Compare equal lines placed between converging perspective cues and measure how context changes perceived size.",
     keywords: ["ponzo illusion test", "size perception test online", "optical illusion test", "perspective illusion test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1985,13 +1985,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "poggendorff-illusion-test",
     title: "Poggendorff Illusion Test",
-    metaTitle: "Poggendorff Illusion Test — Free Online Line Alignment Test",
+    metaTitle: "Poggendorff Illusion Test – Free Line Alignment Test",
     shortTitle: "Poggendorff Illusion",
     category: "Perception",
     icon: "📏",
     shortDescription: "Judge where a diagonal line continues after passing behind a rectangle, testing line alignment perception.",
     metaDescription:
-      "Free online Poggendorff Illusion Test. Measure how accurately you can judge line alignment when a rectangle interrupts the line.",
+      "Take a free Poggendorff Illusion Test online. Judge whether separated diagonal line segments are truly aligned and measure visual misalignment bias.",
     keywords: ["poggendorff illusion test", "line alignment test online", "optical illusion test", "visual perception test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2001,13 +2001,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "delboeuf-illusion-test",
     title: "Delboeuf Illusion Test",
-    metaTitle: "Delboeuf Illusion Test — Free Online Circle Size Test",
+    metaTitle: "Delboeuf Illusion Test – Free Relative Size Perception Test",
     shortTitle: "Delboeuf Illusion",
     category: "Perception",
     icon: "⭕",
     shortDescription: "Match a circle's size to another circle that's surrounded by a distorting outer ring.",
     metaDescription:
-      "Free online Delboeuf Illusion Test. Measure how a surrounding ring distorts your perception of a circle's true size.",
+      "Take a free Delboeuf Illusion Test online. Compare identical center circles inside different rings and measure how surrounding context changes perceived size.",
     keywords: ["delboeuf illusion test", "circle size illusion test", "optical illusion test online", "size perception test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -2017,13 +2017,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "shepard-tables-illusion-test",
     title: "Shepard Tables Illusion Test",
-    metaTitle: "Shepard Tables Illusion Test — Free Online Perspective Test",
+    metaTitle: "Shepard Tables Illusion Test – Are These Tables the Same?",
     shortTitle: "Shepard Tables",
     category: "Perception",
     icon: "🪑",
     shortDescription: "Match the size of two tabletops drawn in different perspective orientations, despite them being identical.",
     metaDescription:
-      "Free online Shepard Tables Illusion Test. Measure how perspective distortion affects your judgment of identical shapes' sizes.",
+      "Take a free Shepard Tables Illusion Test online. Compare identical tabletop shapes shown at different orientations and measure perceived length and width distortion.",
     keywords: ["shepard tables illusion test", "shepard illusion test online", "perspective illusion test", "optical illusion test"],
     estTime: "2 min",
     difficulty: "Medium",
