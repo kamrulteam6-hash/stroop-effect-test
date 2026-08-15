@@ -143,7 +143,15 @@ export type ComponentKey =
   | "narcissism-screener"
   | "psychopathy-screener"
   | "machiavellianism-screener"
-  | "empathy-screener";
+  | "empathy-screener"
+  | "alexithymia-screener"
+  | "hsp-screener"
+  | "imposter-syndrome-screener"
+  | "anger-screener"
+  | "loneliness-screener"
+  | "procrastination-screener"
+  | "dark-triad-screener"
+  | "dark-tetrad-screener";
 
 export interface TestDefinition {
   slug: string;
@@ -2526,6 +2534,118 @@ export const tests: TestDefinition[] = [
     estTime: "2 min",
     difficulty: "Easy",
     componentKey: "empathy-screener",
+  },
+  {
+    slug: "alexithymia-test",
+    title: "Alexithymia Test",
+    metaTitle: "Alexithymia Test – Free Online Emotion Awareness Test",
+    shortTitle: "Alexithymia Test",
+    category: "Personality",
+    icon: "🌫️",
+    shortDescription: "Answer 10 short statements about identifying and describing your own emotions.",
+    metaDescription: "Take a free Alexithymia Test online. Answer short statements about identifying and describing your emotions for an informal trait screening.",
+    keywords: ["alexithymia test", "alexithymia screening online", "emotional awareness test", "identifying emotions quiz"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "alexithymia-screener",
+  },
+  {
+    slug: "highly-sensitive-person-test",
+    title: "Highly Sensitive Person Test",
+    metaTitle: "Highly Sensitive Person Test – Free HSP Quiz",
+    shortTitle: "Highly Sensitive Person",
+    category: "Personality",
+    icon: "🌸",
+    shortDescription: "Answer 10 short statements about sensory and emotional sensitivity to find out if you're an HSP.",
+    metaDescription: "Take a free Highly Sensitive Person Test online. Answer short statements about sensory and emotional sensitivity for an informal HSP trait screening.",
+    keywords: ["highly sensitive person test", "hsp test online", "am i a highly sensitive person quiz", "sensory sensitivity test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "hsp-screener",
+  },
+  {
+    slug: "imposter-syndrome-test",
+    title: "Imposter Syndrome Test",
+    metaTitle: "Imposter Syndrome Test – Free Online Screening",
+    shortTitle: "Imposter Syndrome",
+    category: "Personality",
+    icon: "🎭",
+    shortDescription: "Answer 10 short statements about self-doubt and achievement to measure imposter feelings.",
+    metaDescription: "Take a free Imposter Syndrome Test online. Answer short statements about self-doubt and achievement for an informal imposter-syndrome screening.",
+    keywords: ["imposter syndrome test", "imposter syndrome quiz online", "am i an imposter quiz", "self doubt test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "imposter-syndrome-screener",
+  },
+  {
+    slug: "anger-test",
+    title: "Anger Test",
+    metaTitle: "Anger Test – Free Online Anger Management Test",
+    shortTitle: "Anger Test",
+    category: "Personality",
+    icon: "🔴",
+    shortDescription: "Answer 10 short statements about how you typically experience and express anger.",
+    metaDescription: "Take a free Anger Test online. Answer short statements about anger reactivity and control for an informal self-report screening.",
+    keywords: ["anger test", "anger management test online", "am i angry quiz", "anger issues test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "anger-screener",
+  },
+  {
+    slug: "loneliness-test",
+    title: "Loneliness Test",
+    metaTitle: "Loneliness Test – Free Online Social Connection Test",
+    shortTitle: "Loneliness Test",
+    category: "Personality",
+    icon: "🌙",
+    shortDescription: "Answer 10 short statements about how connected you feel to the people around you.",
+    metaDescription: "Take a free Loneliness Test online. Answer short statements about social connection and support for an informal loneliness screening.",
+    keywords: ["loneliness test", "loneliness quiz online", "am i lonely quiz", "social connection test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "loneliness-screener",
+  },
+  {
+    slug: "procrastination-test",
+    title: "Procrastination Test",
+    metaTitle: "Procrastination Test – Free Online Procrastination Quiz",
+    shortTitle: "Procrastination Test",
+    category: "Personality",
+    icon: "⏳",
+    shortDescription: "Answer 10 short statements about how you typically approach tasks and deadlines.",
+    metaDescription: "Take a free Procrastination Test online. Answer short statements about task avoidance and deadlines for an informal procrastination score.",
+    keywords: ["procrastination test", "procrastination quiz online", "am i a procrastinator quiz", "task avoidance test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "procrastination-screener",
+  },
+  {
+    slug: "dark-triad-test",
+    title: "Dark Triad Test",
+    metaTitle: "Dark Triad Test – Free Online Personality Test",
+    shortTitle: "Dark Triad Test",
+    category: "Personality",
+    icon: "🖤",
+    shortDescription: "Answer 12 short statements to measure narcissism, Machiavellianism, and psychopathy together.",
+    metaDescription: "Take a free Dark Triad Test online. Answer short statements about narcissism, Machiavellianism, and psychopathy for an informal trait breakdown.",
+    keywords: ["dark triad test", "dark triad quiz online", "narcissism machiavellianism psychopathy test", "dark personality test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "dark-triad-screener",
+  },
+  {
+    slug: "dark-tetrad-test",
+    title: "Dark Tetrad Test",
+    metaTitle: "Dark Tetrad Test – Free Online Personality Test",
+    shortTitle: "Dark Tetrad Test",
+    category: "Personality",
+    icon: "⚫",
+    shortDescription: "Answer 16 short statements to measure narcissism, Machiavellianism, psychopathy, and sadism together.",
+    metaDescription: "Take a free Dark Tetrad Test online. Answer short statements about narcissism, Machiavellianism, psychopathy, and sadism for an informal trait breakdown.",
+    keywords: ["dark tetrad test", "dark tetrad quiz online", "everyday sadism test", "dark personality traits test"],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "dark-tetrad-screener",
   },
 ];
 

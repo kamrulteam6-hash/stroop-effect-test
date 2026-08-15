@@ -131,6 +131,14 @@ import { content as narcissismTest } from "@/data/seoContent/narcissism-test";
 import { content as psychopathyTest } from "@/data/seoContent/psychopathy-test";
 import { content as machiavellianismTest } from "@/data/seoContent/machiavellianism-test";
 import { content as empathyTest } from "@/data/seoContent/empathy-test";
+import { content as alexithymiaTest } from "@/data/seoContent/alexithymia-test";
+import { content as highlySensitivePersonTest } from "@/data/seoContent/highly-sensitive-person-test";
+import { content as imposterSyndromeTest } from "@/data/seoContent/imposter-syndrome-test";
+import { content as angerTest } from "@/data/seoContent/anger-test";
+import { content as lonelinessTest } from "@/data/seoContent/loneliness-test";
+import { content as procrastinationTest } from "@/data/seoContent/procrastination-test";
+import { content as darkTriadTest } from "@/data/seoContent/dark-triad-test";
+import { content as darkTetradTest } from "@/data/seoContent/dark-tetrad-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -265,4 +273,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "psychopathy-test": psychopathyTest,
   "machiavellianism-test": machiavellianismTest,
   "empathy-test": empathyTest,
+  "alexithymia-test": alexithymiaTest,
+  "highly-sensitive-person-test": highlySensitivePersonTest,
+  "imposter-syndrome-test": imposterSyndromeTest,
+  "anger-test": angerTest,
+  "loneliness-test": lonelinessTest,
+  "procrastination-test": procrastinationTest,
+  "dark-triad-test": darkTriadTest,
+  "dark-tetrad-test": darkTetradTest,
 };

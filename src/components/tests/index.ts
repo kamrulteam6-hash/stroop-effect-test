@@ -132,6 +132,14 @@ import { NarcissismTest } from "@/components/tests/NarcissismTest";
 import { PsychopathyTest } from "@/components/tests/PsychopathyTest";
 import { MachiavellianismTest } from "@/components/tests/MachiavellianismTest";
 import { EmpathyTest } from "@/components/tests/EmpathyTest";
+import { AlexithymiaTest } from "@/components/tests/AlexithymiaTest";
+import { HighlySensitivePersonTest } from "@/components/tests/HighlySensitivePersonTest";
+import { ImposterSyndromeTest } from "@/components/tests/ImposterSyndromeTest";
+import { AngerTest } from "@/components/tests/AngerTest";
+import { LonelinessTest } from "@/components/tests/LonelinessTest";
+import { ProcrastinationTest } from "@/components/tests/ProcrastinationTest";
+import { DarkTriadTest } from "@/components/tests/DarkTriadTest";
+import { DarkTetradTest } from "@/components/tests/DarkTetradTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -266,4 +274,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "psychopathy-screener": PsychopathyTest,
   "machiavellianism-screener": MachiavellianismTest,
   "empathy-screener": EmpathyTest,
+  "alexithymia-screener": AlexithymiaTest,
+  "hsp-screener": HighlySensitivePersonTest,
+  "imposter-syndrome-screener": ImposterSyndromeTest,
+  "anger-screener": AngerTest,
+  "loneliness-screener": LonelinessTest,
+  "procrastination-screener": ProcrastinationTest,
+  "dark-triad-screener": DarkTriadTest,
+  "dark-tetrad-screener": DarkTetradTest,
 };
