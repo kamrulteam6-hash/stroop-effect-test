@@ -147,6 +147,14 @@ import { content as conflictStyleTest } from "@/data/seoContent/conflict-style-t
 import { content as communicationStyleTest } from "@/data/seoContent/communication-style-test";
 import { content as leadershipStyleTest } from "@/data/seoContent/leadership-style-test";
 import { content as decisionMakingStyleTest } from "@/data/seoContent/decision-making-style-test";
+import { content as sleepChronotypeTest } from "@/data/seoContent/sleep-chronotype-test";
+import { content as morningPersonVsNightOwlTest } from "@/data/seoContent/morning-person-vs-night-owl-test";
+import { content as sleepQualityTest } from "@/data/seoContent/sleep-quality-test";
+import { content as insomniaScreeningTest } from "@/data/seoContent/insomnia-screening-test";
+import { content as dyslexiaTest } from "@/data/seoContent/dyslexia-test";
+import { content as dyscalculiaTest } from "@/data/seoContent/dyscalculia-test";
+import { content as readingLevelTest } from "@/data/seoContent/reading-level-test";
+import { content as englishLevelTest } from "@/data/seoContent/english-level-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -297,4 +305,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "communication-style-test": communicationStyleTest,
   "leadership-style-test": leadershipStyleTest,
   "decision-making-style-test": decisionMakingStyleTest,
+  "sleep-chronotype-test": sleepChronotypeTest,
+  "morning-person-vs-night-owl-test": morningPersonVsNightOwlTest,
+  "sleep-quality-test": sleepQualityTest,
+  "insomnia-screening-test": insomniaScreeningTest,
+  "dyslexia-test": dyslexiaTest,
+  "dyscalculia-test": dyscalculiaTest,
+  "reading-level-test": readingLevelTest,
+  "english-level-test": englishLevelTest,
 };

@@ -9,7 +9,9 @@ export type TestCategory =
   | "Personality"
   | "IQ & Logic"
   | "Cognitive Biases"
-  | "Mental Health & Wellbeing";
+  | "Mental Health & Wellbeing"
+  | "Sleep & Rhythm"
+  | "Learning & Language";
 
 export type ComponentKey =
   | "stroop"
@@ -159,7 +161,15 @@ export type ComponentKey =
   | "conflict-style"
   | "communication-style"
   | "leadership-style"
-  | "decision-making-style";
+  | "decision-making-style"
+  | "sleep-chronotype"
+  | "morning-night-owl"
+  | "sleep-quality-screener"
+  | "insomnia-screener"
+  | "dyslexia-screener"
+  | "dyscalculia-screener"
+  | "reading-level-screener"
+  | "english-level-screener";
 
 export interface TestDefinition {
   slug: string;
@@ -2766,6 +2776,118 @@ export const tests: TestDefinition[] = [
     estTime: "3 min",
     difficulty: "Easy",
     componentKey: "decision-making-style",
+  },
+  {
+    slug: "sleep-chronotype-test",
+    title: "Sleep Chronotype Test",
+    metaTitle: "Sleep Chronotype Test – Free Online Sleep Type Quiz",
+    shortTitle: "Sleep Chronotype",
+    category: "Sleep & Rhythm",
+    icon: "🦁",
+    shortDescription: "Answer 12 short statements about your energy and sleep patterns to find your chronotype.",
+    metaDescription: "Take a free Sleep Chronotype Test online. Answer short statements to discover your Lion, Bear, Wolf, or Dolphin sleep chronotype.",
+    keywords: ["sleep chronotype test", "chronotype quiz online", "lion bear wolf dolphin test", "sleep type quiz"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "sleep-chronotype",
+  },
+  {
+    slug: "morning-person-vs-night-owl-test",
+    title: "Morning Person vs Night Owl Test",
+    metaTitle: "Morning Person vs Night Owl Test – Free Quiz",
+    shortTitle: "Morning vs Night Owl",
+    category: "Sleep & Rhythm",
+    icon: "🌅",
+    shortDescription: "Answer 10 short statements about when you feel most alert to find out if you're a morning person or night owl.",
+    metaDescription: "Take a free Morning Person vs Night Owl Test online. Answer short statements about your natural energy timing for an informal chronotype score.",
+    keywords: ["morning person vs night owl test", "am i a morning person quiz", "night owl test online", "chronotype quiz"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "morning-night-owl",
+  },
+  {
+    slug: "sleep-quality-test",
+    title: "Sleep Quality Test",
+    metaTitle: "Sleep Quality Test – Free Online Sleep Quiz",
+    shortTitle: "Sleep Quality",
+    category: "Sleep & Rhythm",
+    icon: "😴",
+    shortDescription: "Answer 10 short statements about your sleep over the past month to measure your sleep quality.",
+    metaDescription: "Take a free Sleep Quality Test online. Answer short statements about falling asleep, staying asleep, and feeling rested for an informal sleep score.",
+    keywords: ["sleep quality test", "sleep quality quiz online", "how well do i sleep quiz", "sleep score test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "sleep-quality-screener",
+  },
+  {
+    slug: "insomnia-screening-test",
+    title: "Insomnia Screening Test",
+    metaTitle: "Insomnia Test – Free Online Insomnia Screening",
+    shortTitle: "Insomnia Test",
+    category: "Sleep & Rhythm",
+    icon: "🛌",
+    shortDescription: "Answer 10 short statements about difficulty sleeping over the past month for an informal screening.",
+    metaDescription: "Take a free Insomnia Test online. Answer short statements about falling asleep, staying asleep, and daytime impact for an informal screening.",
+    keywords: ["insomnia test", "insomnia screening test online", "do i have insomnia quiz", "sleep disorder test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "insomnia-screener",
+  },
+  {
+    slug: "dyslexia-test",
+    title: "Dyslexia Test",
+    metaTitle: "Dyslexia Test – Free Online Dyslexia Screening",
+    shortTitle: "Dyslexia Test",
+    category: "Learning & Language",
+    icon: "🔤",
+    shortDescription: "Answer 10 short statements about reading and spelling for an informal dyslexia screening.",
+    metaDescription: "Take a free Dyslexia Test online. Answer short statements about reading, spelling, and written language for an informal self-report screening.",
+    keywords: ["dyslexia test", "dyslexia screening test online", "adult dyslexia test", "do i have dyslexia quiz"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "dyslexia-screener",
+  },
+  {
+    slug: "dyscalculia-test",
+    title: "Dyscalculia Test",
+    metaTitle: "Dyscalculia Test – Free Online Screening",
+    shortTitle: "Dyscalculia Test",
+    category: "Learning & Language",
+    icon: "🔢",
+    shortDescription: "Answer 10 short statements about numbers and math for an informal dyscalculia screening.",
+    metaDescription: "Take a free Dyscalculia Test online. Answer short statements about numbers and math difficulty for an informal self-report screening.",
+    keywords: ["dyscalculia test", "dyscalculia screening test online", "adult dyscalculia test", "math learning disability test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "dyscalculia-screener",
+  },
+  {
+    slug: "reading-level-test",
+    title: "Reading Level Test",
+    metaTitle: "Reading Level Test – Free Online Self-Assessment",
+    shortTitle: "Reading Level",
+    category: "Learning & Language",
+    icon: "📚",
+    shortDescription: "Answer 10 short statements about your reading habits and comprehension to estimate your reading level.",
+    metaDescription: "Take a free Reading Level Test online. Answer short statements about reading habits and comprehension for an informal reading-level estimate.",
+    keywords: ["reading level test", "reading level quiz online", "what is my reading level quiz", "reading ability test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "reading-level-screener",
+  },
+  {
+    slug: "english-level-test",
+    title: "English Level Test",
+    metaTitle: "English Level Test – Free CEFR Self-Assessment",
+    shortTitle: "English Level",
+    category: "Learning & Language",
+    icon: "🇬🇧",
+    shortDescription: "Answer 12 short statements about your English ability to estimate your CEFR level from A1 to C2.",
+    metaDescription: "Take a free English Level Test online. Answer short statements about reading, writing, and speaking for an informal CEFR level estimate (A1-C2).",
+    keywords: ["english level test", "cefr test online", "what is my english level quiz", "english proficiency test free"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "english-level-screener",
   },
 ];
 

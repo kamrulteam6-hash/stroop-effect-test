@@ -148,6 +148,14 @@ import { ConflictStyleTest } from "@/components/tests/ConflictStyleTest";
 import { CommunicationStyleTest } from "@/components/tests/CommunicationStyleTest";
 import { LeadershipStyleTest } from "@/components/tests/LeadershipStyleTest";
 import { DecisionMakingStyleTest } from "@/components/tests/DecisionMakingStyleTest";
+import { SleepChronotypeTest } from "@/components/tests/SleepChronotypeTest";
+import { MorningNightOwlTest } from "@/components/tests/MorningNightOwlTest";
+import { SleepQualityTest } from "@/components/tests/SleepQualityTest";
+import { InsomniaScreeningTest } from "@/components/tests/InsomniaScreeningTest";
+import { DyslexiaTest } from "@/components/tests/DyslexiaTest";
+import { DyscalculiaTest } from "@/components/tests/DyscalculiaTest";
+import { ReadingLevelTest } from "@/components/tests/ReadingLevelTest";
+import { EnglishLevelTest } from "@/components/tests/EnglishLevelTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -298,4 +306,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "communication-style": CommunicationStyleTest,
   "leadership-style": LeadershipStyleTest,
   "decision-making-style": DecisionMakingStyleTest,
+  "sleep-chronotype": SleepChronotypeTest,
+  "morning-night-owl": MorningNightOwlTest,
+  "sleep-quality-screener": SleepQualityTest,
+  "insomnia-screener": InsomniaScreeningTest,
+  "dyslexia-screener": DyslexiaTest,
+  "dyscalculia-screener": DyscalculiaTest,
+  "reading-level-screener": ReadingLevelTest,
+  "english-level-screener": EnglishLevelTest,
 };
