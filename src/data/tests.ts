@@ -1649,13 +1649,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "confirmation-bias-test",
     title: "Confirmation Bias Test",
-    metaTitle: "Confirmation Bias Test — Free Online Reasoning Test",
+    metaTitle: "Confirmation Bias Test – Free Cognitive Bias Test",
     shortTitle: "Confirmation Bias",
     category: "Cognitive Biases",
     icon: "🔍",
     shortDescription: "Choose which number sequences to test a hidden rule against, revealing your search strategy.",
     metaDescription:
-      "Free online Confirmation Bias Test. Discover whether you seek out disconfirming evidence or only evidence that confirms your hypothesis.",
+      "Take a free Confirmation Bias Test online. Choose which evidence to examine and see whether you favor information that supports your first hypothesis.",
     keywords: ["confirmation bias test", "wason 2-4-6 task", "reasoning bias test online", "hypothesis testing test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1665,13 +1665,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "base-rate-neglect-test",
     title: "Base Rate Neglect Test",
-    metaTitle: "Base Rate Neglect Test — Free Online Probability Bias Test",
+    metaTitle: "Base Rate Neglect Test – Free Bayesian Reasoning Test",
     shortTitle: "Base Rate Neglect",
     category: "Cognitive Biases",
     icon: "📊",
     shortDescription: "Estimate probabilities across scenarios to see if you factor in background statistical rates.",
     metaDescription:
-      "Free online Base Rate Neglect Test. See how well you incorporate background statistical rates into probability judgments.",
+      "Take a free Base Rate Neglect Test online. Combine prior probabilities with case evidence and see when vivid descriptions overpower statistical base rates.",
     keywords: ["base rate neglect test", "bayesian reasoning test", "probability bias test online", "statistics bias test"],
     estTime: "3 min",
     difficulty: "Hard",
@@ -1681,13 +1681,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "decoy-effect-test",
     title: "Decoy Effect Test",
-    metaTitle: "Decoy Effect Test — Free Online Decision-Making Bias Test",
+    metaTitle: "Decoy Effect Test – Free Attraction Effect Experiment",
     shortTitle: "Decoy Effect",
     category: "Cognitive Biases",
     icon: "🎯",
     shortDescription: "Make purchase decisions among three options to see how much a decoy option steers your choice.",
     metaDescription:
-      "Free online Decoy Effect Test. See how a strategically placed decoy option influences your everyday purchase decisions.",
+      "Take a free Decoy Effect Test online. Make choices before and after an asymmetrically dominated option appears and see whether context shifts your preference.",
     keywords: ["decoy effect test", "asymmetric dominance test", "decision making bias test", "marketing psychology test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1697,13 +1697,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "loss-aversion-test",
     title: "Loss Aversion Test",
-    metaTitle: "Loss Aversion Test — Free Online Risk & Bias Test",
+    metaTitle: "Loss Aversion Test – Free Gain vs. Loss Decision Test",
     shortTitle: "Loss Aversion",
     category: "Cognitive Biases",
     icon: "⚖️",
     shortDescription: "Choose between coin-flip gambles and sure things to reveal how strongly losses weigh on you.",
     metaDescription:
-      "Free online Loss Aversion Test. Discover how strongly losses loom larger than equivalent gains in your decision-making.",
+      "Take a free Loss Aversion Test online. Accept or reject mixed 50/50 gambles and explore how much potential gain you require to accept an equivalent loss.",
     keywords: ["loss aversion test", "prospect theory test online", "risk aversion test", "behavioral economics test"],
     estTime: "2 min",
     difficulty: "Easy",
