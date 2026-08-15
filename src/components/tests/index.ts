@@ -104,6 +104,14 @@ import { HermannGridTest } from "@/components/tests/HermannGridTest";
 import { KanizsaTriangleTest } from "@/components/tests/KanizsaTriangleTest";
 import { MotionAftereffectTest } from "@/components/tests/MotionAftereffectTest";
 import { SoundLocalizationTest } from "@/components/tests/SoundLocalizationTest";
+import { ToneMemoryTest } from "@/components/tests/ToneMemoryTest";
+import { RhythmDiscriminationTest } from "@/components/tests/RhythmDiscriminationTest";
+import { SynonymTest } from "@/components/tests/SynonymTest";
+import { ReadingSpeedTest } from "@/components/tests/ReadingSpeedTest";
+import { ReadingComprehensionTest } from "@/components/tests/ReadingComprehensionTest";
+import { WordFluencyTest } from "@/components/tests/WordFluencyTest";
+import { AnagramTest } from "@/components/tests/AnagramTest";
+import { SpatialReasoningTest } from "@/components/tests/SpatialReasoningTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -210,4 +218,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "kanizsa-triangle": KanizsaTriangleTest,
   "motion-aftereffect": MotionAftereffectTest,
   "sound-localization": SoundLocalizationTest,
+  "tone-memory": ToneMemoryTest,
+  "rhythm-discrimination": RhythmDiscriminationTest,
+  synonym: SynonymTest,
+  "reading-speed": ReadingSpeedTest,
+  "reading-comprehension": ReadingComprehensionTest,
+  "word-fluency": WordFluencyTest,
+  anagram: AnagramTest,
+  "spatial-reasoning": SpatialReasoningTest,
 };

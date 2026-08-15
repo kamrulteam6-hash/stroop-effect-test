@@ -103,6 +103,14 @@ import { content as hermannGridIllusionTest } from "@/data/seoContent/hermann-gr
 import { content as kanizsaTriangleTest } from "@/data/seoContent/kanizsa-triangle-test";
 import { content as motionAftereffectTest } from "@/data/seoContent/motion-aftereffect-test";
 import { content as soundLocalizationTest } from "@/data/seoContent/sound-localization-test";
+import { content as toneMemoryTest } from "@/data/seoContent/tone-memory-test";
+import { content as rhythmDiscriminationTest } from "@/data/seoContent/rhythm-discrimination-test";
+import { content as synonymTest } from "@/data/seoContent/synonym-test";
+import { content as readingSpeedTest } from "@/data/seoContent/reading-speed-test";
+import { content as readingComprehensionTest } from "@/data/seoContent/reading-comprehension-test";
+import { content as wordFluencyTest } from "@/data/seoContent/word-fluency-test";
+import { content as anagramTest } from "@/data/seoContent/anagram-test";
+import { content as spatialReasoningTest } from "@/data/seoContent/spatial-reasoning-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -209,4 +217,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "kanizsa-triangle-test": kanizsaTriangleTest,
   "motion-aftereffect-test": motionAftereffectTest,
   "sound-localization-test": soundLocalizationTest,
+  "tone-memory-test": toneMemoryTest,
+  "rhythm-discrimination-test": rhythmDiscriminationTest,
+  "synonym-test": synonymTest,
+  "reading-speed-test": readingSpeedTest,
+  "reading-comprehension-test": readingComprehensionTest,
+  "word-fluency-test": wordFluencyTest,
+  "anagram-test": anagramTest,
+  "spatial-reasoning-test": spatialReasoningTest,
 };

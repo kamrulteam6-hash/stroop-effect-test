@@ -114,7 +114,15 @@ export type ComponentKey =
   | "hermann-grid"
   | "kanizsa-triangle"
   | "motion-aftereffect"
-  | "sound-localization";
+  | "sound-localization"
+  | "tone-memory"
+  | "rhythm-discrimination"
+  | "synonym"
+  | "reading-speed"
+  | "reading-comprehension"
+  | "word-fluency"
+  | "anagram"
+  | "spatial-reasoning";
 
 export interface TestDefinition {
   slug: string;
@@ -2080,6 +2088,134 @@ export const tests: TestDefinition[] = [
     estTime: "2 min",
     difficulty: "Easy",
     componentKey: "sound-localization",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "tone-memory-test",
+    title: "Tone Memory Test",
+    metaTitle: "Tone Memory Test — Free Online Musical Memory Test",
+    shortTitle: "Tone Memory",
+    category: "Hearing",
+    icon: "🎵",
+    shortDescription: "Listen to a sequence of musical tones, then play it back in order to test your auditory memory.",
+    metaDescription:
+      "Free online Tone Memory Test. Listen to and reproduce sequences of musical tones to measure your auditory working memory span.",
+    keywords: ["tone memory test", "musical memory test online", "auditory memory test", "pitch sequence test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "tone-memory",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "rhythm-discrimination-test",
+    title: "Rhythm Discrimination Test",
+    metaTitle: "Rhythm Discrimination Test — Free Online Auditory Test",
+    shortTitle: "Rhythm Discrimination",
+    category: "Hearing",
+    icon: "🥁",
+    shortDescription: "Judge whether two short rhythmic click patterns are identical or slightly different.",
+    metaDescription:
+      "Free online Rhythm Discrimination Test. Measure your ability to detect subtle differences between rhythmic patterns.",
+    keywords: ["rhythm discrimination test", "auditory perception test online", "rhythm test free", "beat perception test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "rhythm-discrimination",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "synonym-test",
+    title: "Synonym Test",
+    metaTitle: "Synonym Test — Free Online Vocabulary Test",
+    shortTitle: "Synonym Test",
+    category: "Math & Logic",
+    icon: "📖",
+    shortDescription: "Pick the word that means the same as the given word, as fast and accurately as you can.",
+    metaDescription:
+      "Free online Synonym Test. Test your vocabulary knowledge by identifying words with the same meaning quickly and accurately.",
+    keywords: ["synonym test", "vocabulary test online", "word meaning test", "english vocabulary quiz"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "synonym",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "reading-speed-test",
+    title: "Reading Speed Test",
+    metaTitle: "Reading Speed Test — Free Online WPM Test",
+    shortTitle: "Reading Speed",
+    category: "Math & Logic",
+    icon: "📰",
+    shortDescription: "Read a passage at your natural pace and find out your words-per-minute reading speed.",
+    metaDescription:
+      "Free online Reading Speed Test. Measure your words-per-minute reading speed with a built-in comprehension check.",
+    keywords: ["reading speed test", "wpm test online", "reading speed calculator", "speed reading test free"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "reading-speed",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "reading-comprehension-test",
+    title: "Reading Comprehension Test",
+    metaTitle: "Reading Comprehension Test — Free Online Comprehension Quiz",
+    shortTitle: "Reading Comprehension",
+    category: "Math & Logic",
+    icon: "📗",
+    shortDescription: "Read a short passage carefully, then answer questions to test your understanding and retention.",
+    metaDescription:
+      "Free online Reading Comprehension Test. Read a passage and answer questions to measure your comprehension and retention.",
+    keywords: ["reading comprehension test", "comprehension quiz online", "reading test free", "text comprehension test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "reading-comprehension",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "word-fluency-test",
+    title: "Word Fluency Test",
+    metaTitle: "Word Fluency Test — Free Online Verbal Fluency Test",
+    shortTitle: "Word Fluency",
+    category: "Math & Logic",
+    icon: "🔤",
+    shortDescription: "Type as many different words as you can starting with a given letter within the time limit.",
+    metaDescription:
+      "Free online Word Fluency Test. Generate as many words as possible starting with a given letter to measure verbal fluency.",
+    keywords: ["word fluency test", "verbal fluency test online", "letter fluency test", "cognitive fluency test"],
+    estTime: "1 min",
+    difficulty: "Medium",
+    componentKey: "word-fluency",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "anagram-test",
+    title: "Anagram Test",
+    metaTitle: "Anagram Test — Free Online Word Unscramble Test",
+    shortTitle: "Anagram Test",
+    category: "Math & Logic",
+    icon: "🔠",
+    shortDescription: "Unscramble jumbled letters to form a real word as fast as you can.",
+    metaDescription:
+      "Free online Anagram Test. Unscramble letters to form real words as quickly as possible and test your verbal processing speed.",
+    keywords: ["anagram test", "word unscramble test online", "anagram solver game", "verbal processing test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "anagram",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "spatial-reasoning-test",
+    title: "Spatial Reasoning Test",
+    metaTitle: "Spatial Reasoning Test — Free Online Rotation Matching Test",
+    shortTitle: "Spatial Reasoning",
+    category: "IQ & Logic",
+    icon: "🧩",
+    shortDescription: "Decide whether a second grid pattern is a rotation of the first, or a completely different pattern.",
+    metaDescription:
+      "Free online Spatial Reasoning Test. Judge whether grid patterns are rotated matches or different shapes to measure spatial ability.",
+    keywords: ["spatial reasoning test", "rotation matching test online", "spatial ability test", "iq test spatial"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "spatial-reasoning",
     scoreDirection: "higher",
   },
 ];

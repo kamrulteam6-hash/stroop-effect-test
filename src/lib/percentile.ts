@@ -96,6 +96,14 @@ const MODELS: Record<string, PercentileModel> = {
   "kanizsa-triangle-test": { mean: 80, stdev: 12, direction: "higher" },
   "motion-aftereffect-test": { mean: 8, stdev: 4, direction: "higher" },
   "sound-localization-test": { mean: 70, stdev: 18, direction: "higher" },
+  "tone-memory-test": { mean: 6, stdev: 2, direction: "higher" },
+  "rhythm-discrimination-test": { mean: 70, stdev: 18, direction: "higher" },
+  "synonym-test": { mean: 75, stdev: 15, direction: "higher" },
+  "reading-speed-test": { mean: 200, stdev: 60, direction: "higher" },
+  "reading-comprehension-test": { mean: 75, stdev: 18, direction: "higher" },
+  "word-fluency-test": { mean: 14, stdev: 6, direction: "higher" },
+  "anagram-test": { mean: 4, stdev: 2, direction: "higher" },
+  "spatial-reasoning-test": { mean: 72, stdev: 15, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)
