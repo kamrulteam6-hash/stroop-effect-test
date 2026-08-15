@@ -1521,13 +1521,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "odd-one-out-test",
     title: "Odd One Out Test",
-    metaTitle: "Odd One Out Test — Free Online Visual Search Test",
+    metaTitle: "Odd One Out Test – Free Abstract Reasoning Test",
     shortTitle: "Odd One Out",
     category: "Perception",
     icon: "🔷",
     shortDescription: "Find the one shape that's different from the rest in a grid, as fast as you can.",
     metaDescription:
-      "Free online Odd One Out Test. Spot the different shape in a grid across 8 rounds and measure your visual search speed.",
+      "Take a free Odd One Out Test online. Compare shapes, colors, counts, rotations, and patterns to find the item that breaks the shared rule.",
     keywords: ["odd one out test", "visual search test online", "spot the difference test", "perception speed test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1537,13 +1537,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "operation-span-test",
     title: "Operation Span Test",
-    metaTitle: "Operation Span Test — Free Online Working Memory Test",
+    metaTitle: "Operation Span Test – Free Working Memory Test",
     shortTitle: "Operation Span",
     category: "Memory & Cognition",
     icon: "🧮",
     shortDescription: "Verify math equations while remembering a sequence of letters to test your working memory span.",
     metaDescription:
-      "Free online Operation Span Test (OSPAN). Measure your working memory capacity by combining math verification with letter recall.",
+      "Take a free Operation Span Test online. Solve simple math problems while remembering letter sequences and measure complex working-memory span.",
     keywords: ["operation span test", "ospan test online", "working memory test", "complex span task"],
     estTime: "3 min",
     difficulty: "Hard",
@@ -1553,13 +1553,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "paired-associates-memory-test",
     title: "Paired Associates Memory Test",
-    metaTitle: "Paired Associates Memory Test — Free Online Memory Test",
+    metaTitle: "Paired Associates Memory Test – Free Association Memory Test",
     shortTitle: "Paired Associates",
     category: "Memory & Cognition",
     icon: "🔗",
     shortDescription: "Study word pairs, then recall which word was paired with each cue word.",
     metaDescription:
-      "Free online Paired Associates Memory Test. Study word pairs and test how many correct associations you can recall.",
+      "Take a free Paired Associates Memory Test online. Learn arbitrary cue–target pairs, then use each cue to identify or recall its original partner.",
     keywords: ["paired associates test", "paired associate learning test", "verbal memory test online", "word pair memory test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1569,13 +1569,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "delay-discounting-test",
     title: "Delay Discounting Test",
-    metaTitle: "Delay Discounting Test — Free Online Patience & Impulsivity Test",
+    metaTitle: "Delay Discounting Test – Free Time Preference Test",
     shortTitle: "Delay Discounting",
     category: "Cognitive Biases",
     icon: "⏳",
     shortDescription: "Choose between smaller immediate rewards and larger delayed rewards to reveal your discount rate.",
     metaDescription:
-      "Free online Delay Discounting Test. Discover how you weigh immediate versus delayed rewards and your personal discount rate.",
+      "Take a free Delay Discounting Test online. Choose between smaller rewards sooner and larger rewards later to explore how waiting changes subjective value.",
     keywords: ["delay discounting test", "temporal discounting test", "impulsivity test online", "patience test"],
     estTime: "2 min",
     difficulty: "Easy",
