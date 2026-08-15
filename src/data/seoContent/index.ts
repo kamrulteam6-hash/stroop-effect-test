@@ -71,6 +71,14 @@ import { content as oddOneOutTest } from "@/data/seoContent/odd-one-out-test";
 import { content as operationSpanTest } from "@/data/seoContent/operation-span-test";
 import { content as pairedAssociatesMemoryTest } from "@/data/seoContent/paired-associates-memory-test";
 import { content as delayDiscountingTest } from "@/data/seoContent/delay-discounting-test";
+import { content as attentionalBlinkTest } from "@/data/seoContent/attentional-blink-test";
+import { content as posnerCueingTest } from "@/data/seoContent/posner-cueing-test";
+import { content as mackworthClockTest } from "@/data/seoContent/mackworth-clock-test";
+import { content as cognitiveReflectionTest } from "@/data/seoContent/cognitive-reflection-test";
+import { content as confirmationBiasTest } from "@/data/seoContent/confirmation-bias-test";
+import { content as baseRateNeglectTest } from "@/data/seoContent/base-rate-neglect-test";
+import { content as decoyEffectTest } from "@/data/seoContent/decoy-effect-test";
+import { content as lossAversionTest } from "@/data/seoContent/loss-aversion-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -145,4 +153,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "operation-span-test": operationSpanTest,
   "paired-associates-memory-test": pairedAssociatesMemoryTest,
   "delay-discounting-test": delayDiscountingTest,
+  "attentional-blink-test": attentionalBlinkTest,
+  "posner-cueing-test": posnerCueingTest,
+  "mackworth-clock-test": mackworthClockTest,
+  "cognitive-reflection-test": cognitiveReflectionTest,
+  "confirmation-bias-test": confirmationBiasTest,
+  "base-rate-neglect-test": baseRateNeglectTest,
+  "decoy-effect-test": decoyEffectTest,
+  "loss-aversion-test": lossAversionTest,
 };

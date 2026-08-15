@@ -64,6 +64,14 @@ const MODELS: Record<string, PercentileModel> = {
   "operation-span-test": { mean: 65, stdev: 18, direction: "higher" },
   "paired-associates-memory-test": { mean: 60, stdev: 20, direction: "higher" },
   "delay-discounting-test": { mean: 50, stdev: 25, direction: "higher" },
+  "attentional-blink-test": { mean: 20, stdev: 15, direction: "lower" },
+  "posner-cueing-test": { mean: 35, stdev: 20, direction: "higher" },
+  "mackworth-clock-test": { mean: 75, stdev: 15, direction: "higher" },
+  "cognitive-reflection-test": { mean: 3, stdev: 2, direction: "higher" },
+  "confirmation-bias-test": { mean: 60, stdev: 20, direction: "lower" },
+  "base-rate-neglect-test": { mean: 40, stdev: 20, direction: "higher" },
+  "decoy-effect-test": { mean: 65, stdev: 20, direction: "lower" },
+  "loss-aversion-test": { mean: 40, stdev: 20, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

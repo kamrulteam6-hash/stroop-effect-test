@@ -72,6 +72,14 @@ import { OddOneOutTest } from "@/components/tests/OddOneOutTest";
 import { OperationSpanTest } from "@/components/tests/OperationSpanTest";
 import { PairedAssociatesTest } from "@/components/tests/PairedAssociatesTest";
 import { DelayDiscountingTest } from "@/components/tests/DelayDiscountingTest";
+import { AttentionalBlinkTest } from "@/components/tests/AttentionalBlinkTest";
+import { PosnerCueingTest } from "@/components/tests/PosnerCueingTest";
+import { MackworthClockTest } from "@/components/tests/MackworthClockTest";
+import { CognitiveReflectionTest } from "@/components/tests/CognitiveReflectionTest";
+import { ConfirmationBiasTest } from "@/components/tests/ConfirmationBiasTest";
+import { BaseRateNeglectTest } from "@/components/tests/BaseRateNeglectTest";
+import { DecoyEffectTest } from "@/components/tests/DecoyEffectTest";
+import { LossAversionTest } from "@/components/tests/LossAversionTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -146,4 +154,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "operation-span": OperationSpanTest,
   "paired-associates": PairedAssociatesTest,
   "delay-discounting": DelayDiscountingTest,
+  "attentional-blink": AttentionalBlinkTest,
+  "posner-cueing": PosnerCueingTest,
+  "mackworth-clock": MackworthClockTest,
+  "cognitive-reflection": CognitiveReflectionTest,
+  "confirmation-bias": ConfirmationBiasTest,
+  "base-rate-neglect": BaseRateNeglectTest,
+  "decoy-effect": DecoyEffectTest,
+  "loss-aversion": LossAversionTest,
 };

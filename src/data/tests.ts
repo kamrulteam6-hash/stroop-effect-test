@@ -82,7 +82,15 @@ export type ComponentKey =
   | "odd-one-out"
   | "operation-span"
   | "paired-associates"
-  | "delay-discounting";
+  | "delay-discounting"
+  | "attentional-blink"
+  | "posner-cueing"
+  | "mackworth-clock"
+  | "cognitive-reflection"
+  | "confirmation-bias"
+  | "base-rate-neglect"
+  | "decoy-effect"
+  | "loss-aversion";
 
 export interface TestDefinition {
   slug: string;
@@ -1536,6 +1544,134 @@ export const tests: TestDefinition[] = [
     estTime: "2 min",
     difficulty: "Easy",
     componentKey: "delay-discounting",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "attentional-blink-test",
+    title: "Attentional Blink Test",
+    metaTitle: "Attentional Blink Test — Free Online Rapid Attention Test",
+    shortTitle: "Attentional Blink",
+    category: "Focus & Attention",
+    icon: "👁️",
+    shortDescription: "Spot a target letter that flashes shortly after a digit in a rapid stream of characters.",
+    metaDescription:
+      "Free online Attentional Blink Test. Measure the temporary dip in attention that follows detecting a rapid target in a stream of letters.",
+    keywords: ["attentional blink test", "rapid serial visual presentation test", "attention test online", "rsvp test"],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "attentional-blink",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "posner-cueing-test",
+    title: "Posner Cueing Test",
+    metaTitle: "Posner Cueing Test — Free Online Spatial Attention Test",
+    shortTitle: "Posner Cueing",
+    category: "Focus & Attention",
+    icon: "➡️",
+    shortDescription: "React to a target that appears on the left or right after a spatial cue, valid or invalid.",
+    metaDescription:
+      "Free online Posner Cueing Test. Measure how spatial cues speed up or slow down your reaction time to visual targets.",
+    keywords: ["posner cueing test", "spatial attention test online", "cueing effect test", "visual attention test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "posner-cueing",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "mackworth-clock-test",
+    title: "Mackworth Clock Test",
+    metaTitle: "Mackworth Clock Test — Free Online Vigilance Test",
+    shortTitle: "Mackworth Clock",
+    category: "Focus & Attention",
+    icon: "🕐",
+    shortDescription: "Watch a clock hand tick and report the rare double jumps to test sustained vigilance.",
+    metaDescription:
+      "Free online Mackworth Clock Test. Measure your sustained attention and vigilance by detecting rare target events over time.",
+    keywords: ["mackworth clock test", "vigilance test online", "sustained attention test", "clock test cognitive"],
+    estTime: "1 min",
+    difficulty: "Medium",
+    componentKey: "mackworth-clock",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "cognitive-reflection-test",
+    title: "Cognitive Reflection Test",
+    metaTitle: "Cognitive Reflection Test — Free Online CRT Brainteaser Test",
+    shortTitle: "Cognitive Reflection",
+    category: "Cognitive Biases",
+    icon: "🧠",
+    shortDescription: "Answer brainteasers with a tempting but wrong intuitive answer to test your reflective thinking.",
+    metaDescription:
+      "Free online Cognitive Reflection Test (CRT). Answer classic brainteasers to see how well you override intuitive wrong answers.",
+    keywords: ["cognitive reflection test", "crt test online", "brainteaser test", "intuitive thinking test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "cognitive-reflection",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "confirmation-bias-test",
+    title: "Confirmation Bias Test",
+    metaTitle: "Confirmation Bias Test — Free Online Reasoning Test",
+    shortTitle: "Confirmation Bias",
+    category: "Cognitive Biases",
+    icon: "🔍",
+    shortDescription: "Choose which number sequences to test a hidden rule against, revealing your search strategy.",
+    metaDescription:
+      "Free online Confirmation Bias Test. Discover whether you seek out disconfirming evidence or only evidence that confirms your hypothesis.",
+    keywords: ["confirmation bias test", "wason 2-4-6 task", "reasoning bias test online", "hypothesis testing test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "confirmation-bias",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "base-rate-neglect-test",
+    title: "Base Rate Neglect Test",
+    metaTitle: "Base Rate Neglect Test — Free Online Probability Bias Test",
+    shortTitle: "Base Rate Neglect",
+    category: "Cognitive Biases",
+    icon: "📊",
+    shortDescription: "Estimate probabilities across scenarios to see if you factor in background statistical rates.",
+    metaDescription:
+      "Free online Base Rate Neglect Test. See how well you incorporate background statistical rates into probability judgments.",
+    keywords: ["base rate neglect test", "bayesian reasoning test", "probability bias test online", "statistics bias test"],
+    estTime: "3 min",
+    difficulty: "Hard",
+    componentKey: "base-rate-neglect",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "decoy-effect-test",
+    title: "Decoy Effect Test",
+    metaTitle: "Decoy Effect Test — Free Online Decision-Making Bias Test",
+    shortTitle: "Decoy Effect",
+    category: "Cognitive Biases",
+    icon: "🎯",
+    shortDescription: "Make purchase decisions among three options to see how much a decoy option steers your choice.",
+    metaDescription:
+      "Free online Decoy Effect Test. See how a strategically placed decoy option influences your everyday purchase decisions.",
+    keywords: ["decoy effect test", "asymmetric dominance test", "decision making bias test", "marketing psychology test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "decoy-effect",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "loss-aversion-test",
+    title: "Loss Aversion Test",
+    metaTitle: "Loss Aversion Test — Free Online Risk & Bias Test",
+    shortTitle: "Loss Aversion",
+    category: "Cognitive Biases",
+    icon: "⚖️",
+    shortDescription: "Choose between coin-flip gambles and sure things to reveal how strongly losses weigh on you.",
+    metaDescription:
+      "Free online Loss Aversion Test. Discover how strongly losses loom larger than equivalent gains in your decision-making.",
+    keywords: ["loss aversion test", "prospect theory test online", "risk aversion test", "behavioral economics test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "loss-aversion",
     scoreDirection: "higher",
   },
 ];
