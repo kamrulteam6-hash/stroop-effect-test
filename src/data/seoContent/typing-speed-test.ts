@@ -4,86 +4,479 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "This free Typing Speed Test measures your words per minute (WPM) and accuracy as you type. Choose Passage mode and pick a text category (Quotes, Tech, or Literature), or try the 60-second Sprint mode for a continuous, Monkeytype-style typing burst against a stream of common words. It's a quick way to check your baseline typing speed, whether you're preparing for a job requirement, curious how you compare to average, or just want a benchmark before a longer practice session.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Typing Speed Test Works",
+      text: "How fast can you type **accurately**, not just how fast can your fingers move?",
     },
     {
       type: "paragraph",
-      text: "In Passage mode, a short text appears on screen — start typing it out, and the timer begins automatically on your first keystroke. In 60-second Sprint mode, you type continuously against a long stream of text until time runs out, however far you get. As you type, each character is marked correct or incorrect in real time, and a live graph tracks your WPM throughout the test.",
-    },
-    {
-      type: "heading",
-      id: "net-vs-raw",
-      text: "Net WPM vs. Raw WPM (How We Calculate Your Score)",
+      text: "Take this free **Typing Speed Test** to measure your words per minute (WPM), raw speed, and accuracy.",
     },
     {
       type: "paragraph",
-      text: "The main score you see is your net WPM — words per minute based only on the characters you typed correctly, divided by five (the standard average word length) and by the time elapsed in minutes. We also show your raw WPM, which counts every character you typed, mistakes included. The gap between the two matters: a typist who blazes through at high raw speed but makes constant errors will end up with a lower net WPM than someone typing more deliberately with fewer mistakes — which is exactly why net WPM, not raw WPM, is the number most typing tests (and most employers) actually care about.",
+      text: "Choose between:",
     },
     {
-      type: "heading",
-      text: "The Science Behind Typing Speed",
-    },
-    {
-      type: "paragraph",
-      text: "Typing quickly and accurately relies on procedural memory — the same type of long-term memory used for skills like riding a bike. With enough practice, your fingers learn key locations well enough that typing becomes largely automatic, freeing up your conscious attention to focus on the words themselves rather than individual keystrokes. This is why touch typists (who type without looking at the keyboard) are typically much faster and more accurate than \"hunt and peck\" typists, who must visually locate each key before pressing it, adding a slow, deliberate step to every keystroke.",
-    },
-    {
-      type: "heading",
-      id: "by-profession",
-      text: "Average Typing Speed by Profession",
+      type: "list",
+      items: ["**Passage Mode** with Quotes, Tech, or Literature;", "**60-Second Sprint** for continuous typing against a longer stream of text."],
     },
     {
       type: "paragraph",
-      text: "What counts as a \"good\" typing speed depends heavily on context. Published benchmarks for typing-heavy roles cluster around these ranges:",
+      text: "The timer begins on your first keystroke, and your WPM updates while you type.",
     },
     {
-      type: "table",
-      headers: ["Group", "Typical WPM Range"],
-      rows: [
-        ["Untrained / beginner typist", "20–30 WPM"],
-        ["General office / admin work", "40–50 WPM"],
-        ["Trained touch typist", "65–75 WPM"],
-        ["Data entry specialist", "65–80 WPM"],
-        ["Legal secretary / transcriptionist", "70–90 WPM"],
-        ["Professional / competitive typist", "80–120 WPM"],
+      type: "paragraph",
+      text: "For a useful baseline, compare results only when the mode, text type, device, and error rules are similar.",
+    },
+    {
+      type: "heading",
+      id: "how-to-take",
+      text: "How to Take the Typing Speed Test",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Choose Passage or 60-Second Sprint.",
+        "In Passage mode, select Quotes, Tech, or Literature.",
+        "Press **Start Test**.",
+        "Begin typing the displayed text.",
+        "Type exactly what appears on screen.",
+        "Correct mistakes if the interface allows and your strategy requires it.",
+        "Continue until the passage ends or the 60-second timer expires.",
+        "Review WPM, raw WPM, accuracy, and your speed pattern.",
       ],
     },
     {
+      type: "paragraph",
+      text: "Do not sacrifice accuracy simply to force the speed number higher.",
+    },
+    {
+      type: "paragraph",
+      text: "A useful typing score combines **speed and correctness**.",
+    },
+    {
       type: "heading",
-      text: "Tips to Improve Your Score",
+      id: "what-is-wpm",
+      text: "What Is WPM?",
+    },
+    {
+      type: "paragraph",
+      text: "**WPM** means **words per minute**.",
+    },
+    {
+      type: "paragraph",
+      text: "Typing tests do not usually count literal dictionary words because word lengths vary.",
+    },
+    {
+      type: "paragraph",
+      text: "Instead, text-entry research commonly standardizes one “word” as **five characters or keystrokes**.",
+    },
+    {
+      type: "paragraph",
+      text: "A basic gross-speed formula is:",
+    },
+    {
+      type: "paragraph",
+      text: "**WPM = characters typed ÷ 5 ÷ minutes**",
+    },
+    {
+      type: "paragraph",
+      text: "This convention makes a test with short words more comparable with one containing longer words.",
+    },
+    {
+      type: "paragraph",
+      text: "Your website's main score is based on correctly typed characters, while raw WPM reflects total typing activity before accuracy is considered.",
+    },
+    {
+      type: "heading",
+      text: "Raw WPM vs. Net WPM",
+    },
+    {
+      type: "paragraph",
+      text: "These labels are not implemented identically on every typing website.",
+    },
+    {
+      type: "paragraph",
+      text: "On this test:",
+    },
+    {
+      type: "subheading",
+      text: "Raw WPM",
+    },
+    {
+      type: "paragraph",
+      text: "Counts your total typed characters converted into five-character words per minute, including activity associated with mistakes.",
+    },
+    {
+      type: "subheading",
+      text: "Net WPM",
+    },
+    {
+      type: "paragraph",
+      text: "Uses correctly typed characters, so errors reduce the main result.",
+    },
+    {
+      type: "paragraph",
+      text: "Some typing systems calculate “net WPM” differently—for example, by subtracting an explicit error penalty from gross WPM.",
+    },
+    {
+      type: "paragraph",
+      text: "That means a 70 WPM result on one website is not automatically identical to 70 WPM elsewhere.",
+    },
+    {
+      type: "paragraph",
+      text: "Always compare the scoring formula as well as the number.",
+    },
+    {
+      type: "heading",
+      text: "Accuracy Matters",
+    },
+    {
+      type: "paragraph",
+      text: "Typing quickly with frequent errors creates extra correction work.",
+    },
+    {
+      type: "paragraph",
+      text: "Accuracy is therefore an essential companion to WPM.",
+    },
+    {
+      type: "paragraph",
+      text: "A basic accuracy measure compares correct input with total input.",
+    },
+    {
+      type: "paragraph",
+      text: "High speed and high accuracy together are more useful than either one in isolation.",
+    },
+    {
+      type: "paragraph",
+      text: "Suppose:",
+    },
+    {
+      type: "list",
+      items: ["Run A: 75 raw WPM with many mistakes;", "Run B: 65 WPM with very high accuracy."],
+    },
+    {
+      type: "paragraph",
+      text: "Which is “better” depends on the task and how corrections are scored.",
+    },
+    {
+      type: "paragraph",
+      text: "For most real text entry, errors have a cost.",
+    },
+    {
+      type: "paragraph",
+      text: "That is why the gap between raw and corrected performance matters.",
+    },
+    {
+      type: "heading",
+      text: "Passage Mode vs. 60-Second Sprint",
+    },
+    {
+      type: "paragraph",
+      text: "These modes should not be treated as interchangeable benchmarks.",
+    },
+    {
+      type: "subheading",
+      text: "Passage Mode",
+    },
+    {
+      type: "paragraph",
+      text: "You type a fixed piece of text.",
+    },
+    {
+      type: "paragraph",
+      text: "Difficulty depends on:",
+    },
+    {
+      type: "list",
+      items: ["punctuation;", "capitalization;", "uncommon words;", "sentence structure;", "numbers or symbols;", "passage length."],
+    },
+    {
+      type: "subheading",
+      text: "60-Second Sprint",
+    },
+    {
+      type: "paragraph",
+      text: "You type continuously for one minute.",
+    },
+    {
+      type: "paragraph",
+      text: "The fixed duration makes repeated sessions easier to compare, but the exact word stream still affects difficulty.",
+    },
+    {
+      type: "paragraph",
+      text: "A Quotes passage and a Tech passage may produce different WPM because the character and vocabulary demands differ.",
+    },
+    {
+      type: "paragraph",
+      text: "For tracking progress, keep the mode consistent.",
+    },
+    {
+      type: "heading",
+      text: "What Is an Average Typing Speed?",
+    },
+    {
+      type: "paragraph",
+      text: "There is no single universal average that applies to every typing test.",
+    },
+    {
+      type: "paragraph",
+      text: "A large 2018 research project analyzing **136 million keystrokes from more than 168,000 volunteers** found that most physical-keyboard users typed roughly **30 to 60 WPM**, while some exceeded 120 WPM.",
+    },
+    {
+      type: "paragraph",
+      text: "Other studies produce different averages because samples and tasks differ.",
+    },
+    {
+      type: "paragraph",
+      text: "Typing speed depends on:",
+    },
+    {
+      type: "list",
+      items: ["age and experience;", "keyboard;", "language;", "text difficulty;", "correction rules;", "test duration;", "punctuation;", "and participant population."],
+    },
+    {
+      type: "paragraph",
+      text: "So a broad 30–60 WPM range is more defensible than claiming one exact number is “the human average.”",
+    },
+    {
+      type: "heading",
+      text: "Why Online Benchmark Tables Often Disagree",
+    },
+    {
+      type: "paragraph",
+      text: "Search for “good typing speed” and you will find many different charts.",
+    },
+    {
+      type: "paragraph",
+      text: "One site may call 40 WPM average.",
+    },
+    {
+      type: "paragraph",
+      text: "Another may call 50 WPM average.",
+    },
+    {
+      type: "paragraph",
+      text: "Another may classify 70 WPM as professional.",
+    },
+    {
+      type: "paragraph",
+      text: "The disagreement comes partly from different datasets and partly from invented marketing categories.",
+    },
+    {
+      type: "paragraph",
+      text: "Profession-specific claims are especially difficult.",
+    },
+    {
+      type: "paragraph",
+      text: "A transcription role, dispatch job, office position, programmer, and writer do not all have one universal typing requirement.",
+    },
+    {
+      type: "paragraph",
+      text: "If an employer or exam requires a minimum speed, use **that specific requirement**.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not treat a generic internet table as an occupational standard.",
+    },
+    {
+      type: "heading",
+      text: "Fast Typists Do Not All Use the Same Technique",
+    },
+    {
+      type: "paragraph",
+      text: "Traditional typing instruction emphasizes **touch typing** with multiple fingers and minimal visual attention to the keyboard.",
+    },
+    {
+      type: "paragraph",
+      text: "That can support fast, automatic text entry.",
+    },
+    {
+      type: "paragraph",
+      text: "But modern typing research shows that skilled typists use a variety of finger strategies.",
+    },
+    {
+      type: "paragraph",
+      text: "Large-scale studies have found that factors such as:",
+    },
+    {
+      type: "list",
+      items: ["number of fingers used;", "key-to-finger consistency;", "rollover between keystrokes;", "error behavior;", "and motor preparation"],
+    },
+    {
+      type: "paragraph",
+      text: "all relate to performance.",
+    },
+    {
+      type: "paragraph",
+      text: "Some self-taught typists can be very fast without textbook-perfect technique.",
+    },
+    {
+      type: "paragraph",
+      text: "The practical goal is not to imitate one rigid finger map.",
+    },
+    {
+      type: "paragraph",
+      text: "It is to develop a consistent, efficient movement pattern with high accuracy.",
+    },
+    {
+      type: "heading",
+      text: "Why Longer Tests Usually Give a Better Baseline",
+    },
+    {
+      type: "paragraph",
+      text: "A 10-second burst can capture a short peak.",
+    },
+    {
+      type: "paragraph",
+      text: "A one-minute test samples more sustained performance.",
+    },
+    {
+      type: "paragraph",
+      text: "Longer tests reveal:",
+    },
+    {
+      type: "list",
+      items: ["fatigue;", "difficult words;", "error correction;", "consistency;", "and whether speed drops after the opening seconds."],
+    },
+    {
+      type: "paragraph",
+      text: "If you want a personal baseline, the **60-second Sprint** is generally more stable than a very short passage.",
+    },
+    {
+      type: "paragraph",
+      text: "But even one minute is still a sample.",
+    },
+    {
+      type: "paragraph",
+      text: "Use several runs on different days rather than treating a single personal best as your permanent typing speed.",
+    },
+    {
+      type: "heading",
+      text: "Why Text Difficulty Changes WPM",
+    },
+    {
+      type: "paragraph",
+      text: "Typing:",
+    },
+    {
+      type: "paragraph",
+      text: "**the quick brown fox**",
+    },
+    {
+      type: "paragraph",
+      text: "is not the same motor task as typing:",
+    },
+    {
+      type: "paragraph",
+      text: "**electrophysiological synchronization**",
+    },
+    {
+      type: "paragraph",
+      text: "Uncommon letter combinations, punctuation, numbers, uppercase characters, and symbols can slow performance.",
+    },
+    {
+      type: "paragraph",
+      text: "Familiar phrases may be typed as larger learned patterns.",
+    },
+    {
+      type: "paragraph",
+      text: "This is why speed on a random common-word test can be higher than speed on realistic prose.",
+    },
+    {
+      type: "paragraph",
+      text: "Neither score is fake.",
+    },
+    {
+      type: "paragraph",
+      text: "They measure performance under different text constraints.",
+    },
+    {
+      type: "heading",
+      text: "Typing Is a Learned Motor Skill",
+    },
+    {
+      type: "paragraph",
+      text: "With practice, key locations and movement sequences become increasingly automatic.",
+    },
+    {
+      type: "paragraph",
+      text: "Skilled typing relies heavily on procedural learning.",
+    },
+    {
+      type: "paragraph",
+      text: "Instead of consciously searching for every key, experienced typists prepare sequences of movements while reading ahead.",
+    },
+    {
+      type: "paragraph",
+      text: "That automation reduces the attention required for individual keystrokes.",
+    },
+    {
+      type: "paragraph",
+      text: "The skill still involves language and vision, but the motor component becomes much less deliberate.",
+    },
+    {
+      type: "paragraph",
+      text: "This is one reason regular practice can produce large improvements.",
+    },
+    {
+      type: "heading",
+      text: "How to Improve Typing Speed",
+    },
+    {
+      type: "paragraph",
+      text: "Focus first on **repeatable accuracy**.",
+    },
+    {
+      type: "paragraph",
+      text: "Useful practice principles include:",
     },
     {
       type: "list",
       items: [
-        "Keep your fingers on the home row (ASDF / JKL;) between keystrokes for faster, more accurate typing.",
-        "Prioritize accuracy over raw speed at first — a typist at 65 WPM with 98% accuracy is faster in practice than one at 80 WPM with 85% accuracy, once you account for time spent correcting mistakes.",
-        "Avoid looking at the keyboard; train yourself to trust muscle memory instead.",
-        "Practice regularly in short sessions rather than occasional long ones — typing speed builds fastest with consistent repetition.",
-        "Try the 60-second Sprint mode regularly — its live WPM graph makes it easy to see exactly where your speed drops off within a session.",
-        "Sit with good posture and keep your wrists relaxed to avoid fatigue that slows you down over longer sessions.",
+        "keep your hands in a stable position;",
+        "avoid unnecessary force;",
+        "practice without constantly looking at the keyboard;",
+        "identify letters or combinations that repeatedly slow you down;",
+        "use realistic text as well as easy word lists;",
+        "gradually increase speed while protecting accuracy;",
+        "practice consistently rather than only chasing personal records.",
       ],
     },
     {
-      type: "table",
-      headers: ["Net WPM", "Typical Interpretation"],
-      rows: [
-        ["Under 30", "Beginner typing speed"],
-        ["30–50", "Average typing speed"],
-        ["50–70", "Above average, comfortable for most office work"],
-        ["70+", "Fast typist, often achieved through touch typing practice"],
-      ],
+      type: "paragraph",
+      text: "If you repeatedly type the same easy text, you may mostly learn that text.",
     },
     {
-      type: "callout",
-      icon: "⚡",
-      title: "Test other kinds of speed",
-      tone: "accent",
-      text: "Typing speed is just one form of motor speed. Try our [Click Speed Test](/test/click-speed-test) for raw clicking speed, or the [Reaction Time Test](/test/reaction-time-test) for pure visual reflexes.",
+      type: "paragraph",
+      text: "Use varied material to build a more general skill.",
+    },
+    {
+      type: "heading",
+      text: "Typing Speed vs. Reaction Time",
+    },
+    {
+      type: "paragraph",
+      text: "The [Reaction Time Test](/test/reaction-time-test) measures how quickly you respond to a simple unpredictable cue.",
+    },
+    {
+      type: "paragraph",
+      text: "Typing speed measures repeated skilled text entry.",
+    },
+    {
+      type: "paragraph",
+      text: "Fast typing depends far more on:",
+    },
+    {
+      type: "list",
+      items: ["learned key locations;", "movement sequences;", "reading ahead;", "language familiarity;", "accuracy control."],
+    },
+    {
+      type: "paragraph",
+      text: "A fast reaction-time score does not guarantee fast typing.",
+    },
+    {
+      type: "paragraph",
+      text: "Likewise, an expert typist does not necessarily have unusually fast simple visual reaction time.",
     },
     {
       type: "heading",
@@ -94,31 +487,63 @@ export const content: TestSeoContent = {
       type: "faq",
       items: [
         {
+          question: "What does WPM mean?",
+          answer: "Words per minute. In typing measurement, one standardized “word” is commonly treated as five characters rather than one literal dictionary word.",
+        },
+        {
           question: "What is a good typing speed?",
           answer:
-            "The average typing speed is around 40 words per minute. Speeds of 60 WPM and above are generally considered fast, and professional typists in roles like transcription often reach 80–100+ WPM.",
+            "It depends on your purpose and test format. Large physical-keyboard data place many users in roughly the 30–60 WPM range, but individual performance varies widely.",
         },
         {
-          question: "What's the difference between net WPM and raw WPM?",
-          answer:
-            "Net WPM (the main score shown here) only counts correctly typed characters, so mistakes bring it down. Raw WPM counts every character you typed regardless of accuracy. Net WPM is the more meaningful number for most real-world typing.",
+          question: "Is 40 WPM average?",
+          answer: "It is a common rule of thumb, but there is no single universal average. Large datasets and different tasks produce different values.",
         },
         {
-          question: "How is WPM calculated?",
-          answer:
-            "WPM is calculated by dividing the number of characters typed by five — the standard average word length — then dividing by the time taken in minutes. Net WPM uses only correctly typed characters; raw WPM uses all of them.",
+          question: "Why is my raw WPM higher?",
+          answer: "Raw WPM measures total typing activity, while the main corrected score accounts for mistakes.",
         },
         {
-          question: "Should I use Passage mode or 60-second Sprint mode?",
-          answer:
-            "Passage mode is a quick, consistent benchmark using the same fixed text structure each time. Sprint mode better reflects sustained real-world typing, since you're producing continuous text against the clock rather than a single short passage.",
+          question: "Is 60-second Sprint better than Passage mode?",
+          answer: "Neither is universally better. Sprint is useful for standardized duration; Passage mode is useful for realistic prose. Track each separately.",
         },
         {
-          question: "How can I type faster without losing accuracy?",
-          answer:
-            "The fastest path is consistent touch-typing practice — learning proper finger placement so your speed increases naturally as the motion becomes automatic, rather than trying to force faster typing with poor technique.",
+          question: "Does touch typing always make someone faster?",
+          answer: "No. Touch-typing principles can help, but research shows fast typists use several effective techniques rather than one identical finger pattern.",
+        },
+        {
+          question: "Can I compare scores from different typing websites?",
+          answer: "Only cautiously. Text difficulty, duration, correction policy, and WPM formulas can differ.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Build a Repeatable Typing Baseline",
+    },
+    {
+      type: "paragraph",
+      text: "Your fastest-ever burst is fun.",
+    },
+    {
+      type: "paragraph",
+      text: "Your most useful score is the one you can reproduce with strong accuracy.",
+    },
+    {
+      type: "paragraph",
+      text: "Choose one setup—such as **60-Second Sprint on the same keyboard**—and use it consistently.",
+    },
+    {
+      type: "paragraph",
+      text: "Then look for progress in three things together:",
+    },
+    {
+      type: "paragraph",
+      text: "**speed, accuracy, and consistency.**",
+    },
+    {
+      type: "paragraph",
+      text: "That gives you a much more meaningful picture than chasing one isolated WPM number.",
     },
   ],
 };

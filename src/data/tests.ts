@@ -207,13 +207,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "number-memory-test",
     title: "Number Memory Test",
-    metaTitle: "Number Memory Test — Free Digit Span Test Online",
+    metaTitle: "Number Memory Test – Free Forward & Backward Digit Span",
     shortTitle: "Number Memory",
     category: "Memory & Cognition",
     icon: "🔢",
     shortDescription: "Memorize an increasingly long string of digits. How many can you hold at once?",
     metaDescription:
-      "Free Number Memory Test with Forward and Backward (Reverse) digit span modes. See how many digits you can hold in working memory and how you compare to the average.",
+      "Take a free Number Memory Test online. Memorize increasingly long digit strings in Forward or Reverse mode and find your personal digit-span limit.",
     keywords: [
       "number memory test",
       "digit span test",
@@ -271,13 +271,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "typing-speed-test",
     title: "Typing Speed Test",
-    metaTitle: "Typing Speed Test Online — Free WPM & Accuracy Test",
+    metaTitle: "Typing Speed Test – Free WPM & Accuracy Test Online",
     shortTitle: "Typing Speed",
     category: "Reaction & Speed",
     icon: "⌨️",
     shortDescription: "Type the given passage as fast and accurately as you can. Get your live WPM.",
     metaDescription:
-      "Free online Typing Speed Test with Passage and 60-second Sprint modes across 3 text categories. Get instant WPM, raw WPM, and accuracy — no sign-up required.",
+      "Take a free typing speed test online. Choose a passage or 60-second sprint and measure WPM, raw WPM, accuracy, and typing consistency.",
     keywords: [
       "typing speed test",
       "wpm test",
@@ -1227,13 +1227,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "iowa-gambling-task",
     title: "Iowa Gambling Task",
-    metaTitle: "Iowa Gambling Task — Free Online Decision-Making Test",
+    metaTitle: "Iowa Gambling Task – Free Online Decision-Making Test",
     shortTitle: "Iowa Gambling Task",
     category: "Cognitive Biases",
     icon: "🎰",
     shortDescription: "Draw cards from 4 decks to earn money — some decks feel more exciting but quietly lose you money over time.",
     metaDescription:
-      "Free online Iowa Gambling Task. Draw cards from 4 decks with hidden reward and penalty patterns to see how well you learn to avoid the risky decks.",
+      "Try a free Iowa Gambling Task online. Draw 40 cards from four hidden-risk decks and see how your choices change as you learn from rewards and penalties.",
     keywords: [
       "iowa gambling task online",
       "iowa gambling task free",
@@ -1248,13 +1248,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "availability-heuristic-test",
     title: "Availability Heuristic Test",
-    metaTitle: "Availability Heuristic Test — Free Online Judgment Bias Test",
+    metaTitle: "Availability Heuristic Test – Free Cognitive Bias Quiz",
     shortTitle: "Availability Heuristic",
     category: "Cognitive Biases",
     icon: "📰",
     shortDescription: "Guess which of 12 pairs of things is actually more common — the more memorable answer isn't always the right one.",
     metaDescription:
-      "Free online Availability Heuristic Test. Judge which of 12 pairs is more common and see how memorable, vivid examples can distort your sense of frequency.",
+      "Take a free Availability Heuristic Test online. Answer 12 frequency comparisons and see when memorable examples feel more common than the actual numbers.",
     keywords: [
       "availability heuristic test",
       "availability bias test online",
