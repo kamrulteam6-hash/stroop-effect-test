@@ -1777,13 +1777,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "numerical-stroop-test",
     title: "Numerical Stroop Test",
-    metaTitle: "Numerical Stroop Test — Free Online Number Size Test",
+    metaTitle: "Numerical Stroop Test – Free Size Congruity Test Online",
     shortTitle: "Numerical Stroop",
     category: "Perception",
     icon: "🔢",
     shortDescription: "Click the numerically larger digit while ignoring its physical size, which sometimes conflicts.",
     metaDescription:
-      "Free online Numerical Stroop Test. Measure interference between numerical value and physical size judgments.",
+      "Take a free Numerical Stroop Test online. Compare digit value or physical size and measure how irrelevant numerical or visual size creates interference.",
     keywords: ["numerical stroop test", "number size congruity test", "stroop effect numbers", "cognitive interference test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1793,13 +1793,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "emotional-stroop-test",
     title: "Emotional Stroop Test",
-    metaTitle: "Emotional Stroop Test — Free Online Emotional Interference Test",
+    metaTitle: "Emotional Stroop Test – Free Emotional Interference Task",
     shortTitle: "Emotional Stroop",
     category: "Perception",
     icon: "💭",
     shortDescription: "Name the ink color of emotionally charged and neutral words to measure emotional interference.",
     metaDescription:
-      "Free online Emotional Stroop Test. Measure how emotionally charged words slow down your ink-color naming speed.",
+      "Take a free Emotional Stroop Test online. Name the font color of emotional and neutral words and compare how emotional meaning affects response speed.",
     keywords: ["emotional stroop test", "emotional interference test online", "stroop effect emotion", "attention bias test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1809,13 +1809,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "navon-test",
     title: "Navon Test",
-    metaTitle: "Navon Test — Free Online Global-Local Attention Test",
+    metaTitle: "Navon Test – Free Global vs. Local Attention Test",
     shortTitle: "Navon Test",
     category: "Perception",
     icon: "🔠",
     shortDescription: "Identify large letters made of small letters, switching between global and local processing.",
     metaDescription:
-      "Free online Navon Test. Measure global versus local visual processing using large letters composed of smaller letters.",
+      "Take a free Navon Test online. Identify large global letters or small local letters and measure global precedence, local interference, and attention switching.",
     keywords: ["navon test", "global local processing test", "navon figures test", "visual attention test online"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1825,13 +1825,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "negative-priming-test",
     title: "Negative Priming Test",
-    metaTitle: "Negative Priming Test — Free Online Inhibition Test",
+    metaTitle: "Negative Priming Test – Free Selective Attention Experiment",
     shortTitle: "Negative Priming",
     category: "Focus & Attention",
     icon: "🔵",
     shortDescription: "Click the target shape each round — sometimes the previous distractor becomes the new target.",
     metaDescription:
-      "Free online Negative Priming Test. Measure how ignoring a distractor slows you down when it later becomes the target.",
+      "Take a free Negative Priming Test online. Ignore distractors on prime trials, then respond when a previously ignored item becomes the target.",
     keywords: ["negative priming test", "inhibition test online", "selective attention test", "cognitive inhibition test"],
     estTime: "2 min",
     difficulty: "Hard",
