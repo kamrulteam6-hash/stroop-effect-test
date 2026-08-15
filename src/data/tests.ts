@@ -1393,13 +1393,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "tower-of-hanoi-test",
     title: "Tower of Hanoi Test",
-    metaTitle: "Tower of Hanoi Test — Free Online Puzzle Game",
+    metaTitle: "Tower of Hanoi Test – Free Online Planning Puzzle",
     shortTitle: "Tower of Hanoi",
     category: "IQ & Logic",
     icon: "🗼",
     shortDescription: "Move all 4 disks to the last peg in as few moves as possible, without stacking big on small.",
     metaDescription:
-      "Free online Tower of Hanoi Test. Move 4 disks between 3 pegs in as few moves as possible and compare your result to the 15-move optimal solution.",
+      "Take a free Tower of Hanoi Test online. Move disks between three pegs, follow the rules, and compare your solution with the minimum possible moves.",
     keywords: ["tower of hanoi online", "tower of hanoi game", "planning puzzle test", "logic puzzle free"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -1409,13 +1409,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "choice-reaction-time-test",
     title: "Choice Reaction Time Test",
-    metaTitle: "Choice Reaction Time Test — Free Online 4-Choice Test",
+    metaTitle: "Choice Reaction Time Test – Free Decision Speed Test",
     shortTitle: "Choice Reaction",
     category: "Reaction & Speed",
     icon: "🎯",
     shortDescription: "React to one of four colors as fast as you can with the matching key or button.",
     metaDescription:
-      "Free online Choice Reaction Time Test. React to one of four colors as fast as you can across 15 rounds and see your average choice reaction time.",
+      "Take a free Choice Reaction Time Test online. Match each stimulus to the correct response and measure decision speed, accuracy, and multi-choice reaction time.",
     keywords: ["choice reaction time test", "4 choice reaction test", "reaction time test online", "cognitive speed test"],
     estTime: "1 min",
     difficulty: "Easy",
@@ -1425,13 +1425,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "visual-search-test",
     title: "Visual Search Test",
-    metaTitle: "Visual Search Test — Free Online Target Detection Test",
+    metaTitle: "Visual Search Test – Free Online Attention Search Task",
     shortTitle: "Visual Search",
     category: "Focus & Attention",
     icon: "🔍",
     shortDescription: "Find the odd-colored circle among distractors as fast as you can.",
     metaDescription:
-      "Free online Visual Search Test. Find the target circle among distractors as fast as you can across rounds with different set sizes.",
+      "Take a free Visual Search Test online. Find targets among distractors and compare feature vs. conjunction search speed across different set sizes.",
     keywords: ["visual search test", "target detection test online", "attention test free", "find the odd one out"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1441,13 +1441,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "change-blindness-test",
     title: "Change Blindness Test",
-    metaTitle: "Change Blindness Test — Free Online Perception Test",
+    metaTitle: "Change Blindness Test – Can You Spot the Change?",
     shortTitle: "Change Blindness",
     category: "Perception",
     icon: "🔲",
     shortDescription: "Spot the one square that changes color between two flickering grids.",
     metaDescription:
-      "Free online Change Blindness Test. Spot the square that changes color between two flickering grids and see how fast you detect the change.",
+      "Take a free Change Blindness Test online. Watch two scenes flicker with a brief blank between them and see how quickly you can find the hidden change.",
     keywords: ["change blindness test", "change detection test online", "perception test free", "spot the difference test"],
     estTime: "2 min",
     difficulty: "Medium",
