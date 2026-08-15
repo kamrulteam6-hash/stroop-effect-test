@@ -162,13 +162,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "aim-trainer-test",
     title: "Aim Trainer Test",
-    metaTitle: "Aim Trainer Test — Free Online Mouse Accuracy & Speed Test",
+    metaTitle: "Aim Trainer Test – Free Online Mouse Accuracy Test",
     shortTitle: "Aim Trainer",
     category: "Reaction & Speed",
     icon: "🎯",
     shortDescription: "Click 30 targets as fast as you can. Track your average click speed and accuracy.",
     metaDescription:
-      "Free online Aim Trainer test — no download, no install. Click static or moving targets, choose your target size and count, and track your average time and accuracy.",
+      "Test your aim, mouse accuracy, and target-clicking speed online. Choose target size, static or tracking mode, and get instant results in milliseconds.",
     keywords: [
       "aim trainer test",
       "aim trainer online",
