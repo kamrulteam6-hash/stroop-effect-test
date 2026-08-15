@@ -820,13 +820,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "vocabulary-size-test",
     title: "Vocabulary Size Test",
-    metaTitle: "Vocabulary Size Test — Free Online Word Knowledge Test",
+    metaTitle: "Vocabulary Size Test – How Many English Words Do You Know?",
     shortTitle: "Vocabulary Size",
     category: "Memory & Cognition",
     icon: "📚",
     shortDescription: "Mark which words you actually know to get an estimate of your vocabulary size.",
     metaDescription:
-      "Free online Vocabulary Size Test. Mark which words you genuinely know — including decoy fake words — to get an estimate of your total English vocabulary size.",
+      "Take a free vocabulary size test online. Mark the English words you genuinely know, avoid realistic fake words, and get an estimated receptive vocabulary size.",
     keywords: [
       "vocabulary size test",
       "vocabulary test online free",
@@ -841,13 +841,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "handedness-test",
     title: "Handedness Test",
-    metaTitle: "Handedness Test — Free Online Hand Dominance Quiz",
+    metaTitle: "Handedness Test – Left, Right or Mixed-Handed Quiz",
     shortTitle: "Handedness",
     category: "Personality",
     icon: "✋",
     shortDescription: "A short quiz measuring how strongly you favor your dominant hand across everyday tasks.",
     metaDescription:
-      "Free online Handedness Test inspired by the Edinburgh Handedness Inventory. Answer questions about everyday tasks to get your hand dominance score.",
+      "Take a free handedness test online. Answer 10 everyday hand-preference questions and see your Laterality Quotient from strongly left to strongly right.",
     keywords: [
       "handedness test",
       "edinburgh handedness inventory online",
@@ -861,13 +861,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "personality-type-test",
     title: "Personality Type Test",
-    metaTitle: "Personality Type Test — Free Online 4-Letter Type Quiz",
+    metaTitle: "Personality Type Test – Free 16 Type & 4-Letter Quiz",
     shortTitle: "Personality Type",
     category: "Personality",
     icon: "🧭",
     shortDescription: "A short quiz sorting your preferences into a 4-letter personality type.",
     metaDescription:
-      "Free online Personality Type Test. Answer quick questions across 4 preference dimensions to get your 4-letter personality type, inspired by the popular typing system.",
+      "Take a free personality type test online. Answer 24 questions and explore your preferences across E–I, S–N, T–F, and J–P to get a 4-letter type.",
     keywords: [
       "personality type test",
       "16 personality types quiz",
@@ -881,13 +881,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "risk-taking-test",
     title: "Risk-Taking Test",
-    metaTitle: "Risk-Taking Test — Free Online Balloon Risk Task",
+    metaTitle: "Risk-Taking Test – Free Balloon Risk Task Online",
     shortTitle: "Risk-Taking",
     category: "Personality",
     icon: "🎈",
     shortDescription: "Pump up a virtual balloon for points — but don't let it pop before you cash out.",
     metaDescription:
-      "Free online Risk-Taking Test based on the Balloon Analogue Risk Task (BART). Pump a virtual balloon for points, but cash out before it pops.",
+      "Take a free risk-taking test based on the Balloon Analogue Risk Task. Pump 10 virtual balloons, cash out before they pop, and explore your risk decisions.",
     keywords: [
       "risk taking test online",
       "balloon analogue risk task",
