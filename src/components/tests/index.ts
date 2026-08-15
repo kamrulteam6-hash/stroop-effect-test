@@ -164,6 +164,14 @@ import { BrainAgeTest } from "@/components/tests/BrainAgeTest";
 import { CognitiveAgeTest } from "@/components/tests/CognitiveAgeTest";
 import { AttentionAgeTest } from "@/components/tests/AttentionAgeTest";
 import { MemoryAgeTest } from "@/components/tests/MemoryAgeTest";
+import { FocusTest } from "@/components/tests/FocusTest";
+import { ConcentrationTest } from "@/components/tests/ConcentrationTest";
+import { MultitaskingTest } from "@/components/tests/MultitaskingTest";
+import { ProcessingSpeedTest } from "@/components/tests/ProcessingSpeedTest";
+import { CognitiveFlexibilityTest } from "@/components/tests/CognitiveFlexibilityTest";
+import { ExecutiveFunctionTest } from "@/components/tests/ExecutiveFunctionTest";
+import { ProblemSolvingTest } from "@/components/tests/ProblemSolvingTest";
+import { CommonSenseTest } from "@/components/tests/CommonSenseTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -330,4 +338,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "cognitive-age": CognitiveAgeTest,
   "attention-age": AttentionAgeTest,
   "memory-age": MemoryAgeTest,
+  "focus-test": FocusTest,
+  "concentration-test": ConcentrationTest,
+  "multitasking-test": MultitaskingTest,
+  "processing-speed": ProcessingSpeedTest,
+  "cognitive-flexibility": CognitiveFlexibilityTest,
+  "executive-function": ExecutiveFunctionTest,
+  "problem-solving-quiz": ProblemSolvingTest,
+  "common-sense-quiz": CommonSenseTest,
 };

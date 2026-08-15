@@ -163,6 +163,14 @@ import { content as brainAgeTest } from "@/data/seoContent/brain-age-test";
 import { content as cognitiveAgeTest } from "@/data/seoContent/cognitive-age-test";
 import { content as attentionAgeTest } from "@/data/seoContent/attention-age-test";
 import { content as memoryAgeTest } from "@/data/seoContent/memory-age-test";
+import { content as focusTest } from "@/data/seoContent/focus-test";
+import { content as concentrationTest } from "@/data/seoContent/concentration-test";
+import { content as multitaskingTest } from "@/data/seoContent/multitasking-test";
+import { content as processingSpeedTest } from "@/data/seoContent/processing-speed-test";
+import { content as cognitiveFlexibilityTest } from "@/data/seoContent/cognitive-flexibility-test";
+import { content as executiveFunctionTest } from "@/data/seoContent/executive-function-test";
+import { content as problemSolvingTest } from "@/data/seoContent/problem-solving-test";
+import { content as commonSenseTest } from "@/data/seoContent/common-sense-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -329,4 +337,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "cognitive-age-test": cognitiveAgeTest,
   "attention-age-test": attentionAgeTest,
   "memory-age-test": memoryAgeTest,
+  "focus-test": focusTest,
+  "concentration-test": concentrationTest,
+  "multitasking-test": multitaskingTest,
+  "processing-speed-test": processingSpeedTest,
+  "cognitive-flexibility-test": cognitiveFlexibilityTest,
+  "executive-function-test": executiveFunctionTest,
+  "problem-solving-test": problemSolvingTest,
+  "common-sense-test": commonSenseTest,
 };

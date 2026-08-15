@@ -177,7 +177,15 @@ export type ComponentKey =
   | "brain-age"
   | "cognitive-age"
   | "attention-age"
-  | "memory-age";
+  | "memory-age"
+  | "focus-test"
+  | "concentration-test"
+  | "multitasking-test"
+  | "processing-speed"
+  | "cognitive-flexibility"
+  | "executive-function"
+  | "problem-solving-quiz"
+  | "common-sense-quiz";
 
 export interface TestDefinition {
   slug: string;
@@ -3016,6 +3024,126 @@ export const tests: TestDefinition[] = [
     difficulty: "Easy",
     componentKey: "memory-age",
     scoreDirection: "lower",
+  },
+  {
+    slug: "focus-test",
+    title: "Focus Test",
+    metaTitle: "Focus Test – Free Online Sustained Focus Test",
+    shortTitle: "Focus Test",
+    category: "Focus & Attention",
+    icon: "🎯",
+    shortDescription: "Respond to 24 blue or red circles as quickly and consistently as you can.",
+    metaDescription: "Take a free Focus Test online. Respond to a repeating color task and measure your focus score, accuracy, and response consistency.",
+    keywords: ["focus test", "focus test online free", "how focused am i test", "attention consistency test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "focus-test",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "concentration-test",
+    title: "Concentration Test",
+    metaTitle: "Concentration Test – Free Online Serial Subtraction",
+    shortTitle: "Concentration Test",
+    category: "Focus & Attention",
+    icon: "🧮",
+    shortDescription: "Subtract 7 repeatedly from a random starting number, holding the running total in your head.",
+    metaDescription: "Take a free Concentration Test online. Subtract 7 repeatedly from a starting number to measure sustained mental concentration.",
+    keywords: ["concentration test", "concentration test online free", "serial sevens test", "mental concentration test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "concentration-test",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "multitasking-test",
+    title: "Multitasking Test",
+    metaTitle: "Multitasking Test – Free Online Dual-Task Test",
+    shortTitle: "Multitasking Test",
+    category: "Focus & Attention",
+    icon: "🤹",
+    shortDescription: "Complete a baseline task, then repeat it while tracking a second task to reveal your multitasking cost.",
+    metaDescription: "Take a free Multitasking Test online. Compare single-task and dual-task performance to measure your multitasking cost.",
+    keywords: ["multitasking test", "multitasking test online free", "dual task test", "how good am i at multitasking"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "multitasking-test",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "processing-speed-test",
+    title: "Processing Speed Test",
+    metaTitle: "Processing Speed Test – Free Online Quiz",
+    shortTitle: "Processing Speed",
+    category: "Focus & Attention",
+    icon: "⚡",
+    shortDescription: "Decide whether 20 pairs of letter strings are exactly the same or different, as fast as you can.",
+    metaDescription: "Take a free Processing Speed Test online. Compare letter-string pairs as fast as you can to measure your perceptual processing speed.",
+    keywords: ["processing speed test", "processing speed test online free", "perceptual speed test", "mental speed test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "processing-speed",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "cognitive-flexibility-test",
+    title: "Cognitive Flexibility Test",
+    metaTitle: "Cognitive Flexibility Test – Free Online Quiz",
+    shortTitle: "Cognitive Flexibility",
+    category: "Focus & Attention",
+    icon: "🔀",
+    shortDescription: "List as many different, creative uses for a common object as you can in 45 seconds.",
+    metaDescription: "Take a free Cognitive Flexibility Test online. List creative uses for a common object to measure divergent thinking and mental flexibility.",
+    keywords: ["cognitive flexibility test", "cognitive flexibility test online free", "divergent thinking test", "alternate uses test"],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "cognitive-flexibility",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "executive-function-test",
+    title: "Executive Function Test",
+    metaTitle: "Executive Function Test – Free Online Composite Test",
+    shortTitle: "Executive Function",
+    category: "Focus & Attention",
+    icon: "🗂️",
+    shortDescription: "Complete three rounds covering inhibition, working memory, and planning for a composite breakdown.",
+    metaDescription: "Take a free Executive Function Test online. Complete three quick rounds covering inhibition, working memory, and planning for a composite score.",
+    keywords: ["executive function test", "executive function test online free", "executive functioning quiz", "frontal lobe test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "executive-function",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "problem-solving-test",
+    title: "Problem Solving Test",
+    metaTitle: "Problem Solving Test – Free Online Logic Quiz",
+    shortTitle: "Problem Solving",
+    category: "IQ & Logic",
+    icon: "🧩",
+    shortDescription: "Answer 10 short logic and brain-teaser puzzles at your own pace.",
+    metaDescription: "Take a free Problem Solving Test online. Answer 10 logic and brain-teaser puzzles to measure your problem-solving ability.",
+    keywords: ["problem solving test", "problem solving test online free", "logic puzzle quiz", "brain teaser test"],
+    estTime: "5 min",
+    difficulty: "Medium",
+    componentKey: "problem-solving-quiz",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "common-sense-test",
+    title: "Common Sense Test",
+    metaTitle: "Common Sense Test – Free Online Practical Judgment Quiz",
+    shortTitle: "Common Sense Test",
+    category: "IQ & Logic",
+    icon: "💡",
+    shortDescription: "Choose the most sensible response to 10 everyday practical scenarios.",
+    metaDescription: "Take a free Common Sense Test online. Choose the most sensible response to everyday scenarios and measure your practical judgment.",
+    keywords: ["common sense test", "common sense test online free", "practical judgment quiz", "do you have common sense quiz"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "common-sense-quiz",
+    scoreDirection: "higher",
   },
 ];
 
