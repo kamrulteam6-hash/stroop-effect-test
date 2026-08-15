@@ -1841,13 +1841,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "inhibition-of-return-test",
     title: "Inhibition of Return Test",
-    metaTitle: "Inhibition of Return Test — Free Online Attention Test",
+    metaTitle: "Inhibition of Return Test – Free Spatial Attention Test",
     shortTitle: "Inhibition of Return",
     category: "Focus & Attention",
     icon: "↩️",
     shortDescription: "React to targets after a cue, revealing how attention resists returning to a previously cued spot.",
     metaDescription:
-      "Free online Inhibition of Return Test. Measure how your attention resists returning to a previously cued location.",
+      "Take a free Inhibition of Return Test online. Respond to targets at previously cued and uncued locations and measure how attention changes over time.",
     keywords: ["inhibition of return test", "ior test online", "visual attention test", "cueing attention test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1857,13 +1857,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "flicker-change-detection-test",
     title: "Flicker Change Detection Test",
-    metaTitle: "Flicker Change Detection Test — Free Online Change Blindness Test",
+    metaTitle: "Flicker Change Detection Test – Spot Visual Changes Online",
     shortTitle: "Flicker Detection",
     category: "Perception",
     icon: "✨",
     shortDescription: "Find the one shape that changes as a grid flickers between two nearly identical versions.",
     metaDescription:
-      "Free online Flicker Change Detection Test. Find the one item that changes as a scene flickers between two versions.",
+      "Take a free Flicker Change Detection Test online. Compare alternating displays separated by blank intervals and measure change localization speed and accuracy.",
     keywords: ["flicker change detection test", "change blindness test online", "spot the difference test", "visual attention test"],
     estTime: "2 min",
     difficulty: "Hard",
@@ -1873,13 +1873,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "spatial-search-test",
     title: "Spatial Search Test",
-    metaTitle: "Spatial Search Test — Free Online Location Memory Test",
+    metaTitle: "Spatial Search Test – Free Spatial Working Memory Test",
     shortTitle: "Spatial Search",
     category: "Memory & Cognition",
     icon: "📍",
     shortDescription: "Remember a briefly highlighted cell's location and click it once the grid goes blank.",
     metaDescription:
-      "Free online Spatial Search Test. Measure your spatial location memory and search speed across multiple rounds.",
+      "Take a free Spatial Search Test online. Search boxes for hidden targets, remember previously successful locations, and measure spatial working-memory errors.",
     keywords: ["spatial search test", "location memory test online", "spatial memory test", "visual search speed test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1889,13 +1889,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "backward-spatial-span-test",
     title: "Backward Spatial Span Test",
-    metaTitle: "Backward Spatial Span Test — Free Online Working Memory Test",
+    metaTitle: "Backward Spatial Span Test – Free Spatial Working Memory Test",
     shortTitle: "Backward Spatial Span",
     category: "Memory & Cognition",
     icon: "🔁",
     shortDescription: "Watch a sequence of highlighted cells, then click them back in reverse order.",
     metaDescription:
-      "Free online Backward Spatial Span Test. Measure your visuospatial working memory by recalling sequences in reverse order.",
+      "Take a free Backward Spatial Span Test online. Watch a sequence of locations and reproduce the pattern in reverse order to challenge spatial working memory.",
     keywords: ["backward spatial span test", "spatial span test online", "corsi block test", "working memory test"],
     estTime: "3 min",
     difficulty: "Hard",
