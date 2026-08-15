@@ -983,13 +983,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "barnum-effect-test",
     title: "Barnum Effect Test",
-    metaTitle: "Barnum Effect Test — Free Online Forer Effect Demonstration",
+    metaTitle: "Barnum Effect Test – Free Forer Effect Personality Demo",
     shortTitle: "Barnum Effect",
     category: "Cognitive Biases",
     icon: "🔮",
     shortDescription: "Get a 'personalized' reading, rate how accurate it feels, then see the trick behind it.",
     metaDescription:
-      "Free online Barnum Effect Test (Forer Effect). Get a personalized-sounding reading, rate its accuracy, then discover why vague statements feel so personally true.",
+      "Take a free Barnum Effect Test online. Get a “personalized” personality reading, rate its accuracy, then reveal the Forer effect behind it.",
     keywords: [
       "barnum effect test",
       "forer effect test online",
@@ -1003,13 +1003,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "necker-cube-test",
     title: "Necker Cube Test",
-    metaTitle: "Necker Cube Test — Free Online Bistable Illusion Test",
+    metaTitle: "Necker Cube Test – Free Bistable Perception Illusion",
     shortTitle: "Necker Cube",
     category: "Perception",
     icon: "🧊",
     shortDescription: "Stare at an ambiguous wireframe cube and click every time your perception of it flips.",
     metaDescription:
-      "Free online Necker Cube Test. Watch a classic ambiguous wireframe cube and track how often your perception spontaneously flips between two interpretations.",
+      "Take a free Necker Cube Test online. Watch the ambiguous cube for 30 seconds, click whenever its 3D orientation flips, and see your reversal rate.",
     keywords: [
       "necker cube test online",
       "ambiguous figure test",
@@ -1023,13 +1023,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "anchoring-bias-test",
     title: "Anchoring Bias Test",
-    metaTitle: "Anchoring Bias Test — Free Online Cognitive Bias Test",
+    metaTitle: "Anchoring Bias Test – Free Cognitive Bias Experiment",
     shortTitle: "Anchoring Bias",
     category: "Cognitive Biases",
     icon: "⚓",
     shortDescription: "Answer a few trivia estimates and see how a random starting number quietly pulled your guess.",
     metaDescription:
-      "Free online Anchoring Bias Test. Estimate trivia answers after seeing a random anchor number, then see how far your guesses were pulled toward it.",
+      "Take a free Anchoring Bias Test online. Answer 5 trivia estimates after seeing high or low reference numbers and explore how anchors can influence judgment.",
     keywords: [
       "anchoring bias test online",
       "anchoring effect test",
@@ -1043,13 +1043,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "levels-of-processing-test",
     title: "Levels of Processing Test",
-    metaTitle: "Levels of Processing Test — Free Online Memory Test",
+    metaTitle: "Levels of Processing Test – Deep vs. Shallow Memory",
     shortTitle: "Levels of Processing",
     category: "Memory & Cognition",
     icon: "🧠",
     shortDescription: "Judge some words by appearance and others by meaning, then see which ones you remember better.",
     metaDescription:
-      "Free online Levels of Processing Test. Compare shallow (visual) and deep (meaning-based) word encoding to see which one gives you better memory recall.",
+      "Take a free Levels of Processing Test online. Judge words by appearance or meaning, then compare recognition for shallow vs. semantic encoding.",
     keywords: [
       "levels of processing test",
       "deep vs shallow memory test",

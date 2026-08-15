@@ -4,57 +4,475 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "Before you estimate an unfamiliar number, seeing almost any other number first — even one you know is arbitrary — can quietly shift your guess toward it. This is anchoring bias, one of the most robust findings in behavioral economics and judgment research, and this test lets you notice it happening in your own estimates.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Anchoring Bias Test Works",
+      text: "Can a number influence your estimate even when you know it should not matter?",
     },
     {
       type: "paragraph",
-      text: "You'll answer 5 trivia questions. Before each one, you'll see a reference number — randomly either a high or low one — and quickly judge whether the real answer is more or less than it. Then you'll type in your actual best guess. Afterward, you'll see your estimate next to the anchor you saw and the real answer, so you can notice whether your guess landed closer to the anchor than you might expect.",
-    },
-    {
-      type: "heading",
-      text: "The Research Behind Anchoring",
+      text: "Take this free **Anchoring Bias Test** to experience one of the most studied effects in judgment and decision-making.",
     },
     {
       type: "paragraph",
-      text: "Anchoring bias was first documented by psychologists Amos Tversky and Daniel Kahneman in the early 1970s as part of their pioneering work on judgment under uncertainty — research that later contributed to Kahneman's 2002 Nobel Prize in Economic Sciences. In their classic demonstration, participants spun a rigged wheel of fortune landing on either a high or low number, then estimated an unrelated quantity (the percentage of African countries in the United Nations). Despite the wheel result being obviously random and irrelevant, participants who saw a higher spin gave systematically higher estimates than those who saw a lower spin.",
-    },
-    {
-      type: "heading",
-      id: "why-it-matters",
-      text: "Why This Bias Is So Hard to Resist",
+      text: "You will answer five estimation questions. Before each estimate, the test shows a high or low reference number. You first decide whether the true answer is above or below that number, then enter your best estimate.",
     },
     {
       type: "paragraph",
-      text: "The leading explanation is that people adjust away from an initial anchor through a mental search process, but that search tends to stop too early — as soon as a plausible-sounding answer is reached, rather than continuing all the way to an unbiased estimate. This means the bias isn't really about believing the anchor is meaningful; it happens even when people are explicitly told the anchor is random, which is part of what makes it such a persistent and well-studied effect.",
+      text: "The test is a demonstration, not an individual diagnosis of “how biased” you are. Five questions are too few to establish a stable personal susceptibility to anchoring.",
     },
     {
       type: "heading",
-      text: "Where Anchoring Shows Up in Everyday Life",
+      id: "how-to-take",
+      text: "How to Take the Anchoring Bias Test",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Press **Start Test**.",
+        "Read the trivia question.",
+        "Notice the reference number—the anchor.",
+        "Decide whether the real answer is higher or lower.",
+        "Enter your own best numerical estimate.",
+        "Repeat for all five questions.",
+        "Compare your estimates with the anchors and actual answers.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Answer honestly.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not search for the correct trivia answers while taking the test.",
+    },
+    {
+      type: "paragraph",
+      text: "The experiment only makes sense when you are estimating under uncertainty.",
+    },
+    {
+      type: "heading",
+      id: "what-is",
+      text: "What Is Anchoring Bias?",
+    },
+    {
+      type: "paragraph",
+      text: "**Anchoring bias** is the tendency for an initial value or reference point to influence a later numerical judgment.",
+    },
+    {
+      type: "paragraph",
+      text: "Suppose you know very little about the height of a distant mountain.",
+    },
+    {
+      type: "paragraph",
+      text: "Before guessing, someone asks:",
+    },
+    {
+      type: "paragraph",
+      text: "**“Is it higher or lower than 8,000 meters?”**",
+    },
+    {
+      type: "paragraph",
+      text: "That number can pull your eventual estimate upward.",
+    },
+    {
+      type: "paragraph",
+      text: "Another person shown:",
+    },
+    {
+      type: "paragraph",
+      text: "**“Is it higher or lower than 2,000 meters?”**",
+    },
+    {
+      type: "paragraph",
+      text: "may give a lower estimate.",
+    },
+    {
+      type: "paragraph",
+      text: "The anchor does not need to be the correct answer.",
+    },
+    {
+      type: "paragraph",
+      text: "In classic experiments, even obviously arbitrary numbers have influenced estimates.",
+    },
+    {
+      type: "heading",
+      text: "The Classic Tversky and Kahneman Demonstration",
+    },
+    {
+      type: "paragraph",
+      text: "Anchoring became famous through the work of psychologists **Amos Tversky and Daniel Kahneman**.",
+    },
+    {
+      type: "paragraph",
+      text: "In their influential 1974 paper on judgment under uncertainty, participants encountered an apparently random number generated by a wheel and then answered an unrelated estimation question.",
+    },
+    {
+      type: "paragraph",
+      text: "Groups exposed to a high number gave higher estimates than groups exposed to a low number.",
+    },
+    {
+      type: "paragraph",
+      text: "The important evidence came from the **difference between groups**.",
+    },
+    {
+      type: "paragraph",
+      text: "That point matters for interpreting this website.",
+    },
+    {
+      type: "paragraph",
+      text: "Anchoring is scientifically demonstrated by comparing judgments under different anchor conditions—not simply by noticing that one person's estimate happened to sit near one anchor.",
+    },
+    {
+      type: "heading",
+      text: "Why Your Individual Estimate Cannot Prove the Anchor Caused It",
+    },
+    {
+      type: "paragraph",
+      text: "Imagine the test shows you an anchor of 70 and you estimate 62.",
+    },
+    {
+      type: "paragraph",
+      text: "Was your answer pulled upward by the anchor?",
+    },
+    {
+      type: "paragraph",
+      text: "Maybe.",
+    },
+    {
+      type: "paragraph",
+      text: "But we do not know what **you would have guessed without seeing 70**.",
+    },
+    {
+      type: "paragraph",
+      text: "Perhaps your unaided estimate would also have been 62.",
+    },
+    {
+      type: "paragraph",
+      text: "That missing alternative is called a **counterfactual**.",
+    },
+    {
+      type: "paragraph",
+      text: "In controlled anchoring research, investigators solve this problem by comparing many people exposed to different anchors or to control conditions.",
+    },
+    {
+      type: "paragraph",
+      text: "With one person answering one version of a question, causation cannot be established.",
+    },
+    {
+      type: "paragraph",
+      text: "So this test can give you a **felt demonstration of the setup**, but it cannot calculate your true individual anchoring effect from five trivia answers.",
+    },
+    {
+      type: "heading",
+      text: "High Anchors vs. Low Anchors",
+    },
+    {
+      type: "paragraph",
+      text: "A common experiment randomly assigns:",
+    },
+    {
+      type: "list",
+      items: ["a relatively high anchor;", "or a relatively low anchor."],
+    },
+    {
+      type: "paragraph",
+      text: "If anchoring occurs across a group, estimates after the high anchor should tend to be higher.",
+    },
+    {
+      type: "paragraph",
+      text: "The effect is not defined as:",
+    },
+    {
+      type: "paragraph",
+      text: "**“your answer was numerically close to the anchor.”**",
+    },
+    {
+      type: "paragraph",
+      text: "A person can still be influenced even if the final estimate is far away.",
+    },
+    {
+      type: "paragraph",
+      text: "What matters scientifically is how the distribution of judgments changes compared with another anchor condition.",
+    },
+    {
+      type: "heading",
+      text: "Why Do Anchors Work?",
+    },
+    {
+      type: "paragraph",
+      text: "There is no single universally accepted explanation for every anchoring effect.",
+    },
+    {
+      type: "paragraph",
+      text: "Several mechanisms have strong research histories.",
+    },
+    {
+      type: "subheading",
+      text: "Insufficient Adjustment",
+    },
+    {
+      type: "paragraph",
+      text: "One idea is that people start from an anchor and adjust away from it—but stop adjusting too soon.",
+    },
+    {
+      type: "subheading",
+      text: "Selective Accessibility",
+    },
+    {
+      type: "paragraph",
+      text: "Considering an anchor may make anchor-consistent information easier to retrieve.",
+    },
+    {
+      type: "paragraph",
+      text: "A high anchor can prompt thoughts supporting a relatively high value, while a low anchor activates different information.",
+    },
+    {
+      type: "subheading",
+      text: "Scale and Numerical Processes",
+    },
+    {
+      type: "paragraph",
+      text: "Anchors can also influence how people interpret the response scale or magnitude of plausible values.",
+    },
+    {
+      type: "paragraph",
+      text: "Different anchoring paradigms may involve different mechanisms.",
+    },
+    {
+      type: "paragraph",
+      text: "That is why it is too strong to claim that **all anchoring happens only because adjustment stops early**.",
+    },
+    {
+      type: "heading",
+      text: "Does the Anchor Have to Be Relevant?",
+    },
+    {
+      type: "paragraph",
+      text: "No.",
+    },
+    {
+      type: "paragraph",
+      text: "One of the striking features of anchoring research is that arbitrary or minimally informative values can still influence estimates.",
+    },
+    {
+      type: "paragraph",
+      text: "However, the strength of the effect depends on the task and anchor.",
+    },
+    {
+      type: "paragraph",
+      text: "Not every random number creates the same amount of anchoring.",
+    },
+    {
+      type: "paragraph",
+      text: "Extremely implausible anchors, expertise, available knowledge, incentives, and question framing can all change the result.",
+    },
+    {
+      type: "paragraph",
+      text: "The scientifically accurate statement is:",
+    },
+    {
+      type: "paragraph",
+      text: "**irrelevant anchors can influence judgment**",
+    },
+    {
+      type: "paragraph",
+      text: "not:",
+    },
+    {
+      type: "paragraph",
+      text: "**every number influences every person equally.**",
+    },
+    {
+      type: "heading",
+      text: "Anchoring in Negotiations",
+    },
+    {
+      type: "paragraph",
+      text: "Negotiations are one of the most practical contexts for anchoring.",
+    },
+    {
+      type: "paragraph",
+      text: "The first serious numerical offer can shape the range of later discussion.",
+    },
+    {
+      type: "paragraph",
+      text: "A high opening price may make later numbers feel relatively moderate.",
+    },
+    {
+      type: "paragraph",
+      text: "A low initial salary figure may influence what counts as a reasonable counteroffer.",
+    },
+    {
+      type: "paragraph",
+      text: "But anchoring is not the only force in negotiation.",
+    },
+    {
+      type: "paragraph",
+      text: "Market knowledge, bargaining power, alternatives, credibility, goals, and strategic behavior also matter.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not assume that making an extreme first offer automatically guarantees a favorable outcome.",
+    },
+    {
+      type: "heading",
+      text: "Anchoring in Pricing",
+    },
+    {
+      type: "paragraph",
+      text: "Retail pricing can create reference points.",
+    },
+    {
+      type: "paragraph",
+      text: "Examples include:",
     },
     {
       type: "list",
       items: [
-        "Negotiations, where the first number mentioned tends to pull the entire discussion toward it.",
-        "Retail pricing, where a crossed-out \"original price\" next to a sale price anchors your sense of value.",
-        "Salary discussions, where the first figure raised in a conversation often shapes the eventual outcome.",
-        "Real estate, where a home's initial listing price can anchor buyers' sense of what it's actually worth.",
+        "an original price next to a sale price;",
+        "a premium product shown beside a cheaper one;",
+        "suggested donation amounts;",
+        "“regular” versus discounted subscriptions.",
       ],
     },
     {
-      type: "callout",
-      icon: "⚓",
-      title: "This is a general finding, not a claim about you specifically",
-      tone: "gold",
-      text: "With just 5 questions, this test can't prove your individual bias with certainty — it's meant to give you a felt sense of how the effect generally works, based on decades of replicated research.",
+      type: "paragraph",
+      text: "The first number can influence what later prices feel expensive or inexpensive.",
     },
     {
       type: "paragraph",
-      text: "Curious about another everyday decision bias? Try our [Sunk Cost Fallacy Test](/test/sunk-cost-test), which looks at how already-spent costs can irrationally influence what you decide to do next.",
+      text: "Again, this does not mean every displayed reference price manipulates every buyer.",
+    },
+    {
+      type: "paragraph",
+      text: "Anchoring describes a statistical tendency.",
+    },
+    {
+      type: "heading",
+      text: "Does Expertise Eliminate Anchoring?",
+    },
+    {
+      type: "paragraph",
+      text: "Not necessarily.",
+    },
+    {
+      type: "paragraph",
+      text: "Experts often have more relevant knowledge, which can reduce uncertainty and sometimes reduce anchoring.",
+    },
+    {
+      type: "paragraph",
+      text: "But anchoring effects have also been observed in professional contexts.",
+    },
+    {
+      type: "paragraph",
+      text: "Expertise is not perfect immunity.",
+    },
+    {
+      type: "paragraph",
+      text: "The size of an effect depends on how much knowledge is available, whether the anchor is plausible, how the judgment is made, and whether independent evidence can be consulted.",
+    },
+    {
+      type: "paragraph",
+      text: "The best defense is not simply telling yourself:",
+    },
+    {
+      type: "paragraph",
+      text: "**“I am experienced, so anchors cannot affect me.”**",
+    },
+    {
+      type: "heading",
+      text: "How to Reduce Anchoring in Real Decisions",
+    },
+    {
+      type: "paragraph",
+      text: "When the stakes matter, use procedures that create independent information before accepting a reference point.",
+    },
+    {
+      type: "paragraph",
+      text: "Try:",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "estimate independently before seeing another person's number;",
+        "research objective comparison data;",
+        "generate reasons why the anchor could be wrong;",
+        "consider multiple alternative values;",
+        "use ranges rather than one immediate point estimate;",
+        "delay commitment when possible.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "For negotiations, prepare your own target, reservation point, and market evidence before the first offer is introduced.",
+    },
+    {
+      type: "paragraph",
+      text: "The goal is to build an independent reference structure.",
+    },
+    {
+      type: "heading",
+      text: "Anchoring Bias vs. Framing Effect",
+    },
+    {
+      type: "paragraph",
+      text: "The [Framing Effect Test](/test/framing-effect-test) changes how the same underlying outcome is described.",
+    },
+    {
+      type: "paragraph",
+      text: "Anchoring uses an initial reference value that pulls later judgment.",
+    },
+    {
+      type: "paragraph",
+      text: "For example:",
+    },
+    {
+      type: "paragraph",
+      text: "**Anchoring:** “Is the answer higher or lower than 80?”",
+    },
+    {
+      type: "paragraph",
+      text: "**Framing:** “90% survive” versus “10% die.”",
+    },
+    {
+      type: "paragraph",
+      text: "Both influence decisions through context, but the mechanisms and experimental designs are different.",
+    },
+    {
+      type: "heading",
+      text: "What Does a “Good” Anchoring Score Look Like?",
+    },
+    {
+      type: "paragraph",
+      text: "There is no universal score.",
+    },
+    {
+      type: "paragraph",
+      text: "In fact, a short individual test should avoid labels such as:",
+    },
+    {
+      type: "list",
+      items: ["immune to anchoring;", "highly biased;", "excellent decision-maker."],
+    },
+    {
+      type: "paragraph",
+      text: "Even if all five estimates end far from the anchors, that does not prove immunity.",
+    },
+    {
+      type: "paragraph",
+      text: "You might already have known the answers.",
+    },
+    {
+      type: "paragraph",
+      text: "The anchors might have been weak.",
+    },
+    {
+      type: "paragraph",
+      text: "Or the influence might have changed your estimate without making it obviously close to the anchor.",
+    },
+    {
+      type: "paragraph",
+      text: "The strongest evidence for anchoring comes from controlled comparisons across many observations.",
     },
     {
       type: "heading",
@@ -66,30 +484,53 @@ export const content: TestSeoContent = {
       items: [
         {
           question: "Who discovered anchoring bias?",
-          answer:
-            "Psychologists Amos Tversky and Daniel Kahneman documented it in the early 1970s as part of their influential research on judgment and decision-making under uncertainty.",
+          answer: "Tversky and Kahneman made the effect famous through classic judgment research, including their 1974 work on heuristics and biases.",
         },
         {
-          question: "Does the anchor have to be believable to work?",
-          answer:
-            "No — research has repeatedly found that anchoring effects persist even when people are told the anchor number is random or completely irrelevant to the question at hand.",
+          question: "Does an anchor have to be believable?",
+          answer: "No. Arbitrary anchors can influence estimates, although effect size depends on the task and anchor.",
         },
         {
-          question: "Why can't I just ignore the anchor if I know about this bias?",
-          answer:
-            "Adjustment away from an anchor tends to stop as soon as an answer feels plausible, rather than continuing to a fully unbiased estimate, which makes the effect resistant to willpower alone.",
+          question: "Is anchoring caused only by insufficient adjustment?",
+          answer: "No. Insufficient adjustment is one influential explanation, but selective accessibility and other mechanisms also have research support.",
         },
         {
-          question: "Is 5 questions enough to prove I'm personally biased?",
-          answer:
-            "Not with statistical certainty for an individual — this test is designed to give you a felt sense of the effect, which has been established through much larger controlled studies across many participants.",
+          question: "Can five questions prove that I am susceptible?",
+          answer: "No. Five trials can demonstrate the experimental idea but cannot provide a stable individual bias measurement.",
         },
         {
-          question: "Can businesses and negotiators exploit anchoring?",
-          answer:
-            "Yes — anchoring is widely discussed in negotiation and pricing strategy specifically because the first number introduced in a discussion tends to have an outsized, lasting influence on the outcome.",
+          question: "Why can't the test simply measure how close I was to the anchor?",
+          answer: "Because closeness does not reveal what you would have guessed without that anchor.",
+        },
+        {
+          question: "Can knowing about anchoring eliminate it?",
+          answer: "Awareness can help, but knowledge alone does not guarantee immunity. Independent estimates and external evidence are stronger safeguards.",
+        },
+        {
+          question: "Is anchoring the same as confirmation bias?",
+          answer: "No. Anchoring specifically concerns the influence of an initial reference point on later judgment.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Ask What You Would Have Guessed First",
+    },
+    {
+      type: "paragraph",
+      text: "The best habit for fighting anchoring is simple:",
+    },
+    {
+      type: "paragraph",
+      text: "**create your own estimate before someone else supplies the reference point.**",
+    },
+    {
+      type: "paragraph",
+      text: "Once a number enters the conversation, it can become psychologically difficult to treat it as if you never saw it.",
+    },
+    {
+      type: "paragraph",
+      text: "That is why anchoring is such a useful bias to understand—both in a five-question experiment and in real decisions involving prices, salaries, forecasts, and negotiations.",
     },
   ],
 };
