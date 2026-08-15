@@ -1713,13 +1713,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "overconfidence-test",
     title: "Overconfidence Test",
-    metaTitle: "Overconfidence Test — Free Online Calibration Test",
+    metaTitle: "Overconfidence Test – Free Confidence Calibration Test",
     shortTitle: "Overconfidence",
     category: "Cognitive Biases",
     icon: "🎓",
     shortDescription: "Give 90% confidence ranges for trivia questions to see how well-calibrated your confidence is.",
     metaDescription:
-      "Free online Overconfidence Test. Give confidence ranges for trivia questions and see how well-calibrated your certainty really is.",
+      "Take a free Overconfidence Test online. Answer knowledge questions, rate your confidence, and compare how certain you feel with how often you are actually correct.",
     keywords: ["overconfidence test", "calibration test online", "confidence bias test", "trivia confidence test"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -1729,13 +1729,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "temporal-discounting-test",
     title: "Temporal Discounting Test",
-    metaTitle: "Temporal Discounting Test — Free Online Time Preference Test",
+    metaTitle: "Temporal Discounting Test – Free Intertemporal Choice Test",
     shortTitle: "Temporal Discounting",
     category: "Cognitive Biases",
     icon: "📈",
     shortDescription: "Find the smallest amount you'd accept today instead of waiting, across several time horizons.",
     metaDescription:
-      "Free online Temporal Discounting Test. Map your personal discounting curve across multiple time horizons from a week to five years.",
+      "Take a free Temporal Discounting Test online. Find your indifference points across future delays and visualize how the subjective value of rewards changes over time.",
     keywords: ["temporal discounting test", "time preference test online", "discounting curve test", "delay of gratification test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1745,13 +1745,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "wason-selection-task",
     title: "Wason Selection Task",
-    metaTitle: "Wason Selection Task — Free Online Logic Test",
+    metaTitle: "Wason Selection Task – Free Four Card Logic Test",
     shortTitle: "Wason Selection",
     category: "IQ & Logic",
     icon: "🃏",
     shortDescription: "Select exactly the cards you need to flip to test a conditional rule, testing formal logic.",
     metaDescription:
-      "Free online Wason Selection Task. Test your formal logical reasoning by selecting the right cards to verify a conditional rule.",
+      "Take the Wason Selection Task online. Choose which cards must be checked to test an if–then rule and learn the logic of P, Q, and possible counterexamples.",
     keywords: ["wason selection task", "logic test online", "conditional reasoning test", "card selection puzzle"],
     estTime: "2 min",
     difficulty: "Hard",
@@ -1761,13 +1761,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "syllogism-test",
     title: "Syllogism Test",
-    metaTitle: "Syllogism Test — Free Online Logical Reasoning Test",
+    metaTitle: "Syllogism Test – Free Logical Reasoning Test Online",
     shortTitle: "Syllogism",
     category: "IQ & Logic",
     icon: "📐",
     shortDescription: "Judge whether conclusions logically follow from their premises, independent of real-world truth.",
     metaDescription:
-      "Free online Syllogism Test. Judge whether logical conclusions truly follow from their premises, testing pure deductive reasoning.",
+      "Take a free Syllogism Test online. Decide whether conclusions logically follow from all, no, and some premises while separating validity from believability.",
     keywords: ["syllogism test", "logical reasoning test online", "deductive reasoning test", "logic puzzle test"],
     estTime: "3 min",
     difficulty: "Medium",
