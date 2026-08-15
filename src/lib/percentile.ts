@@ -48,6 +48,14 @@ const MODELS: Record<string, PercentileModel> = {
   "gamblers-fallacy-test": { mean: 2, stdev: 1, direction: "higher" },
   "iowa-gambling-task": { mean: 200, stdev: 500, direction: "higher" },
   "availability-heuristic-test": { mean: 2, stdev: 1, direction: "higher" },
+  "mental-rotation-test": { mean: 75, stdev: 15, direction: "higher" },
+  "stop-signal-test": { mean: 65, stdev: 15, direction: "higher" },
+  "simon-effect-test": { mean: 60, stdev: 30, direction: "lower" },
+  "wisconsin-card-sorting-test": { mean: 60, stdev: 15, direction: "higher" },
+  "tower-of-hanoi-test": { mean: 25, stdev: 10, direction: "lower" },
+  "choice-reaction-time-test": { mean: 550, stdev: 100, direction: "lower" },
+  "visual-search-test": { mean: 1200, stdev: 400, direction: "lower" },
+  "change-blindness-test": { mean: 4000, stdev: 2000, direction: "lower" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

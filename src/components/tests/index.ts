@@ -56,6 +56,14 @@ import { HaloEffectTest } from "@/components/tests/HaloEffectTest";
 import { GamblersFallacyTest } from "@/components/tests/GamblersFallacyTest";
 import { IowaGamblingTest } from "@/components/tests/IowaGamblingTest";
 import { AvailabilityHeuristicTest } from "@/components/tests/AvailabilityHeuristicTest";
+import { MentalRotationTest } from "@/components/tests/MentalRotationTest";
+import { StopSignalTest } from "@/components/tests/StopSignalTest";
+import { SimonEffectTest } from "@/components/tests/SimonEffectTest";
+import { WisconsinCardSortTest } from "@/components/tests/WisconsinCardSortTest";
+import { TowerOfHanoiTest } from "@/components/tests/TowerOfHanoiTest";
+import { ChoiceReactionTimeTest } from "@/components/tests/ChoiceReactionTimeTest";
+import { VisualSearchTest } from "@/components/tests/VisualSearchTest";
+import { ChangeBlindnessTest } from "@/components/tests/ChangeBlindnessTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -114,4 +122,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "gamblers-fallacy": GamblersFallacyTest,
   "iowa-gambling": IowaGamblingTest,
   "availability-heuristic": AvailabilityHeuristicTest,
+  "mental-rotation": MentalRotationTest,
+  "stop-signal": StopSignalTest,
+  "simon-effect": SimonEffectTest,
+  wcst: WisconsinCardSortTest,
+  "tower-of-hanoi": TowerOfHanoiTest,
+  "choice-reaction-time": ChoiceReactionTimeTest,
+  "visual-search": VisualSearchTest,
+  "change-blindness": ChangeBlindnessTest,
 };

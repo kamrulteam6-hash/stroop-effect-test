@@ -66,7 +66,15 @@ export type ComponentKey =
   | "halo-effect"
   | "gamblers-fallacy"
   | "iowa-gambling"
-  | "availability-heuristic";
+  | "availability-heuristic"
+  | "mental-rotation"
+  | "stop-signal"
+  | "simon-effect"
+  | "wcst"
+  | "tower-of-hanoi"
+  | "choice-reaction-time"
+  | "visual-search"
+  | "change-blindness";
 
 export interface TestDefinition {
   slug: string;
@@ -1265,6 +1273,134 @@ export const tests: TestDefinition[] = [
     difficulty: "Easy",
     componentKey: "availability-heuristic",
     scoreDirection: "higher",
+  },
+  {
+    slug: "mental-rotation-test",
+    title: "Mental Rotation Test",
+    metaTitle: "Mental Rotation Test — Free Online Spatial Reasoning Test",
+    shortTitle: "Mental Rotation",
+    category: "IQ & Logic",
+    icon: "🔄",
+    shortDescription: "Decide whether a rotated shape is normal or mirrored, as fast and accurately as you can.",
+    metaDescription:
+      "Free online Mental Rotation Test. Judge whether rotated shapes are normal or mirrored across 10 rounds and see your spatial reasoning accuracy.",
+    keywords: ["mental rotation test", "spatial reasoning test online", "mirror image test", "cognitive test free"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "mental-rotation",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "stop-signal-test",
+    title: "Stop Signal Test",
+    metaTitle: "Stop Signal Test — Free Online Response Inhibition Test",
+    shortTitle: "Stop Signal",
+    category: "Focus & Attention",
+    icon: "🛑",
+    shortDescription: "Respond to arrow direction quickly — but withhold your response when a stop signal appears.",
+    metaDescription:
+      "Free online Stop Signal Test. Respond to arrows quickly, then try to withhold your response when a stop signal appears, to measure response inhibition.",
+    keywords: ["stop signal test", "response inhibition test", "impulse control test online", "go no go test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "stop-signal",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "simon-effect-test",
+    title: "Simon Effect Test",
+    metaTitle: "Simon Effect Test — Free Online Stimulus-Response Test",
+    shortTitle: "Simon Effect",
+    category: "Focus & Attention",
+    icon: "↔️",
+    shortDescription: "Respond to color, not position, and see how much location still slows you down.",
+    metaDescription:
+      "Free online Simon Effect Test. Respond to color while ignoring position across 24 rounds and see how much irrelevant spatial location slows you down.",
+    keywords: ["simon effect test", "simon task online", "stimulus response compatibility test", "cognitive bias test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "simon-effect",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "wisconsin-card-sorting-test",
+    title: "Wisconsin Card Sorting Test",
+    metaTitle: "Wisconsin Card Sorting Test — Free Online WCST",
+    shortTitle: "Card Sorting",
+    category: "IQ & Logic",
+    icon: "🃏",
+    shortDescription: "Sort cards by a hidden, secretly changing rule and see how quickly you adapt.",
+    metaDescription:
+      "Free online Wisconsin Card Sorting Test (WCST). Sort cards by a hidden rule that secretly changes and see how well you adapt to the new pattern.",
+    keywords: ["wisconsin card sorting test", "wcst online", "cognitive flexibility test", "card sorting test free"],
+    estTime: "3 min",
+    difficulty: "Hard",
+    componentKey: "wcst",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "tower-of-hanoi-test",
+    title: "Tower of Hanoi Test",
+    metaTitle: "Tower of Hanoi Test — Free Online Puzzle Game",
+    shortTitle: "Tower of Hanoi",
+    category: "IQ & Logic",
+    icon: "🗼",
+    shortDescription: "Move all 4 disks to the last peg in as few moves as possible, without stacking big on small.",
+    metaDescription:
+      "Free online Tower of Hanoi Test. Move 4 disks between 3 pegs in as few moves as possible and compare your result to the 15-move optimal solution.",
+    keywords: ["tower of hanoi online", "tower of hanoi game", "planning puzzle test", "logic puzzle free"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "tower-of-hanoi",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "choice-reaction-time-test",
+    title: "Choice Reaction Time Test",
+    metaTitle: "Choice Reaction Time Test — Free Online 4-Choice Test",
+    shortTitle: "Choice Reaction",
+    category: "Reaction & Speed",
+    icon: "🎯",
+    shortDescription: "React to one of four colors as fast as you can with the matching key or button.",
+    metaDescription:
+      "Free online Choice Reaction Time Test. React to one of four colors as fast as you can across 15 rounds and see your average choice reaction time.",
+    keywords: ["choice reaction time test", "4 choice reaction test", "reaction time test online", "cognitive speed test"],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "choice-reaction-time",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "visual-search-test",
+    title: "Visual Search Test",
+    metaTitle: "Visual Search Test — Free Online Target Detection Test",
+    shortTitle: "Visual Search",
+    category: "Focus & Attention",
+    icon: "🔍",
+    shortDescription: "Find the odd-colored circle among distractors as fast as you can.",
+    metaDescription:
+      "Free online Visual Search Test. Find the target circle among distractors as fast as you can across rounds with different set sizes.",
+    keywords: ["visual search test", "target detection test online", "attention test free", "find the odd one out"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "visual-search",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "change-blindness-test",
+    title: "Change Blindness Test",
+    metaTitle: "Change Blindness Test — Free Online Perception Test",
+    shortTitle: "Change Blindness",
+    category: "Perception",
+    icon: "🔲",
+    shortDescription: "Spot the one square that changes color between two flickering grids.",
+    metaDescription:
+      "Free online Change Blindness Test. Spot the square that changes color between two flickering grids and see how fast you detect the change.",
+    keywords: ["change blindness test", "change detection test online", "perception test free", "spot the difference test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "change-blindness",
+    scoreDirection: "lower",
   },
 ];
 

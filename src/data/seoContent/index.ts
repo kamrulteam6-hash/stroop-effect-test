@@ -55,6 +55,14 @@ import { content as haloEffectTest } from "@/data/seoContent/halo-effect-test";
 import { content as gamblersFallacyTest } from "@/data/seoContent/gamblers-fallacy-test";
 import { content as iowaGamblingTask } from "@/data/seoContent/iowa-gambling-task";
 import { content as availabilityHeuristicTest } from "@/data/seoContent/availability-heuristic-test";
+import { content as mentalRotationTest } from "@/data/seoContent/mental-rotation-test";
+import { content as stopSignalTest } from "@/data/seoContent/stop-signal-test";
+import { content as simonEffectTest } from "@/data/seoContent/simon-effect-test";
+import { content as wisconsinCardSortingTest } from "@/data/seoContent/wisconsin-card-sorting-test";
+import { content as towerOfHanoiTest } from "@/data/seoContent/tower-of-hanoi-test";
+import { content as choiceReactionTimeTest } from "@/data/seoContent/choice-reaction-time-test";
+import { content as visualSearchTest } from "@/data/seoContent/visual-search-test";
+import { content as changeBlindnessTest } from "@/data/seoContent/change-blindness-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -113,4 +121,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "gamblers-fallacy-test": gamblersFallacyTest,
   "iowa-gambling-task": iowaGamblingTask,
   "availability-heuristic-test": availabilityHeuristicTest,
+  "mental-rotation-test": mentalRotationTest,
+  "stop-signal-test": stopSignalTest,
+  "simon-effect-test": simonEffectTest,
+  "wisconsin-card-sorting-test": wisconsinCardSortingTest,
+  "tower-of-hanoi-test": towerOfHanoiTest,
+  "choice-reaction-time-test": choiceReactionTimeTest,
+  "visual-search-test": visualSearchTest,
+  "change-blindness-test": changeBlindnessTest,
 };
