@@ -2225,13 +2225,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "paper-folding-test",
     title: "Paper Folding Test",
-    metaTitle: "Paper Folding Test — Free Online Spatial Visualization Test",
+    metaTitle: "Paper Folding Test – Free Spatial Visualization Test",
     shortTitle: "Paper Folding",
     category: "IQ & Logic",
     icon: "📄",
     shortDescription: "Predict where punched holes will appear when a folded sheet of paper is unfolded.",
     metaDescription:
-      "Free online Paper Folding Test. Predict hole positions after unfolding paper to measure your spatial visualization ability.",
+      "Take a free Paper Folding Test online. Follow folds, track a hole punch, mentally unfold the sheet, and choose the correct final pattern.",
     keywords: ["paper folding test", "spatial visualization test online", "iq test paper folding", "mental rotation puzzle"],
     estTime: "2 min",
     difficulty: "Hard",
@@ -2241,13 +2241,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "mirror-image-test",
     title: "Mirror Image Test",
-    metaTitle: "Mirror Image Test — Free Online Letter Recognition Test",
+    metaTitle: "Mirror Image Test – Free Reflection Reasoning Test",
     shortTitle: "Mirror Image",
     category: "Perception",
     icon: "🪞",
     shortDescription: "Decide whether a rotated letter is shown normally or mirror-flipped, as fast as you can.",
     metaDescription:
-      "Free online Mirror Image Test. Judge whether rotated letters are normal or mirrored to measure visual discrimination speed.",
+      "Take a free Mirror Image Test online. Identify true left-right reflections while rejecting rotated, shifted, and visually similar distractor shapes.",
     keywords: ["mirror image test", "letter recognition test online", "mirror writing test", "visual discrimination test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2257,13 +2257,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "pattern-completion-test",
     title: "Pattern Completion Test",
-    metaTitle: "Pattern Completion Test — Free Online Sequence Test",
+    metaTitle: "Pattern Completion Test – Free Visual Reasoning Test",
     shortTitle: "Pattern Completion",
     category: "IQ & Logic",
     icon: "🔷",
     shortDescription: "Study a repeating sequence of shapes and colors, then pick the item that continues the pattern.",
     metaDescription:
-      "Free online Pattern Completion Test. Identify the next item in a repeating shape and color sequence to test pattern recognition.",
+      "Take a free Pattern Completion Test online. Find the missing visual element by discovering rules involving shape, number, position, rotation, and combination.",
     keywords: ["pattern completion test", "sequence recognition test online", "pattern iq test", "logical sequence test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2273,13 +2273,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "deductive-reasoning-test",
     title: "Deductive Reasoning Test",
-    metaTitle: "Deductive Reasoning Test — Free Online Logic Puzzle Test",
+    metaTitle: "Deductive Reasoning Test – Free Logical Reasoning Test",
     shortTitle: "Deductive Reasoning",
     category: "IQ & Logic",
     icon: "🕵️",
     shortDescription: "Read logical clues and answer questions that follow strictly from them, with no outside assumptions.",
     metaDescription:
-      "Free online Deductive Reasoning Test. Solve logic puzzles using strict deduction from given clues to measure your reasoning ability.",
+      "Take a free Deductive Reasoning Test online. Evaluate conditional rules, logical necessity, set relations, and multi-step conclusions without relying on plausibility.",
     keywords: ["deductive reasoning test", "logic puzzle test online", "deduction test", "critical thinking test"],
     estTime: "3 min",
     difficulty: "Medium",
