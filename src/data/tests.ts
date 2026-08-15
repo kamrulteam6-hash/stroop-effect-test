@@ -314,13 +314,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "hearing-range-test",
     title: "Hearing Range Test",
-    metaTitle: "Hearing Range Test — Free Online Frequency Test (20Hz–20kHz)",
+    metaTitle: "Hearing Range Test – Free Online Frequency Test",
     shortTitle: "Hearing Range",
     category: "Hearing",
     icon: "🎧",
     shortDescription: "Find the highest and lowest frequencies you can hear, in Hz. Headphones recommended.",
     metaDescription:
-      "Free online Hearing Range Test with a stereo left/right ear mode. Discover the highest and lowest audio frequencies (Hz) you can hear, from 20Hz to 20kHz.",
+      "Take a free hearing range test online and find the highest and lowest frequencies you can detect. Test both ears or each ear separately with headphones.",
     keywords: [
       "hearing range test",
       "hearing test online",
@@ -335,13 +335,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "mental-math-test",
     title: "Mental Math Speed Test",
-    metaTitle: "Mental Math Speed Test — Free Online Arithmetic Test",
+    metaTitle: "Mental Math Speed Test – Free Online Arithmetic Test",
     shortTitle: "Mental Math",
     category: "Math & Logic",
     icon: "➗",
     shortDescription: "Solve as many quick arithmetic problems as you can before time runs out.",
     metaDescription:
-      "Free Mental Math Speed Test with adjustable operations and duration (30/60/120s) plus streak-based scoring. Solve as many problems as you can and measure your calculation speed.",
+      "Take a free mental math speed test online. Solve addition, subtraction, multiplication, or mixed arithmetic in 30, 60, or 120 seconds and see your score.",
     keywords: [
       "mental math test",
       "math speed test online",
@@ -356,13 +356,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "color-perception-test",
     title: "Color Perception Test",
-    metaTitle: "Color Perception Test — Free Online Hue Discrimination Test",
+    metaTitle: "Color Perception Test – Free Shade Discrimination Test",
     shortTitle: "Color Perception",
     category: "Perception",
     icon: "🌈",
     shortDescription: "Arrange shades of the same hue in the correct order to test your color discrimination.",
     metaDescription:
-      "Free Color Perception Test inspired by the Farnsworth-Munsell hue test. Arrange 6, 8, or 12 shades in order and measure your color discrimination with an error score.",
+      "Take a free color perception test online. Arrange shades from lightest to darkest and test how accurately you distinguish subtle differences in color lightness.",
     keywords: [
       "color perception test",
       "color discrimination test",

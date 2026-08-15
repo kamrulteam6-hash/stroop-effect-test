@@ -4,64 +4,387 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "The Color Perception Test challenges your ability to discriminate between subtle shade differences. In each round, you'll see 6, 8, or 12 swatches (your choice) of the same color family shuffled out of order — your task is to click them from lightest to darkest as accurately as you can, across 1, 3, or 5 rounds. It's inspired by professional color discrimination tests used in design and vision science fields.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Color Perception Test Works",
+      text: "How well can you tell apart two colors that look almost the same?",
     },
     {
       type: "paragraph",
-      text: "Each round shows swatches that are all the same hue but at different lightness levels, arranged in a random shuffled order. Click them in the order you believe goes from lightest to darkest. Once you've clicked them all, we compare your chosen order to the actual correct order and calculate an error score — the total distance each swatch ended up from its correct position. A score of zero means a perfect round. The test repeats for your chosen number of rounds, each with a different randomly chosen hue.",
-    },
-    {
-      type: "heading",
-      id: "farnsworth-munsell",
-      text: "The Farnsworth-Munsell 100 Hue Test",
+      text: "Take this free **Color Perception Test** to challenge your ability to distinguish subtle differences in **shade and lightness**. Each round gives you several swatches from the same color family. Your task is to arrange them from **lightest to darkest**.",
     },
     {
       type: "paragraph",
-      text: "This task is a simplified version of a real professional color arrangement test: the Farnsworth-Munsell 100 Hue Test, originally developed by Dean Farnsworth in the 1940s for military applications and still used today in fields from textile and paint manufacturing to occupational vision screening. The full version uses 85 movable color caps across four rows spanning the entire hue circle, scored so that zero represents a perfect arrangement — the same zero-is-best convention we use here. Ours simplifies that into a single-hue, lightness-ordering task that runs entirely in your browser, rather than a physical or fully licensed digital replica of the original 85-cap test.",
-    },
-    {
-      type: "heading",
-      text: "The Science Behind Color Discrimination",
+      text: "Choose 6, 8, or 12 swatches and complete 1, 3, or 5 rounds.",
     },
     {
       type: "paragraph",
-      text: "Distinguishing fine differences in lightness and hue relies on the density and health of cone cells in your retina, as well as how well your visual cortex processes and compares closely related colors. Performance can also be affected by screen calibration, lighting conditions, and even short-term visual fatigue — which is worth keeping in mind before assuming a rough result reflects your actual color vision rather than your monitor.",
+      text: "A lower error score means your ordering was closer to the correct sequence. A score of **0** means you placed every swatch in the correct position.",
     },
     {
       type: "heading",
-      id: "who-relies-on-it",
-      text: "Who Relies on Strong Color Discrimination?",
+      id: "how-to-take",
+      text: "How to Take the Color Perception Test",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Choose 6, 8, or 12 swatches.",
+        "Choose 1, 3, or 5 rounds.",
+        "Start the test.",
+        "Look at the full group before making your first choice.",
+        "Select the swatches from lightest to darkest.",
+        "Complete the entire sequence.",
+        "Review your error score.",
+        "Repeat the process for the remaining rounds.",
+      ],
     },
     {
       type: "paragraph",
-      text: "Photographers, graphic designers, and video editors depend on precise color discrimination daily, since even small color misjudgments can throw off a final print, a client deliverable, or a color-graded scene. It's common advice in these fields to calibrate monitors monthly when working on color-critical projects, and casual users are generally advised to recalibrate every three to six months — a reminder that even strong natural color discrimination can be undermined by an uncalibrated screen.",
+      text: "There is no need to rush. This test is about visual discrimination, not reaction speed.",
+    },
+    {
+      type: "paragraph",
+      text: "For the most useful comparison, use the same device, brightness, browser, swatch count, and lighting conditions each time.",
     },
     {
       type: "heading",
-      text: "Tips to Improve Your Score",
+      id: "what-does-it-measure",
+      text: "What Does This Color Perception Test Measure?",
+    },
+    {
+      type: "paragraph",
+      text: "This specific test mainly challenges **lightness discrimination within a color family**.",
+    },
+    {
+      type: "paragraph",
+      text: "That distinction matters.",
+    },
+    {
+      type: "paragraph",
+      text: "Color can be described using several perceptual properties, including:",
     },
     {
       type: "list",
       items: [
-        "Scan all the swatches first before clicking anything, rather than deciding as you go.",
-        "Compare swatches side by side mentally rather than judging each one in isolation.",
-        "Take the test in good, even lighting — glare and dim rooms both hurt discrimination.",
-        "Avoid rushing; there's no time pressure, so a careful, deliberate approach tends to score better.",
-        "Try 12 swatches once 6 or 8 feels easy — more swatches means smaller lightness differences between neighbors.",
-        "If your results feel consistently off, try adjusting your screen brightness and contrast settings.",
+        "hue — whether a color looks red, green, blue, yellow, and so on;",
+        "lightness — how light or dark it appears;",
+        "saturation or chroma — how vivid or muted the color appears.",
       ],
     },
     {
-      type: "callout",
-      icon: "🔴",
-      title: "Not the same as a color blindness screening",
-      tone: "gold",
-      text: "This test measures graded shade discrimination, not red-green color confusion specifically. For that, try our [Color Blind Test](/test/colorblind-test-online), a two-minute Ishihara-style screening.",
+      type: "paragraph",
+      text: "In this test, the swatches within a round belong to the same general hue family but vary from lighter to darker.",
+    },
+    {
+      type: "paragraph",
+      text: "Your task is therefore not simply to identify a color name. You must compare close neighboring shades and place them in the correct lightness order.",
+    },
+    {
+      type: "heading",
+      text: "Is This a Hue Test?",
+    },
+    {
+      type: "paragraph",
+      text: "Not exactly.",
+    },
+    {
+      type: "paragraph",
+      text: "A true **hue discrimination** task changes hue while attempting to control other color properties.",
+    },
+    {
+      type: "paragraph",
+      text: "The classic Farnsworth–Munsell 100 Hue Test is a well-known example. It asks people to arrange many colored caps in a smooth hue sequence. The official test uses a large set of carefully specified colors.",
+    },
+    {
+      type: "paragraph",
+      text: "This browser test uses a simpler arrangement idea, but the task is different: you are ordering shades primarily by **lightness within a hue**, not arranging a full hue circle.",
+    },
+    {
+      type: "paragraph",
+      text: "That makes “shade discrimination test” or “color lightness discrimination test” a more precise description of what you are doing here.",
+    },
+    {
+      type: "paragraph",
+      text: "It is also why your score should not be compared directly with a Farnsworth–Munsell 100 Hue score.",
+    },
+    {
+      type: "heading",
+      text: "How Is the Error Score Calculated?",
+    },
+    {
+      type: "paragraph",
+      text: "After you arrange the swatches, your selected order is compared with the correct light-to-dark order.",
+    },
+    {
+      type: "paragraph",
+      text: "Swatches that are farther from their correct position add more error.",
+    },
+    {
+      type: "paragraph",
+      text: "That means: **0 error = perfect ordering**",
+    },
+    {
+      type: "paragraph",
+      text: "A higher error score means more swatches were misplaced, or some swatches were placed farther from their correct positions.",
+    },
+    {
+      type: "paragraph",
+      text: "The exact number should be interpreted within the current test settings.",
+    },
+    {
+      type: "paragraph",
+      text: "A score of 5 with 6 swatches is not necessarily equivalent to a score of 5 with 12 swatches because the number of comparisons and spacing between shades can differ.",
+    },
+    {
+      type: "paragraph",
+      text: "Compare like with like.",
+    },
+    {
+      type: "heading",
+      text: "Why More Swatches Make the Test Harder",
+    },
+    {
+      type: "paragraph",
+      text: "Six swatches leave relatively large steps between neighboring shades.",
+    },
+    {
+      type: "paragraph",
+      text: "With 12 swatches, more intermediate shades have to fit into the same overall light-to-dark sequence.",
+    },
+    {
+      type: "paragraph",
+      text: "The closest neighbors may therefore look extremely similar.",
+    },
+    {
+      type: "paragraph",
+      text: "This turns the test from obvious sorting into fine visual comparison.",
+    },
+    {
+      type: "paragraph",
+      text: "If 6 swatches feels easy, move to 8. If you can consistently order 8 with very little error, try 12.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not assume a higher error score at 12 means your color perception suddenly became worse. You changed the difficulty.",
+    },
+    {
+      type: "heading",
+      text: "Is This a Color Blind Test?",
+    },
+    {
+      type: "paragraph",
+      text: "No.",
+    },
+    {
+      type: "paragraph",
+      text: "A [Color Blind Test](/test/colorblind-test-online) and a Color Perception Test are related to color vision, but they are designed around different tasks.",
+    },
+    {
+      type: "paragraph",
+      text: "Your Color Blind Test uses pseudoisochromatic, Ishihara-style patterns to screen informally for possible **red-green color vision difficulty**.",
+    },
+    {
+      type: "paragraph",
+      text: "This page asks you to arrange subtle shades from light to dark.",
+    },
+    {
+      type: "paragraph",
+      text: "Someone can perform well on one task and find the other difficult.",
+    },
+    {
+      type: "paragraph",
+      text: "A good score here does not rule out color vision deficiency, and a poor score does not automatically mean you are color blind.",
+    },
+    {
+      type: "paragraph",
+      text: "If your concern is red-green color confusion specifically, use the Color Blind Test instead.",
+    },
+    {
+      type: "heading",
+      text: "Why Your Screen Can Change the Result",
+    },
+    {
+      type: "paragraph",
+      text: "This is one of the most important limitations of any online color test.",
+    },
+    {
+      type: "paragraph",
+      text: "A browser sends color values to your display, but different screens do not reproduce those values identically.",
+    },
+    {
+      type: "paragraph",
+      text: "Your result can be affected by:",
+    },
+    {
+      type: "list",
+      items: [
+        "screen brightness,",
+        "contrast settings,",
+        "display color profile,",
+        "Night Light or Night Shift,",
+        "blue-light filters,",
+        "HDR or vivid-color modes,",
+        "viewing angle,",
+        "ambient lighting,",
+        "screen quality,",
+        "and screen damage.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "On some displays, small lightness differences may be easier to see than on others.",
+    },
+    {
+      type: "paragraph",
+      text: "That means this test measures **your perception through your current display**, not your visual system in isolation.",
+    },
+    {
+      type: "heading",
+      text: "How to Prepare Your Screen",
+    },
+    {
+      type: "paragraph",
+      text: "Before taking the test:",
+    },
+    {
+      type: "list",
+      items: [
+        "turn off Night Light, Night Shift, and blue-light filters;",
+        "disable accessibility filters that alter colors;",
+        "avoid an extremely dim or extremely bright screen;",
+        "sit directly in front of the display;",
+        "avoid strong glare;",
+        "keep the browser zoom at a normal level;",
+        "and use the same setup for repeat tests.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If your result seems surprisingly poor, try another good-quality screen before assuming the result reflects your eyes.",
+    },
+    {
+      type: "paragraph",
+      text: "Professional color tests use controlled equipment and viewing conditions for exactly this reason.",
+    },
+    {
+      type: "heading",
+      text: "What Is the Farnsworth–Munsell 100 Hue Test?",
+    },
+    {
+      type: "paragraph",
+      text: "The **Farnsworth–Munsell 100 Hue Test**, often shortened to FM100, is a standardized color-arrangement test used to evaluate color discrimination.",
+    },
+    {
+      type: "paragraph",
+      text: "Despite the name, the traditional test uses 85 movable color caps arranged across four trays between fixed reference colors.",
+    },
+    {
+      type: "paragraph",
+      text: "The task is to place those caps in a smooth hue sequence.",
+    },
+    {
+      type: "paragraph",
+      text: "Its scoring system analyzes arrangement errors, and lower error is better.",
+    },
+    {
+      type: "paragraph",
+      text: "Your browser test shares the general idea that people can reveal subtle color discrimination through **ordering**, but it is not a digital copy of the FM100 and should not use FM100 clinical or occupational score ranges.",
+    },
+    {
+      type: "paragraph",
+      text: "This distinction keeps the result honest and easier to understand.",
+    },
+    {
+      type: "heading",
+      id: "good-score",
+      text: "What Is a Good Color Perception Score?",
+    },
+    {
+      type: "paragraph",
+      text: "The simplest answer is: **Lower is better, and 0 is perfect for the current round.**",
+    },
+    {
+      type: "paragraph",
+      text: "There is no universal browser score that defines excellent, average, or poor color perception for this specific game.",
+    },
+    {
+      type: "paragraph",
+      text: "The result depends on:",
+    },
+    {
+      type: "list",
+      items: [
+        "number of swatches;",
+        "number of rounds;",
+        "generated color family;",
+        "spacing between shades;",
+        "display characteristics;",
+        "ambient lighting;",
+        "and the scoring formula.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Avoid comparing your score with fixed cutoffs from a different color test.",
+    },
+    {
+      type: "paragraph",
+      text: "Instead, compare repeated sessions using the same settings.",
+    },
+    {
+      type: "paragraph",
+      text: "If your average error falls while conditions stay consistent, you are getting better at this particular shade-ordering task.",
+    },
+    {
+      type: "heading",
+      text: "Why Can One Color Family Feel Harder Than Another?",
+    },
+    {
+      type: "paragraph",
+      text: "Human color perception is not perfectly uniform across every part of color space.",
+    },
+    {
+      type: "paragraph",
+      text: "Displays are not perfectly uniform either.",
+    },
+    {
+      type: "paragraph",
+      text: "Two shades that differ by a similar numerical amount in software do not always look equally different to a human observer.",
+    },
+    {
+      type: "paragraph",
+      text: "That means one round may naturally feel easier than another.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not overinterpret a single difficult hue family.",
+    },
+    {
+      type: "paragraph",
+      text: "Multiple rounds provide a better picture of your performance on the game.",
+    },
+    {
+      type: "heading",
+      text: "Can Color Discrimination Improve With Practice?",
+    },
+    {
+      type: "paragraph",
+      text: "You can become better at the task.",
+    },
+    {
+      type: "paragraph",
+      text: "Practice teaches you to compare neighboring swatches more systematically and to pay attention to smaller differences.",
+    },
+    {
+      type: "paragraph",
+      text: "People who work with color frequently may also develop strong practical strategies for visual comparison.",
+    },
+    {
+      type: "paragraph",
+      text: "But repeated improvement can partly reflect **task familiarity**, not a biological change in your eyes.",
+    },
+    {
+      type: "paragraph",
+      text: "That is another reason to describe the result as performance on a color-perception challenge rather than a medical measurement.",
     },
     {
       type: "heading",
@@ -72,31 +395,50 @@ export const content: TestSeoContent = {
       type: "faq",
       items: [
         {
-          question: "What's a good color perception score?",
-          answer:
-            "An error score of 0 to 4 per round is considered excellent color discrimination. Scores between 5 and 12 are still solid, while consistently higher scores may suggest reduced hue discrimination sensitivity — or simply an uncalibrated screen.",
+          question: "What does a score of 0 mean?",
+          answer: "It means you placed every swatch in the correct light-to-dark order for that round.",
         },
         {
-          question: "Is this the same as a color blindness test?",
+          question: "Is this a hue discrimination test?",
           answer:
-            "It's related but different — this test measures fine-grained shade discrimination within a single hue, while a color blindness test screens specifically for red-green color confusion using contrasting hues.",
+            "It is better described as a shade or lightness discrimination test because the main task is ordering lighter and darker versions within the same color family.",
         },
         {
-          question: "What is the Farnsworth-Munsell 100 Hue Test?",
+          question: "Is this the Farnsworth–Munsell 100 Hue Test?",
           answer:
-            "It's a well-known professional color arrangement test developed in the 1940s, using 85 color caps arranged into the correct hue order. It's used in vision research and industries where precise color discrimination matters, and it inspired the simplified format used here.",
+            "No. The FM100 is a standardized hue-arrangement test with a different stimulus set, procedure, and scoring system. This browser task is only conceptually related through color ordering.",
         },
         {
-          question: "Does my screen affect the results?",
+          question: "Can this test diagnose color blindness?",
           answer:
-            "Yes, significantly. Screen color calibration, brightness, and even the viewing angle on some displays can shift how shades appear, affecting your score independent of your actual color vision.",
+            "No. Use the separate Color Blind Test for an informal red-green screening, and consult an eye-care professional for diagnosis.",
         },
         {
-          question: "Can color discrimination be trained?",
+          question: "Does a bad screen make my score worse?",
           answer:
-            "To a modest degree, yes — professionals like painters, designers, and photographers often develop sharper color discrimination through years of deliberate practice and attention to subtle color differences.",
+            "It can. Display brightness, contrast, color processing, viewing angle, and filters can make subtle shade differences easier or harder to see.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Test Your Color Perception Again",
+    },
+    {
+      type: "paragraph",
+      text: "For a repeatable benchmark, choose one setup and keep it constant.",
+    },
+    {
+      type: "paragraph",
+      text: "For example: **8 swatches + 3 rounds + same display**",
+    },
+    {
+      type: "paragraph",
+      text: "Turn off color-changing filters, use comfortable neutral lighting, and compare your average error across sessions.",
+    },
+    {
+      type: "paragraph",
+      text: "The goal is not to earn a medical label. It is to see how accurately you can detect and order **small visual differences that are easy to overlook**.",
     },
   ],
 };
