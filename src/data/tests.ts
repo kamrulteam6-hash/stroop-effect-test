@@ -591,13 +591,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "big-five-personality-test",
     title: "Big Five Personality Test",
-    metaTitle: "Big Five Personality Test — Free OCEAN Test Online",
+    metaTitle: "Big Five Personality Test – Free OCEAN Test Online",
     shortTitle: "Big Five",
     category: "Personality",
     icon: "🌟",
     shortDescription: "A short, free version of the most scientifically supported personality model in psychology.",
     metaDescription:
-      "Free Big Five (OCEAN) personality test online. Answer 25 quick questions to see your Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism scores.",
+      "Take a free Big Five personality test online. Explore your Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism scores in minutes.",
     keywords: [
       "big five personality test",
       "ocean personality test",
@@ -611,13 +611,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "emotional-intelligence-test",
     title: "Emotional Intelligence Test",
-    metaTitle: "Emotional Intelligence Test — Free EQ Quiz Online",
+    metaTitle: "Emotional Intelligence Test – Free EQ Test Online",
     shortTitle: "EQ Test",
     category: "Personality",
     icon: "💬",
     shortDescription: "A quick self-assessment of your emotional awareness, regulation, and social skills.",
     metaDescription:
-      "Free Emotional Intelligence (EQ) test online. Answer 20 quick questions across 4 core skills and get an instant EQ score with a plain-language breakdown.",
+      "Take a free Emotional Intelligence Test online. Answer 20 questions about emotional awareness, regulation, social awareness, and relationship management.",
     keywords: [
       "emotional intelligence test",
       "eq test online free",
@@ -632,13 +632,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "peripheral-vision-test",
     title: "Peripheral Vision Test",
-    metaTitle: "Peripheral Vision Test — Free Online Visual Field Check",
+    metaTitle: "Peripheral Vision Test – Free Online Side Vision Check",
     shortTitle: "Peripheral Vision",
     category: "Vision",
     icon: "👀",
     shortDescription: "Keep your eyes on the center and catch flashes appearing in your peripheral vision.",
     metaDescription:
-      "Free online Peripheral Vision Test. Keep your eyes fixed on the center and detect flashes at the edge of your visual field — see your detection rate by zone.",
+      "Take a free peripheral vision test online. Keep your eyes on the center, detect brief flashes around the screen, and compare near and far detection.",
     keywords: [
       "peripheral vision test online",
       "visual field test",
