@@ -902,13 +902,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "enneagram-test",
     title: "Enneagram Test",
-    metaTitle: "Enneagram Test — Free Online 9 Personality Types Quiz",
+    metaTitle: "Enneagram Test – Free 9 Personality Types Quiz",
     shortTitle: "Enneagram",
     category: "Personality",
     icon: "🔯",
     shortDescription: "A short quiz estimating your dominant Enneagram type from the 9 core types.",
     metaDescription:
-      "Free online Enneagram Test. Answer quick questions to estimate your dominant type among the 9 core Enneagram personality types.",
+      "Take a free Enneagram test online. Answer 27 questions and see how strongly you match each of the 9 Enneagram personality types.",
     keywords: [
       "enneagram test free",
       "enneagram test online",
@@ -922,13 +922,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "love-language-test",
     title: "Love Language Test",
-    metaTitle: "Love Language Test — Free Online 5 Love Languages Quiz",
+    metaTitle: "Love Language Test – Free 5 Love Languages Quiz",
     shortTitle: "Love Language",
     category: "Personality",
     icon: "💌",
     shortDescription: "Discover how you prefer to give and receive love across 5 categories.",
     metaDescription:
-      "Free online Love Language Test. Answer quick questions to find out which of the 5 love languages matters most to you in relationships.",
+      "Take a free Love Language Test online. Answer 20 questions and explore Words of Affirmation, Quality Time, Touch, Acts of Service, and Gifts.",
     keywords: [
       "love language test free",
       "5 love languages test",
@@ -942,13 +942,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "serial-position-test",
     title: "Serial Position Effect Test",
-    metaTitle: "Serial Position Effect Test — Free Online Memory Test",
+    metaTitle: "Serial Position Effect Test – Primacy & Recency Memory Test",
     shortTitle: "Serial Position",
     category: "Memory & Cognition",
     icon: "📃",
     shortDescription: "Study a list of words, then see how well you remember the start, middle, and end.",
     metaDescription:
-      "Free online Serial Position Effect Test. Study a word list, then see your personal primacy and recency memory curve — a classic memory science demonstration.",
+      "Take a free Serial Position Effect Test online. Study 15 words, complete a recognition test, and compare memory for the beginning, middle, and end.",
     keywords: [
       "serial position effect test",
       "primacy recency test online",
@@ -963,13 +963,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "false-memory-test",
     title: "False Memory Test",
-    metaTitle: "False Memory Test — Free Online Memory Illusion (DRM)",
+    metaTitle: "False Memory Test – Free DRM Memory Illusion Online",
     shortTitle: "False Memory",
     category: "Memory & Cognition",
     icon: "🌀",
     shortDescription: "Study related word lists, then see if you 'remember' a word that was never actually shown.",
     metaDescription:
-      "Free online False Memory Test based on the DRM paradigm. Study word lists, then take a recognition test to see if your brain creates a convincing false memory.",
+      "Take a free false memory test based on the DRM paradigm. Study related word lists and see if you recognize critical lure words that were never shown.",
     keywords: [
       "false memory test online",
       "DRM test free",
