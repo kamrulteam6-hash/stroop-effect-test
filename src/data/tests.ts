@@ -74,7 +74,15 @@ export type ComponentKey =
   | "tower-of-hanoi"
   | "choice-reaction-time"
   | "visual-search"
-  | "change-blindness";
+  | "change-blindness"
+  | "psychomotor-vigilance"
+  | "task-switching"
+  | "face-memory"
+  | "emotion-recognition"
+  | "odd-one-out"
+  | "operation-span"
+  | "paired-associates"
+  | "delay-discounting";
 
 export interface TestDefinition {
   slug: string;
@@ -1401,6 +1409,134 @@ export const tests: TestDefinition[] = [
     difficulty: "Medium",
     componentKey: "change-blindness",
     scoreDirection: "lower",
+  },
+  {
+    slug: "psychomotor-vigilance-test",
+    title: "Psychomotor Vigilance Test",
+    metaTitle: "Psychomotor Vigilance Test — Free Online PVT Reaction Test",
+    shortTitle: "Vigilance",
+    category: "Reaction & Speed",
+    icon: "🟢",
+    shortDescription: "Click the moment the box turns green across 10 unpredictable rounds to measure sustained attention.",
+    metaDescription:
+      "Free online Psychomotor Vigilance Test (PVT). Measure your sustained attention and reaction speed across unpredictable wait times.",
+    keywords: ["psychomotor vigilance test", "pvt test online", "reaction time vigilance", "sustained attention test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "psychomotor-vigilance",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "task-switching-test",
+    title: "Task Switching Test",
+    metaTitle: "Task Switching Test — Free Online Cognitive Flexibility Test",
+    shortTitle: "Task Switching",
+    category: "Focus & Attention",
+    icon: "🔀",
+    shortDescription: "Switch between odd/even and low/high number judgments to measure your task-switching cost.",
+    metaDescription:
+      "Free online Task Switching Test. Measure your cognitive flexibility and switch cost between two number judgment tasks.",
+    keywords: ["task switching test", "cognitive flexibility test", "switch cost test", "executive function test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "task-switching",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "face-memory-test",
+    title: "Face Memory Test",
+    metaTitle: "Face Memory Test — Free Online Facial Recognition Memory Test",
+    shortTitle: "Face Memory",
+    category: "Memory & Cognition",
+    icon: "🙂",
+    shortDescription: "Study a set of faces, then pick out which ones you've seen before among new distractors.",
+    metaDescription:
+      "Free online Face Memory Test. Study a set of faces and see how many you can correctly recognize afterward.",
+    keywords: ["face memory test", "facial recognition test online", "face recall test", "memory test free"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "face-memory",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "emotion-recognition-test",
+    title: "Emotion Recognition Test",
+    metaTitle: "Emotion Recognition Test — Free Online Facial Emotion Test",
+    shortTitle: "Emotion Recognition",
+    category: "Memory & Cognition",
+    icon: "😲",
+    shortDescription: "Identify facial emotions as quickly and accurately as possible across 12 rounds.",
+    metaDescription:
+      "Free online Emotion Recognition Test. Identify facial expressions quickly and accurately to measure your emotion recognition accuracy.",
+    keywords: ["emotion recognition test", "facial emotion test online", "emotional intelligence test", "read emotions test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "emotion-recognition",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "odd-one-out-test",
+    title: "Odd One Out Test",
+    metaTitle: "Odd One Out Test — Free Online Visual Search Test",
+    shortTitle: "Odd One Out",
+    category: "Perception",
+    icon: "🔷",
+    shortDescription: "Find the one shape that's different from the rest in a grid, as fast as you can.",
+    metaDescription:
+      "Free online Odd One Out Test. Spot the different shape in a grid across 8 rounds and measure your visual search speed.",
+    keywords: ["odd one out test", "visual search test online", "spot the difference test", "perception speed test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "odd-one-out",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "operation-span-test",
+    title: "Operation Span Test",
+    metaTitle: "Operation Span Test — Free Online Working Memory Test",
+    shortTitle: "Operation Span",
+    category: "Memory & Cognition",
+    icon: "🧮",
+    shortDescription: "Verify math equations while remembering a sequence of letters to test your working memory span.",
+    metaDescription:
+      "Free online Operation Span Test (OSPAN). Measure your working memory capacity by combining math verification with letter recall.",
+    keywords: ["operation span test", "ospan test online", "working memory test", "complex span task"],
+    estTime: "3 min",
+    difficulty: "Hard",
+    componentKey: "operation-span",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "paired-associates-memory-test",
+    title: "Paired Associates Memory Test",
+    metaTitle: "Paired Associates Memory Test — Free Online Memory Test",
+    shortTitle: "Paired Associates",
+    category: "Memory & Cognition",
+    icon: "🔗",
+    shortDescription: "Study word pairs, then recall which word was paired with each cue word.",
+    metaDescription:
+      "Free online Paired Associates Memory Test. Study word pairs and test how many correct associations you can recall.",
+    keywords: ["paired associates test", "paired associate learning test", "verbal memory test online", "word pair memory test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "paired-associates",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "delay-discounting-test",
+    title: "Delay Discounting Test",
+    metaTitle: "Delay Discounting Test — Free Online Patience & Impulsivity Test",
+    shortTitle: "Delay Discounting",
+    category: "Cognitive Biases",
+    icon: "⏳",
+    shortDescription: "Choose between smaller immediate rewards and larger delayed rewards to reveal your discount rate.",
+    metaDescription:
+      "Free online Delay Discounting Test. Discover how you weigh immediate versus delayed rewards and your personal discount rate.",
+    keywords: ["delay discounting test", "temporal discounting test", "impulsivity test online", "patience test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "delay-discounting",
+    scoreDirection: "higher",
   },
 ];
 

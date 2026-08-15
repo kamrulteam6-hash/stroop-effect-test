@@ -63,6 +63,14 @@ import { content as towerOfHanoiTest } from "@/data/seoContent/tower-of-hanoi-te
 import { content as choiceReactionTimeTest } from "@/data/seoContent/choice-reaction-time-test";
 import { content as visualSearchTest } from "@/data/seoContent/visual-search-test";
 import { content as changeBlindnessTest } from "@/data/seoContent/change-blindness-test";
+import { content as psychomotorVigilanceTest } from "@/data/seoContent/psychomotor-vigilance-test";
+import { content as taskSwitchingTest } from "@/data/seoContent/task-switching-test";
+import { content as faceMemoryTest } from "@/data/seoContent/face-memory-test";
+import { content as emotionRecognitionTest } from "@/data/seoContent/emotion-recognition-test";
+import { content as oddOneOutTest } from "@/data/seoContent/odd-one-out-test";
+import { content as operationSpanTest } from "@/data/seoContent/operation-span-test";
+import { content as pairedAssociatesMemoryTest } from "@/data/seoContent/paired-associates-memory-test";
+import { content as delayDiscountingTest } from "@/data/seoContent/delay-discounting-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -129,4 +137,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "choice-reaction-time-test": choiceReactionTimeTest,
   "visual-search-test": visualSearchTest,
   "change-blindness-test": changeBlindnessTest,
+  "psychomotor-vigilance-test": psychomotorVigilanceTest,
+  "task-switching-test": taskSwitchingTest,
+  "face-memory-test": faceMemoryTest,
+  "emotion-recognition-test": emotionRecognitionTest,
+  "odd-one-out-test": oddOneOutTest,
+  "operation-span-test": operationSpanTest,
+  "paired-associates-memory-test": pairedAssociatesMemoryTest,
+  "delay-discounting-test": delayDiscountingTest,
 };

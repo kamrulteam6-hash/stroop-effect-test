@@ -64,6 +64,14 @@ import { TowerOfHanoiTest } from "@/components/tests/TowerOfHanoiTest";
 import { ChoiceReactionTimeTest } from "@/components/tests/ChoiceReactionTimeTest";
 import { VisualSearchTest } from "@/components/tests/VisualSearchTest";
 import { ChangeBlindnessTest } from "@/components/tests/ChangeBlindnessTest";
+import { PsychomotorVigilanceTest } from "@/components/tests/PsychomotorVigilanceTest";
+import { TaskSwitchingTest } from "@/components/tests/TaskSwitchingTest";
+import { FaceMemoryTest } from "@/components/tests/FaceMemoryTest";
+import { EmotionRecognitionTest } from "@/components/tests/EmotionRecognitionTest";
+import { OddOneOutTest } from "@/components/tests/OddOneOutTest";
+import { OperationSpanTest } from "@/components/tests/OperationSpanTest";
+import { PairedAssociatesTest } from "@/components/tests/PairedAssociatesTest";
+import { DelayDiscountingTest } from "@/components/tests/DelayDiscountingTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -130,4 +138,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "choice-reaction-time": ChoiceReactionTimeTest,
   "visual-search": VisualSearchTest,
   "change-blindness": ChangeBlindnessTest,
+  "psychomotor-vigilance": PsychomotorVigilanceTest,
+  "task-switching": TaskSwitchingTest,
+  "face-memory": FaceMemoryTest,
+  "emotion-recognition": EmotionRecognitionTest,
+  "odd-one-out": OddOneOutTest,
+  "operation-span": OperationSpanTest,
+  "paired-associates": PairedAssociatesTest,
+  "delay-discounting": DelayDiscountingTest,
 };

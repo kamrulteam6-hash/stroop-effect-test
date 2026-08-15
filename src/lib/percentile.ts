@@ -56,6 +56,14 @@ const MODELS: Record<string, PercentileModel> = {
   "choice-reaction-time-test": { mean: 550, stdev: 100, direction: "lower" },
   "visual-search-test": { mean: 1200, stdev: 400, direction: "lower" },
   "change-blindness-test": { mean: 4000, stdev: 2000, direction: "lower" },
+  "psychomotor-vigilance-test": { mean: 320, stdev: 60, direction: "lower" },
+  "task-switching-test": { mean: 180, stdev: 90, direction: "lower" },
+  "face-memory-test": { mean: 70, stdev: 15, direction: "higher" },
+  "emotion-recognition-test": { mean: 75, stdev: 15, direction: "higher" },
+  "odd-one-out-test": { mean: 900, stdev: 300, direction: "lower" },
+  "operation-span-test": { mean: 65, stdev: 18, direction: "higher" },
+  "paired-associates-memory-test": { mean: 60, stdev: 20, direction: "higher" },
+  "delay-discounting-test": { mean: 50, stdev: 25, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)
