@@ -115,6 +115,14 @@ import { content as paperFoldingTest } from "@/data/seoContent/paper-folding-tes
 import { content as mirrorImageTest } from "@/data/seoContent/mirror-image-test";
 import { content as patternCompletionTest } from "@/data/seoContent/pattern-completion-test";
 import { content as deductiveReasoningTest } from "@/data/seoContent/deductive-reasoning-test";
+import { content as adhdTest } from "@/data/seoContent/adhd-test";
+import { content as autismSpectrumTest } from "@/data/seoContent/autism-spectrum-test";
+import { content as depressionTest } from "@/data/seoContent/depression-test";
+import { content as anxietyTest } from "@/data/seoContent/anxiety-test";
+import { content as socialAnxietyTest } from "@/data/seoContent/social-anxiety-test";
+import { content as stressTest } from "@/data/seoContent/stress-test";
+import { content as burnoutTest } from "@/data/seoContent/burnout-test";
+import { content as ocdTest } from "@/data/seoContent/ocd-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -233,4 +241,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "mirror-image-test": mirrorImageTest,
   "pattern-completion-test": patternCompletionTest,
   "deductive-reasoning-test": deductiveReasoningTest,
+  "adhd-test": adhdTest,
+  "autism-spectrum-test": autismSpectrumTest,
+  "depression-test": depressionTest,
+  "anxiety-test": anxietyTest,
+  "social-anxiety-test": socialAnxietyTest,
+  "stress-test": stressTest,
+  "burnout-test": burnoutTest,
+  "ocd-test": ocdTest,
 };

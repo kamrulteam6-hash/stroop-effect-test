@@ -8,7 +8,8 @@ export type TestCategory =
   | "Focus & Attention"
   | "Personality"
   | "IQ & Logic"
-  | "Cognitive Biases";
+  | "Cognitive Biases"
+  | "Mental Health & Wellbeing";
 
 export type ComponentKey =
   | "stroop"
@@ -126,7 +127,15 @@ export type ComponentKey =
   | "paper-folding"
   | "mirror-image"
   | "pattern-completion"
-  | "deductive-reasoning";
+  | "deductive-reasoning"
+  | "adhd-screener"
+  | "autism-screener"
+  | "depression-screener"
+  | "anxiety-screener"
+  | "social-anxiety-screener"
+  | "stress-screener"
+  | "burnout-screener"
+  | "ocd-screener";
 
 export interface TestDefinition {
   slug: string;
@@ -2285,6 +2294,118 @@ export const tests: TestDefinition[] = [
     difficulty: "Medium",
     componentKey: "deductive-reasoning",
     scoreDirection: "higher",
+  },
+  {
+    slug: "adhd-test",
+    title: "ADHD Test",
+    metaTitle: "ADHD Test – Free Online ADHD Screening",
+    shortTitle: "ADHD Test",
+    category: "Mental Health & Wellbeing",
+    icon: "🧠",
+    shortDescription: "Answer 12 short statements about attention and activity levels to get an informal ADHD trait screening.",
+    metaDescription: "Take a free ADHD Test online. Answer short statements about inattention and hyperactivity-impulsivity for an informal self-report screening.",
+    keywords: ["adhd test", "adhd screening test online", "adult adhd test", "attention deficit test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "adhd-screener",
+  },
+  {
+    slug: "autism-spectrum-test",
+    title: "Autism Spectrum Test",
+    metaTitle: "Autism Spectrum Test – Free Online Screening",
+    shortTitle: "Autism Spectrum",
+    category: "Mental Health & Wellbeing",
+    icon: "🧩",
+    shortDescription: "Answer 12 short statements about social communication and routines for an informal autism trait screening.",
+    metaDescription: "Take a free Autism Spectrum Test online. Answer short statements about social communication and routines for an informal self-report screening.",
+    keywords: ["autism test", "autism spectrum test online", "aspergers test", "autism screening quiz"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "autism-screener",
+  },
+  {
+    slug: "depression-test",
+    title: "Depression Test",
+    metaTitle: "Depression Test – Free Online Depression Screening",
+    shortTitle: "Depression Test",
+    category: "Mental Health & Wellbeing",
+    icon: "🌧️",
+    shortDescription: "Answer 10 short statements about your mood over the past two weeks for an informal depression screening.",
+    metaDescription: "Take a free Depression Test online. Answer short statements about mood, sleep, and energy for an informal self-report screening.",
+    keywords: ["depression test", "depression screening test online", "am i depressed quiz", "mental health test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "depression-screener",
+  },
+  {
+    slug: "anxiety-test",
+    title: "Anxiety Test",
+    metaTitle: "Anxiety Test – Free Online Anxiety Screening",
+    shortTitle: "Anxiety Test",
+    category: "Mental Health & Wellbeing",
+    icon: "😰",
+    shortDescription: "Answer 10 short statements about worry and tension over the past two weeks for an informal anxiety screening.",
+    metaDescription: "Take a free Anxiety Test online. Answer short statements about worry, restlessness, and tension for an informal self-report screening.",
+    keywords: ["anxiety test", "anxiety screening test online", "am i anxious quiz", "gad test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "anxiety-screener",
+  },
+  {
+    slug: "social-anxiety-test",
+    title: "Social Anxiety Test",
+    metaTitle: "Social Anxiety Test – Free Online Screening",
+    shortTitle: "Social Anxiety",
+    category: "Mental Health & Wellbeing",
+    icon: "🙈",
+    shortDescription: "Answer 10 short statements about fear of judgment in social situations for an informal screening.",
+    metaDescription: "Take a free Social Anxiety Test online. Answer short statements about fear of judgment and social avoidance for an informal self-report screening.",
+    keywords: ["social anxiety test", "social anxiety screening online", "social phobia test", "shyness test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "social-anxiety-screener",
+  },
+  {
+    slug: "stress-test",
+    title: "Stress Test",
+    metaTitle: "Stress Test – Free Online Perceived Stress Test",
+    shortTitle: "Stress Test",
+    category: "Mental Health & Wellbeing",
+    icon: "🌀",
+    shortDescription: "Answer 10 short statements about how in control you've felt over the past month.",
+    metaDescription: "Take a free Stress Test online. Answer short statements about feeling overwhelmed versus in control for an informal perceived-stress screening.",
+    keywords: ["stress test", "stress level test online", "perceived stress test", "am i stressed quiz"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "stress-screener",
+  },
+  {
+    slug: "burnout-test",
+    title: "Burnout Test",
+    metaTitle: "Burnout Test – Free Online Burnout Screening",
+    shortTitle: "Burnout Test",
+    category: "Mental Health & Wellbeing",
+    icon: "🔥",
+    shortDescription: "Answer 12 short statements about exhaustion and detachment from work or responsibilities.",
+    metaDescription: "Take a free Burnout Test online. Answer short statements about exhaustion and cynicism for an informal occupational burnout screening.",
+    keywords: ["burnout test", "burnout screening test online", "am i burned out quiz", "work burnout test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "burnout-screener",
+  },
+  {
+    slug: "ocd-test",
+    title: "OCD Test",
+    metaTitle: "OCD Test – Free Online OCD Screening",
+    shortTitle: "OCD Test",
+    category: "Mental Health & Wellbeing",
+    icon: "🔁",
+    shortDescription: "Answer 10 short statements about intrusive thoughts and repetitive behaviors for an informal screening.",
+    metaDescription: "Take a free OCD Test online. Answer short statements about intrusive thoughts and repetitive behaviors for an informal self-report screening.",
+    keywords: ["ocd test", "ocd screening test online", "obsessive compulsive test", "am i ocd quiz"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "ocd-screener",
   },
 ];
 

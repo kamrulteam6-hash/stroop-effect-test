@@ -116,6 +116,14 @@ import { PaperFoldingTest } from "@/components/tests/PaperFoldingTest";
 import { MirrorImageTest } from "@/components/tests/MirrorImageTest";
 import { PatternCompletionTest } from "@/components/tests/PatternCompletionTest";
 import { DeductiveReasoningTest } from "@/components/tests/DeductiveReasoningTest";
+import { ADHDTest } from "@/components/tests/ADHDTest";
+import { AutismSpectrumTest } from "@/components/tests/AutismSpectrumTest";
+import { DepressionTest } from "@/components/tests/DepressionTest";
+import { AnxietyTest } from "@/components/tests/AnxietyTest";
+import { SocialAnxietyTest } from "@/components/tests/SocialAnxietyTest";
+import { StressTest } from "@/components/tests/StressTest";
+import { BurnoutTest } from "@/components/tests/BurnoutTest";
+import { OCDTest } from "@/components/tests/OCDTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -234,4 +242,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "mirror-image": MirrorImageTest,
   "pattern-completion": PatternCompletionTest,
   "deductive-reasoning": DeductiveReasoningTest,
+  "adhd-screener": ADHDTest,
+  "autism-screener": AutismSpectrumTest,
+  "depression-screener": DepressionTest,
+  "anxiety-screener": AnxietyTest,
+  "social-anxiety-screener": SocialAnxietyTest,
+  "stress-screener": StressTest,
+  "burnout-screener": BurnoutTest,
+  "ocd-screener": OCDTest,
 };
