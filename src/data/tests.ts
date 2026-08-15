@@ -463,13 +463,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "pitch-discrimination-test",
     title: "Pitch Discrimination Test",
-    metaTitle: "Pitch Discrimination Test — Free Tone Deafness Screening",
+    metaTitle: "Pitch Discrimination Test – Free Online Tone Deaf Test",
     shortTitle: "Pitch Discrimination",
     category: "Hearing",
     icon: "🎵",
     shortDescription: "Two tones play — can you tell which is higher? The gap narrows as you improve.",
     metaDescription:
-      "Free online pitch discrimination test and tone deafness screening. Identify which of two tones is higher as the pitch gap narrows, and find your discrimination threshold.",
+      "Take a free pitch discrimination test online. Hear two tones, choose whether the second is higher or lower, and find the smallest pitch gap you can identify.",
     keywords: [
       "tone deafness test",
       "pitch discrimination test",
@@ -485,13 +485,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "color-memory-game",
     title: "Color Memory Game",
-    metaTitle: "Color Memory Game — Free Online Color & Sound Pattern Game",
+    metaTitle: "Color Memory Game – Free Online Sequence Memory Test",
     shortTitle: "Color Memory",
     category: "Memory & Cognition",
     icon: "🔴",
     shortDescription: "Watch the color and sound pattern grow, then repeat it back from memory.",
     metaDescription:
-      "Free online color memory game with sound. Watch a growing sequence of colors and tones, then repeat it back — a classic electronic memory game format, right in your browser.",
+      "Play a free color memory game online. Watch the color and sound sequence, repeat it in order, and see how long a pattern you can remember.",
     keywords: [
       "color memory game online",
       "simon game online free",
@@ -506,13 +506,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "rhythm-tapping-test",
     title: "Rhythm Tapping Test",
-    metaTitle: "Rhythm Tapping Test — Free Online Timing Accuracy Test",
+    metaTitle: "Rhythm Tapping Test – Free Online Beat Timing Test",
     shortTitle: "Rhythm Tapping",
     category: "Reaction & Speed",
     icon: "🥁",
     shortDescription: "Tap along to a steady beat and see how close to perfect timing you can get.",
     metaDescription:
-      "Free online Rhythm Tapping Test. Tap along to a metronome at your chosen BPM and get scored on your average timing accuracy in milliseconds.",
+      "Take a free rhythm tapping test online. Tap with a 60, 90, or 120 BPM metronome and measure how closely your taps match the beat in milliseconds.",
     keywords: [
       "rhythm test online",
       "tempo tapping test",
