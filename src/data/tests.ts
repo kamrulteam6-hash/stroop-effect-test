@@ -2097,13 +2097,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "tone-memory-test",
     title: "Tone Memory Test",
-    metaTitle: "Tone Memory Test — Free Online Musical Memory Test",
+    metaTitle: "Tone Memory Test – Free Auditory Memory Test Online",
     shortTitle: "Tone Memory",
     category: "Hearing",
     icon: "🎵",
     shortDescription: "Listen to a sequence of musical tones, then play it back in order to test your auditory memory.",
     metaDescription:
-      "Free online Tone Memory Test. Listen to and reproduce sequences of musical tones to measure your auditory working memory span.",
+      "Take a free Tone Memory Test online. Remember short pitch sequences, compare them after a delay, and test auditory working memory for tones.",
     keywords: ["tone memory test", "musical memory test online", "auditory memory test", "pitch sequence test"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -2113,13 +2113,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "rhythm-discrimination-test",
     title: "Rhythm Discrimination Test",
-    metaTitle: "Rhythm Discrimination Test — Free Online Auditory Test",
+    metaTitle: "Rhythm Discrimination Test – Free Rhythm Perception Test",
     shortTitle: "Rhythm Discrimination",
     category: "Hearing",
     icon: "🥁",
     shortDescription: "Judge whether two short rhythmic click patterns are identical or slightly different.",
     metaDescription:
-      "Free online Rhythm Discrimination Test. Measure your ability to detect subtle differences between rhythmic patterns.",
+      "Take a free Rhythm Discrimination Test online. Compare two timing patterns and decide whether their beat intervals are identical or subtly different.",
     keywords: ["rhythm discrimination test", "auditory perception test online", "rhythm test free", "beat perception test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2129,13 +2129,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "synonym-test",
     title: "Synonym Test",
-    metaTitle: "Synonym Test — Free Online Vocabulary Test",
+    metaTitle: "Synonym Test – Free English Vocabulary Test Online",
     shortTitle: "Synonym Test",
     category: "Math & Logic",
     icon: "📖",
     shortDescription: "Pick the word that means the same as the given word, as fast and accurately as you can.",
     metaDescription:
-      "Free online Synonym Test. Test your vocabulary knowledge by identifying words with the same meaning quickly and accurately.",
+      "Take a free Synonym Test online. Choose the word closest in meaning to each target and test receptive English vocabulary across increasing difficulty.",
     keywords: ["synonym test", "vocabulary test online", "word meaning test", "english vocabulary quiz"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2145,13 +2145,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "reading-speed-test",
     title: "Reading Speed Test",
-    metaTitle: "Reading Speed Test — Free Online WPM Test",
+    metaTitle: "Reading Speed Test – Free Words Per Minute Test",
     shortTitle: "Reading Speed",
     category: "Math & Logic",
     icon: "📰",
     shortDescription: "Read a passage at your natural pace and find out your words-per-minute reading speed.",
     metaDescription:
-      "Free online Reading Speed Test. Measure your words-per-minute reading speed with a built-in comprehension check.",
+      "Take a free Reading Speed Test online. Read a passage naturally, measure words per minute, and answer comprehension questions to verify understanding.",
     keywords: ["reading speed test", "wpm test online", "reading speed calculator", "speed reading test free"],
     estTime: "2 min",
     difficulty: "Easy",
