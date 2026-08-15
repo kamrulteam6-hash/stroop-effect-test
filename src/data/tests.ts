@@ -1064,13 +1064,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "framing-effect-test",
     title: "Framing Effect Test",
-    metaTitle: "Framing Effect Test — Free Online Decision Bias Test",
+    metaTitle: "Framing Effect Test – Free Cognitive Bias Experiment",
     shortTitle: "Framing Effect",
     category: "Cognitive Biases",
     icon: "🪟",
     shortDescription: "Make a few quick decisions, then see how the way each choice was worded may have swayed you.",
     metaDescription:
-      "Free online Framing Effect Test. Make decisions framed as gains or losses, then see how wording alone can shift choices — a classic behavioral economics demonstration.",
+      "Take a free Framing Effect Test online. Make 5 gain- or loss-framed decisions and see how equivalent wording can change risk preferences.",
     keywords: [
       "framing effect test online",
       "gain loss framing test",
@@ -1084,13 +1084,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "sunk-cost-test",
     title: "Sunk Cost Fallacy Test",
-    metaTitle: "Sunk Cost Fallacy Test — Free Online Decision Bias Test",
+    metaTitle: "Sunk Cost Fallacy Test – Free Decision Bias Quiz",
     shortTitle: "Sunk Cost Fallacy",
     category: "Cognitive Biases",
     icon: "💸",
     shortDescription: "Work through 8 everyday scenarios and see how often already-spent costs sway your choices.",
     metaDescription:
-      "Free online Sunk Cost Fallacy Test. Work through 8 everyday scenarios to see how often you let money, time, or effort already spent influence a decision it shouldn't.",
+      "Take a free Sunk Cost Fallacy Test online. Work through 8 money, time, and effort scenarios and see when past investments influence future choices.",
     keywords: [
       "sunk cost fallacy test",
       "sunk cost test online",
@@ -1105,13 +1105,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "ebbinghaus-illusion-test",
     title: "Ebbinghaus Illusion Test",
-    metaTitle: "Ebbinghaus Illusion Test — Free Online Size Perception Test",
+    metaTitle: "Ebbinghaus Illusion Test – Titchener Circles Online",
     shortTitle: "Ebbinghaus Illusion",
     category: "Perception",
     icon: "⭕",
     shortDescription: "Adjust a circle to match another — then see how much the surrounding circles fooled your eyes.",
     metaDescription:
-      "Free online Ebbinghaus Illusion Test (Titchener circles). Match two center circles by eye while surrounding circles distort your sense of their size.",
+      "Take a free Ebbinghaus Illusion Test online. Adjust one center circle until it matches the other and measure how surrounding circles influence perceived size.",
     keywords: [
       "ebbinghaus illusion test",
       "titchener circles test online",
@@ -1125,13 +1125,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "semantic-priming-test",
     title: "Semantic Priming Test",
-    metaTitle: "Semantic Priming Test — Free Online Word Association Test",
+    metaTitle: "Semantic Priming Test – Free Lexical Decision Experiment",
     shortTitle: "Semantic Priming",
     category: "Focus & Attention",
     icon: "💭",
     shortDescription: "Decide if each string is a real word — a related word shown just before may quietly speed you up.",
     metaDescription:
-      "Free online Semantic Priming Test (lexical decision task). See how a related word flashed just before a target speeds up your word recognition.",
+      "Take a free Semantic Priming Test online. Decide word vs. non-word and compare reaction times after related and unrelated prime words.",
     keywords: [
       "semantic priming test online",
       "lexical decision task test",
