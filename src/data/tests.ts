@@ -139,13 +139,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "colorblind-test-online",
     title: "Color Blind Test",
-    metaTitle: "Color Blind Test Online — Free Ishihara-Style Screening",
+    metaTitle: "Color Blind Test Online – Free Red-Green Vision Test",
     shortTitle: "Color Blindness",
     category: "Perception",
     icon: "🔴",
     shortDescription: "Screen for red-green color vision deficiency with Ishihara-style plates.",
     metaDescription:
-      "Free online color blind test with 10 dynamically-generated Ishihara-style plates — a fresh set every time. Screen for red-green color vision deficiency in under two minutes.",
+      "Take a free color blind test online using Ishihara-style dot plates. Check for possible red-green color vision difficulty in minutes with instant results.",
     keywords: [
       "color blind test online",
       "ishihara test online",
