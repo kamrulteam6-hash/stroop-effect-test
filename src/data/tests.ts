@@ -653,13 +653,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "visual-illusion-test",
     title: "Visual Illusion Test",
-    metaTitle: "Visual Illusion Test — Free Müller-Lyer Illusion Online",
+    metaTitle: "Visual Illusion Test – Müller-Lyer Optical Illusion Online",
     shortTitle: "Visual Illusion",
     category: "Perception",
     icon: "🔀",
     shortDescription: "Adjust a line until it looks equal to another — then see how much the illusion fooled you.",
     metaDescription:
-      "Free online Visual Illusion Test featuring the classic Müller-Lyer illusion. Adjust a line to match another by eye and measure your personal illusion susceptibility.",
+      "Take a free Müller-Lyer visual illusion test online. Adjust one line until both look equal, then see how much surrounding arrow fins changed your size perception.",
     keywords: [
       "visual illusion test online",
       "muller-lyer illusion test",
@@ -673,13 +673,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "symbol-digit-test",
     title: "Symbol Digit Modalities Test",
-    metaTitle: "Symbol Digit Modalities Test — Free Online SDMT",
+    metaTitle: "Symbol Digit Modalities Test Online – Free SDMT-Style Test",
     shortTitle: "Symbol Digit",
     category: "Focus & Attention",
     icon: "🔣",
     shortDescription: "Match each symbol to its digit using the key, as fast as you can, for 90 seconds.",
     metaDescription:
-      "Free online Symbol Digit Modalities Test (SDMT) — a simplified version of the real processing-speed test. Match symbols to digits as fast as you can in 90 seconds.",
+      "Take a free Symbol Digit Modalities Test online. Match symbols to digits using a key for 90 seconds and measure processing speed and response accuracy.",
     keywords: [
       "symbol digit modalities test",
       "sdmt online",
@@ -694,13 +694,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "pattern-iq-test",
     title: "Pattern IQ Test",
-    metaTitle: "Pattern IQ Test — Free Online Matrix Reasoning Test",
+    metaTitle: "Pattern IQ Test – Free Online Matrix Reasoning Test",
     shortTitle: "Pattern IQ",
     category: "IQ & Logic",
     icon: "🧩",
     shortDescription: "Spot the rule in a sequence of shapes and pick what comes next.",
     metaDescription:
-      "Free online Pattern IQ Test with procedurally generated matrix-reasoning puzzles — a new set every time. Spot the pattern and pick the shape that completes it.",
+      "Take a free Pattern IQ test online. Solve 8 visual matrix puzzles by finding row and column rules, then see how many abstract patterns you complete correctly.",
     keywords: [
       "pattern iq test",
       "matrix reasoning test online",
@@ -715,13 +715,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "finger-tapping-test",
     title: "Finger Tapping Test",
-    metaTitle: "Finger Tapping Test — Free Online Motor Speed Test",
+    metaTitle: "Finger Tapping Test – Free Online Motor Speed Test",
     shortTitle: "Finger Tapping",
     category: "Reaction & Speed",
     icon: "👆",
     shortDescription: "Tap as fast as you can for 10 seconds with each hand and compare the results.",
     metaDescription:
-      "Free online Finger Tapping Test — a simplified version of the real neuropsychological motor speed test. Compare your dominant and non-dominant hand tap counts.",
+      "Take a free finger tapping test online. Tap for 10 seconds with your dominant and non-dominant hands and compare tapping speed between hands.",
     keywords: [
       "finger tapping test",
       "finger tapping test online",
