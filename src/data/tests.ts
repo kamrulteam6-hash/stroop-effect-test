@@ -1457,13 +1457,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "psychomotor-vigilance-test",
     title: "Psychomotor Vigilance Test",
-    metaTitle: "Psychomotor Vigilance Test — Free Online PVT Reaction Test",
+    metaTitle: "Psychomotor Vigilance Test – Free Online PVT",
     shortTitle: "Vigilance",
     category: "Reaction & Speed",
     icon: "🟢",
     shortDescription: "Click the moment the box turns green across 10 unpredictable rounds to measure sustained attention.",
     metaDescription:
-      "Free online Psychomotor Vigilance Test (PVT). Measure your sustained attention and reaction speed across unpredictable wait times.",
+      "Take a free Psychomotor Vigilance Test online. Respond to unpredictable visual signals and measure reaction speed, lapses, and sustained attention over time.",
     keywords: ["psychomotor vigilance test", "pvt test online", "reaction time vigilance", "sustained attention test"],
     estTime: "2 min",
     difficulty: "Easy",
@@ -1473,13 +1473,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "task-switching-test",
     title: "Task Switching Test",
-    metaTitle: "Task Switching Test — Free Online Cognitive Flexibility Test",
+    metaTitle: "Task Switching Test – Free Cognitive Flexibility Test",
     shortTitle: "Task Switching",
     category: "Focus & Attention",
     icon: "🔀",
     shortDescription: "Switch between odd/even and low/high number judgments to measure your task-switching cost.",
     metaDescription:
-      "Free online Task Switching Test. Measure your cognitive flexibility and switch cost between two number judgment tasks.",
+      "Take a free Task Switching Test online. Alternate between two simple rules and measure switch cost, repeat-trial speed, accuracy, and cognitive flexibility.",
     keywords: ["task switching test", "cognitive flexibility test", "switch cost test", "executive function test"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -1489,13 +1489,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "face-memory-test",
     title: "Face Memory Test",
-    metaTitle: "Face Memory Test — Free Online Facial Recognition Memory Test",
+    metaTitle: "Face Memory Test – Free Online Face Recognition Test",
     shortTitle: "Face Memory",
     category: "Memory & Cognition",
     icon: "🙂",
     shortDescription: "Study a set of faces, then pick out which ones you've seen before among new distractors.",
     metaDescription:
-      "Free online Face Memory Test. Study a set of faces and see how many you can correctly recognize afterward.",
+      "Take a free Face Memory Test online. Learn unfamiliar faces, identify them among similar distractors, and test recognition memory for facial identity.",
     keywords: ["face memory test", "facial recognition test online", "face recall test", "memory test free"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -1505,13 +1505,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "emotion-recognition-test",
     title: "Emotion Recognition Test",
-    metaTitle: "Emotion Recognition Test — Free Online Facial Emotion Test",
+    metaTitle: "Emotion Recognition Test – Read Facial Expressions Online",
     shortTitle: "Emotion Recognition",
     category: "Memory & Cognition",
     icon: "😲",
     shortDescription: "Identify facial emotions as quickly and accurately as possible across 12 rounds.",
     metaDescription:
-      "Free online Emotion Recognition Test. Identify facial expressions quickly and accurately to measure your emotion recognition accuracy.",
+      "Take a free Emotion Recognition Test online. Identify facial-expression categories such as happiness, anger, fear, sadness, disgust, and surprise.",
     keywords: ["emotion recognition test", "facial emotion test online", "emotional intelligence test", "read emotions test"],
     estTime: "2 min",
     difficulty: "Easy",
