@@ -2161,13 +2161,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "reading-comprehension-test",
     title: "Reading Comprehension Test",
-    metaTitle: "Reading Comprehension Test — Free Online Comprehension Quiz",
+    metaTitle: "Reading Comprehension Test – Free Online Reading Test",
     shortTitle: "Reading Comprehension",
     category: "Math & Logic",
     icon: "📗",
     shortDescription: "Read a short passage carefully, then answer questions to test your understanding and retention.",
     metaDescription:
-      "Free online Reading Comprehension Test. Read a passage and answer questions to measure your comprehension and retention.",
+      "Take a free Reading Comprehension Test online. Read short passages and answer literal, inferential, main-idea, vocabulary, and reasoning questions.",
     keywords: ["reading comprehension test", "comprehension quiz online", "reading test free", "text comprehension test"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -2177,13 +2177,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "word-fluency-test",
     title: "Word Fluency Test",
-    metaTitle: "Word Fluency Test — Free Online Verbal Fluency Test",
+    metaTitle: "Word Fluency Test – Free Verbal Fluency Test Online",
     shortTitle: "Word Fluency",
     category: "Math & Logic",
     icon: "🔤",
     shortDescription: "Type as many different words as you can starting with a given letter within the time limit.",
     metaDescription:
-      "Free online Word Fluency Test. Generate as many words as possible starting with a given letter to measure verbal fluency.",
+      "Take a free Word Fluency Test online. Generate as many valid words as possible from a letter or semantic category and measure lexical retrieval.",
     keywords: ["word fluency test", "verbal fluency test online", "letter fluency test", "cognitive fluency test"],
     estTime: "1 min",
     difficulty: "Medium",
@@ -2193,13 +2193,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "anagram-test",
     title: "Anagram Test",
-    metaTitle: "Anagram Test — Free Online Word Unscramble Test",
+    metaTitle: "Anagram Test – Free Word Scramble Puzzle Test Online",
     shortTitle: "Anagram Test",
     category: "Math & Logic",
     icon: "🔠",
     shortDescription: "Unscramble jumbled letters to form a real word as fast as you can.",
     metaDescription:
-      "Free online Anagram Test. Unscramble letters to form real words as quickly as possible and test your verbal processing speed.",
+      "Take a free Anagram Test online. Rearrange scrambled letters into valid words and measure solution accuracy, speed, and word-reconstruction difficulty.",
     keywords: ["anagram test", "word unscramble test online", "anagram solver game", "verbal processing test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2209,13 +2209,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "spatial-reasoning-test",
     title: "Spatial Reasoning Test",
-    metaTitle: "Spatial Reasoning Test — Free Online Rotation Matching Test",
+    metaTitle: "Spatial Reasoning Test – Free Spatial Ability Test Online",
     shortTitle: "Spatial Reasoning",
     category: "IQ & Logic",
     icon: "🧩",
     shortDescription: "Decide whether a second grid pattern is a rotation of the first, or a completely different pattern.",
     metaDescription:
-      "Free online Spatial Reasoning Test. Judge whether grid patterns are rotated matches or different shapes to measure spatial ability.",
+      "Take a free Spatial Reasoning Test online. Solve visual problems involving relative position, orientation, viewpoint, maps, and spatial transformations.",
     keywords: ["spatial reasoning test", "rotation matching test online", "spatial ability test", "iq test spatial"],
     estTime: "2 min",
     difficulty: "Medium",
