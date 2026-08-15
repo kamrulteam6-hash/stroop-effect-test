@@ -528,13 +528,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "n-back-test",
     title: "N-Back Test",
-    metaTitle: "N-Back Test Online — Free Working Memory Training",
+    metaTitle: "N-Back Test Online – Free Working Memory Test",
     shortTitle: "N-Back",
     category: "Memory & Cognition",
     icon: "🧠",
     shortDescription: "Click when the current tile matches the one from N steps earlier. A real working-memory workout.",
     metaDescription:
-      "Free online N-Back Test with adjustable N-level (1/2/3) and trial count. Train working memory by spotting when the current tile position matches N steps back.",
+      "Take a free N-Back test online. Choose 1-Back, 2-Back, or 3-Back and test how accurately you can update and compare information in working memory.",
     keywords: [
       "n-back test",
       "n-back test online",
@@ -550,13 +550,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "blind-spot-test",
     title: "Blind Spot Test",
-    metaTitle: "Blind Spot Test Online — Find Your Eye's Blind Spot",
+    metaTitle: "Blind Spot Test – Find Your Eye's Natural Blind Spot Online",
     shortTitle: "Blind Spot",
     category: "Vision",
     icon: "⚫",
     shortDescription: "An interactive version of the classic demonstration — find the blind spot in each eye.",
     metaDescription:
-      "Free interactive online blind spot test. Slide the dot and find the exact point where it disappears — a classic optic nerve demonstration for each eye.",
+      "Take a free blind spot test online. Cover one eye, focus on the cross, move the dot, and discover the natural blind spot created by your optic nerve.",
     keywords: [
       "blind spot test online",
       "find your blind spot",
@@ -570,13 +570,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "multiple-object-tracking-test",
     title: "Multiple Object Tracking Test",
-    metaTitle: "Multiple Object Tracking Test — Free Online MOT Test",
+    metaTitle: "Multiple Object Tracking Test – Free Online MOT Test",
     shortTitle: "Object Tracking",
     category: "Focus & Attention",
     icon: "🔵",
     shortDescription: "Track the highlighted dots as they move and scatter among identical distractors.",
     metaDescription:
-      "Free online Multiple Object Tracking (MOT) test. Track 2-4 moving targets among distractors, then pick them out again — a real visual attention research paradigm.",
+      "Take a free Multiple Object Tracking Test online. Track 2, 3, or 4 moving targets among identical distractors and test your dynamic visual attention.",
     keywords: [
       "multiple object tracking test",
       "mot test online",
