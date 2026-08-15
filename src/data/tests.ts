@@ -184,13 +184,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "click-speed-test",
     title: "Click Speed Test (CPS)",
-    metaTitle: "CPS Test — Free Click Speed Test Online (5/10/30/60s)",
+    metaTitle: "CPS Test – Free Click Speed Test Online",
     shortTitle: "Click Speed",
     category: "Reaction & Speed",
     icon: "🖱️",
     shortDescription: "Measure how many clicks per second (CPS) you can perform in 5 seconds.",
     metaDescription:
-      "Free Click Speed Test (CPS Test) with 5, 10, 30, and 60-second modes, plus a spacebar mode. Find out your clicks per second and see how you compare.",
+      "Take a free CPS test online and measure your clicks per second. Choose 5, 10, 30, or 60 seconds, use mouse or spacebar, and get instant results.",
     keywords: [
       "click speed test",
       "cps test",

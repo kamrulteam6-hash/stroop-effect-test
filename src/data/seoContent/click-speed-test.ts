@@ -4,82 +4,374 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "The Click Speed Test, often called a CPS Test (clicks per second), measures exactly how many times you can click in a fixed window of time. Choose a 5, 10, 30, or 60-second duration, and pick Click or Spacebar mode — some people find spacebar mashing faster and more comfortable than mouse clicking, so it's worth trying both. It's a simple, fun way to test your hand speed and compare scores with friends.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Click Speed Test Works",
+      text: "How fast can you click?",
     },
     {
       type: "paragraph",
-      text: "Pick your duration and input method, then click the button (or start mashing spacebar) — the timer begins on your very first input, so there's no waiting around. Go as fast as you can until time runs out. At the end, we divide your total click count by the test duration to calculate your clicks per second (CPS), along with your raw total click count.",
-    },
-    {
-      type: "heading",
-      text: "The Science Behind Click Speed",
+      text: "Take this **Click Speed Test**, also known as a **CPS Test**, to measure how many clicks you can make per second. Choose a 5, 10, 30, or 60-second test, select mouse click or spacebar mode, and start pressing as fast as you can.",
     },
     {
       type: "paragraph",
-      text: "Click speed depends on a mix of factors: the speed of nerve signals from your brain to your finger muscles, the specific technique you use, and even your mouse or keyboard's physical switch responsiveness. Competitive gamers, particularly in genres requiring rapid-fire clicking, have developed specialized techniques to push their CPS well beyond what a natural single-finger click can achieve — though these techniques trade off some precision and can increase strain with overuse.",
+      text: "Your final result shows your **total clicks** and **clicks per second (CPS)**.",
+    },
+    {
+      type: "paragraph",
+      text: "Use the same duration, input method, device, and technique when comparing scores.",
     },
     {
       type: "heading",
-      id: "techniques",
+      id: "how-to-take",
+      text: "How to Take the CPS Test",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Choose a test duration: 5, 10, 30, or 60 seconds.",
+        "Select **Click** for mouse input or **Spacebar** for keyboard input.",
+        "Press Start Test.",
+        "Begin clicking or pressing the spacebar as quickly as you can.",
+        "Continue until the timer reaches zero.",
+        "Check your total clicks and CPS result.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The timer should start with your first valid input, so your score reflects the active test period rather than time spent getting ready.",
+    },
+    {
+      type: "paragraph",
+      text: "If you are comparing results with friends, make sure everyone uses the same duration and input method. A 5-second mouse score should not be directly compared with a 60-second spacebar score.",
+    },
+    {
+      type: "heading",
+      id: "what-is-cps",
+      text: "What Is CPS?",
+    },
+    {
+      type: "paragraph",
+      text: "**CPS means clicks per second.**",
+    },
+    {
+      type: "paragraph",
+      text: "It is calculated with a simple formula:",
+    },
+    {
+      type: "paragraph",
+      text: "**Total Clicks ÷ Test Time in Seconds = CPS**",
+    },
+    {
+      type: "paragraph",
+      text: "For example, if you make 70 clicks in a 10-second test:",
+    },
+    {
+      type: "paragraph",
+      text: "**70 ÷ 10 = 7 CPS**",
+    },
+    {
+      type: "paragraph",
+      text: "A higher CPS means more registered clicks per second.",
+    },
+    {
+      type: "paragraph",
+      text: "CPS is mainly used as a simple benchmark for mouse-clicking speed, finger tapping speed, and gaming-related clicking challenges. It does not measure overall reaction time, aiming ability, intelligence, or general gaming skill.",
+    },
+    {
+      type: "heading",
+      text: "5-Second vs. 10-Second vs. 30-Second vs. 60-Second CPS Test",
+    },
+    {
+      type: "paragraph",
+      text: "Test duration changes what the result tells you.",
+    },
+    {
+      type: "subheading",
+      text: "5-Second CPS Test",
+    },
+    {
+      type: "paragraph",
+      text: "The 5-second test is best for measuring **short-burst clicking speed**.",
+    },
+    {
+      type: "paragraph",
+      text: "Because the test ends quickly, fatigue has less time to affect your result. This makes it useful when you want to see how fast you can click for a brief burst.",
+    },
+    {
+      type: "subheading",
+      text: "10-Second CPS Test",
+    },
+    {
+      type: "paragraph",
+      text: "The 10-second test gives you a slightly longer benchmark while still being short enough for repeated attempts.",
+    },
+    {
+      type: "paragraph",
+      text: "It is a useful default if you want to compare your CPS across sessions without turning the test into an endurance challenge.",
+    },
+    {
+      type: "subheading",
+      text: "30-Second CPS Test",
+    },
+    {
+      type: "paragraph",
+      text: "The 30-second test begins to measure **sustained clicking speed**.",
+    },
+    {
+      type: "paragraph",
+      text: "You may notice your clicking rhythm changing as your finger and hand become tired. A high first few seconds does not guarantee the same pace for the full test.",
+    },
+    {
+      type: "subheading",
+      text: "60-Second CPS Test",
+    },
+    {
+      type: "paragraph",
+      text: "The 60-second test is mainly an endurance challenge.",
+    },
+    {
+      type: "paragraph",
+      text: "Your average CPS may be lower than your 5- or 10-second score because maintaining rapid repetitive clicking for a full minute is much harder.",
+    },
+    {
+      type: "paragraph",
+      text: "Only compare results from the same duration.",
+    },
+    {
+      type: "heading",
+      id: "good-score",
+      text: "What Is a Good CPS Score?",
+    },
+    {
+      type: "paragraph",
+      text: "There is no universal CPS number that separates “average,” “good,” “pro,” or “elite” users.",
+    },
+    {
+      type: "paragraph",
+      text: "Online click tests use different timing methods, input rules, hardware, browsers, and clicking techniques. Some users click normally with one finger, while others use butterfly, jitter, or drag-clicking techniques. Those results are not directly equivalent.",
+    },
+    {
+      type: "paragraph",
+      text: "Instead of chasing a generic ranking, create your own baseline.",
+    },
+    {
+      type: "paragraph",
+      text: "For example:",
+    },
+    {
+      type: "list",
+      items: [
+        "take the 10-second test three times;",
+        "use the same mouse and clicking technique;",
+        "ignore one unusually high or low result;",
+        "compare your typical CPS over time.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If your repeated 10-second scores rise while your technique remains controlled, you have a meaningful personal improvement.",
+    },
+    {
+      type: "heading",
+      text: "Mouse Click Mode vs. Spacebar Mode",
+    },
+    {
+      type: "paragraph",
+      text: "This test lets you use either a mouse button or the keyboard spacebar.",
+    },
+    {
+      type: "paragraph",
+      text: "These should be treated as separate challenges.",
+    },
+    {
+      type: "subheading",
+      text: "Mouse Click Mode",
+    },
+    {
+      type: "paragraph",
+      text: "Mouse mode measures how quickly you can repeatedly actuate the mouse button.",
+    },
+    {
+      type: "paragraph",
+      text: "The result can depend on:",
+    },
+    {
+      type: "list",
+      items: [
+        "finger speed,",
+        "clicking technique,",
+        "mouse switch resistance,",
+        "debounce behavior,",
+        "hand position,",
+        "and how consistently each click registers.",
+      ],
+    },
+    {
+      type: "subheading",
+      text: "Spacebar Mode",
+    },
+    {
+      type: "paragraph",
+      text: "Spacebar mode measures repeated keyboard presses rather than mouse clicks.",
+    },
+    {
+      type: "paragraph",
+      text: "The key is much larger than a mouse button, and the movement pattern can feel very different. Some users can press the spacebar faster, while others perform better with a mouse.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not combine mouse and spacebar records into one benchmark. Keep separate personal bests.",
+    },
+    {
+      type: "heading",
       text: "Clicking Techniques Explained",
     },
     {
+      type: "paragraph",
+      text: "Different techniques can produce very different CPS results.",
+    },
+    {
+      type: "subheading",
+      text: "Regular Clicking",
+    },
+    {
+      type: "paragraph",
+      text: "Regular clicking uses one finger to press and release the mouse button repeatedly.",
+    },
+    {
+      type: "paragraph",
+      text: "This is the simplest method and usually gives the cleanest comparison between sessions.",
+    },
+    {
+      type: "subheading",
+      text: "Butterfly Clicking",
+    },
+    {
+      type: "paragraph",
+      text: "Butterfly clicking alternates two fingers on the same mouse button.",
+    },
+    {
+      type: "paragraph",
+      text: "Because one finger can press while the other resets, this technique can produce a higher CPS than normal one-finger clicking.",
+    },
+    {
+      type: "paragraph",
+      text: "Whether it works well depends on the mouse, button design, and how the input is registered.",
+    },
+    {
+      type: "subheading",
+      text: "Jitter Clicking",
+    },
+    {
+      type: "paragraph",
+      text: "Jitter clicking uses rapid muscle tension or vibration in the hand and arm to produce repeated clicks.",
+    },
+    {
+      type: "paragraph",
+      text: "It can increase click rate, but it also creates more physical strain than relaxed normal clicking. It should not be practiced through discomfort.",
+    },
+    {
+      type: "subheading",
+      text: "Drag Clicking",
+    },
+    {
+      type: "paragraph",
+      text: "Drag clicking uses friction between the finger and mouse button to make the switch register multiple rapid activations during one dragging motion.",
+    },
+    {
+      type: "paragraph",
+      text: "This technique depends heavily on mouse hardware and switch behavior. A drag-click CPS score should not be compared with a normal single-finger clicking score.",
+    },
+    {
+      type: "heading",
+      text: "Does Your Mouse Affect CPS?",
+    },
+    {
+      type: "paragraph",
+      text: "Yes, your mouse can affect how reliably rapid clicks are registered.",
+    },
+    {
+      type: "paragraph",
+      text: "Mouse switches differ in actuation force, travel, mechanical design, and debounce behavior. Different mice may also respond differently to techniques such as butterfly or drag clicking. A more expensive mouse does not automatically make you faster, so keep the same hardware when comparing sessions.",
+    },
+    {
+      type: "heading",
+      text: "CPS Test vs. Aim Trainer",
+    },
+    {
+      type: "paragraph",
+      text: "An [Aim Trainer](/test/aim-trainer-test) adds cursor movement and target accuracy.",
+    },
+    {
+      type: "paragraph",
+      text: "In a CPS test, the cursor can stay in one place while you click repeatedly.",
+    },
+    {
+      type: "paragraph",
+      text: "In an aim trainer, every target can appear in a different location, so you must:",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: ["see the target,", "move toward it,", "stop accurately,", "and click."],
+    },
+    {
+      type: "paragraph",
+      text: "That means aim performance combines visual search, movement speed, accuracy, and clicking.",
+    },
+    {
+      type: "paragraph",
+      text: "Use the CPS Test for raw repeated clicking speed and the Aim Trainer for target acquisition.",
+    },
+    {
+      type: "heading",
+      text: "How to Improve Your CPS",
+    },
+    {
+      type: "paragraph",
+      text: "Start by finding a comfortable, repeatable rhythm.",
+    },
+    {
+      type: "paragraph",
+      text: "Keep your hand relaxed and avoid pressing harder than necessary. Extra force does not make a click register faster, and tension can make it harder to maintain a smooth rhythm.",
+    },
+    {
+      type: "paragraph",
+      text: "Try these simple steps:",
+    },
+    {
       type: "list",
       items: [
-        "Regular clicking — tapping with one finger. Most people land in the 6–8 CPS range with this technique.",
-        "Jitter clicking — deliberately tensing your arm and hand to create rapid, small vibrations that trigger many clicks per second. Skilled jitter clickers reach well into the mid-teens CPS.",
-        "Butterfly clicking — alternating two fingers rapidly on the same button, roughly doubling a single finger's rate. This is the technique behind most of the highest publicly recorded CPS scores.",
-        "Drag clicking — dragging a fingertip across certain mouse buttons to exploit rapid mechanical switch bounce. It produces extreme short-burst scores but depends entirely on specific mouse hardware, not skill.",
+        "warm up with one short test;",
+        "use the same finger position each time;",
+        "keep your wrist in a comfortable position;",
+        "practice short sessions instead of endless attempts;",
+        "compare scores using the same duration;",
+        "stop if your hand, wrist, or forearm becomes uncomfortable.",
       ],
     },
     {
       type: "paragraph",
-      text: "A quick honest note: jitter and butterfly clicking add real physical strain, especially in longer sessions or the 60-second mode. If your hand starts to hurt, stop — no test score is worth a repetitive strain injury.",
+      text: "If you switch to a specialized technique, treat it as a separate category from your normal-clicking personal best.",
     },
     {
       type: "heading",
-      text: "CPS World Records",
+      text: "Can Rapid Clicking Hurt Your Hand?",
     },
     {
       type: "paragraph",
-      text: "The most widely cited official record is Dylan Allred's 14.1 CPS sustained over 10 seconds, recognized by Guinness World Records in 2018 using standard single-hand clicking. Unofficial video-verified leaderboards report jitter and butterfly techniques pushing past 20+ CPS in short one-second bursts, though these shorter, unverified formats aren't directly comparable to a sustained 10-second record. Scores claiming very high CPS over long durations are frequently the result of auto-clicker software rather than genuine manual clicking — this test, like any fair CPS test, only measures real clicks you make yourself.",
+      text: "Repeated hand and finger movements can contribute to discomfort when performed excessively, especially when combined with force, tension, or long sessions.",
     },
     {
-      type: "heading",
-      text: "Tips to Improve Your Score",
+      type: "paragraph",
+      text: "The NHS describes repetitive strain injury as pain that can be associated with repeated movement of body parts including the hand, wrist, and forearm. OSHA also identifies repetitive motions as a risk factor for musculoskeletal problems.",
     },
     {
-      type: "list",
-      items: [
-        "Keep your hand relaxed and close to the button to minimize travel distance.",
-        "Use your whole hand or wrist for short bursts rather than just your fingertip.",
-        "Try a light, quick tapping motion instead of pressing down hard.",
-        "A mouse or keyboard with a responsive switch will register faster inputs than an older or heavier one.",
-        "Warm up with a few practice rounds before your best attempt.",
-        "Try the shorter 5-second mode for your peak burst speed, and the 30 or 60-second modes to measure sustained speed instead.",
-      ],
+      type: "paragraph",
+      text: "A CPS test is meant to be a short challenge, not something to continue through pain.",
     },
     {
-      type: "table",
-      headers: ["CPS Score", "Typical Interpretation"],
-      rows: [
-        ["Under 6", "Casual clicking speed"],
-        ["6–8", "Solid, controlled single-finger clicking"],
-        ["9–12", "Strong — often trained or technique-assisted"],
-        ["13+", "Exceptional, usually jitter or butterfly clicking"],
-      ],
-    },
-    {
-      type: "callout",
-      icon: "🎯",
-      title: "Test more than just speed",
-      tone: "primary",
-      text: "Raw clicking speed is only one piece of gaming performance. Try our [Aim Trainer Test](/test/aim-trainer-test) to combine speed with targeting precision, or the [Reaction Time Test](/test/reaction-time-test) to measure how fast you respond to a single signal.",
+      type: "paragraph",
+      text: "If your finger, hand, wrist, or forearm begins to hurt, stop testing and rest.",
     },
     {
       type: "heading",
@@ -90,36 +382,65 @@ export const content: TestSeoContent = {
       type: "faq",
       items: [
         {
-          question: "What is a good CPS score?",
+          question: "What does CPS stand for?",
           answer:
-            "Most people click between 6 and 8 times per second with a normal single-finger technique over a sustained duration. Scores above 12–13 CPS usually involve specialized techniques like jitter or butterfly clicking.",
+            "CPS stands for clicks per second. It is the number of registered clicks divided by the number of seconds in the test.",
         },
         {
-          question: "Is spacebar clicking faster than mouse clicking?",
+          question: "Which CPS duration should I use?",
           answer:
-            "For many people, yes — spacebar mashing can engage larger, less fatigue-prone muscles than a single mouse-clicking finger. Try both modes on this test to see which is faster for you personally.",
+            "Use 5 seconds for peak burst speed, 10 seconds for a repeatable short benchmark, and 30 or 60 seconds when you want to test sustained clicking.",
         },
         {
-          question: "Why does my score vary between attempts?",
+          question: "Is 10-second CPS better than 5-second CPS?",
           answer:
-            "Click speed naturally fluctuates with fatigue, focus, and how warmed up your hand is — some variation between rounds is completely normal.",
+            "Neither is inherently better. They measure performance over different time periods. The important rule is to compare 5-second results with other 5-second results and 10-second results with other 10-second results.",
         },
         {
-          question: "Is repeated clicking bad for my hand?",
+          question: "Does spacebar mode count as CPS?",
           answer:
-            "Occasional testing is harmless for most people, but if you feel strain or discomfort, take a break. Repetitive strain from excessive rapid clicking, especially jitter clicking, is a real risk over time.",
+            "It measures presses per second using the same basic calculation, but it is a different input method. Keep mouse and spacebar scores separate.",
         },
         {
-          question: "Does my mouse affect my CPS?",
+          question: "Why did my CPS drop in the 60-second test?",
           answer:
-            "Yes. Gaming mice and keyboards with lighter, more responsive switches generally register inputs faster and more reliably than older or lower-quality hardware.",
+            "Long tests introduce fatigue and make it harder to maintain your peak clicking rhythm. A lower 60-second CPS than 5-second CPS is not unusual.",
         },
         {
-          question: "Which duration should I use — 5s, 10s, 30s, or 60s?",
+          question: "Can I use an auto clicker?",
           answer:
-            "Shorter durations (5s) tend to show your peak burst speed, since fatigue hasn't set in yet. Longer durations (30–60s) are a better test of sustained clicking speed and technique endurance.",
+            "An auto clicker defeats the purpose of a manual CPS test. If you want to compare your own hand speed, use only real physical inputs.",
+        },
+        {
+          question: "Does CPS measure gaming skill?",
+          answer:
+            "No. Rapid clicking can matter in some game situations, but gaming performance also depends on accuracy, movement, reaction time, timing, positioning, strategy, and game-specific mechanics.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Test Your Click Speed Again",
+    },
+    {
+      type: "paragraph",
+      text: "Choose one test setup and make it your personal benchmark.",
+    },
+    {
+      type: "paragraph",
+      text: "A good starting point is:",
+    },
+    {
+      type: "paragraph",
+      text: "**10 seconds + Mouse Click mode + Normal clicking**",
+    },
+    {
+      type: "paragraph",
+      text: "Take a few attempts, record your typical CPS, and compare it again later using the same setup.",
+    },
+    {
+      type: "paragraph",
+      text: "Your highest score is fun to beat, but the most useful result is the one you can repeat consistently.",
     },
   ],
 };
