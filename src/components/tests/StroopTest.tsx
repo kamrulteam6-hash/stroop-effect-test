@@ -53,6 +53,8 @@ export function StroopTest() {
   const [prompt, setPrompt] = useState<Prompt>(() => randomPrompt(0.75));
   const [correct, setCorrect] = useState(0);
   const [times, setTimes] = useState<number[]>([]);
+  const [congruentTimes, setCongruentTimes] = useState<number[]>([]);
+  const [incongruentTimes, setIncongruentTimes] = useState<number[]>([]);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const promptStart = useRef(0);
   const sound = useSound();
@@ -63,6 +65,8 @@ export function StroopTest() {
     setRound(0);
     setCorrect(0);
     setTimes([]);
+    setCongruentTimes([]);
+    setIncongruentTimes([]);
     setPrompt(randomPrompt(incongruentRate));
     promptStart.current = performance.now();
     setPhase("running");
@@ -74,9 +78,12 @@ export function StroopTest() {
       const elapsed = performance.now() - promptStart.current;
       const target = mode === "reverse" ? prompt.word : prompt.ink.name;
       const isCorrect = colorName === target;
+      const isCongruent = prompt.word === prompt.ink.name;
       setFeedback(isCorrect ? "correct" : "wrong");
       sound.play(isCorrect ? "tick" : "error");
       setTimes((t) => [...t, elapsed]);
+      setCongruentTimes((t) => (isCongruent ? [...t, elapsed] : t));
+      setIncongruentTimes((t) => (!isCongruent ? [...t, elapsed] : t));
       if (isCorrect) setCorrect((c) => c + 1);
 
       window.setTimeout(() => {
@@ -109,6 +116,13 @@ export function StroopTest() {
 
   const avgTime = times.length ? Math.round(times.reduce((a, b) => a + b, 0) / times.length) : 0;
   const accuracy = round ? Math.round((correct / round) * 100) : 0;
+  const avgCongruent = congruentTimes.length
+    ? Math.round(congruentTimes.reduce((a, b) => a + b, 0) / congruentTimes.length)
+    : 0;
+  const avgIncongruent = incongruentTimes.length
+    ? Math.round(incongruentTimes.reduce((a, b) => a + b, 0) / incongruentTimes.length)
+    : 0;
+  const interference = avgCongruent && avgIncongruent ? avgIncongruent - avgCongruent : 0;
 
   return (
     <TestFrame>
@@ -197,6 +211,9 @@ export function StroopTest() {
             { label: "Accuracy", value: `${accuracy}%` },
             { label: "Correct", value: `${correct}/${rounds}` },
             { label: "Mode", value: MODE_LABEL[mode] },
+            { label: "Congruent RT", value: avgCongruent ? `${avgCongruent}ms` : "—" },
+            { label: "Incongruent RT", value: avgIncongruent ? `${avgIncongruent}ms` : "—" },
+            { label: "Interference", value: interference ? `+${interference}ms` : "—" },
           ]}
           shareLabel={`I averaged ${avgTime}ms with ${accuracy}% accuracy on the Stroop Effect Test!`}
           onRetry={beginRound}

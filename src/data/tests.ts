@@ -91,14 +91,14 @@ export const tests: TestDefinition[] = [
   {
     slug: "stroop-effect-test",
     title: "Stroop Effect Test",
-    metaTitle: "Stroop Test Online — Free, With Classic & Reverse Modes",
+    metaTitle: "Stroop Effect Test – Free Online Color Word Test",
     shortTitle: "Stroop Effect",
     category: "Perception",
     icon: "🎨",
     shortDescription:
       "Name the ink color, not the word. A classic test of selective attention and cognitive control.",
     metaDescription:
-      "Take the free Stroop test online with Classic, Reverse, and Fifty-Fifty modes. See your accuracy and average response time instantly — no sign-up required.",
+      "Take the free Stroop Effect Test online. Measure selective attention, cognitive interference, accuracy, and reaction time with instant results—no sign-up.",
     keywords: [
       "stroop test online",
       "take the stroop test",
@@ -377,13 +377,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "attention-span-test",
     title: "Attention & Focus Test",
-    metaTitle: "Attention & Focus Test — Free Online Go/No-Go Test",
+    metaTitle: "Attention Span Test Online – Free Focus & Attention Test",
     shortTitle: "Attention Span",
     category: "Focus & Attention",
     icon: "🎯",
     shortDescription: "Respond only to the correct target and hold back on the rest. Tests sustained focus.",
     metaDescription:
-      "Free Attention and Focus Test (go/no-go task) with adjustable trial count, difficulty, and letters or shapes. Measure your sustained attention and impulse control.",
+      "Take a free attention span test online. Measure sustained focus, response inhibition, reaction time, misses, and false alarms with instant results.",
     keywords: [
       "attention test online",
       "focus test",

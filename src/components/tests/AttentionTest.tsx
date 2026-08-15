@@ -108,7 +108,11 @@ export function AttentionTest() {
   const hits = results.filter((r) => r.isGo && r.responded).length;
   const misses = results.filter((r) => r.isGo && !r.responded).length;
   const falseAlarms = results.filter((r) => !r.isGo && r.responded).length;
+  const correctRejections = results.filter((r) => !r.isGo && !r.responded).length;
   const goTrials = results.filter((r) => r.isGo).length;
+  const noGoTrials = results.filter((r) => !r.isGo).length;
+  const hitRate = goTrials ? Math.round((hits / goTrials) * 100) : 0;
+  const falseAlarmRate = noGoTrials ? Math.round((falseAlarms / noGoTrials) * 100) : 0;
   const accuracy = results.length
     ? Math.round(((hits + results.filter((r) => !r.isGo && !r.responded).length) / results.length) * 100)
     : 0;
@@ -123,8 +127,9 @@ export function AttentionTest() {
           value={accuracy}
           unitLabel="% accuracy"
           extraStats={[
-            { label: "Hits", value: `${hits}/${goTrials}` },
-            { label: "False Alarms", value: `${falseAlarms}` },
+            { label: "Hit Rate", value: `${hitRate}%` },
+            { label: "False-Alarm Rate", value: `${falseAlarmRate}%` },
+            { label: "Correct Rejections", value: `${correctRejections}/${noGoTrials}` },
             { label: "Misses", value: `${misses}` },
             { label: "Avg. RT", value: `${avgRt}ms` },
           ]}
