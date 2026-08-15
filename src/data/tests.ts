@@ -1329,13 +1329,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "mental-rotation-test",
     title: "Mental Rotation Test",
-    metaTitle: "Mental Rotation Test — Free Online Spatial Reasoning Test",
+    metaTitle: "Mental Rotation Test – Free Online Spatial Ability Test",
     shortTitle: "Mental Rotation",
     category: "IQ & Logic",
     icon: "🔄",
     shortDescription: "Decide whether a rotated shape is normal or mirrored, as fast and accurately as you can.",
     metaDescription:
-      "Free online Mental Rotation Test. Judge whether rotated shapes are normal or mirrored across 10 rounds and see your spatial reasoning accuracy.",
+      "Take a free Mental Rotation Test online. Compare rotated 3D objects, decide whether they are the same or mirrored, and measure spatial accuracy and speed.",
     keywords: ["mental rotation test", "spatial reasoning test online", "mirror image test", "cognitive test free"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1345,13 +1345,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "stop-signal-test",
     title: "Stop Signal Test",
-    metaTitle: "Stop Signal Test — Free Online Response Inhibition Test",
+    metaTitle: "Stop Signal Test – Free Online Response Inhibition Test",
     shortTitle: "Stop Signal",
     category: "Focus & Attention",
     icon: "🛑",
     shortDescription: "Respond to arrow direction quickly — but withhold your response when a stop signal appears.",
     metaDescription:
-      "Free online Stop Signal Test. Respond to arrows quickly, then try to withhold your response when a stop signal appears, to measure response inhibition.",
+      "Take a free Stop Signal Test online. Respond quickly on go trials, cancel your response when a stop signal appears, and explore response inhibition.",
     keywords: ["stop signal test", "response inhibition test", "impulse control test online", "go no go test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1361,13 +1361,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "simon-effect-test",
     title: "Simon Effect Test",
-    metaTitle: "Simon Effect Test — Free Online Stimulus-Response Test",
+    metaTitle: "Simon Effect Test – Free Online Cognitive Interference Test",
     shortTitle: "Simon Effect",
     category: "Focus & Attention",
     icon: "↔️",
     shortDescription: "Respond to color, not position, and see how much location still slows you down.",
     metaDescription:
-      "Free online Simon Effect Test. Respond to color while ignoring position across 24 rounds and see how much irrelevant spatial location slows you down.",
+      "Take a free Simon Effect Test online. Respond to a relevant feature while ignoring stimulus location and measure compatible vs. incompatible reaction times.",
     keywords: ["simon effect test", "simon task online", "stimulus response compatibility test", "cognitive bias test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1377,13 +1377,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "wisconsin-card-sorting-test",
     title: "Wisconsin Card Sorting Test",
-    metaTitle: "Wisconsin Card Sorting Test — Free Online WCST",
+    metaTitle: "Wisconsin Card Sorting Test – Free WCST-Style Online Task",
     shortTitle: "Card Sorting",
     category: "IQ & Logic",
     icon: "🃏",
     shortDescription: "Sort cards by a hidden, secretly changing rule and see how quickly you adapt.",
     metaDescription:
-      "Free online Wisconsin Card Sorting Test (WCST). Sort cards by a hidden rule that secretly changes and see how well you adapt to the new pattern.",
+      "Try a free WCST-style card sorting task online. Infer hidden rules from feedback, adapt when the rule changes, and explore cognitive flexibility.",
     keywords: ["wisconsin card sorting test", "wcst online", "cognitive flexibility test", "card sorting test free"],
     estTime: "3 min",
     difficulty: "Hard",
