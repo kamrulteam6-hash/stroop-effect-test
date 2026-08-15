@@ -4,58 +4,161 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "This astigmatism test uses a simple radial line pattern — sometimes called an astigmatic dial or fan chart — to give you a quick, informal sense of whether some directions of your vision might be less sharp than others. It takes about a minute and requires nothing but your screen and a normal reading distance.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Astigmatism Test Works",
+      text: "Do some lines on a clock-style chart look sharper, darker, or clearer than others?",
     },
     {
       type: "paragraph",
-      text: "Cover one eye, and from a comfortable distance, look at the center dot of the radial line pattern. All the lines are drawn with identical thickness and color — in a person with typical, even vision, they should all appear roughly equally dark and sharp. If astigmatism is present, the uneven way the eye focuses light across different angles can make some lines look bolder, blacker, or more in-focus than others, while lines at a different angle look comparatively lighter or blurrier. After you answer, repeat the check with your other eye for a fuller picture.",
+      text: "Take this free **Astigmatism Test** using a radial line chart to check whether your eyes perceive certain lines as more distinct than others. The chart shows lines radiating outward like the numbers on a clock face.",
+    },
+    {
+      type: "paragraph",
+      text: "Test **each eye separately** by covering one eye at a time, and note which lines—if any—look darker, sharper, or blurrier than the rest.",
+    },
+    {
+      type: "callout",
+      icon: "⚠️",
+      title: "Important",
+      tone: "gold",
+      text: "This is not a medical diagnostic tool. It is an informal, self-administered chart similar in concept to charts used in eye exams, but it cannot replace a comprehensive eye exam with an eye care professional.",
     },
     {
       type: "heading",
+      id: "how-to-take",
+      text: "How to Take the Astigmatism Test",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Sit at a comfortable, normal viewing distance from your screen.",
+        "If you wear glasses or contacts, keep them on—test your normal corrected vision.",
+        "Cover one eye completely.",
+        "Look at the center of the radial chart with your uncovered eye.",
+        "Note whether all lines look equally dark and sharp, or whether some stand out.",
+        "Repeat with the other eye covered.",
+        "Compare what you noticed between the two eyes.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Keep the room lighting steady and avoid squinting, which can temporarily change how the lines appear.",
+    },
+    {
+      type: "heading",
+      id: "what-is",
       text: "What Is Astigmatism?",
     },
     {
       type: "paragraph",
-      text: "Astigmatism is an extremely common and usually very manageable vision condition where the cornea or lens has a slightly irregular, more football-shaped curve instead of a perfectly round one. That irregular shape causes light to focus unevenly on the retina — sharply in one orientation but not in others — which is exactly what a radial line dial is designed to reveal informally. It's not a disease and it isn't caused by anything you did; most people have at least a small amount of it, and only more significant astigmatism tends to noticeably affect everyday vision.",
-    },
-    {
-      type: "heading",
-      id: "the-dial-test",
-      text: "The History of the Astigmatic Dial",
+      text: "**Astigmatism** is a common and very treatable condition in which the cornea or lens has an irregular curvature. Instead of being evenly curved like a basketball, the surface is shaped more like a football, curving more steeply in one direction than another.",
     },
     {
       type: "paragraph",
-      text: "Radial line charts like this one — sometimes called astigmatic dials or fan and block charts — have long been used informally and in clinical settings as a quick way to reveal directional blur. Professional versions used by optometrists are precisely calibrated and viewed under controlled conditions with proper equipment; this browser-based version follows the same basic visual principle in a simplified, self-directed format.",
+      text: "According to the [National Eye Institute](https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/astigmatism), this irregular shape causes light to focus on more than one point in the eye instead of a single point on the retina, which can result in blurry or distorted vision at some or all distances.",
+    },
+    {
+      type: "paragraph",
+      text: "Astigmatism is extremely common and often occurs alongside nearsightedness or farsightedness. It can typically be corrected with glasses, contact lenses, or refractive surgery.",
     },
     {
       type: "heading",
-      text: "Tips for an Accurate Self-Check",
+      text: "How the Radial Line Chart Works",
+    },
+    {
+      type: "paragraph",
+      text: "The chart displays a set of lines radiating from a central point at different angles, similar to the hands of a clock pointing in every direction at once.",
+    },
+    {
+      type: "paragraph",
+      text: "Because astigmatism affects focus differently depending on the angle or orientation of the light entering the eye, some people with uncorrected or under-corrected astigmatism notice that lines pointing in a particular direction appear darker, bolder, or more in-focus, while lines pointing in other directions appear lighter, thinner, or blurrier.",
+    },
+    {
+      type: "paragraph",
+      text: "If every line looks essentially the same to you—equally sharp and equally dark—that is generally a reassuring sign for that eye at this viewing distance.",
+    },
+    {
+      type: "paragraph",
+      text: "If certain lines consistently stand out from the rest, that pattern is worth mentioning to an eye care professional.",
+    },
+    {
+      type: "heading",
+      text: "Why You Must Test Each Eye Separately",
+    },
+    {
+      type: "paragraph",
+      text: "Astigmatism can affect one eye differently than the other, or affect only one eye at all.",
+    },
+    {
+      type: "paragraph",
+      text: "Testing with both eyes open lets your stronger or less-affected eye compensate for the weaker one, which can mask a real difference. Covering one eye at a time removes that compensation and lets you evaluate each eye on its own.",
+    },
+    {
+      type: "paragraph",
+      text: "Always note your observations for the left and right eye separately rather than as one combined impression.",
+    },
+    {
+      type: "heading",
+      text: "What This Test Cannot Tell You",
+    },
+    {
+      type: "paragraph",
+      text: "This chart can suggest that something may be worth looking into. It cannot:",
     },
     {
       type: "list",
       items: [
-        "Test each eye separately by covering the other one — astigmatism can affect one eye more than the other.",
-        "Sit at a normal, comfortable reading distance rather than very close or very far from the screen.",
-        "Make sure your screen brightness is at a normal level and you're in a well-lit room.",
-        "If you normally wear glasses or contacts, try the test both with and without them.",
-        "If you consistently see uneven lines in the same direction on both attempts, mention it at your next eye exam.",
+        "measure the degree or axis of astigmatism;",
+        "distinguish astigmatism from other vision issues that cause blur;",
+        "account for screen calibration, resolution, or brightness;",
+        "replace a refraction test performed with proper equipment;",
+        "or provide a prescription.",
       ],
     },
     {
-      type: "callout",
-      icon: "🩺",
-      title: "Not a medical diagnosis",
-      tone: "gold",
-      text: "This is an informal self-check for awareness purposes only. Only a comprehensive eye exam with proper equipment from a qualified optometrist or ophthalmologist can diagnose astigmatism or any other vision condition.",
+      type: "paragraph",
+      text: "A comprehensive eye exam uses calibrated instruments and trained clinical judgment to measure exactly how light is being focused in your eye, which a self-administered screen chart cannot replicate.",
+    },
+    {
+      type: "heading",
+      text: "Astigmatism Test vs. Colorblind Test",
     },
     {
       type: "paragraph",
-      text: "Curious about a different kind of vision screening? Try our [Color Blind Test](/test/colorblind-test-online), a two-minute Ishihara-style check for red-green color vision deficiency.",
+      text: "These two tests check completely different aspects of vision.",
+    },
+    {
+      type: "paragraph",
+      text: "This Astigmatism Test looks at how sharply your eye focuses lines at different orientations.",
+    },
+    {
+      type: "paragraph",
+      text: "The [Colorblind Test](/test/colorblind-test-online) checks whether you can distinguish certain colors from one another, which relates to color perception rather than focus.",
+    },
+    {
+      type: "paragraph",
+      text: "You can have perfectly normal color vision and still have astigmatism, or normal focusing ability and still have a color vision difference. They are unrelated conditions and should be checked independently.",
+    },
+    {
+      type: "heading",
+      text: "When to See an Eye Care Professional",
+    },
+    {
+      type: "paragraph",
+      text: "Consider scheduling a comprehensive eye exam if you notice:",
+    },
+    {
+      type: "list",
+      items: [
+        "lines that consistently appear sharper or darker in one direction;",
+        "blurry or distorted vision at any distance;",
+        "eye strain, headaches, or squinting during reading or screen use;",
+        "difficulty seeing clearly at night;",
+        "or any sudden change in your vision.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Regular eye exams are recommended regardless of whether you notice symptoms, since some vision changes develop gradually.",
     },
     {
       type: "heading",
@@ -66,31 +169,47 @@ export const content: TestSeoContent = {
       type: "faq",
       items: [
         {
+          question: "Can this test diagnose astigmatism?",
+          answer:
+            "No. It is an informal self-check that can suggest a pattern worth discussing with an eye care professional, not a diagnostic tool.",
+        },
+        {
+          question: "Why do some lines look darker than others?",
+          answer:
+            "This can happen when the eye focuses light differently depending on the line's orientation, which is a hallmark of astigmatism. It can also result from screen quality, lighting, or normal visual variation.",
+        },
+        {
+          question: "Should I test with my glasses on or off?",
+          answer:
+            "Test your normal corrected vision first, meaning with glasses or contacts on if you usually wear them. You can also try without correction for comparison, but note the difference.",
+        },
+        {
           question: "Is astigmatism serious?",
           answer:
-            "Usually not. Most people have at least a mild degree of astigmatism, and it's typically easily corrected with glasses, contact lenses, or refractive surgery when it's significant enough to affect daily vision.",
+            "Astigmatism is very common and is usually easily corrected with glasses, contact lenses, or refractive surgery. An eye care professional can advise on your specific situation.",
         },
         {
-          question: "Can this test actually diagnose astigmatism?",
-          answer:
-            "No. It's an informal self-check based on the same visual principle used in clinical astigmatic dials, but without calibrated equipment or a professional exam, it can't provide a diagnosis — only suggest whether it might be worth getting checked.",
+          question: "Can astigmatism affect only one eye?",
+          answer: "Yes. This is exactly why the test asks you to check each eye separately rather than both together.",
         },
         {
-          question: "Why do I need to test each eye separately?",
+          question: "Can children have astigmatism?",
           answer:
-            "Astigmatism can differ between your two eyes, sometimes significantly, so checking one eye at a time gives a more complete picture than looking with both eyes open.",
-        },
-        {
-          question: "What does it mean if lines in one direction look bolder?",
-          answer:
-            "It suggests your eye may be focusing light more sharply along that orientation than others, which is the basic visual pattern associated with astigmatism — though many other factors, including screen quality and lighting, can also affect what you see.",
-        },
-        {
-          question: "Can astigmatism be corrected?",
-          answer:
-            "Yes, in most cases. Glasses, toric contact lenses, and refractive surgery are all common, effective corrections for astigmatism, typically prescribed after a proper eye exam.",
+            "Yes, astigmatism can occur at any age, including in children. Regular pediatric eye exams help catch vision issues early.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Check Your Eyes Again",
+    },
+    {
+      type: "paragraph",
+      text: "Retest periodically, always covering one eye at a time and comparing your observations between your left and right eye.",
+    },
+    {
+      type: "paragraph",
+      text: "If you consistently notice certain lines standing out, or if you have any concerns about your vision, schedule a comprehensive eye exam with an eye care professional for an accurate diagnosis and proper correction.",
     },
   ],
 };

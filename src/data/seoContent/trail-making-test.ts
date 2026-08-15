@@ -4,54 +4,228 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "The Trail Making Test (TMT) is a real neuropsychological task used to measure visual attention, processing speed, and cognitive flexibility. Part A asks you to connect scattered numbers in ascending order — 1, 2, 3, and so on. Part B raises the difficulty by making you alternate between numbers and letters — 1, A, 2, B, 3, C — forcing your brain to constantly switch between two different sequencing rules.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Trail Making Test Works",
+      text: "How quickly can you connect a scattered sequence—and switch between two sequences at once?",
     },
     {
       type: "paragraph",
-      text: "Choose Part A or Part B, and a count of 15 or 25 items. Circles scattered across the play area are labeled in a shuffled layout — click them in the correct order as quickly as you can. A line traces your path as you go, so you can see the route you took once you finish. Clicking the wrong circle doesn't end the test, but it's logged as an error and briefly flashes red. Your timer stops the instant you click the final circle correctly.",
-    },
-    {
-      type: "heading",
-      text: "What Part A vs. Part B Measures",
+      text: "Take this free **Trail Making Test** to challenge visual search, sequencing, and cognitive flexibility. Circles containing numbers—or numbers and letters—are scattered across the screen, and your job is to connect them in the correct order as quickly as possible.",
     },
     {
       type: "paragraph",
-      text: "Part A is mostly a test of visual scanning speed and processing speed — how quickly you can locate and connect a simple, predictable sequence. Part B adds genuine cognitive complexity: alternating between two different category rules (numbers, then letters) requires cognitive flexibility and working memory to track which sequence comes next. In clinical use, a much larger Part B time relative to Part A time (sometimes called the B-A difference or B/A ratio) is specifically interpreted as reflecting difficulty with task-switching and cognitive flexibility, separate from raw visual search speed.",
+      text: "Choose **Part A** to connect numbers in ascending order, or **Part B** to alternate between numbers and letters.",
     },
     {
       type: "heading",
-      id: "clinical-use",
-      text: "The Trail Making Test in Research and Clinical Practice",
+      id: "how-to-take",
+      text: "How to Take the Trail Making Test",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Choose Part A or Part B.",
+        "Press **Start Test**.",
+        "In Part A, click the circles in order: 1, 2, 3, and so on.",
+        "In Part B, alternate between numbers and letters: 1, A, 2, B, 3, C, and so on.",
+        "If you click the wrong circle, keep going—the mistake is recorded.",
+        "Finish when you connect the final circle in the sequence.",
+        "Review your completion time and error count.",
+      ],
     },
     {
       type: "paragraph",
-      text: "The Trail Making Test is one of the most widely used neuropsychological assessments in the world, applied in research and clinical settings ranging from general cognitive screening to studies of stroke recovery and age-related cognitive change. Professional administrations use a standardized paper form, precise timing equipment, and trained scoring — this free browser-based version follows the same core logic in a simplified, self-directed format for casual practice and curiosity, not clinical assessment.",
+      text: "The circles are scattered at different positions each time, so you cannot memorize a fixed layout.",
     },
     {
       type: "heading",
-      text: "Tips to Improve Your Time",
+      id: "what-is",
+      text: "What Is the Trail Making Test?",
+    },
+    {
+      type: "paragraph",
+      text: "The **Trail Making Test (TMT)** is a well-known neuropsychological task that has been used in clinical and research settings for decades. It has two parts.",
+    },
+    {
+      type: "subheading",
+      text: "Part A",
+    },
+    {
+      type: "paragraph",
+      text: "Part A asks you to connect numbered circles in ascending order: **1 → 2 → 3 → 4 →**, and so on. It primarily measures visual search speed and processing speed.",
+    },
+    {
+      type: "subheading",
+      text: "Part B",
+    },
+    {
+      type: "paragraph",
+      text: "Part B asks you to alternate between two sequences—numbers and letters—switching back and forth: **1 → A → 2 → B → 3 → C →**, and so on.",
+    },
+    {
+      type: "paragraph",
+      text: "Part B adds a **task-switching** demand on top of the visual search required by Part A, which is why it typically takes noticeably longer to complete.",
+    },
+    {
+      type: "paragraph",
+      text: "This online version is best treated as an **informal cognitive-flexibility and processing-speed challenge**, not a clinical neuropsychological assessment.",
+    },
+    {
+      type: "heading",
+      text: "What Does the Trail Making Test Measure?",
+    },
+    {
+      type: "paragraph",
+      text: "Your completion time and errors reflect several overlapping abilities.",
+    },
+    {
+      type: "subheading",
+      text: "Visual Search",
+    },
+    {
+      type: "paragraph",
+      text: "You must scan the scattered layout to locate the next circle you need.",
+    },
+    {
+      type: "subheading",
+      text: "Processing Speed",
+    },
+    {
+      type: "paragraph",
+      text: "How quickly you can perceive, decide, and act on each target contributes directly to your total time.",
+    },
+    {
+      type: "subheading",
+      text: "Cognitive Flexibility (Part B only)",
+    },
+    {
+      type: "paragraph",
+      text: "Alternating between numbers and letters requires you to hold two ongoing sequences in mind and switch between them without losing track of either one.",
+    },
+    {
+      type: "subheading",
+      text: "Visual-Motor Speed",
+    },
+    {
+      type: "paragraph",
+      text: "As with any click-based task, your device, input method, and motor speed also influence your final time.",
+    },
+    {
+      type: "heading",
+      text: "Why Is Part B Slower Than Part A?",
+    },
+    {
+      type: "paragraph",
+      text: "Part B is not simply “Part A with more items.” It introduces a genuine switching cost.",
+    },
+    {
+      type: "paragraph",
+      text: "Each time you move from a number to a letter (or a letter to a number), you must briefly disengage from one sequence and re-engage with the other. That mental switch takes measurable time, even when you know both sequences well.",
+    },
+    {
+      type: "paragraph",
+      text: "This is why researchers and clinicians often look at the **difference between Part B and Part A time** rather than Part B time alone—it can help separate general processing speed from the added cost of switching.",
+    },
+    {
+      type: "paragraph",
+      text: "On this informal test, you can make the same comparison for your own curiosity, but do not treat the gap as a clinical measurement.",
+    },
+    {
+      type: "heading",
+      id: "good-time",
+      text: "What Is a Good Trail Making Test Time?",
+    },
+    {
+      type: "paragraph",
+      text: "There is no single validated online benchmark for a “good” Trail Making time, and published clinical norms are tied to standardized paper-and-pencil administration, age ranges, and testing conditions that this browser version does not replicate.",
+    },
+    {
+      type: "paragraph",
+      text: "Your result can depend on:",
     },
     {
       type: "list",
       items: [
-        "Scan the whole area briefly before starting to build a rough mental map of where key numbers are.",
-        "Try Part A first to build a baseline before attempting the more demanding Part B.",
-        "In Part B, say each item's category silently ('number... letter...') to reinforce the alternating rule.",
-        "Move your cursor in a direct, efficient path rather than jumping erratically between distant circles.",
-        "Don't panic after a wrong click — it costs you a moment, not the whole test.",
+        "screen size and circle spacing;",
+        "mouse versus touchscreen input;",
+        "whether mistakes are penalized;",
+        "how the circles are scattered in that particular run;",
+        "previous practice with the layout;",
+        "and general alertness and fatigue.",
       ],
     },
     {
-      type: "callout",
-      icon: "🔢",
-      title: "Another visual attention challenge",
-      tone: "primary",
-      text: "For a related but different visual search task, try our [Schulte Table Test](/test/schulte-table-test), which uses a fixed grid instead of scattered targets.",
+      type: "paragraph",
+      text: "The most meaningful benchmark is your own performance over time, tracked separately for Part A and Part B.",
+    },
+    {
+      type: "heading",
+      text: "Why Errors Matter",
+    },
+    {
+      type: "paragraph",
+      text: "A fast time with many mistakes is not necessarily a stronger result than a slightly slower, clean run.",
+    },
+    {
+      type: "paragraph",
+      text: "In Part B especially, errors often reveal a lost place in the sequence—clicking the wrong type of circle because you forgot whether a number or a letter came next. Watching your error count alongside your time gives a fuller picture of your performance than time alone.",
+    },
+    {
+      type: "heading",
+      text: "Trail Making Test vs. Schulte Table",
+    },
+    {
+      type: "paragraph",
+      text: "Both tasks involve finding items in sequence, but the demands differ.",
+    },
+    {
+      type: "paragraph",
+      text: "The [Schulte Table Test](/test/schulte-table-test) uses a fixed grid with numbers placed inside equally sized cells, testing visual search within a compact, structured layout.",
+    },
+    {
+      type: "paragraph",
+      text: "The Trail Making Test scatters circles across an open field, and Part B adds the alternating-sequence switching demand that a Schulte table does not include.",
+    },
+    {
+      type: "paragraph",
+      text: "Use the Schulte Table when you want a compact grid-search challenge. Use the Trail Making Test when you want a scattered-search task, especially if you want to include the Part B switching challenge.",
+    },
+    {
+      type: "heading",
+      text: "How to Improve Your Trail Making Time",
+    },
+    {
+      type: "paragraph",
+      text: "Start with Part A until you can complete it cleanly and consistently, then move to Part B.",
+    },
+    {
+      type: "paragraph",
+      text: "During a run:",
+    },
+    {
+      type: "list",
+      items: [
+        "scan efficiently rather than searching corner to corner every time;",
+        "in Part B, say the next target to yourself before searching for it;",
+        "avoid unnecessary cursor movement between clicks;",
+        "do not restart after a single mistake—finish the sequence;",
+        "and compare several runs rather than judging yourself on one attempt.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Short, focused sessions are more useful than long repeated runs while fatigued.",
+    },
+    {
+      type: "heading",
+      text: "Does This Test Diagnose a Cognitive Condition?",
+    },
+    {
+      type: "paragraph",
+      text: "No. The Trail Making Test is used in some clinical settings, but a browser-based version without standardized administration, norms, or professional interpretation cannot diagnose any cognitive condition.",
+    },
+    {
+      type: "paragraph",
+      text: "Many everyday factors—screen setup, input device, sleep, stress, and practice—can affect your result. If you have genuine concerns about cognitive function, memory, or processing speed, speak with a qualified healthcare professional who can arrange proper assessment.",
     },
     {
       type: "heading",
@@ -62,31 +236,47 @@ export const content: TestSeoContent = {
       type: "faq",
       items: [
         {
-          question: "What is a good Trail Making Test time?",
+          question: "What is the difference between Part A and Part B?",
           answer:
-            "For the 25-item version, completing Part A in under 30 seconds and Part B in under 75 seconds are commonly cited as being within a typical healthy adult range, though results vary with age and practice.",
+            "Part A asks you to connect numbers in ascending order. Part B asks you to alternate between numbers and letters, adding a task-switching demand.",
         },
         {
-          question: "Why is Part B so much harder than Part A?",
+          question: "Why does Part B take longer than Part A?",
           answer:
-            "Part B requires constantly switching between two different sequencing rules (numbers and letters), which draws on cognitive flexibility and working memory in addition to the visual scanning speed that Part A measures on its own.",
+            "Switching between two sequences—numbers and letters—carries a mental cost beyond simple visual search, which makes Part B slower even for skilled performers.",
         },
         {
-          question: "Is this test used to screen for real conditions?",
+          question: "Is a lower time better?",
           answer:
-            "Professional, standardized versions of the Trail Making Test are used in clinical neuropsychology, including in research on stroke, traumatic brain injury, and age-related cognitive decline — but this free online version is a simplified format for casual practice, not a diagnostic tool.",
+            "Yes, when compared against your own similar runs and a comparable error count. A fast time with many mistakes is not automatically a better result.",
         },
         {
-          question: "Does a wrong click end the test?",
-          answer:
-            "No. A wrong click briefly flashes red and adds to your error count, but the test continues — only successfully clicking every item in the correct order stops the timer.",
+          question: "Does this test measure IQ?",
+          answer: "No. It is a narrow visual-search and task-switching task, not an intelligence test.",
         },
         {
-          question: "Should I do 15 or 25 items?",
+          question: "Can I use a touchscreen?",
           answer:
-            "15 items is a faster, gentler introduction, especially for Part B. 25 items matches the traditional Trail Making Test format most commonly referenced in research.",
+            "Yes, but touchscreen and mouse results involve different movement demands. Compare touchscreen sessions with touchscreen sessions when possible.",
+        },
+        {
+          question: "Can this test diagnose a cognitive condition?",
+          answer:
+            "No. This is an informal browser challenge, not a standardized clinical assessment. Speak with a healthcare professional for genuine concerns.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Try the Trail Making Test Again",
+    },
+    {
+      type: "paragraph",
+      text: "For useful progress tracking, test Part A and Part B separately and compare each against your own past attempts rather than against a universal benchmark.",
+    },
+    {
+      type: "paragraph",
+      text: "The goal is not just raw speed—it is efficient scanning, accurate sequencing, and, in Part B, smooth switching between two sequences at once.",
     },
   ],
 };

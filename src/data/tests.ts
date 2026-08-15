@@ -399,13 +399,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "schulte-table-test",
     title: "Schulte Table Test",
-    metaTitle: "Schulte Table Test — Free Online Concentration Grid",
+    metaTitle: "Schulte Table Test – Free Online 5×5 Attention Grid",
     shortTitle: "Schulte Table",
     category: "Focus & Attention",
     icon: "🔢",
     shortDescription: "Click the numbers 1 through 25 in order, as fast as you can, using peripheral vision.",
     metaDescription:
-      "Free Schulte Table test online with 4×4, 5×5, and 6×6 grids. Click the shuffled numbers in ascending order as fast as you can to train visual scanning and focus.",
+      "Take a free Schulte Table test online. Find shuffled numbers in order on 4×4, 5×5, or 6×6 grids and measure visual search speed, focus, and errors.",
     keywords: [
       "schulte table",
       "schulte table test online",
@@ -421,13 +421,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "astigmatism-test",
     title: "Astigmatism Test",
-    metaTitle: "Astigmatism Test Online — Free 1-Minute Vision Self-Check",
+    metaTitle: "Astigmatism Test Online – Free Eye Self-Check",
     shortTitle: "Astigmatism",
     category: "Vision",
     icon: "👁️",
     shortDescription: "A quick radial-line self-check for possible signs of astigmatism.",
     metaDescription:
-      "Free online astigmatism test using a radial line pattern. Check in under a minute whether some lines appear sharper or darker than others — a possible sign of astigmatism.",
+      "Take a free online astigmatism test using a radial clock-dial chart. Check each eye separately to see whether some lines look darker, sharper, or blurrier.",
     keywords: [
       "astigmatism test online",
       "astigmatism test free",
@@ -441,13 +441,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "trail-making-test",
     title: "Trail Making Test",
-    metaTitle: "Trail Making Test Online — Free TMT-A & TMT-B",
+    metaTitle: "Trail Making Test Online – Free TMT Part A & Part B",
     shortTitle: "Trail Making",
     category: "Focus & Attention",
     icon: "🔗",
     shortDescription: "Connect the dots in order — numbers only, or alternating numbers and letters.",
     metaDescription:
-      "Free Trail Making Test (TMT) online. Part A connects numbers in order; Part B alternates numbers and letters to test cognitive flexibility and processing speed.",
+      "Take a free Trail Making Test online. Try TMT Part A with numbers or Part B with alternating numbers and letters to test visual search and task switching.",
     keywords: [
       "trail making test online",
       "tmt test",
