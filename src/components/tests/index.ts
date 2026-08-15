@@ -124,6 +124,14 @@ import { SocialAnxietyTest } from "@/components/tests/SocialAnxietyTest";
 import { StressTest } from "@/components/tests/StressTest";
 import { BurnoutTest } from "@/components/tests/BurnoutTest";
 import { OCDTest } from "@/components/tests/OCDTest";
+import { PTSDTest } from "@/components/tests/PTSDTest";
+import { BipolarTest } from "@/components/tests/BipolarTest";
+import { SelfEsteemTest } from "@/components/tests/SelfEsteemTest";
+import { AttachmentStyleTest } from "@/components/tests/AttachmentStyleTest";
+import { NarcissismTest } from "@/components/tests/NarcissismTest";
+import { PsychopathyTest } from "@/components/tests/PsychopathyTest";
+import { MachiavellianismTest } from "@/components/tests/MachiavellianismTest";
+import { EmpathyTest } from "@/components/tests/EmpathyTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -250,4 +258,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "stress-screener": StressTest,
   "burnout-screener": BurnoutTest,
   "ocd-screener": OCDTest,
+  "ptsd-screener": PTSDTest,
+  "bipolar-screener": BipolarTest,
+  "self-esteem-screener": SelfEsteemTest,
+  "attachment-style": AttachmentStyleTest,
+  "narcissism-screener": NarcissismTest,
+  "psychopathy-screener": PsychopathyTest,
+  "machiavellianism-screener": MachiavellianismTest,
+  "empathy-screener": EmpathyTest,
 };

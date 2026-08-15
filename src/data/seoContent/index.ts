@@ -123,6 +123,14 @@ import { content as socialAnxietyTest } from "@/data/seoContent/social-anxiety-t
 import { content as stressTest } from "@/data/seoContent/stress-test";
 import { content as burnoutTest } from "@/data/seoContent/burnout-test";
 import { content as ocdTest } from "@/data/seoContent/ocd-test";
+import { content as ptsdTest } from "@/data/seoContent/ptsd-test";
+import { content as bipolarTest } from "@/data/seoContent/bipolar-test";
+import { content as selfEsteemTest } from "@/data/seoContent/self-esteem-test";
+import { content as attachmentStyleTest } from "@/data/seoContent/attachment-style-test";
+import { content as narcissismTest } from "@/data/seoContent/narcissism-test";
+import { content as psychopathyTest } from "@/data/seoContent/psychopathy-test";
+import { content as machiavellianismTest } from "@/data/seoContent/machiavellianism-test";
+import { content as empathyTest } from "@/data/seoContent/empathy-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -249,4 +257,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stress-test": stressTest,
   "burnout-test": burnoutTest,
   "ocd-test": ocdTest,
+  "ptsd-test": ptsdTest,
+  "bipolar-test": bipolarTest,
+  "self-esteem-test": selfEsteemTest,
+  "attachment-style-test": attachmentStyleTest,
+  "narcissism-test": narcissismTest,
+  "psychopathy-test": psychopathyTest,
+  "machiavellianism-test": machiavellianismTest,
+  "empathy-test": empathyTest,
 };

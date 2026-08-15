@@ -135,7 +135,15 @@ export type ComponentKey =
   | "social-anxiety-screener"
   | "stress-screener"
   | "burnout-screener"
-  | "ocd-screener";
+  | "ocd-screener"
+  | "ptsd-screener"
+  | "bipolar-screener"
+  | "self-esteem-screener"
+  | "attachment-style"
+  | "narcissism-screener"
+  | "psychopathy-screener"
+  | "machiavellianism-screener"
+  | "empathy-screener";
 
 export interface TestDefinition {
   slug: string;
@@ -2406,6 +2414,118 @@ export const tests: TestDefinition[] = [
     estTime: "2 min",
     difficulty: "Easy",
     componentKey: "ocd-screener",
+  },
+  {
+    slug: "ptsd-test",
+    title: "PTSD Test",
+    metaTitle: "PTSD Test – Free Online PTSD Screening",
+    shortTitle: "PTSD Test",
+    category: "Mental Health & Wellbeing",
+    icon: "⛈️",
+    shortDescription: "Answer 10 short statements about reactions to a difficult past event for an informal screening.",
+    metaDescription: "Take a free PTSD Test online. Answer short statements about intrusive memories, avoidance, and arousal for an informal self-report screening.",
+    keywords: ["ptsd test", "ptsd screening test online", "trauma test", "post traumatic stress test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "ptsd-screener",
+  },
+  {
+    slug: "bipolar-test",
+    title: "Bipolar Test",
+    metaTitle: "Bipolar Test – Free Online Bipolar Screening",
+    shortTitle: "Bipolar Test",
+    category: "Mental Health & Wellbeing",
+    icon: "⚖️",
+    shortDescription: "Answer 12 short statements about high-energy and low-mood periods for an informal screening.",
+    metaDescription: "Take a free Bipolar Test online. Answer short statements about elevated and low-mood periods for an informal self-report screening.",
+    keywords: ["bipolar test", "bipolar screening test online", "am i bipolar quiz", "mood disorder test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "bipolar-screener",
+  },
+  {
+    slug: "self-esteem-test",
+    title: "Self-Esteem Test",
+    metaTitle: "Self-Esteem Test – Free Online Self-Worth Test",
+    shortTitle: "Self-Esteem Test",
+    category: "Personality",
+    icon: "🪞",
+    shortDescription: "Answer 10 short statements about how you see and feel about yourself to measure your self-esteem.",
+    metaDescription: "Take a free Self-Esteem Test online. Answer short statements about self-worth and self-acceptance for an informal self-esteem snapshot.",
+    keywords: ["self esteem test", "self esteem quiz online", "self worth test", "confidence test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "self-esteem-screener",
+  },
+  {
+    slug: "attachment-style-test",
+    title: "Attachment Style Test",
+    metaTitle: "Attachment Style Test – Free Online Relationship Test",
+    shortTitle: "Attachment Style",
+    category: "Personality",
+    icon: "🧷",
+    shortDescription: "Answer 12 short statements about closeness and trust to discover your attachment style.",
+    metaDescription: "Take a free Attachment Style Test online. Answer short statements about closeness and trust to discover your secure, anxious, avoidant, or fearful-avoidant style.",
+    keywords: ["attachment style test", "attachment style quiz online", "secure anxious avoidant test", "relationship attachment test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "attachment-style",
+  },
+  {
+    slug: "narcissism-test",
+    title: "Narcissism Test",
+    metaTitle: "Narcissism Test – Free Online Narcissism Screening",
+    shortTitle: "Narcissism Test",
+    category: "Personality",
+    icon: "👑",
+    shortDescription: "Answer 10 short statements about grandiosity and entitlement for an informal narcissism screening.",
+    metaDescription: "Take a free Narcissism Test online. Answer short statements about grandiosity and entitlement for an informal self-report trait screening.",
+    keywords: ["narcissism test", "narcissist test online", "am i a narcissist quiz", "npi test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "narcissism-screener",
+  },
+  {
+    slug: "psychopathy-test",
+    title: "Psychopathy Test",
+    metaTitle: "Psychopathy Test – Free Online Trait Screening",
+    shortTitle: "Psychopathy Test",
+    category: "Personality",
+    icon: "🎭",
+    shortDescription: "Answer 10 short statements about risk, guilt, and manipulation for an informal trait screening.",
+    metaDescription: "Take a free Psychopathy Test online. Answer short statements about callousness, impulsivity, and manipulation for an informal trait screening.",
+    keywords: ["psychopathy test", "psychopath test online", "am i a psychopath quiz", "sociopath test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "psychopathy-screener",
+  },
+  {
+    slug: "machiavellianism-test",
+    title: "Machiavellianism Test",
+    metaTitle: "Machiavellianism Test – Free Online Trait Test",
+    shortTitle: "Machiavellianism",
+    category: "Personality",
+    icon: "♟️",
+    shortDescription: "Answer 10 short statements about strategy, trust, and manipulation for an informal trait screening.",
+    metaDescription: "Take a free Machiavellianism Test online. Answer short statements about cynicism and strategic manipulation for an informal trait screening.",
+    keywords: ["machiavellianism test", "machiavellian test online", "mach iv test", "dark triad machiavellianism"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "machiavellianism-screener",
+  },
+  {
+    slug: "empathy-test",
+    title: "Empathy Test",
+    metaTitle: "Empathy Test – Free Online Empathy Quiz",
+    shortTitle: "Empathy Test",
+    category: "Personality",
+    icon: "💞",
+    shortDescription: "Answer 10 short statements about how you respond to other people's feelings to measure your empathy.",
+    metaDescription: "Take a free Empathy Test online. Answer short statements about recognizing and responding to others' feelings for an informal empathy score.",
+    keywords: ["empathy test", "empathy quiz online", "how empathetic am i", "eq empathy test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "empathy-screener",
   },
 ];
 
