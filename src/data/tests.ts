@@ -736,13 +736,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "ruler-drop-test",
     title: "Ruler Drop Reaction Test",
-    metaTitle: "Ruler Drop Reaction Test — Free Online Reflex Test",
+    metaTitle: "Ruler Drop Reaction Test – Free Online Reflex Test",
     shortTitle: "Ruler Drop",
     category: "Reaction & Speed",
     icon: "📏",
     shortDescription: "The classic ruler-drop reflex trick, digitized — catch the falling ruler as fast as you can.",
     metaDescription:
-      "Free online Ruler Drop Reaction Test — a digital version of the classic falling-ruler reflex trick. Catch it as fast as you can and see your reaction time.",
+      "Take a free ruler drop reaction test online. Catch the falling ruler, measure your reaction time in milliseconds, and see the equivalent fall distance.",
     keywords: [
       "ruler drop test",
       "reaction time ruler test",
@@ -757,13 +757,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "flanker-test",
     title: "Flanker Test",
-    metaTitle: "Flanker Test — Free Online Eriksen Flanker Task",
+    metaTitle: "Flanker Test Online – Free Eriksen Attention Test",
     shortTitle: "Flanker Test",
     category: "Focus & Attention",
     icon: "➡️",
     shortDescription: "Identify the direction of the center arrow while ignoring the arrows around it.",
     metaDescription:
-      "Free online Flanker Test based on the classic Eriksen flanker task. Respond to the center arrow's direction while surrounding arrows try to distract you.",
+      "Take a free Eriksen Flanker Test online. Respond to the center arrow, ignore surrounding arrows, and compare congruent vs. incongruent reaction times.",
     keywords: [
       "flanker test",
       "eriksen flanker task online",
@@ -778,13 +778,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "memory-match-game",
     title: "Memory Match Game",
-    metaTitle: "Memory Match Game — Free Online Card Matching Game",
+    metaTitle: "Memory Match Game – Free Online Matching Pairs Game",
     shortTitle: "Memory Match",
     category: "Memory & Cognition",
     icon: "🃏",
     shortDescription: "Flip cards to find matching pairs in as few moves as possible.",
     metaDescription:
-      "Free online Memory Match card game. Flip cards to find all the matching pairs in as few moves as possible — classic concentration gameplay with instant results.",
+      "Play a free Memory Match game online. Flip cards, remember their locations, match every pair, and try to clear 12 or 16 cards in fewer moves.",
     keywords: [
       "memory match game",
       "concentration card game online",
@@ -799,13 +799,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "pop-up-target-test",
     title: "Pop-Up Target Test",
-    metaTitle: "Pop-Up Target Test — Free Online Reaction Game",
+    metaTitle: "Pop-Up Target Test – Free Reaction & Hand-Eye Test",
     shortTitle: "Pop-Up Target",
     category: "Reaction & Speed",
     icon: "🎯",
     shortDescription: "Targets pop up at random spots — click as many as you can before time runs out.",
     metaDescription:
-      "Free online Pop-Up Target reaction game. Targets appear randomly across a grid — click as many as you can in 30 seconds and track your hit rate.",
+      "Take a free Pop-Up Target Test online. Click targets appearing across a 3×3 grid for 30 seconds and measure hits, misses, and accuracy.",
     keywords: [
       "reaction game online",
       "pop up target game",

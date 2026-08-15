@@ -4,53 +4,470 @@ export const content: TestSeoContent = {
   blocks: [
     {
       type: "paragraph",
-      text: "The memory match game — also known as concentration or pairs — is one of the oldest and most universally recognized memory games, played with physical playing cards for generations before it became a browser classic. Flip two cards at a time, remember what you've seen, and clear the board in as few moves as possible.",
-    },
-    {
-      type: "heading",
-      id: "how-it-works",
-      text: "How the Memory Match Game Works",
+      text: "How efficiently can you remember where matching symbols are hiding?",
     },
     {
       type: "paragraph",
-      text: "Click any card to flip it face up, then click a second card. If the two symbols match, they stay face up permanently. If they don't match, both flip back face down after a brief pause — but the trick is remembering exactly where you saw them, so you can pair them up later with fewer wasted guesses. Clear the entire board to finish, and your score is the total number of moves it took you.",
-    },
-    {
-      type: "heading",
-      text: "Why This Simple Game Is a Real Memory Workout",
+      text: "Play this free **Memory Match Game**, also known as **Concentration**, **Matching Pairs**, or simply **Pairs**. Flip two cards at a time, remember what you see, and match every pair using as few moves as possible.",
     },
     {
       type: "paragraph",
-      text: "Despite its simplicity, concentration-style matching exercises a specific and well-studied form of memory: spatial working memory, the ability to hold and update a mental map of where things are located. Every flip you don't immediately match forces you to encode both the symbol and its exact position, then retrieve that information minutes later while new positions keep getting added to what you're tracking. This is part of why matching games are commonly used informally as a light cognitive exercise across all ages, from early childhood learning to casual brain-training routines for adults.",
+      text: "Choose:",
     },
     {
-      type: "heading",
-      id: "why-it-matters",
-      text: "Efficient Play vs. Lucky Guessing",
+      type: "list",
+      items: ["**Easy — 12 cards / 6 pairs**", "**Hard — 16 cards / 8 pairs**"],
     },
     {
       type: "paragraph",
-      text: "The theoretical minimum number of moves for a perfectly played game is exactly the number of pairs on the board — one move per matched pair, with no wasted flips at all. In practice, that's extremely difficult to achieve even with strong memory, since new information keeps overwriting what you remember from earlier in the game. A move count close to the number of pairs reflects strong spatial memory and efficient searching; a much higher count usually means more flips were spent re-discovering positions you'd already seen before.",
+      text: "There is no time limit. Your main score is the number of moves required to clear the board.",
     },
     {
       type: "heading",
-      text: "Tips for Fewer Moves",
+      id: "how-to-take",
+      text: "How to Play Memory Match",
+    },
+    {
+      type: "list",
+      ordered: true,
+      items: [
+        "Choose Easy or Hard.",
+        "Press **Start Test**.",
+        "Flip one card.",
+        "Flip a second card.",
+        "If the symbols match, the pair stays revealed.",
+        "If they do not match, remember both locations before they turn back over.",
+        "Use what you learned on later moves.",
+        "Continue until every pair is matched.",
+        "Review your total number of moves.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The goal is not to click quickly.",
+    },
+    {
+      type: "paragraph",
+      text: "A thoughtful move that uses remembered information is better than a fast random guess.",
+    },
+    {
+      type: "heading",
+      id: "what-is",
+      text: "What Is the Memory Matching Game?",
+    },
+    {
+      type: "paragraph",
+      text: "The classic game has a simple structure:",
+    },
+    {
+      type: "paragraph",
+      text: "**face-down cards + matching pairs + limited information**",
+    },
+    {
+      type: "paragraph",
+      text: "You only see two cards at a time.",
+    },
+    {
+      type: "paragraph",
+      text: "When they do not match, they disappear from view again—but the information is still useful if you remember it.",
+    },
+    {
+      type: "paragraph",
+      text: "As more cards are revealed, you gradually build a mental map connecting:",
+    },
+    {
+      type: "paragraph",
+      text: "**symbol identity → board location**",
+    },
+    {
+      type: "paragraph",
+      text: "Good play depends on using that map to avoid repeatedly rediscovering cards you have already seen.",
+    },
+    {
+      type: "paragraph",
+      text: "This makes the game more than visual recognition. It requires memory for both **what** appeared and **where** it appeared.",
+    },
+    {
+      type: "heading",
+      text: "What Kind of Memory Does the Game Use?",
+    },
+    {
+      type: "paragraph",
+      text: "It is tempting to call Memory Match a pure “working memory test,” but the task involves several overlapping processes.",
+    },
+    {
+      type: "paragraph",
+      text: "You use:",
+    },
+    {
+      type: "subheading",
+      text: "Visual Memory",
+    },
+    {
+      type: "paragraph",
+      text: "You need to recognize the symbols on previously seen cards.",
+    },
+    {
+      type: "subheading",
+      text: "Spatial Memory",
+    },
+    {
+      type: "paragraph",
+      text: "You need to remember their positions on the board.",
+    },
+    {
+      type: "subheading",
+      text: "Associative Memory",
+    },
+    {
+      type: "paragraph",
+      text: "You connect a particular symbol with a particular location.",
+    },
+    {
+      type: "subheading",
+      text: "Working Memory",
+    },
+    {
+      type: "paragraph",
+      text: "You actively maintain useful recent information while deciding which card to flip next.",
+    },
+    {
+      type: "subheading",
+      text: "Strategy",
+    },
+    {
+      type: "paragraph",
+      text: "You choose whether to reveal an unknown card, return to a known location, or complete a pair.",
+    },
+    {
+      type: "paragraph",
+      text: "Because strategy and luck matter alongside memory, the final move count is not a pure measurement of one memory system.",
+    },
+    {
+      type: "paragraph",
+      text: "It is better described as **performance on a spatial matching-memory game**.",
+    },
+    {
+      type: "heading",
+      text: "Easy vs. Hard Mode",
+    },
+    {
+      type: "paragraph",
+      text: "Easy mode contains 12 cards, which means 6 pairs.",
+    },
+    {
+      type: "paragraph",
+      text: "Hard mode contains 16 cards, or 8 pairs.",
+    },
+    {
+      type: "paragraph",
+      text: "Hard mode creates more locations to track and more possible symbol-position associations.",
+    },
+    {
+      type: "paragraph",
+      text: "That increases the memory load and usually increases the number of moves needed to clear the board.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not directly compare:",
+    },
+    {
+      type: "paragraph",
+      text: "**12 moves on Easy**",
+    },
+    {
+      type: "paragraph",
+      text: "with",
+    },
+    {
+      type: "paragraph",
+      text: "**12 moves on Hard**",
+    },
+    {
+      type: "paragraph",
+      text: "as though they represent the same performance.",
+    },
+    {
+      type: "paragraph",
+      text: "The board sizes are different tasks.",
+    },
+    {
+      type: "heading",
+      text: "What Counts as One Move?",
+    },
+    {
+      type: "paragraph",
+      text: "One move consists of flipping **two cards**.",
+    },
+    {
+      type: "paragraph",
+      text: "If they match, the pair is completed.",
+    },
+    {
+      type: "paragraph",
+      text: "If they do not match, both cards return face down.",
+    },
+    {
+      type: "paragraph",
+      text: "This scoring method rewards efficiency.",
+    },
+    {
+      type: "paragraph",
+      text: "Repeatedly opening the same nonmatching cards increases the move count because it means you spent a turn without completing a pair or gaining much new information.",
+    },
+    {
+      type: "paragraph",
+      text: "However, move count also depends on the order in which unknown cards happen to be revealed.",
+    },
+    {
+      type: "heading",
+      text: "What Is the Best Possible Score?",
+    },
+    {
+      type: "paragraph",
+      text: "The absolute mathematical minimum is one move per pair:",
+    },
+    {
+      type: "list",
+      items: ["6 moves on the 12-card board;", "8 moves on the 16-card board."],
+    },
+    {
+      type: "paragraph",
+      text: "But that minimum requires every pair to be matched immediately.",
+    },
+    {
+      type: "paragraph",
+      text: "On a randomly shuffled face-down board, you do not initially know where the matching cards are.",
+    },
+    {
+      type: "paragraph",
+      text: "Reaching the absolute minimum would therefore require extraordinary luck or prior knowledge of the layout, not simply “perfect memory.”",
+    },
+    {
+      type: "paragraph",
+      text: "This distinction matters.",
+    },
+    {
+      type: "paragraph",
+      text: "Memory begins helping **after cards have been revealed**.",
+    },
+    {
+      type: "paragraph",
+      text: "It cannot tell you the identity of a card you have never seen.",
+    },
+    {
+      type: "heading",
+      text: "Memory vs. Luck",
+    },
+    {
+      type: "paragraph",
+      text: "Early in a game, luck has a larger role.",
+    },
+    {
+      type: "paragraph",
+      text: "Your first card is unknown.",
+    },
+    {
+      type: "paragraph",
+      text: "The second card is also unknown unless its matching symbol has already been revealed earlier—which cannot happen on the first move.",
+    },
+    {
+      type: "paragraph",
+      text: "You may accidentally flip a pair immediately.",
+    },
+    {
+      type: "paragraph",
+      text: "Or you may reveal two unrelated symbols.",
+    },
+    {
+      type: "paragraph",
+      text: "As the game continues, memory becomes increasingly useful because more positions are known.",
+    },
+    {
+      type: "paragraph",
+      text: "That is why one unusually low move count does not prove exceptional memory.",
+    },
+    {
+      type: "paragraph",
+      text: "Compare several games rather than one lucky shuffle.",
+    },
+    {
+      type: "heading",
+      text: "The Mathematics of an Optimal Memory Game",
+    },
+    {
+      type: "paragraph",
+      text: "The matching game has even been studied mathematically.",
+    },
+    {
+      type: "paragraph",
+      text: "Researchers have analyzed how many moves a player with perfect memory should expect to need when using an optimal strategy.",
+    },
+    {
+      type: "paragraph",
+      text: "For large boards, the expected number of moves still exceeds the number of pairs because unknown cards create unavoidable uncertainty.",
+    },
+    {
+      type: "paragraph",
+      text: "This is a useful lesson:",
+    },
+    {
+      type: "paragraph",
+      text: "**perfect memory does not guarantee the theoretical minimum.**",
+    },
+    {
+      type: "paragraph",
+      text: "You can only remember information that has actually been revealed.",
+    },
+    {
+      type: "paragraph",
+      text: "The best strategy uses known information efficiently while exposing new cards in a sensible order.",
+    },
+    {
+      type: "heading",
+      text: "A Strong Basic Strategy",
+    },
+    {
+      type: "paragraph",
+      text: "One useful rule is:",
+    },
+    {
+      type: "paragraph",
+      text: "**When possible, reveal an unknown card first.**",
+    },
+    {
+      type: "paragraph",
+      text: "Why?",
+    },
+    {
+      type: "paragraph",
+      text: "If it matches a card whose location you already know, you can complete that pair with the second flip.",
+    },
+    {
+      type: "paragraph",
+      text: "If it reveals a new symbol, you have still gained information.",
+    },
+    {
+      type: "paragraph",
+      text: "By contrast, flipping a known unmatched card first can waste an opportunity if you do not yet know where its partner is.",
+    },
+    {
+      type: "paragraph",
+      text: "You do not need advanced mathematics to play well.",
+    },
+    {
+      type: "paragraph",
+      text: "The practical goal is simple:",
+    },
+    {
+      type: "paragraph",
+      text: "**maximize new information and avoid forgetting known pairs.**",
+    },
+    {
+      type: "heading",
+      text: "Why Position Matters So Much",
+    },
+    {
+      type: "paragraph",
+      text: "Remembering that you saw a star is useless if you cannot remember where the star was.",
+    },
+    {
+      type: "paragraph",
+      text: "The game therefore binds object identity to spatial location.",
+    },
+    {
+      type: "paragraph",
+      text: "Players often create a mental coordinate system:",
+    },
+    {
+      type: "list",
+      items: ["top left;", "top middle;", "second row right;", "bottom corner."],
+    },
+    {
+      type: "paragraph",
+      text: "A consistent scan strategy can help.",
+    },
+    {
+      type: "paragraph",
+      text: "Random clicking makes locations harder to organize because the board is encoded in no predictable order.",
+    },
+    {
+      type: "heading",
+      text: "Memory Match vs. Visual Memory Test",
+    },
+    {
+      type: "paragraph",
+      text: "The [Visual Memory Test](/test/visual-memory-test) typically shows several locations at once, hides them, then asks you to reproduce the pattern.",
+    },
+    {
+      type: "paragraph",
+      text: "Memory Match reveals information gradually.",
+    },
+    {
+      type: "paragraph",
+      text: "You build knowledge across many moves.",
+    },
+    {
+      type: "paragraph",
+      text: "That means the tasks differ in:",
+    },
+    {
+      type: "list",
+      items: ["presentation;", "recall demands;", "strategy;", "and how much new information arrives over time."],
+    },
+    {
+      type: "paragraph",
+      text: "A person can perform differently on both.",
+    },
+    {
+      type: "paragraph",
+      text: "Do not combine their scores into one overall memory number.",
+    },
+    {
+      type: "heading",
+      text: "Does Playing Memory Match Improve Memory?",
+    },
+    {
+      type: "paragraph",
+      text: "Practice can make you better at the game.",
+    },
+    {
+      type: "paragraph",
+      text: "You may improve at:",
     },
     {
       type: "list",
       items: [
-        "Build a consistent mental scan pattern (like left-to-right, row by row) instead of clicking randomly.",
-        "When you flip a new, unmatched symbol, actively rehearse both its identity and its position before moving on.",
-        "Prioritize flipping cards you haven't seen yet over re-checking cards you're unsure about.",
-        "Start with the easier 12-card board to build a system before trying the harder 16-card version.",
+        "encoding positions;",
+        "organizing the board;",
+        "using a consistent strategy;",
+        "avoiding unnecessary repeat flips;",
+        "and remembering more known pairs at once.",
       ],
     },
     {
-      type: "callout",
-      icon: "🃏",
-      title: "Another spatial memory challenge",
-      tone: "primary",
-      text: "For a different take on remembering positions, try our [Visual Memory Test](/test/visual-memory-test), which asks you to recall a growing set of lit-up tiles instead of matching hidden pairs.",
+      type: "paragraph",
+      text: "What should not be assumed is that improvement automatically transfers to every kind of everyday memory.",
+    },
+    {
+      type: "paragraph",
+      text: "Cognitive-training research often finds the clearest gains on the practiced task or closely related tasks.",
+    },
+    {
+      type: "paragraph",
+      text: "So it is reasonable to say:",
+    },
+    {
+      type: "paragraph",
+      text: "**Memory Match practices visual-spatial matching memory.**",
+    },
+    {
+      type: "paragraph",
+      text: "It is much harder to justify:",
+    },
+    {
+      type: "paragraph",
+      text: "**Memory Match improves all memory.**",
     },
     {
       type: "heading",
@@ -61,31 +478,56 @@ export const content: TestSeoContent = {
       type: "faq",
       items: [
         {
-          question: "What's the best possible score in this game?",
-          answer:
-            "The theoretical minimum is one move per pair — for example, 6 moves on the 12-card easy board — though achieving that in practice requires near-perfect memory of every card's position.",
+          question: "What is another name for Memory Match?",
+          answer: "It is also called Concentration, Matching Pairs, Pairs, Memory, and in some places Pelmanism.",
         },
         {
-          question: "What kind of memory does this game use?",
+          question: "What is the minimum score on Easy?",
           answer:
-            "It primarily exercises spatial working memory — your ability to encode, hold, and retrieve the locations of specific items as new information keeps being added.",
+            "Six moves, because there are six pairs. Achieving it on a hidden random board would require every first attempt to produce a match.",
+        },
+        {
+          question: "What is the minimum on Hard?",
+          answer: "Eight moves for eight pairs, under the same theoretical perfect-match condition.",
+        },
+        {
+          question: "Does the game use working memory?",
+          answer: "Working memory contributes, but so do visual memory, spatial memory, associative memory, strategy, and luck.",
         },
         {
           question: "Is there a time limit?",
-          answer:
-            "No, this version is scored purely by move count, so you can take as long as you like to think through each flip.",
+          answer: "No. The current version is mainly scored by how many moves you need.",
         },
         {
-          question: "Why do unmatched cards flip back instead of staying visible?",
+          question: "Should I flip known or unknown cards first?",
           answer:
-            "That's the core mechanic of the game — if unmatched cards stayed visible, there would be no memory challenge at all, since you could simply scan the whole board freely.",
+            "A useful strategy is often to reveal an unknown card first, then use known location information if its partner has already been seen.",
         },
         {
-          question: "Does playing memory match games actually improve memory?",
-          answer:
-            "Casual games like this can provide light practice for spatial working memory, though like most brain games, the benefits tend to be most noticeable on the specific game itself rather than broadly transferring to unrelated memory tasks.",
+          question: "Does this diagnose memory problems?",
+          answer: "No. It is a casual memory game, not a standardized cognitive assessment.",
         },
       ],
+    },
+    {
+      type: "heading",
+      text: "Clear the Board With Fewer Wasted Moves",
+    },
+    {
+      type: "paragraph",
+      text: "The challenge changes as you play.",
+    },
+    {
+      type: "paragraph",
+      text: "At first, most cards are unknown.",
+    },
+    {
+      type: "paragraph",
+      text: "Later, the board becomes a map of things you have already seen.",
+    },
+    {
+      type: "paragraph",
+      text: "Strong play means turning those brief glimpses into useful location knowledge—and using that knowledge before you forget it.",
     },
   ],
 };
