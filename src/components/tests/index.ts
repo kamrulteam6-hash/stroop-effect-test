@@ -96,6 +96,14 @@ import { VisualPairedAssociatesTest } from "@/components/tests/VisualPairedAssoc
 import { VerbalPairedAssociatesTest } from "@/components/tests/VerbalPairedAssociatesTest";
 import { ProspectiveMemoryTest } from "@/components/tests/ProspectiveMemoryTest";
 import { SerialAdditionTest } from "@/components/tests/SerialAdditionTest";
+import { PonzoIllusionTest } from "@/components/tests/PonzoIllusionTest";
+import { PoggendorffIllusionTest } from "@/components/tests/PoggendorffIllusionTest";
+import { DelboeufIllusionTest } from "@/components/tests/DelboeufIllusionTest";
+import { ShepardTablesTest } from "@/components/tests/ShepardTablesTest";
+import { HermannGridTest } from "@/components/tests/HermannGridTest";
+import { KanizsaTriangleTest } from "@/components/tests/KanizsaTriangleTest";
+import { MotionAftereffectTest } from "@/components/tests/MotionAftereffectTest";
+import { SoundLocalizationTest } from "@/components/tests/SoundLocalizationTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -194,4 +202,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "verbal-paired-associates": VerbalPairedAssociatesTest,
   "prospective-memory": ProspectiveMemoryTest,
   "serial-addition": SerialAdditionTest,
+  "ponzo-illusion": PonzoIllusionTest,
+  "poggendorff-illusion": PoggendorffIllusionTest,
+  "delboeuf-illusion": DelboeufIllusionTest,
+  "shepard-tables": ShepardTablesTest,
+  "hermann-grid": HermannGridTest,
+  "kanizsa-triangle": KanizsaTriangleTest,
+  "motion-aftereffect": MotionAftereffectTest,
+  "sound-localization": SoundLocalizationTest,
 };

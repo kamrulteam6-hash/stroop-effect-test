@@ -95,6 +95,14 @@ import { content as visualPairedAssociatesTest } from "@/data/seoContent/visual-
 import { content as verbalPairedAssociatesTest } from "@/data/seoContent/verbal-paired-associates-test";
 import { content as prospectiveMemoryTest } from "@/data/seoContent/prospective-memory-test";
 import { content as serialAdditionTest } from "@/data/seoContent/serial-addition-test";
+import { content as ponzoIllusionTest } from "@/data/seoContent/ponzo-illusion-test";
+import { content as poggendorffIllusionTest } from "@/data/seoContent/poggendorff-illusion-test";
+import { content as delboeufIllusionTest } from "@/data/seoContent/delboeuf-illusion-test";
+import { content as shepardTablesIllusionTest } from "@/data/seoContent/shepard-tables-illusion-test";
+import { content as hermannGridIllusionTest } from "@/data/seoContent/hermann-grid-illusion-test";
+import { content as kanizsaTriangleTest } from "@/data/seoContent/kanizsa-triangle-test";
+import { content as motionAftereffectTest } from "@/data/seoContent/motion-aftereffect-test";
+import { content as soundLocalizationTest } from "@/data/seoContent/sound-localization-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -193,4 +201,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "verbal-paired-associates-test": verbalPairedAssociatesTest,
   "prospective-memory-test": prospectiveMemoryTest,
   "serial-addition-test": serialAdditionTest,
+  "ponzo-illusion-test": ponzoIllusionTest,
+  "poggendorff-illusion-test": poggendorffIllusionTest,
+  "delboeuf-illusion-test": delboeufIllusionTest,
+  "shepard-tables-illusion-test": shepardTablesIllusionTest,
+  "hermann-grid-illusion-test": hermannGridIllusionTest,
+  "kanizsa-triangle-test": kanizsaTriangleTest,
+  "motion-aftereffect-test": motionAftereffectTest,
+  "sound-localization-test": soundLocalizationTest,
 };

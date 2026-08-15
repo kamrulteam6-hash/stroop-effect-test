@@ -88,6 +88,14 @@ const MODELS: Record<string, PercentileModel> = {
   "verbal-paired-associates-test": { mean: 55, stdev: 20, direction: "higher" },
   "prospective-memory-test": { mean: 65, stdev: 25, direction: "higher" },
   "serial-addition-test": { mean: 15, stdev: 7, direction: "higher" },
+  "ponzo-illusion-test": { mean: 12, stdev: 6, direction: "lower" },
+  "poggendorff-illusion-test": { mean: 15, stdev: 8, direction: "lower" },
+  "delboeuf-illusion-test": { mean: 6, stdev: 3, direction: "lower" },
+  "shepard-tables-illusion-test": { mean: 18, stdev: 8, direction: "lower" },
+  "hermann-grid-illusion-test": { mean: 700, stdev: 250, direction: "lower" },
+  "kanizsa-triangle-test": { mean: 80, stdev: 12, direction: "higher" },
+  "motion-aftereffect-test": { mean: 8, stdev: 4, direction: "higher" },
+  "sound-localization-test": { mean: 70, stdev: 18, direction: "higher" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

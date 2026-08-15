@@ -106,7 +106,15 @@ export type ComponentKey =
   | "visual-paired-associates"
   | "verbal-paired-associates"
   | "prospective-memory"
-  | "serial-addition";
+  | "serial-addition"
+  | "ponzo-illusion"
+  | "poggendorff-illusion"
+  | "delboeuf-illusion"
+  | "shepard-tables"
+  | "hermann-grid"
+  | "kanizsa-triangle"
+  | "motion-aftereffect"
+  | "sound-localization";
 
 export interface TestDefinition {
   slug: string;
@@ -1944,6 +1952,134 @@ export const tests: TestDefinition[] = [
     estTime: "1 min",
     difficulty: "Hard",
     componentKey: "serial-addition",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "ponzo-illusion-test",
+    title: "Ponzo Illusion Test",
+    metaTitle: "Ponzo Illusion Test — Free Online Size Perception Test",
+    shortTitle: "Ponzo Illusion",
+    category: "Perception",
+    icon: "🛤️",
+    shortDescription: "Adjust a line to match another line's length despite converging perspective lines distorting your perception.",
+    metaDescription:
+      "Free online Ponzo Illusion Test. Measure how converging perspective lines distort your judgment of line length.",
+    keywords: ["ponzo illusion test", "size perception test online", "optical illusion test", "perspective illusion test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "ponzo-illusion",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "poggendorff-illusion-test",
+    title: "Poggendorff Illusion Test",
+    metaTitle: "Poggendorff Illusion Test — Free Online Line Alignment Test",
+    shortTitle: "Poggendorff Illusion",
+    category: "Perception",
+    icon: "📏",
+    shortDescription: "Judge where a diagonal line continues after passing behind a rectangle, testing line alignment perception.",
+    metaDescription:
+      "Free online Poggendorff Illusion Test. Measure how accurately you can judge line alignment when a rectangle interrupts the line.",
+    keywords: ["poggendorff illusion test", "line alignment test online", "optical illusion test", "visual perception test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "poggendorff-illusion",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "delboeuf-illusion-test",
+    title: "Delboeuf Illusion Test",
+    metaTitle: "Delboeuf Illusion Test — Free Online Circle Size Test",
+    shortTitle: "Delboeuf Illusion",
+    category: "Perception",
+    icon: "⭕",
+    shortDescription: "Match a circle's size to another circle that's surrounded by a distorting outer ring.",
+    metaDescription:
+      "Free online Delboeuf Illusion Test. Measure how a surrounding ring distorts your perception of a circle's true size.",
+    keywords: ["delboeuf illusion test", "circle size illusion test", "optical illusion test online", "size perception test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "delboeuf-illusion",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "shepard-tables-illusion-test",
+    title: "Shepard Tables Illusion Test",
+    metaTitle: "Shepard Tables Illusion Test — Free Online Perspective Test",
+    shortTitle: "Shepard Tables",
+    category: "Perception",
+    icon: "🪑",
+    shortDescription: "Match the size of two tabletops drawn in different perspective orientations, despite them being identical.",
+    metaDescription:
+      "Free online Shepard Tables Illusion Test. Measure how perspective distortion affects your judgment of identical shapes' sizes.",
+    keywords: ["shepard tables illusion test", "shepard illusion test online", "perspective illusion test", "optical illusion test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "shepard-tables",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "hermann-grid-illusion-test",
+    title: "Hermann Grid Illusion Test",
+    metaTitle: "Hermann Grid Illusion Test — Free Online Visual Perception Test",
+    shortTitle: "Hermann Grid",
+    category: "Perception",
+    icon: "⬜",
+    shortDescription: "Click highlighted intersections on a Hermann grid while ignoring the illusory phantom gray dots.",
+    metaDescription:
+      "Free online Hermann Grid Illusion Test. See the classic phantom dots illusion while testing your visual search speed at grid intersections.",
+    keywords: ["hermann grid illusion test", "scintillating grid test", "optical illusion test online", "visual perception test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "hermann-grid",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "kanizsa-triangle-test",
+    title: "Kanizsa Triangle Test",
+    metaTitle: "Kanizsa Triangle Test — Free Online Illusory Contour Test",
+    shortTitle: "Kanizsa Triangle",
+    category: "Perception",
+    icon: "🔺",
+    shortDescription: "Decide whether three Pac-Man shapes form an illusory triangle in your perception, as fast as possible.",
+    metaDescription:
+      "Free online Kanizsa Triangle Test. Measure how quickly you perceive illusory contours formed by inducing shapes.",
+    keywords: ["kanizsa triangle test", "illusory contour test online", "optical illusion test", "gestalt perception test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "kanizsa-triangle",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "motion-aftereffect-test",
+    title: "Motion Aftereffect Test",
+    metaTitle: "Motion Aftereffect Test — Free Online Waterfall Illusion Test",
+    shortTitle: "Motion Aftereffect",
+    category: "Perception",
+    icon: "🌊",
+    shortDescription: "Stare at a moving pattern, then time how long illusory motion continues on a stationary pattern.",
+    metaDescription:
+      "Free online Motion Aftereffect Test (waterfall illusion). Time how long illusory motion persists after adapting to a moving pattern.",
+    keywords: ["motion aftereffect test", "waterfall illusion test online", "motion illusion test", "visual adaptation test"],
+    estTime: "1 min",
+    difficulty: "Easy",
+    componentKey: "motion-aftereffect",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "sound-localization-test",
+    title: "Sound Localization Test",
+    metaTitle: "Sound Localization Test — Free Online Stereo Hearing Test",
+    shortTitle: "Sound Localization",
+    category: "Hearing",
+    icon: "🎧",
+    shortDescription: "Judge where a stereo-panned tone comes from between your left and right ear across several rounds.",
+    metaDescription:
+      "Free online Sound Localization Test. Measure how accurately you can judge the direction of a stereo-panned sound.",
+    keywords: ["sound localization test", "stereo hearing test online", "auditory localization test", "spatial hearing test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "sound-localization",
     scoreDirection: "higher",
   },
 ];
