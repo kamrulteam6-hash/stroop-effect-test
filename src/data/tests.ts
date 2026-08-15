@@ -1905,13 +1905,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "visual-paired-associates-test",
     title: "Visual Paired Associates Test",
-    metaTitle: "Visual Paired Associates Test — Free Online Visual Memory Test",
+    metaTitle: "Visual Paired Associates Test – Free Visual Memory Test",
     shortTitle: "Visual Paired Associates",
     category: "Memory & Cognition",
     icon: "🎨",
     shortDescription: "Study shape-color pairs, then recall which color went with each shape.",
     metaDescription:
-      "Free online Visual Paired Associates Test. Study shape-color pairs and test your visual associative memory.",
+      "Take a free Visual Paired Associates Test online. Learn picture–location or picture–picture associations and test how accurately you remember visual pairings.",
     keywords: ["visual paired associates test", "visual memory test online", "shape color memory test", "associative memory test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1921,13 +1921,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "verbal-paired-associates-test",
     title: "Verbal Paired Associates Test",
-    metaTitle: "Verbal Paired Associates Test — Free Online Free Recall Test",
+    metaTitle: "Verbal Paired Associates Test – Free Word Pair Memory Test",
     shortTitle: "Verbal Paired Associates",
     category: "Memory & Cognition",
     icon: "✍️",
     shortDescription: "Study unrelated word pairs, then type the exact word paired with each cue from memory.",
     metaDescription:
-      "Free online Verbal Paired Associates Test. Study word pairs and test your free recall of the exact matching word.",
+      "Take a free Verbal Paired Associates Test online. Learn word pairs, then use each cue word to recall or recognize its original partner.",
     keywords: ["verbal paired associates test", "free recall test online", "word pair memory test", "verbal memory test"],
     estTime: "2 min",
     difficulty: "Hard",
@@ -1937,13 +1937,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "prospective-memory-test",
     title: "Prospective Memory Test",
-    metaTitle: "Prospective Memory Test — Free Online Remembering to Remember Test",
+    metaTitle: "Prospective Memory Test – Remember to Do It Later",
     shortTitle: "Prospective Memory",
     category: "Memory & Cognition",
     icon: "⏰",
     shortDescription: "Do an ongoing word task while remembering a special rule for one particular target word.",
     metaDescription:
-      "Free online Prospective Memory Test. Measure your ability to remember a delayed intention while performing another task.",
+      "Take a free Prospective Memory Test online. Perform an ongoing task while remembering to carry out a planned action when a target event or time occurs.",
     keywords: ["prospective memory test", "remembering to remember test", "delayed intention test online", "memory test free"],
     estTime: "3 min",
     difficulty: "Medium",
@@ -1953,13 +1953,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "serial-addition-test",
     title: "Serial Addition Test",
-    metaTitle: "Serial Addition Test — Free Online PASAT Mental Math Test",
+    metaTitle: "Serial Addition Test – Free Paced Mental Math Test",
     shortTitle: "Serial Addition",
     category: "Math & Logic",
     icon: "➕",
     shortDescription: "Add each new digit to the one before it as fast as you can, in the style of the PASAT test.",
     metaDescription:
-      "Free online Serial Addition Test (PASAT-style). Add consecutive digits under time pressure to measure processing speed and working memory.",
+      "Take a free Serial Addition Test online. Add each new digit to the one immediately before it and measure paced calculation accuracy, attention, and processing speed.",
     keywords: ["serial addition test", "pasat test online", "mental math test", "processing speed test"],
     estTime: "1 min",
     difficulty: "Hard",
