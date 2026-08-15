@@ -229,13 +229,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "verbal-memory-test",
     title: "Verbal Memory Test",
-    metaTitle: "Verbal Memory Test — Free Word Recognition Test Online",
+    metaTitle: "Verbal Memory Test – Free Online Word Recognition Test",
     shortTitle: "Verbal Memory",
     category: "Memory & Cognition",
     icon: "📝",
     shortDescription: "Decide whether each word is new or one you've already seen. Survive as long as you can.",
     metaDescription:
-      "Free Verbal Memory Test with a 70-word pool and adjustable lives. Decide whether each word is new or already seen and see how many you can correctly identify.",
+      "Take a free Verbal Memory Test online. Decide whether each word is NEW or SEEN, choose 3 or 5 lives, and test continuous word-recognition memory.",
     keywords: [
       "verbal memory test",
       "word memory test online",
@@ -250,13 +250,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "sequence-memory-test",
     title: "Sequence Memory Test",
-    metaTitle: "Sequence Memory Test — Free Online Chimp Test Style Game",
+    metaTitle: "Sequence Memory Test – Free Spatial Sequence Memory Game",
     shortTitle: "Sequence Memory",
     category: "Memory & Cognition",
     icon: "🧩",
     shortDescription: "Repeat an ever-growing pattern of flashing tiles, chimp-test style.",
     metaDescription:
-      "Free Sequence Memory Test with 3×3 and 4×4 Hard grids. Repeat a growing pattern of flashing tiles, chimp-test style, and see how long a sequence you can remember.",
+      "Take a free Sequence Memory Test online. Watch flashing tiles, reproduce them in the same order, and build an ever-longer spatial sequence.",
     keywords: [
       "sequence memory test",
       "chimp test online",
@@ -293,13 +293,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "visual-memory-test",
     title: "Visual Memory Test",
-    metaTitle: "Visual Memory Test — Free Online Spatial Memory Test",
+    metaTitle: "Visual Memory Test – Free Online Spatial Pattern Memory Test",
     shortTitle: "Visual Memory",
     category: "Memory & Cognition",
     icon: "🖼️",
     shortDescription: "Remember which tiles on a grid lit up, then click them back in any order.",
     metaDescription:
-      "Free Visual Memory Test with 5×5 and 6×6 grids. Remember which tiles lit up, then click them back correctly, and see how many levels you can clear.",
+      "Take a free Visual Memory Test online. Memorize highlighted tiles on a 5×5 or 6×6 grid, then reproduce the full spatial pattern in any order.",
     keywords: [
       "visual memory test",
       "spatial memory test",
