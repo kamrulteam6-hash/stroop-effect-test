@@ -1585,13 +1585,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "attentional-blink-test",
     title: "Attentional Blink Test",
-    metaTitle: "Attentional Blink Test — Free Online Rapid Attention Test",
+    metaTitle: "Attentional Blink Test – Free Rapid Visual Attention Test",
     shortTitle: "Attentional Blink",
     category: "Focus & Attention",
     icon: "👁️",
     shortDescription: "Spot a target letter that flashes shortly after a digit in a rapid stream of characters.",
     metaDescription:
-      "Free online Attentional Blink Test. Measure the temporary dip in attention that follows detecting a rapid target in a stream of letters.",
+      "Take a free Attentional Blink Test online. Detect two targets in a rapid visual stream and see how timing affects awareness of the second target.",
     keywords: ["attentional blink test", "rapid serial visual presentation test", "attention test online", "rsvp test"],
     estTime: "2 min",
     difficulty: "Hard",
@@ -1601,13 +1601,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "posner-cueing-test",
     title: "Posner Cueing Test",
-    metaTitle: "Posner Cueing Test — Free Online Spatial Attention Test",
+    metaTitle: "Posner Cueing Test – Free Spatial Attention Test",
     shortTitle: "Posner Cueing",
     category: "Focus & Attention",
     icon: "➡️",
     shortDescription: "React to a target that appears on the left or right after a spatial cue, valid or invalid.",
     metaDescription:
-      "Free online Posner Cueing Test. Measure how spatial cues speed up or slow down your reaction time to visual targets.",
+      "Take a free Posner Cueing Test online. Respond to targets after valid, invalid, and neutral spatial cues and measure covert attention orienting.",
     keywords: ["posner cueing test", "spatial attention test online", "cueing effect test", "visual attention test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -1617,13 +1617,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "mackworth-clock-test",
     title: "Mackworth Clock Test",
-    metaTitle: "Mackworth Clock Test — Free Online Vigilance Test",
+    metaTitle: "Mackworth Clock Test – Free Online Vigilance Test",
     shortTitle: "Mackworth Clock",
     category: "Focus & Attention",
     icon: "🕐",
     shortDescription: "Watch a clock hand tick and report the rare double jumps to test sustained vigilance.",
     metaDescription:
-      "Free online Mackworth Clock Test. Measure your sustained attention and vigilance by detecting rare target events over time.",
+      "Take a free Mackworth Clock Test online. Watch a moving clock hand for rare double jumps and measure hits, misses, false alarms, and vigilance over time.",
     keywords: ["mackworth clock test", "vigilance test online", "sustained attention test", "clock test cognitive"],
     estTime: "1 min",
     difficulty: "Medium",
@@ -1633,13 +1633,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "cognitive-reflection-test",
     title: "Cognitive Reflection Test",
-    metaTitle: "Cognitive Reflection Test — Free Online CRT Brainteaser Test",
+    metaTitle: "Cognitive Reflection Test – Free CRT Reasoning Test",
     shortTitle: "Cognitive Reflection",
     category: "Cognitive Biases",
     icon: "🧠",
     shortDescription: "Answer brainteasers with a tempting but wrong intuitive answer to test your reflective thinking.",
     metaDescription:
-      "Free online Cognitive Reflection Test (CRT). Answer classic brainteasers to see how well you override intuitive wrong answers.",
+      "Take a free Cognitive Reflection Test online. Solve intuition-conflict problems designed to trigger tempting answers, then check reflective reasoning accuracy.",
     keywords: ["cognitive reflection test", "crt test online", "brainteaser test", "intuitive thinking test"],
     estTime: "3 min",
     difficulty: "Medium",
