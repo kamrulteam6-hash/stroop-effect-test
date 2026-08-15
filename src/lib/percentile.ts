@@ -72,6 +72,14 @@ const MODELS: Record<string, PercentileModel> = {
   "base-rate-neglect-test": { mean: 40, stdev: 20, direction: "higher" },
   "decoy-effect-test": { mean: 65, stdev: 20, direction: "lower" },
   "loss-aversion-test": { mean: 40, stdev: 20, direction: "higher" },
+  "overconfidence-test": { mean: 35, stdev: 20, direction: "lower" },
+  "temporal-discounting-test": { mean: 45, stdev: 20, direction: "lower" },
+  "wason-selection-task": { mean: 40, stdev: 20, direction: "higher" },
+  "syllogism-test": { mean: 65, stdev: 18, direction: "higher" },
+  "numerical-stroop-test": { mean: 80, stdev: 40, direction: "lower" },
+  "emotional-stroop-test": { mean: 60, stdev: 40, direction: "lower" },
+  "navon-test": { mean: 70, stdev: 35, direction: "lower" },
+  "negative-priming-test": { mean: 40, stdev: 30, direction: "lower" },
 };
 
 // Standard normal CDF approximation (Abramowitz & Stegun 7.1.26)

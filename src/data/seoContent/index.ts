@@ -79,6 +79,14 @@ import { content as confirmationBiasTest } from "@/data/seoContent/confirmation-
 import { content as baseRateNeglectTest } from "@/data/seoContent/base-rate-neglect-test";
 import { content as decoyEffectTest } from "@/data/seoContent/decoy-effect-test";
 import { content as lossAversionTest } from "@/data/seoContent/loss-aversion-test";
+import { content as overconfidenceTest } from "@/data/seoContent/overconfidence-test";
+import { content as temporalDiscountingTest } from "@/data/seoContent/temporal-discounting-test";
+import { content as wasonSelectionTask } from "@/data/seoContent/wason-selection-task";
+import { content as syllogismTest } from "@/data/seoContent/syllogism-test";
+import { content as numericalStroopTest } from "@/data/seoContent/numerical-stroop-test";
+import { content as emotionalStroopTest } from "@/data/seoContent/emotional-stroop-test";
+import { content as navonTest } from "@/data/seoContent/navon-test";
+import { content as negativePrimingTest } from "@/data/seoContent/negative-priming-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -161,4 +169,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "base-rate-neglect-test": baseRateNeglectTest,
   "decoy-effect-test": decoyEffectTest,
   "loss-aversion-test": lossAversionTest,
+  "overconfidence-test": overconfidenceTest,
+  "temporal-discounting-test": temporalDiscountingTest,
+  "wason-selection-task": wasonSelectionTask,
+  "syllogism-test": syllogismTest,
+  "numerical-stroop-test": numericalStroopTest,
+  "emotional-stroop-test": emotionalStroopTest,
+  "navon-test": navonTest,
+  "negative-priming-test": negativePrimingTest,
 };

@@ -80,6 +80,14 @@ import { ConfirmationBiasTest } from "@/components/tests/ConfirmationBiasTest";
 import { BaseRateNeglectTest } from "@/components/tests/BaseRateNeglectTest";
 import { DecoyEffectTest } from "@/components/tests/DecoyEffectTest";
 import { LossAversionTest } from "@/components/tests/LossAversionTest";
+import { OverconfidenceTest } from "@/components/tests/OverconfidenceTest";
+import { TemporalDiscountingTest } from "@/components/tests/TemporalDiscountingTest";
+import { WasonSelectionTest } from "@/components/tests/WasonSelectionTest";
+import { SyllogismTest } from "@/components/tests/SyllogismTest";
+import { NumericalStroopTest } from "@/components/tests/NumericalStroopTest";
+import { EmotionalStroopTest } from "@/components/tests/EmotionalStroopTest";
+import { NavonTest } from "@/components/tests/NavonTest";
+import { NegativePrimingTest } from "@/components/tests/NegativePrimingTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -162,4 +170,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "base-rate-neglect": BaseRateNeglectTest,
   "decoy-effect": DecoyEffectTest,
   "loss-aversion": LossAversionTest,
+  overconfidence: OverconfidenceTest,
+  "temporal-discounting": TemporalDiscountingTest,
+  "wason-selection": WasonSelectionTest,
+  syllogism: SyllogismTest,
+  "numerical-stroop": NumericalStroopTest,
+  "emotional-stroop": EmotionalStroopTest,
+  navon: NavonTest,
+  "negative-priming": NegativePrimingTest,
 };

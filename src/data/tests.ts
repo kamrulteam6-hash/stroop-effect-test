@@ -90,7 +90,15 @@ export type ComponentKey =
   | "confirmation-bias"
   | "base-rate-neglect"
   | "decoy-effect"
-  | "loss-aversion";
+  | "loss-aversion"
+  | "overconfidence"
+  | "temporal-discounting"
+  | "wason-selection"
+  | "syllogism"
+  | "numerical-stroop"
+  | "emotional-stroop"
+  | "navon"
+  | "negative-priming";
 
 export interface TestDefinition {
   slug: string;
@@ -1673,6 +1681,134 @@ export const tests: TestDefinition[] = [
     difficulty: "Easy",
     componentKey: "loss-aversion",
     scoreDirection: "higher",
+  },
+  {
+    slug: "overconfidence-test",
+    title: "Overconfidence Test",
+    metaTitle: "Overconfidence Test — Free Online Calibration Test",
+    shortTitle: "Overconfidence",
+    category: "Cognitive Biases",
+    icon: "🎓",
+    shortDescription: "Give 90% confidence ranges for trivia questions to see how well-calibrated your confidence is.",
+    metaDescription:
+      "Free online Overconfidence Test. Give confidence ranges for trivia questions and see how well-calibrated your certainty really is.",
+    keywords: ["overconfidence test", "calibration test online", "confidence bias test", "trivia confidence test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "overconfidence",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "temporal-discounting-test",
+    title: "Temporal Discounting Test",
+    metaTitle: "Temporal Discounting Test — Free Online Time Preference Test",
+    shortTitle: "Temporal Discounting",
+    category: "Cognitive Biases",
+    icon: "📈",
+    shortDescription: "Find the smallest amount you'd accept today instead of waiting, across several time horizons.",
+    metaDescription:
+      "Free online Temporal Discounting Test. Map your personal discounting curve across multiple time horizons from a week to five years.",
+    keywords: ["temporal discounting test", "time preference test online", "discounting curve test", "delay of gratification test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "temporal-discounting",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "wason-selection-task",
+    title: "Wason Selection Task",
+    metaTitle: "Wason Selection Task — Free Online Logic Test",
+    shortTitle: "Wason Selection",
+    category: "IQ & Logic",
+    icon: "🃏",
+    shortDescription: "Select exactly the cards you need to flip to test a conditional rule, testing formal logic.",
+    metaDescription:
+      "Free online Wason Selection Task. Test your formal logical reasoning by selecting the right cards to verify a conditional rule.",
+    keywords: ["wason selection task", "logic test online", "conditional reasoning test", "card selection puzzle"],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "wason-selection",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "syllogism-test",
+    title: "Syllogism Test",
+    metaTitle: "Syllogism Test — Free Online Logical Reasoning Test",
+    shortTitle: "Syllogism",
+    category: "IQ & Logic",
+    icon: "📐",
+    shortDescription: "Judge whether conclusions logically follow from their premises, independent of real-world truth.",
+    metaDescription:
+      "Free online Syllogism Test. Judge whether logical conclusions truly follow from their premises, testing pure deductive reasoning.",
+    keywords: ["syllogism test", "logical reasoning test online", "deductive reasoning test", "logic puzzle test"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "syllogism",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "numerical-stroop-test",
+    title: "Numerical Stroop Test",
+    metaTitle: "Numerical Stroop Test — Free Online Number Size Test",
+    shortTitle: "Numerical Stroop",
+    category: "Perception",
+    icon: "🔢",
+    shortDescription: "Click the numerically larger digit while ignoring its physical size, which sometimes conflicts.",
+    metaDescription:
+      "Free online Numerical Stroop Test. Measure interference between numerical value and physical size judgments.",
+    keywords: ["numerical stroop test", "number size congruity test", "stroop effect numbers", "cognitive interference test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "numerical-stroop",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "emotional-stroop-test",
+    title: "Emotional Stroop Test",
+    metaTitle: "Emotional Stroop Test — Free Online Emotional Interference Test",
+    shortTitle: "Emotional Stroop",
+    category: "Perception",
+    icon: "💭",
+    shortDescription: "Name the ink color of emotionally charged and neutral words to measure emotional interference.",
+    metaDescription:
+      "Free online Emotional Stroop Test. Measure how emotionally charged words slow down your ink-color naming speed.",
+    keywords: ["emotional stroop test", "emotional interference test online", "stroop effect emotion", "attention bias test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "emotional-stroop",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "navon-test",
+    title: "Navon Test",
+    metaTitle: "Navon Test — Free Online Global-Local Attention Test",
+    shortTitle: "Navon Test",
+    category: "Perception",
+    icon: "🔠",
+    shortDescription: "Identify large letters made of small letters, switching between global and local processing.",
+    metaDescription:
+      "Free online Navon Test. Measure global versus local visual processing using large letters composed of smaller letters.",
+    keywords: ["navon test", "global local processing test", "navon figures test", "visual attention test online"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "navon",
+    scoreDirection: "lower",
+  },
+  {
+    slug: "negative-priming-test",
+    title: "Negative Priming Test",
+    metaTitle: "Negative Priming Test — Free Online Inhibition Test",
+    shortTitle: "Negative Priming",
+    category: "Focus & Attention",
+    icon: "🔵",
+    shortDescription: "Click the target shape each round — sometimes the previous distractor becomes the new target.",
+    metaDescription:
+      "Free online Negative Priming Test. Measure how ignoring a distractor slows you down when it later becomes the target.",
+    keywords: ["negative priming test", "inhibition test online", "selective attention test", "cognitive inhibition test"],
+    estTime: "2 min",
+    difficulty: "Hard",
+    componentKey: "negative-priming",
+    scoreDirection: "lower",
   },
 ];
 
