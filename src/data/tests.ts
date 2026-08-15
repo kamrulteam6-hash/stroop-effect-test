@@ -2033,13 +2033,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "hermann-grid-illusion-test",
     title: "Hermann Grid Illusion Test",
-    metaTitle: "Hermann Grid Illusion Test — Free Online Visual Perception Test",
+    metaTitle: "Hermann Grid Illusion Test – See the Phantom Spots",
     shortTitle: "Hermann Grid",
     category: "Perception",
     icon: "⬜",
     shortDescription: "Click highlighted intersections on a Hermann grid while ignoring the illusory phantom gray dots.",
     metaDescription:
-      "Free online Hermann Grid Illusion Test. See the classic phantom dots illusion while testing your visual search speed at grid intersections.",
+      "Take a free Hermann Grid Illusion Test online. View classic and modified grids, report phantom intersection spots, and explore how line geometry changes the effect.",
     keywords: ["hermann grid illusion test", "scintillating grid test", "optical illusion test online", "visual perception test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2049,13 +2049,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "kanizsa-triangle-test",
     title: "Kanizsa Triangle Test",
-    metaTitle: "Kanizsa Triangle Test — Free Online Illusory Contour Test",
+    metaTitle: "Kanizsa Triangle Test – Free Illusory Contour Test",
     shortTitle: "Kanizsa Triangle",
     category: "Perception",
     icon: "🔺",
     shortDescription: "Decide whether three Pac-Man shapes form an illusory triangle in your perception, as fast as possible.",
     metaDescription:
-      "Free online Kanizsa Triangle Test. Measure how quickly you perceive illusory contours formed by inducing shapes.",
+      "Take a free Kanizsa Triangle Test online. See whether aligned visual fragments create a triangle with edges and brightness that are not physically drawn.",
     keywords: ["kanizsa triangle test", "illusory contour test online", "optical illusion test", "gestalt perception test"],
     estTime: "2 min",
     difficulty: "Medium",
@@ -2065,13 +2065,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "motion-aftereffect-test",
     title: "Motion Aftereffect Test",
-    metaTitle: "Motion Aftereffect Test — Free Online Waterfall Illusion Test",
+    metaTitle: "Motion Aftereffect Test – Free Waterfall Illusion",
     shortTitle: "Motion Aftereffect",
     category: "Perception",
     icon: "🌊",
     shortDescription: "Stare at a moving pattern, then time how long illusory motion continues on a stationary pattern.",
     metaDescription:
-      "Free online Motion Aftereffect Test (waterfall illusion). Time how long illusory motion persists after adapting to a moving pattern.",
+      "Take a free Motion Aftereffect Test online. Adapt to moving patterns, then view a stationary image and experience illusory motion in the opposite direction.",
     keywords: ["motion aftereffect test", "waterfall illusion test online", "motion illusion test", "visual adaptation test"],
     estTime: "1 min",
     difficulty: "Easy",
@@ -2081,13 +2081,13 @@ export const tests: TestDefinition[] = [
   {
     slug: "sound-localization-test",
     title: "Sound Localization Test",
-    metaTitle: "Sound Localization Test — Free Online Stereo Hearing Test",
+    metaTitle: "Sound Localization Test – Free Left Right Hearing Test",
     shortTitle: "Sound Localization",
     category: "Hearing",
     icon: "🎧",
     shortDescription: "Judge where a stereo-panned tone comes from between your left and right ear across several rounds.",
     metaDescription:
-      "Free online Sound Localization Test. Measure how accurately you can judge the direction of a stereo-panned sound.",
+      "Take a free Sound Localization Test with stereo headphones. Use interaural time and level differences to judge whether sounds are shifted left or right.",
     keywords: ["sound localization test", "stereo hearing test online", "auditory localization test", "spatial hearing test"],
     estTime: "2 min",
     difficulty: "Easy",
