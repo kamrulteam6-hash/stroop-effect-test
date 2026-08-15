@@ -140,6 +140,14 @@ import { LonelinessTest } from "@/components/tests/LonelinessTest";
 import { ProcrastinationTest } from "@/components/tests/ProcrastinationTest";
 import { DarkTriadTest } from "@/components/tests/DarkTriadTest";
 import { DarkTetradTest } from "@/components/tests/DarkTetradTest";
+import { AssertivenessTest } from "@/components/tests/AssertivenessTest";
+import { PeoplePleasingTest } from "@/components/tests/PeoplePleasingTest";
+import { EmotionalMaturityTest } from "@/components/tests/EmotionalMaturityTest";
+import { EmotionalRegulationTest } from "@/components/tests/EmotionalRegulationTest";
+import { ConflictStyleTest } from "@/components/tests/ConflictStyleTest";
+import { CommunicationStyleTest } from "@/components/tests/CommunicationStyleTest";
+import { LeadershipStyleTest } from "@/components/tests/LeadershipStyleTest";
+import { DecisionMakingStyleTest } from "@/components/tests/DecisionMakingStyleTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -282,4 +290,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "procrastination-screener": ProcrastinationTest,
   "dark-triad-screener": DarkTriadTest,
   "dark-tetrad-screener": DarkTetradTest,
+  "assertiveness-screener": AssertivenessTest,
+  "people-pleasing-screener": PeoplePleasingTest,
+  "emotional-maturity-screener": EmotionalMaturityTest,
+  "emotional-regulation-screener": EmotionalRegulationTest,
+  "conflict-style": ConflictStyleTest,
+  "communication-style": CommunicationStyleTest,
+  "leadership-style": LeadershipStyleTest,
+  "decision-making-style": DecisionMakingStyleTest,
 };

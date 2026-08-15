@@ -139,6 +139,14 @@ import { content as lonelinessTest } from "@/data/seoContent/loneliness-test";
 import { content as procrastinationTest } from "@/data/seoContent/procrastination-test";
 import { content as darkTriadTest } from "@/data/seoContent/dark-triad-test";
 import { content as darkTetradTest } from "@/data/seoContent/dark-tetrad-test";
+import { content as assertivenessTest } from "@/data/seoContent/assertiveness-test";
+import { content as peoplePleasingTest } from "@/data/seoContent/people-pleasing-test";
+import { content as emotionalMaturityTest } from "@/data/seoContent/emotional-maturity-test";
+import { content as emotionalRegulationTest } from "@/data/seoContent/emotional-regulation-test";
+import { content as conflictStyleTest } from "@/data/seoContent/conflict-style-test";
+import { content as communicationStyleTest } from "@/data/seoContent/communication-style-test";
+import { content as leadershipStyleTest } from "@/data/seoContent/leadership-style-test";
+import { content as decisionMakingStyleTest } from "@/data/seoContent/decision-making-style-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -281,4 +289,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "procrastination-test": procrastinationTest,
   "dark-triad-test": darkTriadTest,
   "dark-tetrad-test": darkTetradTest,
+  "assertiveness-test": assertivenessTest,
+  "people-pleasing-test": peoplePleasingTest,
+  "emotional-maturity-test": emotionalMaturityTest,
+  "emotional-regulation-test": emotionalRegulationTest,
+  "conflict-style-test": conflictStyleTest,
+  "communication-style-test": communicationStyleTest,
+  "leadership-style-test": leadershipStyleTest,
+  "decision-making-style-test": decisionMakingStyleTest,
 };

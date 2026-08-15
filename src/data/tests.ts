@@ -151,7 +151,15 @@ export type ComponentKey =
   | "loneliness-screener"
   | "procrastination-screener"
   | "dark-triad-screener"
-  | "dark-tetrad-screener";
+  | "dark-tetrad-screener"
+  | "assertiveness-screener"
+  | "people-pleasing-screener"
+  | "emotional-maturity-screener"
+  | "emotional-regulation-screener"
+  | "conflict-style"
+  | "communication-style"
+  | "leadership-style"
+  | "decision-making-style";
 
 export interface TestDefinition {
   slug: string;
@@ -2646,6 +2654,118 @@ export const tests: TestDefinition[] = [
     estTime: "4 min",
     difficulty: "Easy",
     componentKey: "dark-tetrad-screener",
+  },
+  {
+    slug: "assertiveness-test",
+    title: "Assertiveness Test",
+    metaTitle: "Assertiveness Test – Free Online Assertiveness Quiz",
+    shortTitle: "Assertiveness Test",
+    category: "Personality",
+    icon: "🗯️",
+    shortDescription: "Answer 10 short statements about how you express your needs and opinions to others.",
+    metaDescription: "Take a free Assertiveness Test online. Answer short statements about expressing needs and opinions for an informal assertiveness score.",
+    keywords: ["assertiveness test", "assertiveness quiz online", "am i assertive quiz", "assertive communication test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "assertiveness-screener",
+  },
+  {
+    slug: "people-pleasing-test",
+    title: "People-Pleasing Test",
+    metaTitle: "People-Pleasing Test – Free Online Screening",
+    shortTitle: "People-Pleasing",
+    category: "Personality",
+    icon: "🙂",
+    shortDescription: "Answer 10 short statements about how you respond to other people's needs and expectations.",
+    metaDescription: "Take a free People-Pleasing Test online. Answer short statements about prioritizing others' needs for an informal people-pleasing score.",
+    keywords: ["people pleasing test", "people pleaser quiz online", "am i a people pleaser quiz", "fawn response test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "people-pleasing-screener",
+  },
+  {
+    slug: "emotional-maturity-test",
+    title: "Emotional Maturity Test",
+    metaTitle: "Emotional Maturity Test – Free Online Quiz",
+    shortTitle: "Emotional Maturity",
+    category: "Personality",
+    icon: "🌳",
+    shortDescription: "Answer 10 short statements about how you handle emotional situations and responsibility.",
+    metaDescription: "Take a free Emotional Maturity Test online. Answer short statements about composure and accountability for an informal maturity score.",
+    keywords: ["emotional maturity test", "emotional maturity quiz online", "am i emotionally mature quiz", "maturity test"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "emotional-maturity-screener",
+  },
+  {
+    slug: "emotional-regulation-test",
+    title: "Emotional Regulation Test",
+    metaTitle: "Emotional Regulation Test – Free Online Quiz",
+    shortTitle: "Emotional Regulation",
+    category: "Personality",
+    icon: "🌡️",
+    shortDescription: "Answer 10 short statements about how you manage strong emotions when they arise.",
+    metaDescription: "Take a free Emotional Regulation Test online. Answer short statements about managing strong emotions for an informal regulation score.",
+    keywords: ["emotional regulation test", "emotion regulation quiz online", "self regulation test", "managing emotions quiz"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "emotional-regulation-screener",
+  },
+  {
+    slug: "conflict-style-test",
+    title: "Conflict Style Test",
+    metaTitle: "Conflict Style Test – Free Online Conflict Quiz",
+    shortTitle: "Conflict Style",
+    category: "Personality",
+    icon: "🤺",
+    shortDescription: "Answer 15 short statements about how you behave during disagreements to find your conflict style.",
+    metaDescription: "Take a free Conflict Style Test online. Answer short statements about disagreements to discover your avoiding, competing, or collaborating style.",
+    keywords: ["conflict style test", "conflict resolution quiz online", "conflict management style test", "thomas kilmann test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "conflict-style",
+  },
+  {
+    slug: "communication-style-test",
+    title: "Communication Style Test",
+    metaTitle: "Communication Style Test – Free Online Quiz",
+    shortTitle: "Communication Style",
+    category: "Personality",
+    icon: "💬",
+    shortDescription: "Answer 12 short statements about how you express yourself to find your communication style.",
+    metaDescription: "Take a free Communication Style Test online. Answer short statements to discover your passive, aggressive, or assertive communication style.",
+    keywords: ["communication style test", "communication style quiz online", "assertive passive aggressive test", "how do i communicate quiz"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "communication-style",
+  },
+  {
+    slug: "leadership-style-test",
+    title: "Leadership Style Test",
+    metaTitle: "Leadership Style Test – Free Online Quiz",
+    shortTitle: "Leadership Style",
+    category: "Personality",
+    icon: "👔",
+    shortDescription: "Answer 15 short statements about how you lead or would like to lead a team.",
+    metaDescription: "Take a free Leadership Style Test online. Answer short statements to discover your directive, democratic, coaching, or visionary leadership style.",
+    keywords: ["leadership style test", "leadership style quiz online", "what kind of leader am i quiz", "management style test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "leadership-style",
+  },
+  {
+    slug: "decision-making-style-test",
+    title: "Decision-Making Style Test",
+    metaTitle: "Decision-Making Style Test – Free Online Quiz",
+    shortTitle: "Decision-Making Style",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "Answer 15 short statements about how you approach decisions to find your decision-making style.",
+    metaDescription: "Take a free Decision-Making Style Test online. Answer short statements to discover your rational, intuitive, dependent, or spontaneous style.",
+    keywords: ["decision making style test", "decision making quiz online", "how do i make decisions quiz", "decision style test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "decision-making-style",
   },
 ];
 
