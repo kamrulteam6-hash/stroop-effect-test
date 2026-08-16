@@ -179,6 +179,10 @@ import { content as longTermMemoryTest } from "@/data/seoContent/long-term-memor
 import { content as episodicMemoryTest } from "@/data/seoContent/episodic-memory-test";
 import { content as workingMemoryTest } from "@/data/seoContent/working-memory-test";
 import { content as auditoryMemoryTest } from "@/data/seoContent/auditory-memory-test";
+import { content as faceBlindnessTest } from "@/data/seoContent/face-blindness-test";
+import { content as superRecognizerTest } from "@/data/seoContent/super-recognizer-test";
+import { content as hexacoPersonalityTest } from "@/data/seoContent/hexaco-personality-test";
+import { content as discPersonalityTest } from "@/data/seoContent/disc-personality-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -361,4 +365,8 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "episodic-memory-test": episodicMemoryTest,
   "working-memory-test": workingMemoryTest,
   "auditory-memory-test": auditoryMemoryTest,
+  "face-blindness-test": faceBlindnessTest,
+  "super-recognizer-test": superRecognizerTest,
+  "hexaco-personality-test": hexacoPersonalityTest,
+  "disc-personality-test": discPersonalityTest,
 };

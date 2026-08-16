@@ -193,7 +193,11 @@ export type ComponentKey =
   | "long-term-memory"
   | "episodic-memory"
   | "working-memory"
-  | "auditory-memory";
+  | "auditory-memory"
+  | "face-blindness-screener"
+  | "super-recognizer"
+  | "hexaco-personality"
+  | "disc-personality";
 
 export interface TestDefinition {
   slug: string;
@@ -3272,6 +3276,64 @@ export const tests: TestDefinition[] = [
     difficulty: "Medium",
     componentKey: "auditory-memory",
     scoreDirection: "higher",
+  },
+  {
+    slug: "face-blindness-test",
+    title: "Face Blindness Test",
+    metaTitle: "Face Blindness Test – Free Online Screening",
+    shortTitle: "Face Blindness",
+    category: "Mental Health & Wellbeing",
+    icon: "🫥",
+    shortDescription: "Answer 10 short statements about recognizing faces in everyday life for an informal screening.",
+    metaDescription: "Take a free Face Blindness Test online. Answer short statements about everyday face recognition for an informal prosopagnosia screening.",
+    keywords: ["face blindness test", "prosopagnosia test online", "do i have face blindness quiz", "face recognition screening"],
+    estTime: "2 min",
+    difficulty: "Easy",
+    componentKey: "face-blindness-screener",
+  },
+  {
+    slug: "super-recognizer-test",
+    title: "Super Recognizer Test",
+    metaTitle: "Super Recognizer Test – Free Face Memory Test",
+    shortTitle: "Super Recognizer",
+    category: "Memory & Cognition",
+    icon: "🧑‍🤝‍🧑",
+    shortDescription: "Study 8 unique faces, then judge old vs new across 12 trials to measure your face memory.",
+    metaDescription: "Take a free Super Recognizer Test online. Study faces then judge old versus new to measure your face recognition memory ability.",
+    keywords: ["super recognizer test", "face memory test online free", "am i a super recognizer quiz", "face recognition test"],
+    estTime: "2 min",
+    difficulty: "Medium",
+    componentKey: "super-recognizer",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "hexaco-personality-test",
+    title: "HEXACO Personality Test",
+    metaTitle: "HEXACO Personality Test – Free Online Quiz",
+    shortTitle: "HEXACO Personality",
+    category: "Personality",
+    icon: "🔷",
+    shortDescription: "Answer 24 short statements to get your profile across all six HEXACO personality dimensions.",
+    metaDescription: "Take a free HEXACO Personality Test online. Answer short statements to get your profile across Honesty-Humility, Emotionality, and 4 more dimensions.",
+    keywords: ["hexaco personality test", "hexaco test online free", "honesty humility test", "six factor personality test"],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "hexaco-personality",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "disc-personality-test",
+    title: "DISC Personality Test",
+    metaTitle: "DISC Personality Test – Free Online Quiz",
+    shortTitle: "DISC Personality",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "Answer 12 short statements to discover your primary DISC style: D, I, S, or C.",
+    metaDescription: "Take a free DISC Personality Test online. Answer short statements to discover your Dominance, Influence, Steadiness, or Conscientiousness style.",
+    keywords: ["disc personality test", "disc test online free", "disc assessment quiz", "dominance influence steadiness test"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "disc-personality",
   },
 ];
 

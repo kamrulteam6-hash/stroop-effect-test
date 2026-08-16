@@ -180,6 +180,10 @@ import { LongTermMemoryTest } from "@/components/tests/LongTermMemoryTest";
 import { EpisodicMemoryTest } from "@/components/tests/EpisodicMemoryTest";
 import { WorkingMemoryTest } from "@/components/tests/WorkingMemoryTest";
 import { AuditoryMemoryTest } from "@/components/tests/AuditoryMemoryTest";
+import { FaceBlindnessTest } from "@/components/tests/FaceBlindnessTest";
+import { SuperRecognizerTest } from "@/components/tests/SuperRecognizerTest";
+import { HexacoPersonalityTest } from "@/components/tests/HexacoPersonalityTest";
+import { DiscPersonalityTest } from "@/components/tests/DiscPersonalityTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -362,4 +366,8 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "episodic-memory": EpisodicMemoryTest,
   "working-memory": WorkingMemoryTest,
   "auditory-memory": AuditoryMemoryTest,
+  "face-blindness-screener": FaceBlindnessTest,
+  "super-recognizer": SuperRecognizerTest,
+  "hexaco-personality": HexacoPersonalityTest,
+  "disc-personality": DiscPersonalityTest,
 };
