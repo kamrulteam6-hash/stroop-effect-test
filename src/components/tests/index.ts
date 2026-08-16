@@ -184,6 +184,14 @@ import { FaceBlindnessTest } from "@/components/tests/FaceBlindnessTest";
 import { SuperRecognizerTest } from "@/components/tests/SuperRecognizerTest";
 import { HexacoPersonalityTest } from "@/components/tests/HexacoPersonalityTest";
 import { DiscPersonalityTest } from "@/components/tests/DiscPersonalityTest";
+import { NumericalReasoningTest } from "@/components/tests/NumericalReasoningTest";
+import { VerbalReasoningTest } from "@/components/tests/VerbalReasoningTest";
+import { AbstractReasoningTest } from "@/components/tests/AbstractReasoningTest";
+import { InductiveReasoningTest } from "@/components/tests/InductiveReasoningTest";
+import { DiagrammaticReasoningTest } from "@/components/tests/DiagrammaticReasoningTest";
+import { MechanicalReasoningTest } from "@/components/tests/MechanicalReasoningTest";
+import { CriticalThinkingTest } from "@/components/tests/CriticalThinkingTest";
+import { DataInterpretationTest } from "@/components/tests/DataInterpretationTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -370,4 +378,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "super-recognizer": SuperRecognizerTest,
   "hexaco-personality": HexacoPersonalityTest,
   "disc-personality": DiscPersonalityTest,
+  "numerical-reasoning": NumericalReasoningTest,
+  "verbal-reasoning": VerbalReasoningTest,
+  "abstract-reasoning": AbstractReasoningTest,
+  "inductive-reasoning": InductiveReasoningTest,
+  "diagrammatic-reasoning": DiagrammaticReasoningTest,
+  "mechanical-reasoning": MechanicalReasoningTest,
+  "critical-thinking-quiz": CriticalThinkingTest,
+  "data-interpretation": DataInterpretationTest,
 };

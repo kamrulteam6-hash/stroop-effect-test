@@ -183,6 +183,14 @@ import { content as faceBlindnessTest } from "@/data/seoContent/face-blindness-t
 import { content as superRecognizerTest } from "@/data/seoContent/super-recognizer-test";
 import { content as hexacoPersonalityTest } from "@/data/seoContent/hexaco-personality-test";
 import { content as discPersonalityTest } from "@/data/seoContent/disc-personality-test";
+import { content as numericalReasoningTest } from "@/data/seoContent/numerical-reasoning-test";
+import { content as verbalReasoningTest } from "@/data/seoContent/verbal-reasoning-test";
+import { content as abstractReasoningTest } from "@/data/seoContent/abstract-reasoning-test";
+import { content as inductiveReasoningTest } from "@/data/seoContent/inductive-reasoning-test";
+import { content as diagrammaticReasoningTest } from "@/data/seoContent/diagrammatic-reasoning-test";
+import { content as mechanicalReasoningTest } from "@/data/seoContent/mechanical-reasoning-test";
+import { content as criticalThinkingTest } from "@/data/seoContent/critical-thinking-test";
+import { content as dataInterpretationTest } from "@/data/seoContent/data-interpretation-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -369,4 +377,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "super-recognizer-test": superRecognizerTest,
   "hexaco-personality-test": hexacoPersonalityTest,
   "disc-personality-test": discPersonalityTest,
+  "numerical-reasoning-test": numericalReasoningTest,
+  "verbal-reasoning-test": verbalReasoningTest,
+  "abstract-reasoning-test": abstractReasoningTest,
+  "inductive-reasoning-test": inductiveReasoningTest,
+  "diagrammatic-reasoning-test": diagrammaticReasoningTest,
+  "mechanical-reasoning-test": mechanicalReasoningTest,
+  "critical-thinking-test": criticalThinkingTest,
+  "data-interpretation-test": dataInterpretationTest,
 };

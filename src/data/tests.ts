@@ -197,7 +197,15 @@ export type ComponentKey =
   | "face-blindness-screener"
   | "super-recognizer"
   | "hexaco-personality"
-  | "disc-personality";
+  | "disc-personality"
+  | "numerical-reasoning"
+  | "verbal-reasoning"
+  | "abstract-reasoning"
+  | "inductive-reasoning"
+  | "diagrammatic-reasoning"
+  | "mechanical-reasoning"
+  | "critical-thinking-quiz"
+  | "data-interpretation";
 
 export interface TestDefinition {
   slug: string;
@@ -3334,6 +3342,126 @@ export const tests: TestDefinition[] = [
     estTime: "3 min",
     difficulty: "Easy",
     componentKey: "disc-personality",
+  },
+  {
+    slug: "numerical-reasoning-test",
+    title: "Numerical Reasoning Test",
+    metaTitle: "Numerical Reasoning Test – Free Online Quiz",
+    shortTitle: "Numerical Reasoning",
+    category: "IQ & Logic",
+    icon: "🔢",
+    shortDescription: "Answer 12 multiple-choice questions covering percentages, ratios, averages, and algebra.",
+    metaDescription: "Take a free Numerical Reasoning Test online. Answer multiple-choice questions on percentages, ratios, averages, and algebra with instant scoring.",
+    keywords: ["numerical reasoning test", "numerical reasoning test free", "aptitude test numerical", "maths reasoning quiz online"],
+    estTime: "8 min",
+    difficulty: "Medium",
+    componentKey: "numerical-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "verbal-reasoning-test",
+    title: "Verbal Reasoning Test",
+    metaTitle: "Verbal Reasoning Test – Free Online Quiz",
+    shortTitle: "Verbal Reasoning",
+    category: "IQ & Logic",
+    icon: "📖",
+    shortDescription: "Judge short passages as True, False, or Cannot Say using only the information given.",
+    metaDescription: "Take a free Verbal Reasoning Test online using the classic True/False/Cannot Say passage format, with instant scoring and explanations.",
+    keywords: ["verbal reasoning test", "verbal reasoning test free", "true false cannot say test", "aptitude test verbal"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "verbal-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "abstract-reasoning-test",
+    title: "Abstract Reasoning Test",
+    metaTitle: "Abstract Reasoning Test – Free Online Quiz",
+    shortTitle: "Abstract Reasoning",
+    category: "IQ & Logic",
+    icon: "🔷",
+    shortDescription: "Spot the pattern in shape sequences and pick the option that logically continues it.",
+    metaDescription: "Take a free Abstract Reasoning Test online. Identify shape and pattern sequences to measure non-verbal logical reasoning ability.",
+    keywords: ["abstract reasoning test", "abstract reasoning test free", "pattern recognition test", "non-verbal reasoning quiz"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "abstract-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "inductive-reasoning-test",
+    title: "Inductive Reasoning Test",
+    metaTitle: "Inductive Reasoning Test – Free Online Quiz",
+    shortTitle: "Inductive Reasoning",
+    category: "IQ & Logic",
+    icon: "🧩",
+    shortDescription: "Work out the underlying rule behind each set of examples, then apply it to a new case.",
+    metaDescription: "Take a free Inductive Reasoning Test online. Identify the rule behind each set of examples and apply it to new cases with instant scoring.",
+    keywords: ["inductive reasoning test", "inductive reasoning test free", "rule based reasoning quiz", "aptitude test inductive"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "inductive-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "diagrammatic-reasoning-test",
+    title: "Diagrammatic Reasoning Test",
+    metaTitle: "Diagrammatic Reasoning Test – Free Online Quiz",
+    shortTitle: "Diagrammatic Reasoning",
+    category: "IQ & Logic",
+    icon: "🗺️",
+    shortDescription: "Trace simple flowcharts and process diagrams to work out what the process outputs.",
+    metaDescription: "Take a free Diagrammatic Reasoning Test online. Trace flowchart-style logic problems to measure process and systems reasoning ability.",
+    keywords: ["diagrammatic reasoning test", "diagrammatic reasoning test free", "flowchart logic quiz", "aptitude test diagrammatic"],
+    estTime: "8 min",
+    difficulty: "Hard",
+    componentKey: "diagrammatic-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "mechanical-reasoning-test",
+    title: "Mechanical Reasoning Test",
+    metaTitle: "Mechanical Reasoning Test – Free Online Quiz",
+    shortTitle: "Mechanical Reasoning",
+    category: "IQ & Logic",
+    icon: "⚙️",
+    shortDescription: "Answer questions about gears, levers, pulleys, and everyday mechanical systems.",
+    metaDescription: "Take a free Mechanical Reasoning Test online. Answer questions about gears, levers, and pulleys using everyday physics intuition.",
+    keywords: ["mechanical reasoning test", "mechanical reasoning test free", "mechanical aptitude test", "gears levers pulleys quiz"],
+    estTime: "6 min",
+    difficulty: "Medium",
+    componentKey: "mechanical-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "critical-thinking-test",
+    title: "Critical Thinking Test",
+    metaTitle: "Critical Thinking Test – Free Online Quiz",
+    shortTitle: "Critical Thinking",
+    category: "IQ & Logic",
+    icon: "🧠",
+    shortDescription: "Spot logical flaws, fallacies, and unfounded assumptions in short arguments and scenarios.",
+    metaDescription: "Take a free Critical Thinking Test online. Spot logical fallacies and flawed arguments across 10 scenario-based questions with explanations.",
+    keywords: ["critical thinking test", "critical thinking test free", "logical fallacy quiz", "critical thinking assessment online"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "critical-thinking-quiz",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "data-interpretation-test",
+    title: "Data Interpretation Test",
+    metaTitle: "Data Interpretation Test – Free Online Quiz",
+    shortTitle: "Data Interpretation",
+    category: "IQ & Logic",
+    icon: "📊",
+    shortDescription: "Read small data tables and charts and answer questions using only the data given.",
+    metaDescription: "Take a free Data Interpretation Test online. Read tables, charts, and figures to answer numerical questions with instant scoring.",
+    keywords: ["data interpretation test", "data interpretation test free", "data interpretation quiz online", "aptitude test data interpretation"],
+    estTime: "8 min",
+    difficulty: "Medium",
+    componentKey: "data-interpretation",
+    scoreDirection: "higher",
   },
 ];
 
