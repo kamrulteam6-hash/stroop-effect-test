@@ -172,6 +172,14 @@ import { CognitiveFlexibilityTest } from "@/components/tests/CognitiveFlexibilit
 import { ExecutiveFunctionTest } from "@/components/tests/ExecutiveFunctionTest";
 import { ProblemSolvingTest } from "@/components/tests/ProblemSolvingTest";
 import { CommonSenseTest } from "@/components/tests/CommonSenseTest";
+import { DecisionSpeedTest } from "@/components/tests/DecisionSpeedTest";
+import { ObservationSkillsTest } from "@/components/tests/ObservationSkillsTest";
+import { VisualAttentionTest } from "@/components/tests/VisualAttentionTest";
+import { ShortTermMemoryTest } from "@/components/tests/ShortTermMemoryTest";
+import { LongTermMemoryTest } from "@/components/tests/LongTermMemoryTest";
+import { EpisodicMemoryTest } from "@/components/tests/EpisodicMemoryTest";
+import { WorkingMemoryTest } from "@/components/tests/WorkingMemoryTest";
+import { AuditoryMemoryTest } from "@/components/tests/AuditoryMemoryTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -346,4 +354,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "executive-function": ExecutiveFunctionTest,
   "problem-solving-quiz": ProblemSolvingTest,
   "common-sense-quiz": CommonSenseTest,
+  "decision-speed": DecisionSpeedTest,
+  "observation-skills": ObservationSkillsTest,
+  "visual-attention": VisualAttentionTest,
+  "short-term-memory": ShortTermMemoryTest,
+  "long-term-memory": LongTermMemoryTest,
+  "episodic-memory": EpisodicMemoryTest,
+  "working-memory": WorkingMemoryTest,
+  "auditory-memory": AuditoryMemoryTest,
 };

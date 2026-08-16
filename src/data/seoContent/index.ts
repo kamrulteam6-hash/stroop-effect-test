@@ -171,6 +171,14 @@ import { content as cognitiveFlexibilityTest } from "@/data/seoContent/cognitive
 import { content as executiveFunctionTest } from "@/data/seoContent/executive-function-test";
 import { content as problemSolvingTest } from "@/data/seoContent/problem-solving-test";
 import { content as commonSenseTest } from "@/data/seoContent/common-sense-test";
+import { content as decisionSpeedTest } from "@/data/seoContent/decision-speed-test";
+import { content as observationSkillsTest } from "@/data/seoContent/observation-skills-test";
+import { content as visualAttentionTest } from "@/data/seoContent/visual-attention-test";
+import { content as shortTermMemoryTest } from "@/data/seoContent/short-term-memory-test";
+import { content as longTermMemoryTest } from "@/data/seoContent/long-term-memory-test";
+import { content as episodicMemoryTest } from "@/data/seoContent/episodic-memory-test";
+import { content as workingMemoryTest } from "@/data/seoContent/working-memory-test";
+import { content as auditoryMemoryTest } from "@/data/seoContent/auditory-memory-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -345,4 +353,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "executive-function-test": executiveFunctionTest,
   "problem-solving-test": problemSolvingTest,
   "common-sense-test": commonSenseTest,
+  "decision-speed-test": decisionSpeedTest,
+  "observation-skills-test": observationSkillsTest,
+  "visual-attention-test": visualAttentionTest,
+  "short-term-memory-test": shortTermMemoryTest,
+  "long-term-memory-test": longTermMemoryTest,
+  "episodic-memory-test": episodicMemoryTest,
+  "working-memory-test": workingMemoryTest,
+  "auditory-memory-test": auditoryMemoryTest,
 };
