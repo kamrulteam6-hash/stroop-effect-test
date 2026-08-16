@@ -206,6 +206,14 @@ import { VerbalAnalogyTest } from "@/components/tests/VerbalAnalogyTest";
 import { CareerAptitudeTest } from "@/components/tests/CareerAptitudeTest";
 import { HollandCodeTest } from "@/components/tests/HollandCodeTest";
 import { SpatialMemoryTest } from "@/components/tests/SpatialMemoryTest";
+import { PerfectionismTest } from "@/components/tests/PerfectionismTest";
+import { ResilienceTest } from "@/components/tests/ResilienceTest";
+import { GritTest } from "@/components/tests/GritTest";
+import { LocusOfControlTest } from "@/components/tests/LocusOfControlTest";
+import { OptimismTest } from "@/components/tests/OptimismTest";
+import { SelfControlTest } from "@/components/tests/SelfControlTest";
+import { LearningStyleTest } from "@/components/tests/LearningStyleTest";
+import { CareerPersonalityTest } from "@/components/tests/CareerPersonalityTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -414,4 +422,12 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "career-aptitude": CareerAptitudeTest,
   "holland-code": HollandCodeTest,
   "spatial-memory": SpatialMemoryTest,
+  "perfectionism-screener": PerfectionismTest,
+  "resilience-screener": ResilienceTest,
+  "grit-screener": GritTest,
+  "locus-of-control": LocusOfControlTest,
+  "optimism-screener": OptimismTest,
+  "self-control-screener": SelfControlTest,
+  "learning-style": LearningStyleTest,
+  "career-personality": CareerPersonalityTest,
 };

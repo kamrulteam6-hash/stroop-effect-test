@@ -219,7 +219,15 @@ export type ComponentKey =
   | "verbal-analogy"
   | "career-aptitude"
   | "holland-code"
-  | "spatial-memory";
+  | "spatial-memory"
+  | "perfectionism-screener"
+  | "resilience-screener"
+  | "grit-screener"
+  | "locus-of-control"
+  | "optimism-screener"
+  | "self-control-screener"
+  | "learning-style"
+  | "career-personality";
 
 export interface TestDefinition {
   slug: string;
@@ -3685,6 +3693,118 @@ export const tests: TestDefinition[] = [
     difficulty: "Medium",
     componentKey: "spatial-memory",
     scoreDirection: "higher",
+  },
+  {
+    slug: "perfectionism-test",
+    title: "Perfectionism Test",
+    metaTitle: "Perfectionism Test – Free Online Self-Assessment",
+    shortTitle: "Perfectionism",
+    category: "Personality",
+    icon: "🎯",
+    shortDescription: "Answer 10 short statements about your standards and self-expectations.",
+    metaDescription: "Take a free Perfectionism Test online. Answer 10 short statements to get an instant, informal self-report result.",
+    keywords: ["perfectionism test", "perfectionism test free", "am i a perfectionist quiz", "perfectionism self assessment"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "perfectionism-screener",
+  },
+  {
+    slug: "resilience-test",
+    title: "Resilience Test",
+    metaTitle: "Resilience Test – Free Online Self-Assessment",
+    shortTitle: "Resilience",
+    category: "Personality",
+    icon: "🌱",
+    shortDescription: "Answer 10 short statements about how you typically respond to setbacks and stress.",
+    metaDescription: "Take a free Resilience Test online. Answer 10 short statements to get an instant, informal self-report result.",
+    keywords: ["resilience test", "resilience test free", "how resilient am i quiz", "resilience self assessment"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "resilience-screener",
+  },
+  {
+    slug: "grit-test",
+    title: "Grit Test",
+    metaTitle: "Grit Test – Free Online Self-Assessment",
+    shortTitle: "Grit",
+    category: "Personality",
+    icon: "🔥",
+    shortDescription: "Answer 10 short statements about your persistence and passion for long-term goals.",
+    metaDescription: "Take a free Grit Test online inspired by Angela Duckworth's research. Answer 10 short statements to get an instant result.",
+    keywords: ["grit test", "grit test free", "grit scale quiz", "perseverance test online"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "grit-screener",
+  },
+  {
+    slug: "locus-of-control-test",
+    title: "Locus of Control Test",
+    metaTitle: "Locus of Control Test – Free Online Self-Assessment",
+    shortTitle: "Locus of Control",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "Answer 10 short statements about how much control you feel you have over life's outcomes.",
+    metaDescription: "Take a free Locus of Control Test online. Discover whether you lean internal or external, with instant results.",
+    keywords: ["locus of control test", "locus of control test free", "internal external locus of control quiz", "locus of control self assessment"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "locus-of-control",
+  },
+  {
+    slug: "optimism-test",
+    title: "Optimism Test",
+    metaTitle: "Optimism Test – Free Online Self-Assessment",
+    shortTitle: "Optimism",
+    category: "Personality",
+    icon: "☀️",
+    shortDescription: "Answer 10 short statements about how you typically view the future and uncertain situations.",
+    metaDescription: "Take a free Optimism Test online. Answer 10 short statements to get an instant, informal self-report result.",
+    keywords: ["optimism test", "optimism test free", "am i an optimist quiz", "optimism pessimism test online"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "optimism-screener",
+  },
+  {
+    slug: "self-control-test",
+    title: "Self-Control Test",
+    metaTitle: "Self-Control Test – Free Online Self-Assessment",
+    shortTitle: "Self-Control",
+    category: "Personality",
+    icon: "🛑",
+    shortDescription: "Answer 10 short statements about how well you resist temptation and stick to your goals.",
+    metaDescription: "Take a free Self-Control Test online. Answer 10 short statements to get an instant, informal self-report result.",
+    keywords: ["self control test", "self control test free", "self discipline quiz", "self control self assessment"],
+    estTime: "3 min",
+    difficulty: "Easy",
+    componentKey: "self-control-screener",
+  },
+  {
+    slug: "learning-style-test",
+    title: "Learning Style Test",
+    metaTitle: "Learning Style Test – Free VARK Quiz",
+    shortTitle: "Learning Style",
+    category: "Personality",
+    icon: "🎓",
+    shortDescription: "Answer 12 short statements to discover your primary learning style: Visual, Auditory, Reading/Writing, or Kinesthetic.",
+    metaDescription: "Take a free Learning Style Test (VARK) online. Discover whether you learn best visually, auditorily, by reading/writing, or hands-on.",
+    keywords: ["learning style test", "vark test free", "what is my learning style quiz", "visual auditory kinesthetic test"],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "learning-style",
+  },
+  {
+    slug: "career-personality-test",
+    title: "Career Personality Test",
+    metaTitle: "Career Personality Test – Free Online Quiz",
+    shortTitle: "Career Personality",
+    category: "Personality",
+    icon: "💼",
+    shortDescription: "Answer 12 short statements about how you naturally show up at work to discover your career personality type.",
+    metaDescription: "Take a free Career Personality Test online. Discover whether you're a Leader, Analyst, Creator, or Supporter at work.",
+    keywords: ["career personality test", "career personality test free", "what is my work personality quiz", "career personality type test"],
+    estTime: "4 min",
+    difficulty: "Easy",
+    componentKey: "career-personality",
   },
 ];
 

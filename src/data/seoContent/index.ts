@@ -205,6 +205,14 @@ import { content as verbalAnalogyTest } from "@/data/seoContent/verbal-analogy-t
 import { content as careerAptitudeTest } from "@/data/seoContent/career-aptitude-test";
 import { content as hollandCodeTest } from "@/data/seoContent/holland-code-test";
 import { content as spatialMemoryTest } from "@/data/seoContent/spatial-memory-test";
+import { content as perfectionismTest } from "@/data/seoContent/perfectionism-test";
+import { content as resilienceTest } from "@/data/seoContent/resilience-test";
+import { content as gritTest } from "@/data/seoContent/grit-test";
+import { content as locusOfControlTest } from "@/data/seoContent/locus-of-control-test";
+import { content as optimismTest } from "@/data/seoContent/optimism-test";
+import { content as selfControlTest } from "@/data/seoContent/self-control-test";
+import { content as learningStyleTest } from "@/data/seoContent/learning-style-test";
+import { content as careerPersonalityTest } from "@/data/seoContent/career-personality-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -413,4 +421,12 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "career-aptitude-test": careerAptitudeTest,
   "holland-code-test": hollandCodeTest,
   "spatial-memory-test": spatialMemoryTest,
+  "perfectionism-test": perfectionismTest,
+  "resilience-test": resilienceTest,
+  "grit-test": gritTest,
+  "locus-of-control-test": locusOfControlTest,
+  "optimism-test": optimismTest,
+  "self-control-test": selfControlTest,
+  "learning-style-test": learningStyleTest,
+  "career-personality-test": careerPersonalityTest,
 };
