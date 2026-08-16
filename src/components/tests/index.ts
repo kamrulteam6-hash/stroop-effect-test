@@ -215,6 +215,7 @@ import { SelfControlTest } from "@/components/tests/SelfControlTest";
 import { LearningStyleTest } from "@/components/tests/LearningStyleTest";
 import { CareerPersonalityTest } from "@/components/tests/CareerPersonalityTest";
 import { SpatialAwarenessTest } from "@/components/tests/SpatialAwarenessTest";
+import { RiasecTest } from "@/components/tests/RiasecTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -432,4 +433,5 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "learning-style": LearningStyleTest,
   "career-personality": CareerPersonalityTest,
   "spatial-awareness": SpatialAwarenessTest,
+  riasec: RiasecTest,
 };

@@ -228,7 +228,8 @@ export type ComponentKey =
   | "self-control-screener"
   | "learning-style"
   | "career-personality"
-  | "spatial-awareness";
+  | "spatial-awareness"
+  | "riasec";
 
 export interface TestDefinition {
   slug: string;
@@ -3654,12 +3655,12 @@ export const tests: TestDefinition[] = [
   {
     slug: "career-aptitude-test",
     title: "Career Aptitude Test",
-    metaTitle: "Career Aptitude Test – Free Online Quiz",
+    metaTitle: "Career Aptitude Test – Free Career Strengths Assessment",
     shortTitle: "Career Aptitude",
     category: "Personality",
     icon: "💼",
     shortDescription: "Answer scenario and skill-based questions to see which career direction fits your strengths.",
-    metaDescription: "Take a free Career Aptitude Test online. Answer skill-based scenarios to discover which broad career direction fits your strengths.",
+    metaDescription: "Take a free Career Aptitude Test online. Compare verbal, numerical, spatial, mechanical, clerical, and reasoning strengths to explore career areas that may fit you.",
     keywords: ["career aptitude test", "career aptitude test free", "career skills quiz", "what career fits me quiz"],
     estTime: "7 min",
     difficulty: "Easy",
@@ -3669,12 +3670,12 @@ export const tests: TestDefinition[] = [
   {
     slug: "holland-code-test",
     title: "Holland Code (RIASEC) Career Test",
-    metaTitle: "Holland Code Test – Free RIASEC Career Quiz",
+    metaTitle: "Holland Code Career Test – Free 3-Letter Career Test",
     shortTitle: "Holland Code",
     category: "Personality",
     icon: "🧭",
     shortDescription: "Answer 18 short statements to discover your RIASEC career type: Realistic, Investigative, Artistic, Social, Enterprising, or Conventional.",
-    metaDescription: "Take a free Holland Code (RIASEC) Test online. Discover your career interest type and see matching career directions instantly.",
+    metaDescription: "Take a free Holland Code Career Test to find your top three RIASEC interests and explore careers related to your Realistic, Investigative, Artistic, Social, Enterprising, and Conventional profile.",
     keywords: ["holland code test", "riasec test free", "holland code career test", "riasec career quiz"],
     estTime: "5 min",
     difficulty: "Easy",
@@ -3796,12 +3797,12 @@ export const tests: TestDefinition[] = [
   {
     slug: "career-personality-test",
     title: "Career Personality Test",
-    metaTitle: "Career Personality Test – Free Online Quiz",
+    metaTitle: "Career Personality Test – Free Work Style Assessment",
     shortTitle: "Career Personality",
     category: "Personality",
     icon: "💼",
     shortDescription: "Answer 12 short statements about how you naturally show up at work to discover your career personality type.",
-    metaDescription: "Take a free Career Personality Test online. Discover whether you're a Leader, Analyst, Creator, or Supporter at work.",
+    metaDescription: "Take a free Career Personality Test online. Explore your work style across reliability, adaptability, social orientation, resilience, initiative, leadership, and more.",
     keywords: ["career personality test", "career personality test free", "what is my work personality quiz", "career personality type test"],
     estTime: "4 min",
     difficulty: "Easy",
@@ -3820,6 +3821,21 @@ export const tests: TestDefinition[] = [
     estTime: "7 min",
     difficulty: "Medium",
     componentKey: "spatial-awareness",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "riasec-test",
+    title: "RIASEC Test",
+    metaTitle: "RIASEC Test – Free Career Interest Test",
+    shortTitle: "RIASEC",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "Rate 24 work activities to get your full six-dimension RIASEC career interest profile.",
+    metaDescription: "Take a free RIASEC Test online. Measure your Realistic, Investigative, Artistic, Social, Enterprising, and Conventional career interests and explore your full profile.",
+    keywords: ["riasec test", "riasec test free", "riasec career interest test", "career interest inventory online"],
+    estTime: "5 min",
+    difficulty: "Easy",
+    componentKey: "riasec",
     scoreDirection: "higher",
   },
 ];
