@@ -212,7 +212,14 @@ export type ComponentKey =
   | "attention-to-detail"
   | "non-verbal-reasoning"
   | "number-series"
-  | "letter-series";
+  | "letter-series"
+  | "error-checking"
+  | "clerical-aptitude"
+  | "situational-judgement"
+  | "verbal-analogy"
+  | "career-aptitude"
+  | "holland-code"
+  | "spatial-memory";
 
 export interface TestDefinition {
   slug: string;
@@ -3573,6 +3580,110 @@ export const tests: TestDefinition[] = [
     estTime: "6 min",
     difficulty: "Medium",
     componentKey: "letter-series",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "error-checking-test",
+    title: "Error Checking Test",
+    metaTitle: "Error Checking Test – Free Online Quiz",
+    shortTitle: "Error Checking",
+    category: "IQ & Logic",
+    icon: "✅",
+    shortDescription: "Compare records, codes, and figures to spot exact matches versus subtle errors.",
+    metaDescription: "Take a free Error Checking Test online. Compare pairs of records and codes to spot errors, in the style of clerical aptitude tests.",
+    keywords: ["error checking test", "error checking test free", "clerical error checking quiz", "data checking aptitude test"],
+    estTime: "6 min",
+    difficulty: "Medium",
+    componentKey: "error-checking",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "clerical-aptitude-test",
+    title: "Clerical Aptitude Test",
+    metaTitle: "Clerical Aptitude Test – Free Online Quiz",
+    shortTitle: "Clerical Aptitude",
+    category: "IQ & Logic",
+    icon: "🗃️",
+    shortDescription: "Answer questions on filing order, data checking, and basic office math skills.",
+    metaDescription: "Take a free Clerical Aptitude Test online covering filing, office math, and record organization, with instant scoring and explanations.",
+    keywords: ["clerical aptitude test", "clerical aptitude test free", "office skills test online", "clerical test practice"],
+    estTime: "8 min",
+    difficulty: "Medium",
+    componentKey: "clerical-aptitude",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "situational-judgement-test",
+    title: "Situational Judgement Test",
+    metaTitle: "Situational Judgement Test – Free Online Quiz",
+    shortTitle: "Situational Judgement",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "Read workplace scenarios and choose the most professional, effective response.",
+    metaDescription: "Take a free Situational Judgement Test online with realistic workplace scenarios and instant feedback on best-practice responses.",
+    keywords: ["situational judgement test", "situational judgement test free", "workplace scenario quiz", "sjt practice test"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "situational-judgement",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "verbal-analogy-test",
+    title: "Verbal Analogy Test",
+    metaTitle: "Verbal Analogy Test – Free Online Quiz",
+    shortTitle: "Verbal Analogy",
+    category: "IQ & Logic",
+    icon: "🔗",
+    shortDescription: "Work out the relationship between word pairs and complete the matching analogy.",
+    metaDescription: "Take a free Verbal Analogy Test online. Solve word-relationship analogies across 12 questions with instant scoring and explanations.",
+    keywords: ["verbal analogy test", "verbal analogy test free", "word analogy quiz online", "analogy aptitude test"],
+    estTime: "6 min",
+    difficulty: "Medium",
+    componentKey: "verbal-analogy",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "career-aptitude-test",
+    title: "Career Aptitude Test",
+    metaTitle: "Career Aptitude Test – Free Online Quiz",
+    shortTitle: "Career Aptitude",
+    category: "Personality",
+    icon: "💼",
+    shortDescription: "Answer scenario and skill-based questions to see which career direction fits your strengths.",
+    metaDescription: "Take a free Career Aptitude Test online. Answer skill-based scenarios to discover which broad career direction fits your strengths.",
+    keywords: ["career aptitude test", "career aptitude test free", "career skills quiz", "what career fits me quiz"],
+    estTime: "7 min",
+    difficulty: "Easy",
+    componentKey: "career-aptitude",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "holland-code-test",
+    title: "Holland Code (RIASEC) Career Test",
+    metaTitle: "Holland Code Test – Free RIASEC Career Quiz",
+    shortTitle: "Holland Code",
+    category: "Personality",
+    icon: "🧭",
+    shortDescription: "Answer 18 short statements to discover your RIASEC career type: Realistic, Investigative, Artistic, Social, Enterprising, or Conventional.",
+    metaDescription: "Take a free Holland Code (RIASEC) Test online. Discover your career interest type and see matching career directions instantly.",
+    keywords: ["holland code test", "riasec test free", "holland code career test", "riasec career quiz"],
+    estTime: "5 min",
+    difficulty: "Easy",
+    componentKey: "holland-code",
+  },
+  {
+    slug: "spatial-memory-test",
+    title: "Spatial Memory Test",
+    metaTitle: "Spatial Memory Test – Free Online Quiz",
+    shortTitle: "Spatial Memory",
+    category: "Memory & Cognition",
+    icon: "📍",
+    shortDescription: "Memorize where a dot flashes, then click the exact spot after a short delay across 8 rounds.",
+    metaDescription: "Take a free Spatial Memory Test online. Memorize and recall precise on-screen locations across 8 rounds with instant accuracy scoring.",
+    keywords: ["spatial memory test", "spatial memory test free", "location memory game", "spatial recall test online"],
+    estTime: "3 min",
+    difficulty: "Medium",
+    componentKey: "spatial-memory",
     scoreDirection: "higher",
   },
 ];

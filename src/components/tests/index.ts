@@ -199,6 +199,13 @@ import { AttentionToDetailTest } from "@/components/tests/AttentionToDetailTest"
 import { NonVerbalReasoningTest } from "@/components/tests/NonVerbalReasoningTest";
 import { NumberSeriesTest } from "@/components/tests/NumberSeriesTest";
 import { LetterSeriesTest } from "@/components/tests/LetterSeriesTest";
+import { ErrorCheckingTest } from "@/components/tests/ErrorCheckingTest";
+import { ClericalAptitudeTest } from "@/components/tests/ClericalAptitudeTest";
+import { SituationalJudgementTest } from "@/components/tests/SituationalJudgementTest";
+import { VerbalAnalogyTest } from "@/components/tests/VerbalAnalogyTest";
+import { CareerAptitudeTest } from "@/components/tests/CareerAptitudeTest";
+import { HollandCodeTest } from "@/components/tests/HollandCodeTest";
+import { SpatialMemoryTest } from "@/components/tests/SpatialMemoryTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -400,4 +407,11 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "non-verbal-reasoning": NonVerbalReasoningTest,
   "number-series": NumberSeriesTest,
   "letter-series": LetterSeriesTest,
+  "error-checking": ErrorCheckingTest,
+  "clerical-aptitude": ClericalAptitudeTest,
+  "situational-judgement": SituationalJudgementTest,
+  "verbal-analogy": VerbalAnalogyTest,
+  "career-aptitude": CareerAptitudeTest,
+  "holland-code": HollandCodeTest,
+  "spatial-memory": SpatialMemoryTest,
 };

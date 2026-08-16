@@ -198,6 +198,13 @@ import { content as attentionToDetailTest } from "@/data/seoContent/attention-to
 import { content as nonVerbalReasoningTest } from "@/data/seoContent/non-verbal-reasoning-test";
 import { content as numberSeriesTest } from "@/data/seoContent/number-series-test";
 import { content as letterSeriesTest } from "@/data/seoContent/letter-series-test";
+import { content as errorCheckingTest } from "@/data/seoContent/error-checking-test";
+import { content as clericalAptitudeTest } from "@/data/seoContent/clerical-aptitude-test";
+import { content as situationalJudgementTest } from "@/data/seoContent/situational-judgement-test";
+import { content as verbalAnalogyTest } from "@/data/seoContent/verbal-analogy-test";
+import { content as careerAptitudeTest } from "@/data/seoContent/career-aptitude-test";
+import { content as hollandCodeTest } from "@/data/seoContent/holland-code-test";
+import { content as spatialMemoryTest } from "@/data/seoContent/spatial-memory-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -399,4 +406,11 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "non-verbal-reasoning-test": nonVerbalReasoningTest,
   "number-series-test": numberSeriesTest,
   "letter-series-test": letterSeriesTest,
+  "error-checking-test": errorCheckingTest,
+  "clerical-aptitude-test": clericalAptitudeTest,
+  "situational-judgement-test": situationalJudgementTest,
+  "verbal-analogy-test": verbalAnalogyTest,
+  "career-aptitude-test": careerAptitudeTest,
+  "holland-code-test": hollandCodeTest,
+  "spatial-memory-test": spatialMemoryTest,
 };
