@@ -227,7 +227,8 @@ export type ComponentKey =
   | "optimism-screener"
   | "self-control-screener"
   | "learning-style"
-  | "career-personality";
+  | "career-personality"
+  | "spatial-awareness";
 
 export interface TestDefinition {
   slug: string;
@@ -3593,12 +3594,12 @@ export const tests: TestDefinition[] = [
   {
     slug: "error-checking-test",
     title: "Error Checking Test",
-    metaTitle: "Error Checking Test – Free Online Quiz",
+    metaTitle: "Error Checking Test – Free Accuracy & Checking Test",
     shortTitle: "Error Checking",
     category: "IQ & Logic",
     icon: "✅",
     shortDescription: "Compare records, codes, and figures to spot exact matches versus subtle errors.",
-    metaDescription: "Take a free Error Checking Test online. Compare pairs of records and codes to spot errors, in the style of clerical aptitude tests.",
+    metaDescription: "Take a free Error Checking Test online. Compare codes, names, numbers, and records to detect substitutions, omissions, insertions, and transposition errors quickly.",
     keywords: ["error checking test", "error checking test free", "clerical error checking quiz", "data checking aptitude test"],
     estTime: "6 min",
     difficulty: "Medium",
@@ -3608,12 +3609,12 @@ export const tests: TestDefinition[] = [
   {
     slug: "clerical-aptitude-test",
     title: "Clerical Aptitude Test",
-    metaTitle: "Clerical Aptitude Test – Free Online Quiz",
+    metaTitle: "Clerical Aptitude Test – Free Office Skills Assessment",
     shortTitle: "Clerical Aptitude",
     category: "IQ & Logic",
     icon: "🗃️",
     shortDescription: "Answer questions on filing order, data checking, and basic office math skills.",
-    metaDescription: "Take a free Clerical Aptitude Test online covering filing, office math, and record organization, with instant scoring and explanations.",
+    metaDescription: "Take a free Clerical Aptitude Test online with filing, alphabetization, code checking, record accuracy, data handling, and basic office reasoning tasks.",
     keywords: ["clerical aptitude test", "clerical aptitude test free", "office skills test online", "clerical test practice"],
     estTime: "8 min",
     difficulty: "Medium",
@@ -3623,12 +3624,12 @@ export const tests: TestDefinition[] = [
   {
     slug: "situational-judgement-test",
     title: "Situational Judgement Test",
-    metaTitle: "Situational Judgement Test – Free Online Quiz",
+    metaTitle: "Situational Judgement Test – Free Workplace SJT Practice",
     shortTitle: "Situational Judgement",
     category: "Personality",
     icon: "🧭",
     shortDescription: "Read workplace scenarios and choose the most professional, effective response.",
-    metaDescription: "Take a free Situational Judgement Test online with realistic workplace scenarios and instant feedback on best-practice responses.",
+    metaDescription: "Take a free Situational Judgement Test online. Read realistic workplace scenarios, compare possible responses, and practice choosing effective professional actions.",
     keywords: ["situational judgement test", "situational judgement test free", "workplace scenario quiz", "sjt practice test"],
     estTime: "7 min",
     difficulty: "Medium",
@@ -3805,6 +3806,21 @@ export const tests: TestDefinition[] = [
     estTime: "4 min",
     difficulty: "Easy",
     componentKey: "career-personality",
+  },
+  {
+    slug: "spatial-awareness-test",
+    title: "Spatial Awareness Test",
+    metaTitle: "Spatial Awareness Test – Free Spatial Orientation Test",
+    shortTitle: "Spatial Awareness",
+    category: "IQ & Logic",
+    icon: "🧭",
+    shortDescription: "Judge position, direction, perspective, and orientation as a viewpoint changes.",
+    metaDescription: "Take a free Spatial Awareness Test online. Judge position, direction, perspective, distance, and orientation to test how accurately you understand objects in space.",
+    keywords: ["spatial awareness test", "spatial awareness test free", "spatial orientation quiz", "perspective taking test online"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "spatial-awareness",
+    scoreDirection: "higher",
   },
 ];
 

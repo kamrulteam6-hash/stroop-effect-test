@@ -213,6 +213,7 @@ import { content as optimismTest } from "@/data/seoContent/optimism-test";
 import { content as selfControlTest } from "@/data/seoContent/self-control-test";
 import { content as learningStyleTest } from "@/data/seoContent/learning-style-test";
 import { content as careerPersonalityTest } from "@/data/seoContent/career-personality-test";
+import { content as spatialAwarenessTest } from "@/data/seoContent/spatial-awareness-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -429,4 +430,5 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "self-control-test": selfControlTest,
   "learning-style-test": learningStyleTest,
   "career-personality-test": careerPersonalityTest,
+  "spatial-awareness-test": spatialAwarenessTest,
 };
