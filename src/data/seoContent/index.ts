@@ -191,6 +191,13 @@ import { content as diagrammaticReasoningTest } from "@/data/seoContent/diagramm
 import { content as mechanicalReasoningTest } from "@/data/seoContent/mechanical-reasoning-test";
 import { content as criticalThinkingTest } from "@/data/seoContent/critical-thinking-test";
 import { content as dataInterpretationTest } from "@/data/seoContent/data-interpretation-test";
+import { content as iqTest } from "@/data/seoContent/iq-test";
+import { content as cognitiveAbilityTest } from "@/data/seoContent/cognitive-ability-test";
+import { content as generalAptitudeTest } from "@/data/seoContent/general-aptitude-test";
+import { content as attentionToDetailTest } from "@/data/seoContent/attention-to-detail-test";
+import { content as nonVerbalReasoningTest } from "@/data/seoContent/non-verbal-reasoning-test";
+import { content as numberSeriesTest } from "@/data/seoContent/number-series-test";
+import { content as letterSeriesTest } from "@/data/seoContent/letter-series-test";
 
 export const seoContentBySlug: Record<string, TestSeoContent> = {
   "stroop-effect-test": stroopEffectTest,
@@ -385,4 +392,11 @@ export const seoContentBySlug: Record<string, TestSeoContent> = {
   "mechanical-reasoning-test": mechanicalReasoningTest,
   "critical-thinking-test": criticalThinkingTest,
   "data-interpretation-test": dataInterpretationTest,
+  "iq-test": iqTest,
+  "cognitive-ability-test": cognitiveAbilityTest,
+  "general-aptitude-test": generalAptitudeTest,
+  "attention-to-detail-test": attentionToDetailTest,
+  "non-verbal-reasoning-test": nonVerbalReasoningTest,
+  "number-series-test": numberSeriesTest,
+  "letter-series-test": letterSeriesTest,
 };

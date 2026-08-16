@@ -205,7 +205,14 @@ export type ComponentKey =
   | "diagrammatic-reasoning"
   | "mechanical-reasoning"
   | "critical-thinking-quiz"
-  | "data-interpretation";
+  | "data-interpretation"
+  | "iq-test"
+  | "cognitive-ability"
+  | "general-aptitude"
+  | "attention-to-detail"
+  | "non-verbal-reasoning"
+  | "number-series"
+  | "letter-series";
 
 export interface TestDefinition {
   slug: string;
@@ -3461,6 +3468,111 @@ export const tests: TestDefinition[] = [
     estTime: "8 min",
     difficulty: "Medium",
     componentKey: "data-interpretation",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "iq-test",
+    title: "IQ Test",
+    metaTitle: "Free IQ Test – Quick Online Intelligence Quiz",
+    shortTitle: "IQ Test",
+    category: "IQ & Logic",
+    icon: "🧮",
+    shortDescription: "Answer 15 questions spanning numerical, verbal, and pattern reasoning to get an overall score.",
+    metaDescription: "Take a free IQ Test online. Answer 15 mixed numerical, verbal, and pattern reasoning questions with instant scoring and explanations.",
+    keywords: ["iq test free", "free iq test online", "quick iq test", "intelligence quiz online"],
+    estTime: "9 min",
+    difficulty: "Medium",
+    componentKey: "iq-test",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "cognitive-ability-test",
+    title: "Cognitive Ability Test",
+    metaTitle: "Cognitive Ability Test – Free Online Quiz",
+    shortTitle: "Cognitive Ability",
+    category: "IQ & Logic",
+    icon: "🧠",
+    shortDescription: "Answer 12 mixed questions covering logic, numerical reasoning, and verbal comprehension.",
+    metaDescription: "Take a free Cognitive Ability Test online, similar in style to pre-employment screening tests, with instant scoring and explanations.",
+    keywords: ["cognitive ability test", "cognitive ability test free", "pre employment cognitive test", "general cognitive test online"],
+    estTime: "8 min",
+    difficulty: "Medium",
+    componentKey: "cognitive-ability",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "general-aptitude-test",
+    title: "General Aptitude Test",
+    metaTitle: "General Aptitude Test – Free Online Quiz",
+    shortTitle: "General Aptitude",
+    category: "IQ & Logic",
+    icon: "📐",
+    shortDescription: "Answer 12 broad questions spanning math, logic, verbal skills, and general reasoning.",
+    metaDescription: "Take a free General Aptitude Test online covering math, logic, and verbal reasoning, with instant scoring and explanations.",
+    keywords: ["general aptitude test", "general aptitude test free", "aptitude test online free", "basic aptitude quiz"],
+    estTime: "8 min",
+    difficulty: "Medium",
+    componentKey: "general-aptitude",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "attention-to-detail-test",
+    title: "Attention to Detail Test",
+    metaTitle: "Attention to Detail Test – Free Online Quiz",
+    shortTitle: "Attention to Detail",
+    category: "IQ & Logic",
+    icon: "🔍",
+    shortDescription: "Spot the small differences, mismatches, and errors hidden in text, numbers, and lists.",
+    metaDescription: "Take a free Attention to Detail Test online. Spot typos, mismatches, and errors across 10 detail-focused questions with instant scoring.",
+    keywords: ["attention to detail test", "attention to detail test free", "detail oriented quiz", "proofreading aptitude test"],
+    estTime: "7 min",
+    difficulty: "Medium",
+    componentKey: "attention-to-detail",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "non-verbal-reasoning-test",
+    title: "Non-Verbal Reasoning Test",
+    metaTitle: "Non-Verbal Reasoning Test – Free Online Quiz",
+    shortTitle: "Non-Verbal Reasoning",
+    category: "IQ & Logic",
+    icon: "🔺",
+    shortDescription: "Solve puzzles using only shapes, patterns, and figures — no language skills required.",
+    metaDescription: "Take a free Non-Verbal Reasoning Test online. Solve shape and pattern puzzles to measure visual-spatial logical reasoning ability.",
+    keywords: ["non-verbal reasoning test", "non-verbal reasoning test free", "shape pattern reasoning quiz", "aptitude test non-verbal"],
+    estTime: "8 min",
+    difficulty: "Medium",
+    componentKey: "non-verbal-reasoning",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "number-series-test",
+    title: "Number Series Test",
+    metaTitle: "Number Series Test – Free Online Quiz",
+    shortTitle: "Number Series",
+    category: "IQ & Logic",
+    icon: "🔢",
+    shortDescription: "Find the pattern behind each number sequence and choose the number that comes next.",
+    metaDescription: "Take a free Number Series Test online. Identify numeric patterns and predict the next number in 12 sequences with instant scoring.",
+    keywords: ["number series test", "number series test free", "number sequence quiz", "number series aptitude test"],
+    estTime: "6 min",
+    difficulty: "Medium",
+    componentKey: "number-series",
+    scoreDirection: "higher",
+  },
+  {
+    slug: "letter-series-test",
+    title: "Letter Series Test",
+    metaTitle: "Letter Series Test – Free Online Quiz",
+    shortTitle: "Letter Series",
+    category: "IQ & Logic",
+    icon: "🔤",
+    shortDescription: "Find the pattern behind each letter sequence and choose the letter that comes next.",
+    metaDescription: "Take a free Letter Series Test online. Identify alphabet patterns and predict the next letter in 10 sequences with instant scoring.",
+    keywords: ["letter series test", "letter series test free", "alphabet sequence quiz", "letter series aptitude test"],
+    estTime: "6 min",
+    difficulty: "Medium",
+    componentKey: "letter-series",
     scoreDirection: "higher",
   },
 ];

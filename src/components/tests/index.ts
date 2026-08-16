@@ -192,6 +192,13 @@ import { DiagrammaticReasoningTest } from "@/components/tests/DiagrammaticReason
 import { MechanicalReasoningTest } from "@/components/tests/MechanicalReasoningTest";
 import { CriticalThinkingTest } from "@/components/tests/CriticalThinkingTest";
 import { DataInterpretationTest } from "@/components/tests/DataInterpretationTest";
+import { IQTest } from "@/components/tests/IQTest";
+import { CognitiveAbilityTest } from "@/components/tests/CognitiveAbilityTest";
+import { GeneralAptitudeTest } from "@/components/tests/GeneralAptitudeTest";
+import { AttentionToDetailTest } from "@/components/tests/AttentionToDetailTest";
+import { NonVerbalReasoningTest } from "@/components/tests/NonVerbalReasoningTest";
+import { NumberSeriesTest } from "@/components/tests/NumberSeriesTest";
+import { LetterSeriesTest } from "@/components/tests/LetterSeriesTest";
 
 export const testComponents: Record<ComponentKey, ComponentType> = {
   stroop: StroopTest,
@@ -386,4 +393,11 @@ export const testComponents: Record<ComponentKey, ComponentType> = {
   "mechanical-reasoning": MechanicalReasoningTest,
   "critical-thinking-quiz": CriticalThinkingTest,
   "data-interpretation": DataInterpretationTest,
+  "iq-test": IQTest,
+  "cognitive-ability": CognitiveAbilityTest,
+  "general-aptitude": GeneralAptitudeTest,
+  "attention-to-detail": AttentionToDetailTest,
+  "non-verbal-reasoning": NonVerbalReasoningTest,
+  "number-series": NumberSeriesTest,
+  "letter-series": LetterSeriesTest,
 };
