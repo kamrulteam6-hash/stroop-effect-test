@@ -3853,10 +3853,6 @@ export const categories: TestCategory[] = [
   "Cognitive Biases",
 ];
 
-export const comingSoonCategories: { name: string; examples: string[] }[] = [
-  { name: "Motor Skills", examples: ["Hand-eye coordination", "Typing accuracy test"] },
-];
-
 export function getTestBySlug(slug: string): TestDefinition | undefined {
   return tests.find((t) => t.slug === slug);
 }

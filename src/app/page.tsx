@@ -9,7 +9,7 @@ import { DataTable } from "@/components/seo/DataTable";
 import { HeroBackground } from "@/components/home/HeroBackground";
 import { TestCard } from "@/components/home/TestCard";
 import { StroopTest } from "@/components/tests/StroopTest";
-import { tests, comingSoonCategories } from "@/data/tests";
+import { tests } from "@/data/tests";
 
 const otherTests = tests.filter((t) => t.slug !== "stroop-effect-test");
 
@@ -140,25 +140,6 @@ export default function Home() {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {otherTests.map((test) => (
             <TestCard key={test.slug} test={test} />
-          ))}
-        </div>
-      </section>
-
-      {/* Roadmap teaser */}
-      <section className="mt-20 border-t border-border pt-12">
-        <div className="flex flex-col items-center gap-3 text-center">
-          <SectionLabel>Coming Soon</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">50+ Tests on the Way</h2>
-          <p className="max-w-xl text-balance text-muted">
-            We&apos;re actively building out more categories — here&apos;s a preview of what&apos;s next.
-          </p>
-        </div>
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {comingSoonCategories.map((cat) => (
-            <div key={cat.name} className="rounded-2xl border border-dashed border-border bg-surface-2 p-5 text-center opacity-70">
-              <p className="font-bold text-foreground">{cat.name}</p>
-              <p className="mt-2 text-xs text-muted-2">{cat.examples.join(" · ")}</p>
-            </div>
           ))}
         </div>
       </section>
