@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
           {Object.entries(footerLinks).map(([section, links]) => (
             <div key={section}>
               <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-2">

@@ -35,5 +35,11 @@ export const footerLinks: Record<string, { href: string; label: string }[]> = {
   Explore: [
     { href: "/tests", label: "Browse All Tests" },
     { href: "/blog", label: "Blog" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ],
+  Legal: [
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms", label: "Terms of Service" },
   ],
 };
