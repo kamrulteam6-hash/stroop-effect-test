@@ -8,6 +8,6 @@ export interface BlogMeta {
 }
 
 /** Every published post's slug. Add new posts here after dropping the .mdx file in src/content/blog/. */
-export const BLOG_SLUGS = [] as const;
+export const BLOG_SLUGS = ["how-the-stroop-effect-works-in-the-brain"] as const;
 
 export type BlogSlug = (typeof BLOG_SLUGS)[number];
