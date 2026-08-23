@@ -79,6 +79,34 @@ export function AdminApp() {
   const [promoTest, setPromoTest] = useState(tests[0]?.slug ?? "");
   const [promoLabel, setPromoLabel] = useState("Try the test");
 
+  const [mdCommands, setMdCommands] = useState<import("@uiw/react-md-editor").ICommand[] | null>(null);
+  useEffect(() => {
+    import("@uiw/react-md-editor").then(({ commands }) => {
+      setMdCommands([
+        commands.bold,
+        commands.italic,
+        commands.strikethrough,
+        commands.divider,
+        commands.title2,
+        commands.title3,
+        commands.title4,
+        commands.divider,
+        commands.link,
+        commands.quote,
+        commands.code,
+        commands.codeBlock,
+        commands.image,
+        commands.table,
+        commands.divider,
+        commands.unorderedListCommand,
+        commands.orderedListCommand,
+        commands.checkedListCommand,
+        commands.divider,
+        commands.help,
+      ]);
+    });
+  }, []);
+
   const loadPosts = async () => {
     setLoadingPosts(true);
     const res = await fetch("/api/admin/posts");
@@ -464,7 +492,12 @@ export function AdminApp() {
           </div>
 
           <div data-color-mode="light">
-            <MDEditor value={draft.body} onChange={(v) => setDraft((d) => ({ ...d, body: v || "" }))} height={420} />
+            <MDEditor
+              value={draft.body}
+              onChange={(v) => setDraft((d) => ({ ...d, body: v || "" }))}
+              height={420}
+              commands={mdCommands ?? undefined}
+            />
           </div>
 
           {saveError && <p className="text-xs text-danger">{saveError}</p>}
