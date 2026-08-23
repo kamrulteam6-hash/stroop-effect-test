@@ -1,0 +1,13 @@
+export const metadata = {
+  title: "placeholder",
+  description: "placeholder",
+  excerpt: "placeholder",
+  date: "2026-01-01",
+  tags: [],
+};
+
+Do not add this slug to `BLOG_SLUGS` in `src/data/blog.ts`. This file exists only so the
+`src/content/blog/` directory is never empty — the dynamic `import(\`@/content/blog/${slug}.mdx\`)`
+calls in `blog/page.tsx`, `blog/[slug]/page.tsx`, and `sitemap.ts` fail to build if this directory
+has zero `.mdx` files in it, even when `BLOG_SLUGS` is empty and the import is never reached at
+runtime. If you delete the last real post through the admin panel, keep this file.
