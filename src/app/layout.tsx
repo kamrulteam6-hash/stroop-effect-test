@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  other: {
+    "google-adsense-account": "ca-pub-1010914018637240",
+  },
 };
 
 const organizationJsonLd = {
