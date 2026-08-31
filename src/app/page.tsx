@@ -161,13 +161,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
-            <div className="relative aspect-square w-full">
+          <div className="relative mx-auto w-full max-w-[420px] pt-6 lg:mx-0 lg:max-w-[480px] lg:justify-self-end lg:pt-0">
+            <div className="relative aspect-[480/599] w-full">
               <Image
                 src="/images/homepage/hero-neural-brain.png"
                 alt="Illustration of a glowing neural network in the shape of a human head, representing cognitive testing"
                 fill
-                sizes="(max-width: 1024px) 384px, 480px"
+                sizes="(max-width: 1024px) 420px, 480px"
                 className="object-contain drop-shadow-[0_0_40px_rgba(141,123,255,0.35)]"
                 priority
               />
@@ -175,7 +175,7 @@ export default function Home() {
             {/* Decorative preview card — a static snapshot of the real test below, not interactive */}
             <div
               aria-hidden
-              className="absolute -top-2 right-0 hidden w-40 rounded-2xl border border-white/10 bg-[#181530]/90 p-4 text-center shadow-2xl backdrop-blur sm:block"
+              className="absolute top-0 right-0 hidden w-40 rounded-2xl border border-white/10 bg-[#181530]/90 p-4 text-center shadow-2xl backdrop-blur sm:block"
             >
               <p className="text-lg font-black text-[#3b6ef0]">BLUE</p>
               <p className="text-lg font-black text-[#e0374b]">RED</p>
