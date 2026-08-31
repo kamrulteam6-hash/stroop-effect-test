@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { SectionLabel } from "@/components/ui/Card";
 import { TestsBrowser } from "@/components/home/TestsBrowser";
 import { tests } from "@/data/tests";
@@ -21,7 +22,9 @@ export default function TestsHubPage() {
         </p>
       </div>
       <div className="mt-10">
-        <TestsBrowser tests={tests} />
+        <Suspense fallback={null}>
+          <TestsBrowser tests={tests} />
+        </Suspense>
       </div>
     </div>
   );

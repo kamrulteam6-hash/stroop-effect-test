@@ -1,11 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { TestDefinition, categories } from "@/data/tests";
 import { TestCard } from "@/components/home/TestCard";
 
 export function TestsBrowser({ tests }: { tests: TestDefinition[] }) {
-  const [active, setActive] = useState<string>("All");
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get("category");
+  const [active, setActive] = useState<string>(
+    initialCategory && categories.includes(initialCategory as (typeof categories)[number]) ? initialCategory : "All"
+  );
   const filtered = active === "All" ? tests : tests.filter((t) => t.category === active);
 
   return (
