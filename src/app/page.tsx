@@ -128,6 +128,53 @@ export default function Home() {
         </p>
       </section>
 
+      {/* About this site */}
+      <section className="mt-20 flex flex-col gap-6 border-t border-border pt-12">
+        <div className="flex flex-col items-center gap-3 text-center">
+          <SectionLabel>About This Site</SectionLabel>
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">What You&apos;ll Find Here</h2>
+        </div>
+        <div className="mx-auto flex max-w-3xl flex-col gap-4">
+          <p className="leading-relaxed text-muted">
+            This site started as a single, focused build: a fast, free, no-sign-up version of the classic Stroop
+            effect experiment, the reaction-time task above that measures how well your brain suppresses an automatic
+            response in favor of a slower, deliberate one. From there it grew into a much larger collection of
+            interactive tests, because the same principle that made that first test useful kept applying: a good test
+            should be quick to take, honest about what it actually measures, and free to use without a login wall or
+            an email capture form.
+          </p>
+          <p className="leading-relaxed text-muted">
+            The {tests.length} tests on this site fall into a few broad groups. Reaction and reflex tests measure raw
+            response speed and motor precision. Memory tests cover short-term span, working memory, spatial memory,
+            and long-term recall using established research paradigms like digit span and the N-back task. Perception
+            and vision tests check things like color discrimination, visual illusions, and peripheral awareness.
+            Cognitive-bias tests let you experience effects like anchoring, confirmation bias, and the sunk cost
+            fallacy directly rather than just reading about them. And a set of personality and self-report screeners,
+            built as original questionnaires inspired by publicly described research constructs, let you reflect on
+            traits ranging from the Big Five to decision-making style.
+          </p>
+          <p className="leading-relaxed text-muted">
+            We&apos;re explicit about what these tests are and aren&apos;t. None of them are clinical diagnostic tools, and
+            none should replace a licensed professional for anything medical, psychological, or educational. Where a
+            test is inspired by a named research instrument, such as a published personality or screening
+            questionnaire, we say so directly on that test&apos;s page and clarify whether our version is an original
+            screener or something closer to the official instrument. Where results depend on your testing conditions,
+            like reaction time varying with fatigue or device latency, we say that too. You can read more about how
+            we approach content on the <Link href="/about" className="font-semibold text-primary hover:underline">About page</Link>, and
+            how we handle your data on the{" "}
+            <Link href="/privacy-policy" className="font-semibold text-primary hover:underline">
+              Privacy Policy
+            </Link>
+            .
+          </p>
+          <p className="leading-relaxed text-muted">
+            Every test below runs entirely in your browser. There&apos;s no account to create and no personal information
+            required to see a result — you click start, complete the task, and get instant feedback, the same way the
+            Stroop test above works.
+          </p>
+        </div>
+      </section>
+
       {/* Test grid */}
       <section className="mt-20 border-t border-border pt-12">
         <div className="flex flex-col items-center gap-3 text-center">
