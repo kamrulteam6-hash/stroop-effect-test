@@ -6,7 +6,6 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { SeoHeading, SeoSubheading } from "@/components/seo/SeoHeading";
 import { DataTable } from "@/components/seo/DataTable";
-import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { StroopTest } from "@/components/tests/StroopTest";
 import { tests, getTestBySlug, TestCategory } from "@/data/tests";
 
@@ -395,9 +394,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Reviews */}
-        <ReviewsSection />
 
         {/* SEO content */}
         <section className="mt-20 flex flex-col gap-8 border-t border-border pt-12">
