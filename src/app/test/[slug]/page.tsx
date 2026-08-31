@@ -58,7 +58,11 @@ export default async function TestPage({
     applicationCategory: "EducationalApplication",
     isAccessibleForFree: true,
     operatingSystem: "Any",
+    author: { "@type": "Organization", name: "Stroop Effect Test Editorial Team" },
   };
+
+  const reviewedCategories = ["Personality", "Mental Health & Wellbeing"];
+  const showByline = reviewedCategories.includes(test.category);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
@@ -85,6 +89,14 @@ export default async function TestPage({
           <Badge tone="primary">{test.difficulty}</Badge>
           <Badge tone="muted">{test.estTime}</Badge>
         </div>
+        {showByline && (
+          <p className="text-xs text-muted-2">
+            Written &amp; reviewed by the{" "}
+            <Link href="/about#editorial-team" className="font-semibold text-primary hover:underline">
+              Stroop Effect Test Editorial Team
+            </Link>
+          </p>
+        )}
       </div>
 
       <div className="mt-10">

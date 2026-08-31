@@ -61,7 +61,7 @@ export default async function BlogPostPage({
     description: metadata.description,
     datePublished: metadata.date,
     dateModified: metadata.date,
-    author: { "@type": "Organization", name: "Stroop Effect Test" },
+    author: { "@type": "Organization", name: "Stroop Effect Test Editorial Team" },
     publisher: { "@type": "Organization", name: "Stroop Effect Test" },
     mainEntityOfPage: `https://www.stroopeffecttest.com/blog/${slug}`,
   };
@@ -92,9 +92,18 @@ export default async function BlogPostPage({
       </div>
 
       <h1 className="mt-3 text-2xl font-bold text-foreground sm:text-4xl">{metadata.title}</h1>
-      <time dateTime={metadata.date} className="mt-2 block text-xs text-muted-2">
-        {new Date(metadata.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-      </time>
+      <p className="mt-2 flex flex-wrap items-center gap-x-1.5 text-xs text-muted-2">
+        <time dateTime={metadata.date}>
+          {new Date(metadata.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+        <span>·</span>
+        <span>
+          By the{" "}
+          <Link href="/about#editorial-team" className="font-semibold text-primary hover:underline">
+            Stroop Effect Test Editorial Team
+          </Link>
+        </span>
+      </p>
 
       {metadata.featuredImage && (
         <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-surface-2">

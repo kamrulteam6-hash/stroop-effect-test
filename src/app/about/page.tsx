@@ -76,6 +76,27 @@ export default function AboutPage() {
         </section>
 
         <section className="flex flex-col gap-3">
+          <SeoHeading id="editorial-team">Who Writes and Reviews This Content</SeoHeading>
+          <p className="leading-relaxed text-muted">
+            Content on Stroop Effect Test — test descriptions, scoring guidance, and articles on the blog — is
+            researched, written, and kept up to date by the site&apos;s Editorial Team. We build each test page
+            around publicly documented psychology and cognitive-science paradigms, cite the original research
+            wherever a test is based on a named instrument, and revise pages when we find something unclear,
+            outdated, or inaccurate.
+          </p>
+          <p className="leading-relaxed text-muted">
+            We are not a clinical or medical practice, and nothing on this site is written or reviewed by a licensed
+            healthcare provider. Pages that touch on mental health or personality are written with that limitation
+            front and center, and they say so directly. If you spot something you believe is wrong or misleading,
+            the fastest way to reach us is the{" "}
+            <Link href="/contact" className="text-primary underline underline-offset-2">
+              Contact page
+            </Link>{" "}
+            — we read and act on every report.
+          </p>
+        </section>
+
+        <section className="flex flex-col gap-3">
           <SeoHeading id="get-in-touch">Get in Touch</SeoHeading>
           <p className="leading-relaxed text-muted">
             Found a bug, have a suggestion for a new test, or spotted something inaccurate in the content? We want to
