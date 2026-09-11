@@ -26,7 +26,7 @@ export function Callout({
   children: ReactNode;
 }) {
   return (
-    <div className={`rounded-2xl border p-5 ${toneClasses[tone]}`}>
+    <div className={`rounded-2xl border p-5 shadow-sm ${toneClasses[tone]}`}>
       <p className={`flex items-center gap-2 text-sm font-semibold ${toneText[tone]}`}>
         <span className="text-base">{icon}</span> {title}
       </p>

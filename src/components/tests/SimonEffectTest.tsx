@@ -134,10 +134,16 @@ export function SimonEffectTest() {
         </p>
         <div className="relative h-40 w-full max-w-sm">
           <div
-            className={`absolute top-1/2 h-16 w-16 -translate-y-1/2 rounded-lg transition-all ${
+            className={`absolute top-1/2 h-16 w-16 -translate-y-1/2 rounded-lg shadow-xl transition-all ${
               trial.side === "left" ? "left-4" : "right-4"
             }`}
-            style={{ backgroundColor: trial.color === "blue" ? "#3b82f6" : "#ef4444" }}
+            style={{
+              background:
+                trial.color === "blue"
+                  ? "linear-gradient(to bottom right, #60a5fa, #2563eb)"
+                  : "linear-gradient(to bottom right, #f87171, #dc2626)",
+              boxShadow: trial.color === "blue" ? "0 12px 24px -8px rgba(37,99,235,0.5)" : "0 12px 24px -8px rgba(220,38,38,0.5)",
+            }}
           />
         </div>
         <div className="flex gap-4">
