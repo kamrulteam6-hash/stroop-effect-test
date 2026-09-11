@@ -153,7 +153,7 @@ export function RiasecTest() {
             <button
               key={label}
               onClick={() => answer(i + 1)}
-              className="flex flex-col items-center gap-2 rounded-xl border border-border bg-surface-2 px-1 py-3 text-center text-[10px] font-medium text-muted transition-colors hover:border-primary hover:text-foreground sm:text-xs"
+              className="flex flex-col items-center gap-2 rounded-xl border border-border bg-surface-2 px-1 py-3 text-center text-[10px] font-medium text-muted shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:text-foreground hover:shadow-md active:translate-y-0 active:scale-95 sm:text-xs"
             >
               <span className="text-lg font-bold text-foreground">{i + 1}</span>
               {label}
