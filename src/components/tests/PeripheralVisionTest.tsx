@@ -181,20 +181,37 @@ export function PeripheralVisionTest() {
           />
         </div>
       </div>
-      <div ref={areaRef} className="relative h-full min-h-[420px] w-full">
-        <span className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border/60" />
-        <span className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-border/30" />
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl font-bold text-foreground">
-          +
-        </span>
+      <div
+        ref={areaRef}
+        className="relative h-full min-h-[420px] w-full overflow-hidden"
+        style={{
+          background:
+            "radial-gradient(circle at center, var(--color-surface) 0%, var(--color-surface) 45%, var(--color-surface-2) 100%)",
+        }}
+      >
+        <span className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/15 bg-primary/[0.03]" />
+        <span className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-border/50" />
+
+        {/* Fixation cross — a small anchored halo behind a precise crosshair, so the eye has one clear, stable point to lock onto. */}
+        <span className="absolute left-1/2 top-1/2 h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface shadow-[0_0_0_1px_rgba(0,0,0,0.04)]" />
+        <svg
+          className="pointer-events-none absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <line x1="12" y1="3" x2="12" y2="21" stroke="var(--color-foreground)" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="3" y1="12" x2="21" y2="12" stroke="var(--color-foreground)" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx="12" cy="12" r="2" fill="var(--color-primary)" />
+        </svg>
+
         {flash && (
           <>
             <span
-              className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary"
+              className="absolute h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_16px_4px_rgba(99,91,255,0.55)]"
               style={{ left: flash.x, top: flash.y }}
             />
             <span
-              className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-primary/60"
+              className="absolute h-5 w-5 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-primary/60"
               style={{ left: flash.x, top: flash.y }}
             />
           </>

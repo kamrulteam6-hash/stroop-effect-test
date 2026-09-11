@@ -1,9 +1,14 @@
 import { ReactNode } from "react";
 
 export function TestFrame({ children, className = "" }: { children: ReactNode; className?: string }) {
+  // Tailwind resolves two classes on the same property by stylesheet order, not by where they
+  // appear in the className string — so a caller passing e.g. "bg-success" to flash the frame
+  // green could silently lose to this component's own default background. Only apply the
+  // default when the caller hasn't specified one of their own.
+  const hasCustomBg = /\bbg-/.test(className);
   return (
     <div
-      className={`relative flex min-h-[420px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border bg-surface p-6 sm:p-10 ${className}`}
+      className={`relative flex min-h-[420px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border ${hasCustomBg ? "" : "bg-surface"} p-6 sm:p-10 ${className}`}
     >
       {children}
     </div>
