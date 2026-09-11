@@ -18,6 +18,15 @@
       "placement": "test-sidebar-left",
       "enabled": true,
       "height": 250
+    },
+    {
+      "id": "right-sidebar-2",
+      "label": "Right sidebar 2",
+      "type": "banner",
+      "adCode": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl31290053.profitableratecpmnetwork.com/360c889d92a546fa887665f4242b00e8/invoke.js\"></script>\n<div id=\"container-360c889d92a546fa887665f4242b00e8\"></div>\n",
+      "placement": "test-sidebar-right",
+      "enabled": true,
+      "height": 250
     }
   ]
 }
