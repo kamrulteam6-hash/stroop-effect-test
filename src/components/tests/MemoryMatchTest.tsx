@@ -124,8 +124,10 @@ export function MemoryMatchTest() {
   return (
     <TestFrame>
       <div className="flex flex-col items-center gap-6">
-        <p className="text-xs font-medium text-muted-2">Moves: {moves}</p>
-        <div className="grid grid-cols-4 gap-2">
+        <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2 shadow-sm">
+          Moves: {moves}
+        </span>
+        <div className="grid grid-cols-4 gap-2.5">
           {cards.map((card, i) => {
             const isFaceUp = flipped.includes(i) || card.matched;
             return (
@@ -133,12 +135,12 @@ export function MemoryMatchTest() {
                 key={card.id}
                 onClick={() => flipCard(i)}
                 disabled={isFaceUp}
-                className={`flex h-14 w-14 items-center justify-center rounded-xl border text-2xl transition-colors sm:h-16 sm:w-16 sm:text-3xl ${
+                className={`flex h-14 w-14 items-center justify-center rounded-xl border text-2xl shadow-sm transition-all sm:h-16 sm:w-16 sm:text-3xl ${
                   isFaceUp
                     ? card.matched
-                      ? "border-success bg-success/10"
-                      : "border-primary bg-primary/10"
-                    : "border-border bg-surface-2 hover:border-primary"
+                      ? "scale-95 border-success bg-success/10 shadow-none"
+                      : "scale-105 border-primary bg-primary/10 shadow-md shadow-primary/20"
+                    : "border-border bg-gradient-to-br from-surface-2 to-surface hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
                 }`}
               >
                 {isFaceUp ? card.symbol : ""}

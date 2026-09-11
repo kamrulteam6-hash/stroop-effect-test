@@ -129,14 +129,18 @@ export function PatternIqTest() {
           Puzzle {round + 1} / {ROUNDS} — Score: {correctCount}
         </p>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-2 rounded-2xl border border-border/70 bg-surface-2 p-3 shadow-sm">
           {puzzle.rowShapes.map((shape, r) =>
             puzzle.colCounts.map((count, c) => {
               const isMissing = r === 2 && c === 2;
               return (
                 <div
                   key={`${r}-${c}`}
-                  className="flex h-16 w-16 items-center justify-center rounded-lg border border-border bg-surface-2 sm:h-20 sm:w-20"
+                  className={`flex h-16 w-16 items-center justify-center rounded-lg border sm:h-20 sm:w-20 ${
+                    isMissing
+                      ? "border-dashed border-primary/40 bg-surface"
+                      : "border-border bg-surface shadow-sm"
+                  }`}
                 >
                   {isMissing ? <span className="text-2xl font-bold text-muted-2">?</span> : <CellDisplay shape={shape} count={count} />}
                 </div>
@@ -155,12 +159,12 @@ export function PatternIqTest() {
                 key={idx}
                 onClick={() => choose(idx)}
                 disabled={selected !== null}
-                className={`flex h-14 w-14 items-center justify-center rounded-lg border-2 transition-colors sm:h-16 sm:w-16 ${
+                className={`flex h-14 w-14 items-center justify-center rounded-lg border-2 shadow-sm transition-all sm:h-16 sm:w-16 ${
                   showState && isCorrect
                     ? "border-success bg-success/10"
                     : showState && isChosen
                       ? "border-danger bg-danger/10"
-                      : "border-border bg-surface-2 hover:border-primary"
+                      : "border-border bg-surface-2 hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
                 }`}
               >
                 <CellDisplay shape={opt.shape} count={opt.count} />

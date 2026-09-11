@@ -188,8 +188,8 @@ export function StroopTest() {
               <button
                 key={c.name}
                 onClick={() => answer(c.name)}
-                className="rounded-xl border border-border bg-surface-2 px-3 py-3 text-xs font-bold text-foreground transition-transform hover:scale-105 active:scale-95"
-                style={{ boxShadow: `inset 0 -3px 0 ${c.value}` }}
+                className="rounded-xl border border-border bg-surface-2 px-3 py-3 text-xs font-bold text-foreground transition-all hover:-translate-y-0.5 active:translate-y-0 active:scale-95"
+                style={{ boxShadow: `inset 0 -3px 0 ${c.value}, 0 4px 10px -4px rgba(15,15,35,0.15)` }}
               >
                 {c.name}
               </button>

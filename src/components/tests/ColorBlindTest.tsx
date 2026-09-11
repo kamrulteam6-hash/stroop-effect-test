@@ -177,7 +177,7 @@ export function ColorBlindTest() {
               <span
                 key={i}
                 title={`Plate ${i + 1}: ${o.digits} — you answered ${o.chosen}`}
-                className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${
+                className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold shadow-sm ${
                   o.correct ? "bg-success/15 text-success" : "bg-danger/15 text-danger"
                 }`}
               >
@@ -220,10 +220,12 @@ export function ColorBlindTest() {
   return (
     <TestFrame>
       <div className="flex w-full flex-col items-center gap-6">
-        <p className="text-xs font-medium text-muted-2">
+        <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
           Plate {plateIndex + 1} / {plates.length}
-        </p>
-        <canvas ref={canvasRef} className="rounded-full" />
+        </span>
+        <div className="rounded-full p-1.5 shadow-[0_20px_40px_-16px_rgba(15,15,35,0.3)]">
+          <canvas ref={canvasRef} className="rounded-full" />
+        </div>
         <div className="grid w-full max-w-md grid-cols-2 gap-3">
           {options.map((opt) => {
             const isChosen = selected === opt;
@@ -233,12 +235,12 @@ export function ColorBlindTest() {
                 key={opt}
                 onClick={() => choose(opt)}
                 disabled={!!selected}
-                className={`rounded-xl border px-3 py-3 text-sm font-semibold transition-colors ${
+                className={`rounded-xl border px-3 py-3 text-sm font-semibold shadow-sm transition-all ${
                   isCorrectAnswer
                     ? "border-success bg-success/10 text-success"
                     : isChosen
                       ? "border-danger bg-danger/10 text-danger"
-                      : "border-border bg-surface-2 text-foreground hover:border-primary/40"
+                      : "border-border bg-surface-2 text-foreground hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
                 }`}
               >
                 {opt}
