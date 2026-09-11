@@ -48,6 +48,11 @@ export function PeripheralVisionTest() {
   const areaRef = useRef<HTMLDivElement>(null);
   const respondedRef = useRef(false);
   const timeoutsRef = useRef<number[]>([]);
+  // Tracks whether a click/spacebar still counts as a detection, independent of how long the
+  // flash is visually shown. It used to be gated on the `flash` render state itself, which got
+  // cleared after FLASH_MS (220ms) — so the real response window was only 220ms even though
+  // RESPONSE_WINDOW_MS said 850ms. That's what made it feel impossibly fast to react to.
+  const pendingZoneRef = useRef<Zone | null>(null);
 
   const clearTimeouts = () => {
     timeoutsRef.current.forEach((t) => window.clearTimeout(t));
@@ -64,17 +69,23 @@ export function PeripheralVisionTest() {
 
     const isi = randomIsi();
     setFlash(null);
+    pendingZoneRef.current = null;
     respondedRef.current = false;
 
     const t1 = window.setTimeout(() => {
       const pos = randomFlash(width, height);
       setFlash(pos);
+      pendingZoneRef.current = pos.zone;
 
+      // The dot itself only flashes briefly (realistic for a peripheral-vision cue), but a
+      // click still counts as a catch for the full response window after that, since noticing
+      // something in your periphery and then physically reacting takes real time on its own.
       const t2 = window.setTimeout(() => setFlash(null), FLASH_MS);
       const t3 = window.setTimeout(() => {
         if (!respondedRef.current) {
           setResults((r) => [...r, { zone: pos.zone, detected: false }]);
         }
+        pendingZoneRef.current = null;
         const next = index + 1;
         if (next >= TRIALS) {
           setPhase("result");
@@ -97,9 +108,9 @@ export function PeripheralVisionTest() {
   };
 
   const registerDetection = () => {
-    if (phase !== "running" || respondedRef.current || !flash) return;
+    if (phase !== "running" || respondedRef.current || !pendingZoneRef.current) return;
     respondedRef.current = true;
-    setResults((r) => [...r, { zone: flash.zone, detected: true }]);
+    setResults((r) => [...r, { zone: pendingZoneRef.current as Zone, detected: true }]);
   };
 
   useEffect(() => {
@@ -113,7 +124,7 @@ export function PeripheralVisionTest() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, flash]);
+  }, [phase]);
 
   const detectedCount = results.filter((r) => r.detected).length;
   const overallRate = results.length ? Math.round((detectedCount / results.length) * 100) : 0;
@@ -152,8 +163,8 @@ export function PeripheralVisionTest() {
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">👁️</span>
           <p className="max-w-sm text-sm text-muted">
-            Keep your eyes fixed on the cross at the center — don&apos;t look away. Press spacebar the instant you notice
-            a flash appear anywhere around it, without moving your eyes to look directly at it.
+            Keep your eyes fixed on the cross at the center — don&apos;t look away. Press spacebar or tap anywhere the
+            instant you notice a flash appear around it, without moving your eyes to look directly at it.
           </p>
           <Button size="lg" onClick={start}>
             Start Test
@@ -183,7 +194,10 @@ export function PeripheralVisionTest() {
       </div>
       <div
         ref={areaRef}
-        className="relative h-full min-h-[420px] w-full overflow-hidden"
+        onClick={registerDetection}
+        role="button"
+        tabIndex={-1}
+        className="relative h-full min-h-[420px] w-full cursor-pointer select-none overflow-hidden"
         style={{
           background:
             "radial-gradient(circle at center, var(--color-surface) 0%, var(--color-surface) 45%, var(--color-surface-2) 100%)",
