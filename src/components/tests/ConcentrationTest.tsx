@@ -103,7 +103,7 @@ export function ConcentrationTest() {
             <button
               key={opt}
               onClick={() => pick(opt)}
-              className="rounded-xl border border-border bg-surface-2 px-6 py-3 text-lg font-bold text-foreground hover:border-primary"
+              className="rounded-xl border border-border bg-surface-2 px-6 py-3 text-lg font-bold text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
             >
               {opt}
             </button>

@@ -119,7 +119,7 @@ export function ExecutiveFunctionTest() {
               <button
                 key={opt}
                 onClick={() => answerPlanning(i)}
-                className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-left text-sm font-medium text-foreground hover:border-primary"
+                className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-left text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
               >
                 {opt}
               </button>

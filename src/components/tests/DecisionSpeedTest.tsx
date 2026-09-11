@@ -146,7 +146,7 @@ export function DecisionSpeedTest() {
             <button
               key={i}
               onClick={() => pick(i)}
-              className="flex h-20 w-20 items-center justify-center rounded-xl border border-border bg-surface-2 text-2xl font-bold text-foreground hover:border-primary"
+              className="flex h-20 w-20 items-center justify-center rounded-xl border border-border bg-surface-2 text-2xl font-bold text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
             >
               {n}
             </button>

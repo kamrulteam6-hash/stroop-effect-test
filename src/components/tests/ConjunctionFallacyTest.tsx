@@ -180,13 +180,13 @@ export function ConjunctionFallacyTest() {
         <div className="flex w-full flex-col gap-3">
           <button
             onClick={() => choose("A")}
-            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-left text-sm font-medium text-foreground transition-colors hover:border-primary"
+            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-left text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
           >
             <span className="font-bold text-primary">A:</span> {scenario.optionA}
           </button>
           <button
             onClick={() => choose("B")}
-            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-left text-sm font-medium text-foreground transition-colors hover:border-primary"
+            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-left text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
           >
             <span className="font-bold text-primary">B:</span> {scenario.optionB}
           </button>

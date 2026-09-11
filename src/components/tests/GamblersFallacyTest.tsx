@@ -136,19 +136,19 @@ export function GamblersFallacyTest() {
         <div className="flex w-full flex-col gap-3">
           <button
             onClick={() => choose("same")}
-            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary"
+            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
           >
             🔥 {sideLabel} again — it&apos;s on a streak
           </button>
           <button
             onClick={() => choose("flip")}
-            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary"
+            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
           >
             🔄 {oppositeLabel} — it&apos;s due for a change
           </button>
           <button
             onClick={() => choose("equal")}
-            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary"
+            className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
           >
             ⚖️ Equally likely — 50/50 either way
           </button>

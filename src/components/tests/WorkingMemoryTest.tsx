@@ -137,7 +137,7 @@ export function WorkingMemoryTest() {
             <button
               key={n}
               onClick={() => answer(n)}
-              className="h-14 w-14 rounded-xl border border-border bg-surface-2 text-lg font-bold text-foreground hover:border-primary"
+              className="h-14 w-14 rounded-xl border border-border bg-surface-2 text-lg font-bold text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
             >
               {n}
             </button>

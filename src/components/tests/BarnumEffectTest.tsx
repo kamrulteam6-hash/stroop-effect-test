@@ -233,7 +233,7 @@ export function BarnumEffectTest() {
             <button
               key={opt.label}
               onClick={answerQuestion}
-              className="flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary"
+              className="flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
             >
               {opt.icon && <span>{opt.icon}</span>}
               {opt.label}
