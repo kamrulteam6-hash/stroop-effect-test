@@ -34,6 +34,7 @@ function validateSlot(raw: unknown): AdSlotRecord | null {
     placement: s.placement.trim(),
     enabled: !!s.enabled,
     height: typeof s.height === "number" && s.height > 0 ? Math.round(s.height) : 250,
+    ...(typeof s.width === "number" && s.width > 0 ? { width: Math.round(s.width) } : {}),
   };
 }
 

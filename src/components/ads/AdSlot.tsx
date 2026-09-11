@@ -10,6 +10,7 @@ export interface AdSlotRecord {
   placement: string;
   enabled: boolean;
   height: number;
+  width?: number;
 }
 
 interface AdsConfig {
@@ -101,8 +102,8 @@ export function AdUnit({ slot }: { slot: AdSlotRecord }) {
       data-ad-slot={slot.id}
       data-ad-type={slot.type}
       aria-hidden="true"
-      className="mx-auto flex w-full max-w-full items-center justify-center overflow-hidden"
-      style={{ minHeight: slot.height }}
+      className="mx-auto flex max-w-full items-center justify-center overflow-hidden"
+      style={{ minHeight: slot.height, width: slot.width || "100%" }}
     />
   );
 }

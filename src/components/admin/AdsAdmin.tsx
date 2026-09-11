@@ -11,7 +11,19 @@ interface AdSlotRecord {
   placement: string;
   enabled: boolean;
   height: number;
+  width?: number;
 }
+
+/** Adsterra's standard ad unit sizes — matches the dimensions shown in their "Ad unit(s)" list. */
+const AD_SIZES: { label: string; width?: number; height: number }[] = [
+  { label: "Native Banner (fluid width)", height: 250 },
+  { label: "468 × 60", width: 468, height: 60 },
+  { label: "300 × 250", width: 300, height: 250 },
+  { label: "160 × 600", width: 160, height: 600 },
+  { label: "160 × 300", width: 160, height: 300 },
+  { label: "320 × 50", width: 320, height: 50 },
+  { label: "728 × 90", width: 728, height: 90 },
+];
 
 /** Every <AdSlot placement="..."/> currently placed in the code. Add as many ad slots as you want to
  *  any one of these — each zone renders every enabled slot assigned to it, stacked. */
@@ -41,6 +53,13 @@ const BLANK_SLOT: AdSlotRecord = {
   enabled: true,
   height: 250,
 };
+
+const CUSTOM_SIZE = "custom";
+
+function sizeKey(width: number | undefined, height: number): string {
+  const match = AD_SIZES.find((s) => (s.width ?? 0) === (width ?? 0) && s.height === height);
+  return match ? match.label : CUSTOM_SIZE;
+}
 
 function slugifyId(label: string): string {
   return label
@@ -367,16 +386,49 @@ export function AdsAdmin() {
               </select>
             </label>
             <label className="flex flex-col gap-1 text-xs font-semibold text-muted-2">
-              Reserved height (px)
-              <input
-                type="number"
-                min={1}
-                value={draft.height}
-                onChange={(e) => setDraft((d) => ({ ...d, height: Number(e.target.value) || 250 }))}
+              Ad size
+              <select
+                value={sizeKey(draft.width, draft.height)}
+                onChange={(e) => {
+                  const preset = AD_SIZES.find((s) => s.label === e.target.value);
+                  if (preset) setDraft((d) => ({ ...d, width: preset.width, height: preset.height }));
+                }}
                 className="rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
-              />
-              <span className="font-normal text-muted-2">Prevents layout shift while the ad script loads.</span>
+              >
+                {AD_SIZES.map((s) => (
+                  <option key={s.label} value={s.label}>
+                    {s.label}
+                  </option>
+                ))}
+                <option value={CUSTOM_SIZE}>Custom…</option>
+              </select>
+              <span className="font-normal text-muted-2">
+                Matches your ad network&apos;s unit size, so the reserved space is exact — no layout shift when it
+                loads.
+              </span>
             </label>
+            <div className="grid grid-cols-2 gap-3">
+              <label className="flex flex-col gap-1 text-xs font-semibold text-muted-2">
+                Width (px, blank = fluid)
+                <input
+                  type="number"
+                  min={1}
+                  value={draft.width ?? ""}
+                  onChange={(e) => setDraft((d) => ({ ...d, width: e.target.value ? Number(e.target.value) : undefined }))}
+                  className="rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
+                />
+              </label>
+              <label className="flex flex-col gap-1 text-xs font-semibold text-muted-2">
+                Height (px)
+                <input
+                  type="number"
+                  min={1}
+                  value={draft.height}
+                  onChange={(e) => setDraft((d) => ({ ...d, height: Number(e.target.value) || 250 }))}
+                  className="rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
+                />
+              </label>
+            </div>
             <label className="flex items-center gap-2 self-end pb-2 text-xs font-semibold text-muted-2">
               <input
                 type="checkbox"

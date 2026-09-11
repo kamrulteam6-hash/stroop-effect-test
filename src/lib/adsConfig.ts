@@ -14,6 +14,8 @@ export interface AdSlotRecord {
   enabled: boolean;
   /** Reserved container height in px, to prevent layout shift while the ad script loads. */
   height: number;
+  /** Reserved container width in px, matching the ad network's unit size. Omitted/0 means full width of whatever it's placed in. */
+  width?: number;
 }
 
 export interface AdsConfig {
