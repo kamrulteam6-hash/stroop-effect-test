@@ -9,15 +9,6 @@
       "placement": "test-sidebar-right",
       "enabled": true,
       "height": 250
-    },
-    {
-      "id": "right-sidebar-2",
-      "label": "Right sidebar 2",
-      "type": "banner",
-      "adCode": "<script>\n  atOptions = {\n    'key' : 'a4adbbaa36161e2cfcd29727c623e9bd',\n    'format' : 'iframe',\n    'height' : 250,\n    'width' : 300,\n    'params' : {}\n  };\n</script>\n<script src=\"https://www.highrevenueformat.com/a4adbbaa36161e2cfcd29727c623e9bd/invoke.js\"></script>\n",
-      "placement": "test-sidebar-right",
-      "enabled": true,
-      "height": 250
     }
   ]
 }
