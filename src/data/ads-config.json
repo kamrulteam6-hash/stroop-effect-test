@@ -19,6 +19,16 @@
       "enabled": true,
       "height": 60,
       "width": 468
+    },
+    {
+      "id": "2",
+      "label": "2",
+      "type": "banner",
+      "adCode": "<script>\n  atOptions = {\n    'key' : '507c60495d218f9f764861395c4cc714',\n    'format' : 'iframe',\n    'height' : 60,\n    'width' : 468,\n    'params' : {}\n  };\n</script>\n<script src=\"https://www.highrevenueformat.com/507c60495d218f9f764861395c4cc714/invoke.js\"></script>\n",
+      "placement": "test-sidebar-left",
+      "enabled": true,
+      "height": 60,
+      "width": 468
     }
   ]
 }
