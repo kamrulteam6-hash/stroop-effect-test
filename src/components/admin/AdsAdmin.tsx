@@ -166,6 +166,19 @@ export function AdsAdmin() {
 
   const activeCount = globallyEnabled ? slots.filter((s) => s.enabled).length : 0;
 
+  // Most ad networks bake a unique container id into each snippet, tied to that one ad unit/key.
+  // Pasting the identical snippet into multiple slots makes them collide (getElementById only
+  // ever finds the first one), so only one of the duplicates actually renders — silently.
+  const duplicateGroups = (() => {
+    const byCode = new Map<string, string[]>();
+    for (const s of slots) {
+      if (!s.enabled || !s.adCode.trim()) continue;
+      const key = s.adCode.trim();
+      byCode.set(key, [...(byCode.get(key) ?? []), s.label]);
+    }
+    return [...byCode.values()].filter((labels) => labels.length > 1);
+  })();
+
   if (loading) {
     return <p className="text-sm text-muted-2">Loading ads config…</p>;
   }
@@ -204,6 +217,25 @@ export function AdsAdmin() {
           </button>
         </div>
       </div>
+
+      {duplicateGroups.length > 0 && (
+        <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2.5 text-xs text-amber-600">
+          <p className="font-semibold">
+            {duplicateGroups.length} group{duplicateGroups.length === 1 ? "" : "s"} of slots share the exact same ad
+            code:
+          </p>
+          <ul className="mt-1 ml-4 list-disc">
+            {duplicateGroups.map((labels, i) => (
+              <li key={i}>{labels.join(", ")}</li>
+            ))}
+          </ul>
+          <p className="mt-1">
+            Most networks tie a unique container id to each ad unit — identical code in more than one slot means
+            only one of them will actually render. Generate a separate ad unit per slot in your network&apos;s
+            dashboard instead of reusing one snippet.
+          </p>
+        </div>
+      )}
 
       {saveError && (
         <p className="rounded-lg border border-danger/30 bg-danger/10 px-3 py-2 text-xs text-danger">{saveError}</p>
