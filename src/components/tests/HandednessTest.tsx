@@ -78,8 +78,11 @@ export function HandednessTest() {
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
           <ResultHeading>{result.label}</ResultHeading>
-          <div className="flex flex-col items-center">
-            <span className="text-5xl font-black tabular-nums text-primary">{lq}</span>
+          <div className="relative flex flex-col items-center">
+            <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 scale-150 rounded-full bg-primary/10 blur-2xl" />
+            <span className="text-5xl font-black tabular-nums text-primary drop-shadow-[0_4px_16px_rgba(91,61,240,0.25)]">
+              {lq}
+            </span>
             <span className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-2">
               Laterality Quotient (-100 to 100)
             </span>
@@ -129,16 +132,16 @@ export function HandednessTest() {
           </div>
         </div>
 
-        <p className="min-h-[3rem] text-center text-lg font-semibold text-foreground sm:text-xl">
-          Which hand do you use for: {item}?
-        </p>
+        <div className="flex min-h-[4.5rem] w-full items-center justify-center rounded-2xl border border-border/70 bg-surface-2 px-6 py-5 text-center shadow-sm">
+          <p className="text-lg font-semibold text-foreground sm:text-xl">Which hand do you use for: {item}?</p>
+        </div>
 
         <div className="grid w-full grid-cols-5 gap-2">
           {OPTIONS.map((opt) => (
             <button
               key={opt.label}
               onClick={() => answer(opt.value)}
-              className="flex flex-col items-center justify-center gap-1 rounded-xl border border-border bg-surface-2 px-1 py-3 text-center text-[10px] font-medium text-muted transition-colors hover:border-primary hover:text-foreground sm:text-xs"
+              className="flex flex-col items-center justify-center gap-1 rounded-xl border border-border bg-surface-2 px-1 py-3 text-center text-[10px] font-medium text-muted shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:text-foreground hover:shadow-md active:translate-y-0 active:scale-95 sm:text-xs"
             >
               {opt.label}
             </button>

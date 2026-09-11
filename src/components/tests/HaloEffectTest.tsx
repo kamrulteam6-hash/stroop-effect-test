@@ -156,8 +156,9 @@ export function HaloEffectTest() {
         <div className="flex w-full flex-col items-center gap-7 text-center">
           <ResultHeading>Your Halo Effect Results</ResultHeading>
 
-          <div className="flex flex-col items-center">
-            <span className="text-6xl font-black tabular-nums text-primary sm:text-7xl">
+          <div className="relative flex flex-col items-center">
+            <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 scale-150 rounded-full bg-primary/10 blur-2xl" />
+            <span className="text-6xl font-black tabular-nums text-primary drop-shadow-[0_4px_16px_rgba(91,61,240,0.25)] sm:text-7xl">
               {haloGap >= 0 ? "+" : ""}
               {haloGap.toFixed(1)}
             </span>

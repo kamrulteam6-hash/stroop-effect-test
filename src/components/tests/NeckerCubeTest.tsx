@@ -61,8 +61,9 @@ export function NeckerCubeTest() {
       <TestFrame>
         <div className="flex flex-col items-center gap-6 text-center">
           <ResultHeading>Your Reversal Rate</ResultHeading>
-          <div className="flex flex-col items-center">
-            <span className="text-5xl font-black tabular-nums text-primary">{flips}</span>
+          <div className="relative flex flex-col items-center">
+            <span aria-hidden className="pointer-events-none absolute inset-0 -z-10 scale-150 rounded-full bg-primary/10 blur-2xl" />
+            <span className="text-5xl font-black tabular-nums text-primary drop-shadow-[0_4px_16px_rgba(91,61,240,0.25)]">{flips}</span>
             <span className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-2">
               perceptual flips in {DURATION_S}s
             </span>
