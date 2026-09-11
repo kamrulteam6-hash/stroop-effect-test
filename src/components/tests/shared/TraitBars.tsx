@@ -14,9 +14,9 @@ export function TraitBars({ traits }: { traits: TraitScore[] }) {
             <span className="text-sm font-semibold text-foreground">{t.label}</span>
             <span className="text-sm font-bold tabular-nums text-primary">{Math.round(t.value)}%</span>
           </div>
-          <div className="h-2.5 w-full overflow-hidden rounded-full bg-surface-2">
+          <div className="h-2.5 w-full overflow-hidden rounded-full bg-surface-2 shadow-[inset_0_1px_3px_rgba(15,15,35,0.08)]">
             <div
-              className="h-full rounded-full bg-primary transition-[width] duration-700 ease-out"
+              className="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary shadow-[0_0_8px_rgba(91,61,240,0.4)] transition-[width] duration-700 ease-out"
               style={{ width: `${Math.min(100, Math.max(0, t.value))}%` }}
             />
           </div>

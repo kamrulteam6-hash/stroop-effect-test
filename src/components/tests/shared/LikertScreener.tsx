@@ -106,7 +106,7 @@ export function LikertScreener({ config }: { config: LikertScreenerConfig }) {
           </div>
 
           <span
-            className={`rounded-full px-4 py-1.5 text-sm font-bold ${
+            className={`rounded-full px-4 py-1.5 text-sm font-bold shadow-sm ${
               band.tone === "danger"
                 ? "bg-danger/15 text-danger"
                 : band.tone === "gold"
@@ -169,7 +169,9 @@ export function LikertScreener({ config }: { config: LikertScreenerConfig }) {
           </div>
         </div>
 
-        <p className="min-h-[3rem] text-center text-lg font-semibold text-foreground sm:text-xl">{q.text}</p>
+        <div className="flex min-h-[6rem] w-full items-center justify-center rounded-2xl border border-border/70 bg-surface-2 px-6 py-5 text-center shadow-sm">
+          <p className="text-lg font-semibold text-foreground sm:text-xl">{q.text}</p>
+        </div>
 
         <div
           className="grid w-full gap-2"
@@ -179,7 +181,7 @@ export function LikertScreener({ config }: { config: LikertScreenerConfig }) {
             <button
               key={label}
               onClick={() => answer(i + 1)}
-              className="flex flex-col items-center gap-2 rounded-xl border border-border bg-surface-2 px-1 py-3 text-center text-[10px] font-medium text-muted transition-colors hover:border-primary hover:text-foreground sm:text-xs"
+              className="flex flex-col items-center gap-2 rounded-xl border border-border bg-surface-2 px-1 py-3 text-center text-[10px] font-medium text-muted shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:text-foreground hover:shadow-md active:translate-y-0 active:scale-95 sm:text-xs"
             >
               <span className="text-lg font-bold text-foreground">{i + 1}</span>
               {label}

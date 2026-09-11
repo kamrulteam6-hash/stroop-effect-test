@@ -82,7 +82,7 @@ export function MCQQuiz({ config }: { config: MCQQuizConfig }) {
             <span className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-2">Correct ({pct}%)</span>
           </div>
           <span
-            className={`rounded-full px-4 py-1.5 text-sm font-bold ${
+            className={`rounded-full px-4 py-1.5 text-sm font-bold shadow-sm ${
               band.tone === "danger"
                 ? "bg-danger/15 text-danger"
                 : band.tone === "gold"
@@ -100,7 +100,7 @@ export function MCQQuiz({ config }: { config: MCQQuizConfig }) {
               const userAnswer = answers[i];
               const isCorrect = userAnswer === q.correctIndex;
               return (
-                <div key={i} className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm">
+                <div key={i} className="rounded-xl border border-border/70 bg-surface-2 px-4 py-3 text-sm shadow-sm">
                   <div className="flex items-start justify-between gap-2">
                     <span className="font-medium text-foreground">{q.question}</span>
                     <span className={isCorrect ? "font-bold text-success" : "font-bold text-danger"}>
@@ -176,7 +176,9 @@ export function MCQQuiz({ config }: { config: MCQQuizConfig }) {
           </div>
         </div>
 
-        <p className="min-h-[3rem] text-center text-lg font-semibold text-foreground sm:text-xl">{q.question}</p>
+        <div className="flex min-h-[4.5rem] w-full items-center justify-center rounded-2xl border border-border/70 bg-surface-2 px-6 py-5 text-center shadow-sm">
+          <p className="text-lg font-semibold text-foreground sm:text-xl">{q.question}</p>
+        </div>
 
         <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2">
           {q.options.map((opt, i) => {
@@ -188,12 +190,12 @@ export function MCQQuiz({ config }: { config: MCQQuizConfig }) {
                 key={opt}
                 onClick={() => pick(i)}
                 disabled={picked !== null}
-                className={`rounded-xl border px-4 py-3 text-left text-sm font-medium transition-colors ${
+                className={`rounded-xl border px-4 py-3 text-left text-sm font-medium shadow-sm transition-all ${
                   showState && isCorrectOpt
                     ? "border-success bg-success/10 text-success"
                     : showState && isPicked && !isCorrectOpt
                       ? "border-danger bg-danger/10 text-danger"
-                      : "border-border bg-surface-2 text-foreground hover:border-primary"
+                      : "border-border bg-surface-2 text-foreground hover:-translate-y-0.5 hover:border-primary hover:shadow-md active:translate-y-0"
                 }`}
               >
                 {opt}
