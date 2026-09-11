@@ -1,5 +1,5 @@
 {
-  "adsGloballyEnabled": true,
+  "adsGloballyEnabled": false,
   "slots": [
     {
       "id": "native-bannar",
