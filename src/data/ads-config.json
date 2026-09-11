@@ -2,16 +2,6 @@
   "adsGloballyEnabled": false,
   "slots": [
     {
-      "id": "right-side",
-      "label": "right side",
-      "type": "banner",
-      "adCode": "<script>\n  atOptions = {\n    'key' : '6168b3b078b4dd71cf7045f8ea45a99f',\n    'format' : 'iframe',\n    'height' : 600,\n    'width' : 160,\n    'params' : {}\n  };\n</script>\n<script src=\"https://www.highrevenueformat.com/6168b3b078b4dd71cf7045f8ea45a99f/invoke.js\"></script>\n",
-      "placement": "test-sidebar-left",
-      "enabled": true,
-      "height": 600,
-      "width": 160
-    },
-    {
       "id": "2",
       "label": "2",
       "type": "banner",
