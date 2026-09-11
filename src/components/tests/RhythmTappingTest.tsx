@@ -204,12 +204,12 @@ export function RhythmTappingTest() {
           {inLeadIn ? "🎧 Get ready…" : `Beat ${scoredSoFar + 1} / ${SCORED}`}
         </p>
         <div
-          className={`flex h-32 w-32 items-center justify-center rounded-full border-4 transition-transform ${
+          className={`flex h-32 w-32 items-center justify-center rounded-full border-4 shadow-lg transition-transform ${
             tapFlash === "good"
-              ? "border-success bg-success/20"
+              ? "border-success bg-gradient-to-b from-success/30 to-success/10 shadow-success/30"
               : tapFlash === "off"
-                ? "border-gold bg-gold/20"
-                : "border-primary bg-primary/10"
+                ? "border-gold bg-gradient-to-b from-gold/30 to-gold/10 shadow-gold/30"
+                : "border-primary bg-gradient-to-b from-primary/20 to-primary/5 shadow-primary/20"
           }`}
           style={{ transform: pulse ? "scale(1.15)" : "scale(1)" }}
         >

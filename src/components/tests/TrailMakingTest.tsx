@@ -183,28 +183,41 @@ export function TrailMakingTest() {
   return (
     <TestFrame className="p-0">
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
-      <div className="absolute left-3 top-3 z-10 flex items-center gap-3 rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
-        <span>Next: {dots[nextIndex]?.label ?? "—"}</span>
-        <span>{elapsed.toFixed(1)}s</span>
+      <div className="absolute left-3 top-3 z-10 flex items-center gap-2 text-xs font-semibold">
+        <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">
+          Next: {dots[nextIndex]?.label ?? "—"}
+        </span>
+        <span className="rounded-full bg-surface-2 px-3 py-1 tabular-nums text-muted-2">⏱ {elapsed.toFixed(1)}s</span>
       </div>
-      <div ref={areaRef} className="relative h-full min-h-[420px] w-full">
+      <div
+        ref={areaRef}
+        className="relative h-full min-h-[420px] w-full"
+        style={{
+          backgroundImage: "radial-gradient(var(--color-border) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+          backgroundPosition: "10px 10px",
+        }}
+      >
         <svg className="pointer-events-none absolute inset-0 h-full w-full">
-          <polyline points={trailPoints} fill="none" stroke="var(--color-primary)" strokeWidth={2} opacity={0.5} />
+          <polyline points={trailPoints} fill="none" stroke="var(--color-primary)" strokeWidth={2.5} opacity={0.55} strokeLinejoin="round" />
         </svg>
         {dots.map((dot, index) => {
           const done = index < nextIndex;
+          const isNext = index === nextIndex;
           const isWrong = wrongLabel === dot.label && index !== nextIndex;
           return (
             <button
               key={`${dot.label}-${index}`}
               onClick={() => tapDot(dot, index)}
               disabled={done}
-              className={`absolute flex items-center justify-center rounded-full border text-sm font-bold transition-colors ${
+              className={`absolute flex items-center justify-center rounded-full border text-sm font-bold shadow-sm transition-all ${
                 isWrong
                   ? "border-danger bg-danger/30 text-danger"
                   : done
-                    ? "border-border bg-surface-2 text-muted-2 opacity-40"
-                    : "border-primary bg-surface text-foreground hover:bg-primary/10"
+                    ? "border-border bg-surface-2 text-muted-2 opacity-35 shadow-none"
+                    : isNext
+                      ? "scale-110 border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/30 ring-4 ring-primary/20"
+                      : "border-border bg-surface text-foreground hover:border-primary hover:bg-primary/5"
               }`}
               style={{ width: TARGET_SIZE, height: TARGET_SIZE, left: dot.x, top: dot.y }}
             >

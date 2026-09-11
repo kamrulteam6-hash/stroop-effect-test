@@ -206,7 +206,14 @@ export function MultipleObjectTrackingTest() {
           </div>
         )}
       </div>
-      <div ref={areaRef} className="relative h-full min-h-[420px] w-full">
+      <div
+        ref={areaRef}
+        className="relative h-full min-h-[420px] w-full overflow-hidden"
+        style={{
+          background:
+            "radial-gradient(circle at center, var(--color-surface) 0%, var(--color-surface) 55%, var(--color-surface-2) 100%)",
+        }}
+      >
         {dots.map((d) => {
           const isTarget = phase === "highlight" && targetIds.has(d.id);
           const isSelected = selectedIds.has(d.id);
@@ -216,12 +223,12 @@ export function MultipleObjectTrackingTest() {
               onClick={() => toggleSelect(d.id)}
               disabled={phase !== "selecting"}
               aria-label={`dot ${d.id}`}
-              className={`absolute flex items-center justify-center rounded-full border-2 shadow-sm transition-colors ${
+              className={`absolute flex items-center justify-center rounded-full border-2 shadow-md transition-colors ${
                 isTarget
-                  ? "scale-110 border-primary bg-primary ring-4 ring-primary/30"
+                  ? "scale-110 border-primary bg-primary shadow-lg shadow-primary/40 ring-4 ring-primary/30"
                   : isSelected
-                    ? "border-success bg-success"
-                    : "border-border bg-foreground/70"
+                    ? "border-success bg-success shadow-success/30"
+                    : "border-border/60 bg-foreground/80"
               }`}
               style={{ width: DOT_SIZE, height: DOT_SIZE, left: d.x, top: d.y }}
             >

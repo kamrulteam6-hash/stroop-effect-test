@@ -124,37 +124,43 @@ export function SymbolDigitTest() {
     <TestFrame>
       <div className="flex w-full max-w-md flex-col items-center gap-6">
         <div className="flex w-full items-center justify-between text-xs font-semibold text-muted-2">
-          <span>Correct: {correct}</span>
-          <span>Time: {timeLeft}s</span>
+          <span className="rounded-full bg-success/10 px-3 py-1 text-success">✓ {correct} correct</span>
+          <span className="rounded-full bg-surface-2 px-3 py-1 tabular-nums">⏱ {timeLeft}s</span>
+        </div>
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+          <div
+            className="h-full rounded-full bg-primary transition-[width] duration-300 ease-linear"
+            style={{ width: `${(timeLeft / DURATION_S) * 100}%` }}
+          />
         </div>
 
-        <div className="grid w-full grid-cols-9 gap-1 rounded-xl border border-border bg-surface-2 p-2">
+        <div className="grid w-full grid-cols-9 gap-1 rounded-2xl border border-border bg-surface-2 p-2 shadow-sm sm:gap-1.5 sm:p-3">
           {SYMBOLS.map((s, i) => (
-            <div key={i} className="flex flex-col items-center gap-1 text-center">
-              <span className="text-base sm:text-lg">{s}</span>
+            <div key={i} className="flex flex-col items-center gap-1 rounded-lg bg-surface py-1.5 text-center shadow-sm">
+              <span className="text-lg sm:text-xl">{s}</span>
               <span className="text-[10px] font-bold text-muted-2">{legend[i]}</span>
             </div>
           ))}
         </div>
 
         <div
-          className={`flex h-24 w-24 items-center justify-center rounded-2xl border-2 text-5xl transition-colors ${
+          className={`flex h-28 w-28 items-center justify-center rounded-3xl border-2 text-6xl shadow-lg transition-all duration-150 ${
             flash === "correct"
-              ? "border-success bg-success/10"
+              ? "scale-105 border-success bg-success/10 shadow-success/20"
               : flash === "wrong"
-                ? "border-danger bg-danger/10"
+                ? "scale-95 border-danger bg-danger/10 shadow-danger/20"
                 : "border-border bg-surface-2"
           }`}
         >
           {SYMBOLS[current]}
         </div>
 
-        <div className="grid grid-cols-9 gap-1.5">
+        <div className="grid grid-cols-9 gap-1.5 sm:gap-2">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((d) => (
             <button
               key={d}
               onClick={() => answer(d)}
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface-2 text-sm font-bold text-foreground transition-colors hover:border-primary sm:h-10 sm:w-10"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface-2 text-sm font-bold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary/5 active:scale-90 sm:h-11 sm:w-11"
             >
               {d}
             </button>
