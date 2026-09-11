@@ -175,7 +175,7 @@ export function FlankerTest() {
           <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
             Trial {Math.min(trialIndex + 1, trialCount)} / {trialCount}
           </p>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2 shadow-[inset_0_1px_2px_rgba(15,15,35,0.08)]">
             <div
               className="h-full rounded-full bg-primary transition-[width] duration-150"
               style={{ width: `${(Math.min(trialIndex + 1, trialCount) / trialCount) * 100}%` }}

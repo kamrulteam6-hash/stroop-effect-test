@@ -127,7 +127,7 @@ export function SymbolDigitTest() {
           <span className="rounded-full bg-success/10 px-3 py-1 text-success">✓ {correct} correct</span>
           <span className="rounded-full bg-surface-2 px-3 py-1 tabular-nums">⏱ {timeLeft}s</span>
         </div>
-        <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2 shadow-[inset_0_1px_2px_rgba(15,15,35,0.08)]">
           <div
             className="h-full rounded-full bg-primary transition-[width] duration-300 ease-linear"
             style={{ width: `${(timeLeft / DURATION_S) * 100}%` }}

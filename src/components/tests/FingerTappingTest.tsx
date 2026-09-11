@@ -166,7 +166,7 @@ export function FingerTappingTest() {
           <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
             Round {phase === "tapping1" ? 1 : 2} — {timeLeft}s left
           </p>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2 shadow-[inset_0_1px_2px_rgba(15,15,35,0.08)]">
             <div
               className="h-full rounded-full bg-primary transition-[width] duration-500 ease-linear"
               style={{ width: `${(timeLeft / DURATION_S) * 100}%` }}

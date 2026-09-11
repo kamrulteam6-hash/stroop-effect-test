@@ -176,7 +176,7 @@ export function NBackTest() {
             Trial {Math.min(trialIndex + 1, trialCount)} / {trialCount} — remember {nLevel} step{nLevel > 1 ? "s" : ""}{" "}
             back
           </p>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2 shadow-[inset_0_1px_2px_rgba(15,15,35,0.08)]">
             <div
               className="h-full rounded-full bg-primary transition-[width] duration-150"
               style={{ width: `${(Math.min(trialIndex + 1, trialCount) / trialCount) * 100}%` }}

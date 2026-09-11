@@ -219,7 +219,7 @@ export function BarnumEffectTest() {
               Question {questionIndex + 1} / {QUESTIONS.length}
             </span>
           </div>
-          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2 shadow-[inset_0_1px_2px_rgba(15,15,35,0.08)]">
             <div
               className="h-full rounded-full bg-primary transition-[width] duration-300"
               style={{ width: `${(questionIndex / QUESTIONS.length) * 100}%` }}
