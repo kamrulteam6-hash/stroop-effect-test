@@ -75,15 +75,19 @@ export function ResultScreen({
       <Confetti fire={showConfetti} />
 
       {isNewBest && history.length > 1 && (
-        <span className="animate-pop-in rounded-full bg-gold/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">
+        <span className="animate-pop-in rounded-full bg-gold/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold shadow-sm">
           🏆 New Personal Best
         </span>
       )}
 
       <h3 className="text-2xl font-bold text-foreground sm:text-3xl">{headline}</h3>
 
-      <div className="flex flex-col items-center">
-        <span className="text-6xl font-black tabular-nums text-primary sm:text-7xl">
+      <div className="relative flex flex-col items-center">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 scale-150 rounded-full bg-primary/10 blur-2xl"
+        />
+        <span className="text-6xl font-black tabular-nums text-primary drop-shadow-[0_4px_16px_rgba(91,61,240,0.25)] sm:text-7xl">
           {formatValue(animatedValue)}
         </span>
         <span className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-2">{unitLabel}</span>
@@ -94,7 +98,10 @@ export function ResultScreen({
       {extraStats.length > 0 && (
         <div className="grid w-full max-w-md grid-cols-2 gap-3 sm:grid-cols-3">
           {extraStats.map((s) => (
-            <div key={s.label} className="rounded-xl border border-border bg-surface-2 px-3 py-3 text-center">
+            <div
+              key={s.label}
+              className="rounded-xl border border-border/70 bg-surface-2 px-3 py-3 text-center shadow-sm transition-shadow hover:shadow-md"
+            >
               <div className="text-xl font-bold text-foreground">{s.value}</div>
               <div className="mt-1 text-[11px] uppercase tracking-wide text-muted-2">{s.label}</div>
             </div>

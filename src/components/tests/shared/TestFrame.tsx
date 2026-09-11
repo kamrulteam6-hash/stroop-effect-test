@@ -8,7 +8,7 @@ export function TestFrame({ children, className = "" }: { children: ReactNode; c
   const hasCustomBg = /\bbg-/.test(className);
   return (
     <div
-      className={`relative flex min-h-[420px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border ${hasCustomBg ? "" : "bg-surface"} p-6 sm:p-10 ${className}`}
+      className={`relative flex min-h-[420px] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border/70 ${hasCustomBg ? "" : "bg-surface"} p-6 shadow-[0_1px_0_0_rgba(255,255,255,0.08)_inset,0_24px_48px_-28px_rgba(15,15,35,0.28),0_8px_20px_-14px_rgba(15,15,35,0.14)] sm:p-10 ${className}`}
     >
       {children}
     </div>
@@ -19,7 +19,10 @@ export function StatRow({ stats }: { stats: { label: string; value: string }[] }
   return (
     <div className="grid w-full max-w-md grid-cols-2 gap-3 sm:grid-cols-3">
       {stats.map((s) => (
-        <div key={s.label} className="rounded-xl border border-border bg-surface-2 px-3 py-3 text-center">
+        <div
+          key={s.label}
+          className="rounded-xl border border-border/70 bg-surface-2 px-3 py-3 text-center shadow-sm transition-shadow hover:shadow-md"
+        >
           <div className="text-2xl font-bold text-primary">{s.value}</div>
           <div className="mt-1 text-[11px] uppercase tracking-wide text-muted-2">{s.label}</div>
         </div>
