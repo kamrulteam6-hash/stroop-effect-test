@@ -13,6 +13,25 @@ interface AdSlotRecord {
   height: number;
 }
 
+/** Every <AdSlot placement="..."/> currently placed in the code. Add as many ad slots as you want to
+ *  any one of these — each zone renders every enabled slot assigned to it, stacked. */
+const KNOWN_PLACEMENTS = [
+  "test-results",
+  "test-article-top",
+  "test-article-inline",
+  "test-article-end",
+  "test-sidebar-left",
+  "test-sidebar-right",
+  "homepage-popular",
+  "homepage-mid",
+  "homepage-pre-faq",
+  "blog-article-top",
+  "blog-article-end",
+  "tests-grid",
+  "footer",
+  "anchor",
+] as const;
+
 const BLANK_SLOT: AdSlotRecord = {
   id: "",
   label: "",
@@ -282,15 +301,23 @@ export function AdsAdmin() {
               />
             </label>
             <label className="flex flex-col gap-1 text-xs font-semibold text-muted-2">
-              Placement
+              Placement (where this shows)
               <input
                 value={draft.placement}
                 onChange={(e) => setDraft((d) => ({ ...d, placement: e.target.value }))}
                 placeholder="test-results"
+                list="known-placements"
                 className="rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-foreground outline-none focus:border-primary"
               />
+              <datalist id="known-placements">
+                {KNOWN_PLACEMENTS.map((p) => (
+                  <option key={p} value={p} />
+                ))}
+              </datalist>
               <span className="font-normal text-muted-2">
-                {`Free-text note for where this renders. Must match an <AdSlot id="${draft.id || "..."}"/> already placed in the code.`}
+                Pick one of the existing zones to add another ad there (multiple slots can share a
+                placement — they all show, stacked), or type a new placement id, but it only renders
+                once that exact id is added as an &lt;AdSlot/&gt; in the code.
               </span>
             </label>
             <label className="flex flex-col gap-1 text-xs font-semibold text-muted-2">

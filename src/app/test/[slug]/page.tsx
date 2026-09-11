@@ -7,6 +7,7 @@ import { testComponents } from "@/components/tests";
 import { SectionLabel } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { DeepContentRenderer } from "@/components/seo/DeepContentRenderer";
+import { AdSlot } from "@/components/ads/AdSlot";
 
 export function generateStaticParams() {
   return tests.map((t) => ({ slug: t.slug }));
@@ -65,51 +66,71 @@ export default async function TestPage({
   const showByline = reviewedCategories.includes(test.category);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }} />
-      <nav className="mb-6 text-xs text-muted-2">
-        <Link href="/" className="hover:text-primary">
-          Home
-        </Link>{" "}
-        /{" "}
-        <Link href="/tests" className="hover:text-primary">
-          All Tests
-        </Link>{" "}
-        / <span className="text-muted">{test.shortTitle}</span>
-      </nav>
+    <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 xl:grid xl:grid-cols-[200px_1fr_200px] xl:items-start xl:gap-6 xl:px-8">
+      {/* Side rails — extra width only exists on large screens, and these scroll normally with
+          the page (not fixed/sticky), so they never cover content or drift over the test itself. */}
+      <div className="hidden xl:block">
+        <AdSlot placement="test-sidebar-left" gap="gap-6" />
+      </div>
 
-      <div className="flex flex-col items-center gap-4 text-center">
-        <SectionLabel>{test.category}</SectionLabel>
-        <h1 className="text-3xl font-black tracking-tight text-foreground text-balance sm:text-4xl">
-          <span className="mr-2">{test.icon}</span>
-          {test.title}
-        </h1>
-        <p className="max-w-xl text-balance text-muted">{test.shortDescription}</p>
-        <div className="flex items-center gap-2">
-          <Badge tone="primary">{test.difficulty}</Badge>
-          <Badge tone="muted">{test.estTime}</Badge>
+      <div className="mx-auto w-full max-w-3xl">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }} />
+        <nav className="mb-6 text-xs text-muted-2">
+          <Link href="/" className="hover:text-primary">
+            Home
+          </Link>{" "}
+          /{" "}
+          <Link href="/tests" className="hover:text-primary">
+            All Tests
+          </Link>{" "}
+          / <span className="text-muted">{test.shortTitle}</span>
+        </nav>
+
+        <div className="flex flex-col items-center gap-4 text-center">
+          <SectionLabel>{test.category}</SectionLabel>
+          <h1 className="text-3xl font-black tracking-tight text-foreground text-balance sm:text-4xl">
+            <span className="mr-2">{test.icon}</span>
+            {test.title}
+          </h1>
+          <p className="max-w-xl text-balance text-muted">{test.shortDescription}</p>
+          <div className="flex items-center gap-2">
+            <Badge tone="primary">{test.difficulty}</Badge>
+            <Badge tone="muted">{test.estTime}</Badge>
+          </div>
+          {showByline && (
+            <p className="text-xs text-muted-2">
+              Written &amp; reviewed by the{" "}
+              <Link href="/about#editorial-team" className="font-semibold text-primary hover:underline">
+                Stroop Effect Test Editorial Team
+              </Link>
+            </p>
+          )}
         </div>
-        {showByline && (
-          <p className="text-xs text-muted-2">
-            Written &amp; reviewed by the{" "}
-            <Link href="/about#editorial-team" className="font-semibold text-primary hover:underline">
-              Stroop Effect Test Editorial Team
-            </Link>
-          </p>
-        )}
+
+        <div className="mt-10">
+          <TestComponent />
+        </div>
+
+        <div className="mt-10">
+          <AdSlot placement="test-article-top" />
+        </div>
+
+        {seoContent && <DeepContentRenderer content={seoContent} />}
+
+        <div className="mt-10">
+          <AdSlot placement="test-article-end" />
+        </div>
+
+        <div className="mt-16 rounded-2xl border border-border bg-surface p-6 text-center">
+          <p className="text-sm text-muted">Want to try something else?</p>
+          <Link href="/tests" className="mt-2 inline-block text-sm font-semibold text-primary hover:underline">
+            Browse all free tests →
+          </Link>
+        </div>
       </div>
 
-      <div className="mt-10">
-        <TestComponent />
-      </div>
-
-      {seoContent && <DeepContentRenderer content={seoContent} />}
-
-      <div className="mt-16 rounded-2xl border border-border bg-surface p-6 text-center">
-        <p className="text-sm text-muted">Want to try something else?</p>
-        <Link href="/tests" className="mt-2 inline-block text-sm font-semibold text-primary hover:underline">
-          Browse all free tests →
-        </Link>
+      <div className="hidden xl:block">
+        <AdSlot placement="test-sidebar-right" gap="gap-6" />
       </div>
     </div>
   );

@@ -302,7 +302,7 @@ export default function Home() {
           <Button href="/tests" variant="secondary" className="mt-4">
             View All {tests.length} Tests →
           </Button>
-          <AdSlot id="homepage-popular" />
+          <AdSlot placement="homepage-popular" />
         </section>
 
         {/* How it works */}
@@ -325,6 +325,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <AdSlot placement="homepage-mid" />
 
         {/* Why does it happen */}
         <section className="mt-20 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
@@ -519,6 +521,8 @@ export default function Home() {
             </Link>
             .
           </p>
+
+          <AdSlot placement="homepage-pre-faq" />
 
           <SeoHeading id="faq">Frequently Asked Questions</SeoHeading>
           <div>

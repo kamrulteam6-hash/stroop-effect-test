@@ -136,7 +136,7 @@ export function ResultScreen({
       </div>
       {history.length <= 1 && <Badge tone="muted">First attempt recorded</Badge>}
 
-      <AdSlot id="test-results" />
+      <AdSlot placement="test-results" />
     </div>
   );
 }

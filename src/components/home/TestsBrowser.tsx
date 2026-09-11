@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { TestDefinition, categories } from "@/data/tests";
 import { TestCard } from "@/components/home/TestCard";
+import { AdSlot } from "@/components/ads/AdSlot";
+
+const AD_EVERY_N_CARDS = 9;
 
 export function TestsBrowser({ tests }: { tests: TestDefinition[] }) {
   const searchParams = useSearchParams();
@@ -31,8 +34,16 @@ export function TestsBrowser({ tests }: { tests: TestDefinition[] }) {
         ))}
       </div>
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((test) => (
-          <TestCard key={test.slug} test={test} />
+        {filtered.map((test, i) => (
+          <Fragment key={test.slug}>
+            <TestCard test={test} />
+            {(i + 1) % AD_EVERY_N_CARDS === 0 && (
+              <AdSlot
+                placement="tests-grid"
+                className="col-span-1 rounded-2xl border border-border bg-surface p-2 sm:col-span-2 lg:col-span-3"
+              />
+            )}
+          </Fragment>
         ))}
       </div>
     </div>

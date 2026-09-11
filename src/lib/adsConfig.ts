@@ -9,7 +9,7 @@ export interface AdSlotRecord {
   type: AdType;
   /** Raw ad markup from the network (script tags, container divs, etc.) — injected as-is. */
   adCode: string;
-  /** Free-text placement identifier, e.g. "test-results", "homepage-popular", "footer". Matched manually against <AdSlot id="..."/> calls in code. */
+  /** Zone identifier, e.g. "test-results", "homepage-popular", "footer", "anchor". Matches an <AdSlot placement="..."/> in the code — multiple slots can share one placement and all render there, stacked, so density is controlled entirely from the admin panel. */
   placement: string;
   enabled: boolean;
   /** Reserved container height in px, to prevent layout shift while the ad script loads. */

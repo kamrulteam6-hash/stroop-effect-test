@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface AdSlotRecord {
+export interface AdSlotRecord {
   id: string;
   label: string;
   type: string;
@@ -52,14 +52,9 @@ function injectAdCode(container: HTMLDivElement, adCode: string) {
   });
 }
 
-/**
- * Renders one ad placement by id. Pages never reference ad networks directly — everything
- * (whether it's on, what code it runs) is controlled from the admin panel's Ads tab.
- */
-export function AdSlot({ id }: { id: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const injectedRef = useRef(false);
-  const [slot, setSlot] = useState<AdSlotRecord | null | undefined>(undefined);
+/** Fetches the active, enabled slots for a placement. Shared by <AdSlot/> and <AdAnchorBar/> so both know, before rendering any chrome, whether there's actually an ad to show. */
+export function useAdPlacement(placement: string): { active: AdSlotRecord[]; loaded: boolean } {
+  const [slots, setSlots] = useState<AdSlotRecord[] | undefined>(undefined);
   const [globallyEnabled, setGloballyEnabled] = useState(false);
 
   useEffect(() => {
@@ -67,15 +62,23 @@ export function AdSlot({ id }: { id: string }) {
     loadConfig().then((config) => {
       if (cancelled) return;
       setGloballyEnabled(!!config?.adsGloballyEnabled);
-      setSlot(config?.slots.find((s) => s.id === id) ?? null);
+      setSlots(config?.slots.filter((s) => s.placement === placement) ?? []);
     });
     return () => {
       cancelled = true;
     };
-  }, [id]);
+  }, [placement]);
+
+  if (!globallyEnabled || !slots) return { active: [], loaded: slots !== undefined };
+  return { active: slots.filter((s) => s.enabled && s.adCode.trim()), loaded: true };
+}
+
+/** Renders exactly one ad unit. Each unit gets its own idle-load and its own reserved-height container. */
+export function AdUnit({ slot }: { slot: AdSlotRecord }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const injectedRef = useRef(false);
 
   useEffect(() => {
-    if (!slot || !slot.enabled || !globallyEnabled) return;
     if (injectedRef.current) return;
     const container = containerRef.current;
     if (!container || !slot.adCode.trim()) return;
@@ -90,17 +93,36 @@ export function AdSlot({ id }: { id: string }) {
     } else {
       window.setTimeout(run, 200);
     }
-  }, [slot, globallyEnabled]);
-
-  if (!globallyEnabled || !slot || !slot.enabled) return null;
+  }, [slot]);
 
   return (
     <div
       ref={containerRef}
-      data-ad-slot={id}
+      data-ad-slot={slot.id}
+      data-ad-type={slot.type}
       aria-hidden="true"
       className="mx-auto flex w-full max-w-full items-center justify-center overflow-hidden"
       style={{ minHeight: slot.height }}
     />
+  );
+}
+
+/**
+ * Renders every enabled ad slot assigned to this placement — zero, one, or many.
+ * Pages never reference ad networks directly; how many ads show at a given spot,
+ * and what they run, is controlled entirely from the admin panel's Ads tab. To
+ * add more ads at a spot that already exists in the page, no code change is
+ * needed — just add another slot in the admin with the same placement.
+ */
+export function AdSlot({ placement, gap = "gap-4", className = "" }: { placement: string; gap?: string; className?: string }) {
+  const { active } = useAdPlacement(placement);
+  if (active.length === 0) return null;
+
+  return (
+    <div data-ad-placement={placement} className={`flex w-full flex-col items-center ${gap} ${className}`}>
+      {active.map((slot) => (
+        <AdUnit key={slot.id} slot={slot} />
+      ))}
+    </div>
   );
 }

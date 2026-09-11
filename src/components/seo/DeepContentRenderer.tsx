@@ -5,6 +5,7 @@ import { SeoHeading, SeoSubheading } from "@/components/seo/SeoHeading";
 import { DataTable } from "@/components/seo/DataTable";
 import { Callout } from "@/components/seo/Callout";
 import { SeoFaqBlock } from "@/components/seo/SeoFaqBlock";
+import { AdSlot } from "@/components/ads/AdSlot";
 
 const INLINE_PATTERN = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g;
 
@@ -52,15 +53,22 @@ function withInlineLinks(text: string): ReactNode {
 }
 
 export function DeepContentRenderer({ content }: { content: TestSeoContent }) {
+  const headingIndexes = content.blocks.map((b, i) => (b.type === "heading" ? i : -1)).filter((i) => i >= 0);
+
   return (
     <section className="mt-20 flex flex-col gap-8 border-t border-border pt-12">
       {content.blocks.map((block, i) => {
+        // An ad between sections (before every heading but the first) — a natural break in
+        // reading flow rather than an interruption mid-paragraph.
+        const adBeforeThis = block.type === "heading" && headingIndexes.indexOf(i) > 0;
+
         switch (block.type) {
           case "heading":
             return (
-              <SeoHeading key={i} id={block.id}>
-                {block.text}
-              </SeoHeading>
+              <Fragment key={i}>
+                {adBeforeThis && <AdSlot placement="test-article-inline" />}
+                <SeoHeading id={block.id}>{block.text}</SeoHeading>
+              </Fragment>
             );
           case "subheading":
             return <SeoSubheading key={i}>{block.text}</SeoSubheading>;
