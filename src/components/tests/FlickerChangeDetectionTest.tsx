@@ -147,7 +147,10 @@ export function FlickerChangeDetectionTest() {
         <p className="text-xs font-medium text-muted-2">
           Round {trialIndex + 1} / {TOTAL_TRIALS}
         </p>
-        <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
+        <div
+          className="grid gap-3 rounded-2xl border border-border/70 bg-surface-2 p-4 shadow-sm"
+          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
+        >
           {cells.map((cell, i) => {
             const display = i === changeIndex && showChanged ? changedCell : cell;
             return (

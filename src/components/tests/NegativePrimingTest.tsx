@@ -168,7 +168,7 @@ export function NegativePrimingTest() {
               key={shape}
               disabled={showPrime}
               onClick={() => respond(shape)}
-              className="flex h-12 w-12 items-center justify-center rounded-lg border border-border bg-surface-2 transition-colors hover:border-primary/40 disabled:opacity-40"
+              className="flex h-12 w-12 items-center justify-center rounded-lg border border-border bg-surface-2 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md disabled:opacity-40"
             >
               <ShapeIcon shape={shape} color="#94a3b8" />
             </button>

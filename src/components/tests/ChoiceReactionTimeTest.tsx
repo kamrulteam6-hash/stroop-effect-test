@@ -110,9 +110,12 @@ export function ChoiceReactionTimeTest() {
         <p className="text-xs font-medium text-muted-2">
           Round {trialIndex + 1} / {TOTAL_TRIALS}
         </p>
-        <div className="flex h-32 w-32 items-center justify-center rounded-full border border-border">
+        <div className="flex h-32 w-32 items-center justify-center rounded-full border border-border/70 bg-surface-2 shadow-inner">
           {phase === "go" && (
-            <div className="h-24 w-24 rounded-full" style={{ backgroundColor: COLORS[target].hex }} />
+            <div
+              className="h-24 w-24 rounded-full shadow-xl"
+              style={{ backgroundColor: COLORS[target].hex, boxShadow: `0 12px 28px -8px ${COLORS[target].hex}99` }}
+            />
           )}
         </div>
         <div className="flex gap-3">
@@ -120,7 +123,7 @@ export function ChoiceReactionTimeTest() {
             <button
               key={c.name}
               onClick={() => respond(i)}
-              className="flex h-12 w-12 items-center justify-center rounded-xl border border-border text-xs font-bold uppercase text-white"
+              className="flex h-12 w-12 items-center justify-center rounded-xl border border-border text-xs font-bold uppercase text-white shadow-md transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-90"
               style={{ backgroundColor: c.hex }}
             >
               {c.key}

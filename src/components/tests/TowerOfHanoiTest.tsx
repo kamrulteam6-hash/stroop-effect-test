@@ -116,14 +116,14 @@ export function TowerOfHanoiTest() {
             <button
               key={i}
               onClick={() => clickPeg(i)}
-              className={`flex h-48 w-24 flex-col-reverse items-center gap-1 rounded-b-lg border-b-4 pb-1 transition-colors ${
-                selected === i ? "border-primary bg-primary/5" : "border-border bg-surface-2"
+              className={`flex h-48 w-24 flex-col-reverse items-center gap-1 rounded-b-lg border-b-4 pb-1 shadow-sm transition-all ${
+                selected === i ? "border-primary bg-primary/5 shadow-md" : "border-border bg-surface-2"
               }`}
             >
               {peg.map((disk) => (
                 <div
                   key={disk}
-                  className="h-5 rounded"
+                  className="h-5 rounded shadow-md"
                   style={{
                     width: `${30 + disk * 12}px`,
                     backgroundColor: DISK_COLORS[disk - 1] ?? "#999",

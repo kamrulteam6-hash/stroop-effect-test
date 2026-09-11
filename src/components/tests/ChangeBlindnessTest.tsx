@@ -143,8 +143,8 @@ export function ChangeBlindnessTest() {
           Round {trialIndex + 1} / {TOTAL_TRIALS}
         </p>
         <div
-          className="grid gap-2"
-          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, width: `${cols * 44}px` }}
+          className="grid gap-2 rounded-2xl border border-border/70 bg-surface-2 p-3 shadow-sm"
+          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, width: `${cols * 44 + 24}px` }}
         >
           {trial.colors.map((color, i) => {
             const isChangeCell = i === trial.changeIndex;
@@ -153,7 +153,7 @@ export function ChangeBlindnessTest() {
               <button
                 key={i}
                 onClick={() => clickCell(i)}
-                className="h-10 w-10 rounded-lg border border-border/40"
+                className="h-10 w-10 rounded-lg border border-border/40 shadow-sm transition-transform hover:scale-105 active:scale-95"
                 style={{ backgroundColor: displayColor }}
               />
             );

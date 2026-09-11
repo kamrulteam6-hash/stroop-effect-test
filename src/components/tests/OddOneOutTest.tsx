@@ -151,8 +151,8 @@ export function OddOneOutTest() {
           Round {trialIndex + 1} / {TOTAL_TRIALS}
         </p>
         <div
-          className="grid gap-4"
-          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, maxWidth: `${cols * 48}px` }}
+          className="grid gap-4 rounded-2xl border border-border/70 bg-surface-2 p-4 shadow-sm"
+          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, maxWidth: `${cols * 48 + 32}px` }}
         >
           {Array.from({ length: trial.gridSize }).map((_, i) => (
             <button

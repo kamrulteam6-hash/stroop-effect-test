@@ -99,14 +99,14 @@ export function VisualSearchTest() {
           Round {trialIndex + 1} / {TOTAL_TRIALS}
         </p>
         <div
-          className="grid gap-3"
-          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, maxWidth: `${cols * 40}px` }}
+          className="grid gap-3 rounded-2xl border border-border/70 bg-surface-2 p-4 shadow-sm"
+          style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, maxWidth: `${cols * 40 + 32}px` }}
         >
           {Array.from({ length: trial.setSize }).map((_, i) => (
             <button
               key={i}
               onClick={() => clickCell(i)}
-              className="h-7 w-7 rounded-full transition-transform hover:scale-110"
+              className="h-7 w-7 rounded-full shadow-md transition-transform hover:scale-110"
               style={{ backgroundColor: i === trial.targetIndex ? "#ef4444" : "#3b82f6" }}
               aria-label={i === trial.targetIndex ? "target" : "distractor"}
             />

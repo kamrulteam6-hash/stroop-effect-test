@@ -27,9 +27,9 @@ interface Pair {
 }
 
 function ShapeIcon({ shape, color, size = 40 }: { shape: Shape; color: string; size?: number }) {
-  if (shape === "circle") return <div className="rounded-full" style={{ backgroundColor: color, width: size, height: size }} />;
-  if (shape === "square") return <div className="rounded-md" style={{ backgroundColor: color, width: size, height: size }} />;
-  if (shape === "diamond") return <div className="rotate-45 rounded-md" style={{ backgroundColor: color, width: size * 0.8, height: size * 0.8 }} />;
+  if (shape === "circle") return <div className="rounded-full shadow-lg" style={{ backgroundColor: color, width: size, height: size }} />;
+  if (shape === "square") return <div className="rounded-md shadow-lg" style={{ backgroundColor: color, width: size, height: size }} />;
+  if (shape === "diamond") return <div className="rotate-45 rounded-md shadow-lg" style={{ backgroundColor: color, width: size * 0.8, height: size * 0.8 }} />;
   if (shape === "triangle")
     return (
       <div
@@ -185,7 +185,7 @@ export function VisualPairedAssociatesTest() {
               key={color}
               disabled={!!feedback}
               onClick={() => answer(color)}
-              className="h-12 w-12 rounded-full border-2 border-border transition-transform hover:scale-110 disabled:opacity-60"
+              className="h-12 w-12 rounded-full border-2 border-border shadow-md transition-transform hover:scale-110 disabled:opacity-60"
               style={{ backgroundColor: color }}
             />
           ))}
