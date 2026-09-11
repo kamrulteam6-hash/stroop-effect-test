@@ -4,7 +4,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { AdAnchorBar } from "@/components/ads/AdAnchorBar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -82,7 +81,6 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <AdAnchorBar />
       </body>
       <GoogleAnalytics gaId="G-EBS4T6KM9K" />
     </html>

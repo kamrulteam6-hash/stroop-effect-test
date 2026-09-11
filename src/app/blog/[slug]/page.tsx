@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_SLUGS, BlogMeta } from "@/data/blog";
-import { AdSlot } from "@/components/ads/AdSlot";
 
 export function generateStaticParams() {
   return BLOG_SLUGS.map((slug) => ({ slug }));
@@ -119,17 +118,9 @@ export default async function BlogPostPage({
         </div>
       )}
 
-      <div className="mt-8">
-        <AdSlot placement="blog-article-top" />
-      </div>
-
       <article className="mt-8 flex flex-col gap-5">
         <Post />
       </article>
-
-      <div className="mt-10">
-        <AdSlot placement="blog-article-end" />
-      </div>
     </div>
   );
 }

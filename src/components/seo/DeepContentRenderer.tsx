@@ -5,7 +5,6 @@ import { SeoHeading, SeoSubheading } from "@/components/seo/SeoHeading";
 import { DataTable } from "@/components/seo/DataTable";
 import { Callout } from "@/components/seo/Callout";
 import { SeoFaqBlock } from "@/components/seo/SeoFaqBlock";
-import { AdSlot } from "@/components/ads/AdSlot";
 
 const INLINE_PATTERN = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g;
 
@@ -52,21 +51,10 @@ function withInlineLinks(text: string): ReactNode {
   return parts;
 }
 
-/** These pages run deep, long-form content — some have 60-75 paragraph blocks — so an ad before
- *  literally every one would mean dozens stacked down a single page. This spacing still lands
- *  far more ads than before, without turning the article into a wall of ad boxes. */
-const PARAGRAPHS_PER_AD = 5;
-
 export function DeepContentRenderer({ content }: { content: TestSeoContent }) {
-  const paragraphIndexes = content.blocks.map((b, i) => (b.type === "paragraph" ? i : -1)).filter((i) => i >= 0);
-
   return (
     <section className="mt-20 flex flex-col gap-8 border-t border-border pt-12">
       {content.blocks.map((block, i) => {
-        const paragraphPosition = paragraphIndexes.indexOf(i);
-        const adBeforeThis =
-          block.type === "paragraph" && paragraphPosition > 0 && paragraphPosition % PARAGRAPHS_PER_AD === 0;
-
         switch (block.type) {
           case "heading":
             return (
@@ -78,10 +66,9 @@ export function DeepContentRenderer({ content }: { content: TestSeoContent }) {
             return <SeoSubheading key={i}>{block.text}</SeoSubheading>;
           case "paragraph":
             return (
-              <Fragment key={i}>
-                {adBeforeThis && <AdSlot placement="test-article-inline" />}
-                <p className="leading-relaxed text-muted">{withInlineLinks(block.text)}</p>
-              </Fragment>
+              <p key={i} className="leading-relaxed text-muted">
+                {withInlineLinks(block.text)}
+              </p>
             );
           case "list":
             return block.ordered ? (
