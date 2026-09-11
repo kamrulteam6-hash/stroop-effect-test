@@ -139,13 +139,23 @@ export function FalseMemoryTest() {
   if (phase === "studying") {
     return (
       <TestFrame>
-        <div className="flex flex-col items-center gap-6">
-          <p className="text-xs font-medium text-muted-2">
-            Word {studyIndex + 1} / {STUDY_WORDS.length}
-          </p>
-          <div className="flex h-24 items-center justify-center">
+        <div className="flex w-full max-w-xs flex-col items-center gap-6">
+          <div className="w-full">
+            <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+              Word {studyIndex + 1} / {STUDY_WORDS.length}
+            </p>
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+              <div
+                className="h-full rounded-full bg-primary transition-[width] duration-200 ease-linear"
+                style={{ width: `${((studyIndex + 1) / STUDY_WORDS.length) * 100}%` }}
+              />
+            </div>
+          </div>
+          <div className="flex h-28 w-full items-center justify-center rounded-3xl border border-border bg-surface-2 shadow-sm">
             {showingWord && (
-              <span className="text-4xl font-black text-foreground sm:text-5xl">{STUDY_WORDS[studyIndex]}</span>
+              <span className="animate-pop-in text-4xl font-black text-foreground sm:text-5xl">
+                {STUDY_WORDS[studyIndex]}
+              </span>
             )}
           </div>
         </div>
@@ -164,12 +174,13 @@ export function FalseMemoryTest() {
             <button
               key={word}
               onClick={() => toggle(word)}
-              className={`rounded-lg border px-2 py-2 text-xs font-medium transition-colors sm:text-sm ${
+              className={`flex items-center justify-center gap-1.5 rounded-lg border px-2 py-2 text-xs font-medium shadow-sm transition-all sm:text-sm ${
                 marked.has(word)
-                  ? "border-primary bg-primary/10 text-foreground"
-                  : "border-border bg-surface-2 text-muted hover:border-primary"
+                  ? "border-primary bg-primary text-primary-foreground shadow-primary/25"
+                  : "border-border bg-surface-2 text-muted hover:border-primary hover:bg-primary/5"
               }`}
             >
+              {marked.has(word) && <span className="text-[10px]">✓</span>}
               {word}
             </button>
           ))}

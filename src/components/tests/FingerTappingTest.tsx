@@ -176,7 +176,7 @@ export function FingerTappingTest() {
         <span className="text-6xl font-black tabular-nums text-primary">{currentTaps}</span>
         <button
           onClick={tap}
-          className="flex h-40 w-40 select-none items-center justify-center rounded-full border-4 border-primary bg-primary/10 text-lg font-bold text-primary shadow-sm transition-transform active:scale-90 sm:h-48 sm:w-48"
+          className="flex h-40 w-40 select-none items-center justify-center rounded-full border-4 border-primary bg-gradient-to-b from-primary/25 to-primary/5 text-lg font-bold text-primary shadow-lg shadow-primary/25 transition-transform active:scale-90 sm:h-48 sm:w-48"
         >
           👆 TAP
         </button>

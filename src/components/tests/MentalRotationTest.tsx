@@ -111,11 +111,19 @@ export function MentalRotationTest() {
 
   return (
     <TestFrame>
-      <div className="flex flex-col items-center gap-6">
-        <p className="text-xs font-medium text-muted-2">
-          Round {trialIndex + 1} / {TOTAL_TRIALS}
-        </p>
-        <div className="flex h-[160px] items-center justify-center">
+      <div className="flex w-full max-w-xs flex-col items-center gap-6">
+        <div className="w-full">
+          <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+            Round {trialIndex + 1} / {TOTAL_TRIALS}
+          </p>
+          <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+            <div
+              className="h-full rounded-full bg-primary transition-[width] duration-300"
+              style={{ width: `${((trialIndex + 1) / TOTAL_TRIALS) * 100}%` }}
+            />
+          </div>
+        </div>
+        <div className="flex h-[180px] w-full items-center justify-center rounded-3xl border border-border bg-surface-2 shadow-sm">
           <RotatedF {...trial} />
         </div>
         <div className="flex gap-4">

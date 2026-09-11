@@ -130,25 +130,29 @@ export function NumberMemoryTest() {
     <TestFrame>
       {phase === "memorize" && (
         <div className="flex flex-col items-center gap-4 text-center">
-          <p className="text-xs font-medium text-muted-2">{digitCount} digits — memorize this</p>
-          <p className="animate-pop-in text-5xl font-black tracking-widest text-foreground sm:text-6xl">
-            {sequence}
-          </p>
+          <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+            Level {digitCount - startLength + 1} · {digitCount} digits
+          </span>
+          <div className="flex min-h-28 items-center justify-center rounded-3xl border border-border bg-surface-2 px-6 shadow-sm sm:px-8">
+            <p className="animate-pop-in text-5xl font-black tracking-widest text-foreground sm:text-6xl">
+              {sequence}
+            </p>
+          </div>
         </div>
       )}
 
       {phase === "recall" && (
         <div className="flex w-full max-w-xs flex-col items-center gap-4 text-center">
-          <p className="text-xs font-medium text-muted-2">
-            {mode === "reverse" ? "Type it in reverse order" : "Type what you saw"}
-          </p>
+          <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
+            {mode === "reverse" ? "🔁 Type it in reverse order" : "Type what you saw"}
+          </span>
           <input
             autoFocus
             inputMode="numeric"
             value={input}
             onChange={(e) => setInput(e.target.value.replace(/\D/g, ""))}
             onKeyDown={(e) => e.key === "Enter" && submit()}
-            className="w-full rounded-xl border border-border bg-surface-2 px-4 py-3 text-center text-2xl font-bold tracking-widest text-foreground outline-none focus:border-primary"
+            className="w-full rounded-2xl border-2 border-border bg-surface-2 px-4 py-3.5 text-center text-2xl font-bold tracking-widest text-foreground shadow-sm outline-none transition-colors focus:border-primary"
           />
           <Button onClick={submit} disabled={!input}>
             Submit

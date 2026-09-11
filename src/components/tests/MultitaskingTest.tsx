@@ -209,23 +209,29 @@ export function MultitaskingTest() {
   return (
     <TestFrame>
       <div className="flex flex-col items-center gap-8">
-        <p className="text-xs font-medium text-muted-2">
+        <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
           {phase === "baseline" ? "Baseline" : "Dual-Task"} — Round {Math.min(trial + 1, ROUNDS)} / {ROUNDS}
-        </p>
+        </span>
         <div className="relative">
-          <div className={`h-32 w-32 rounded-full sm:h-40 sm:w-40 ${stimulus === "blue" ? "bg-blue-500" : "bg-red-500"}`} />
+          <div
+            className={`h-32 w-32 rounded-full shadow-2xl sm:h-40 sm:w-40 ${
+              stimulus === "blue"
+                ? "bg-gradient-to-br from-blue-400 to-blue-600 shadow-blue-500/40"
+                : "bg-gradient-to-br from-red-400 to-red-600 shadow-red-500/40"
+            }`}
+          />
           {isDual && (
-            <span className="absolute -right-3 -top-3 flex h-9 w-9 items-center justify-center rounded-full bg-gold text-sm font-bold text-black">
+            <span className="absolute -right-3 -top-3 flex h-9 w-9 items-center justify-center rounded-full bg-gold text-sm font-bold text-black shadow-lg shadow-gold/40 ring-4 ring-surface">
               {secondaryNum}
             </span>
           )}
         </div>
         <div className="flex gap-4">
           <Button variant="secondary" onClick={() => answer("blue")}>
-            Blue
+            🔵 Blue
           </Button>
           <Button variant="secondary" onClick={() => answer("red")}>
-            Red
+            🔴 Red
           </Button>
         </div>
       </div>

@@ -194,18 +194,36 @@ export function AttentionTest() {
         tabIndex={0}
         onClick={respond}
         onKeyDown={() => {}}
-        className="flex h-full min-h-[420px] w-full cursor-pointer select-none flex-col items-center justify-center gap-4 p-6 text-center"
+        className="flex h-full min-h-[420px] w-full cursor-pointer select-none flex-col items-center justify-center gap-6 p-6 text-center"
       >
-        <p className="absolute top-4 text-xs font-medium text-muted-2">
-          Trial {Math.min(trialIndex + 1, trials)} / {trials}
-        </p>
-        {phase === "stimulus" ? (
-          <p className={`text-7xl font-black ${stimulus === set.noGo ? "text-danger" : "text-foreground"}`}>
-            {stimulus}
-          </p>
-        ) : (
-          <p className="text-2xl text-muted-2">+</p>
-        )}
+        <div className="absolute left-0 top-0 w-full px-4 pt-4">
+          <div className="mx-auto max-w-xs">
+            <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
+              Trial {Math.min(trialIndex + 1, trials)} / {trials}
+            </p>
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-2">
+              <div
+                className="h-full rounded-full bg-primary transition-[width] duration-200"
+                style={{ width: `${(Math.min(trialIndex + 1, trials) / trials) * 100}%` }}
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className={`flex h-40 w-40 items-center justify-center rounded-3xl border shadow-sm transition-colors sm:h-48 sm:w-48 ${
+            phase === "stimulus" && stimulus === set.noGo
+              ? "border-danger/30 bg-danger/5"
+              : "border-border bg-surface-2"
+          }`}
+        >
+          {phase === "stimulus" ? (
+            <p className={`text-7xl font-black ${stimulus === set.noGo ? "text-danger" : "text-foreground"}`}>
+              {stimulus}
+            </p>
+          ) : (
+            <p className="text-2xl text-muted-2">+</p>
+          )}
+        </div>
       </div>
     </TestFrame>
   );
