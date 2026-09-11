@@ -8,6 +8,7 @@ import { useCountUp } from "@/lib/useCountUp";
 import { estimatePercentile } from "@/lib/percentile";
 import { Confetti } from "@/components/tests/shared/Confetti";
 import { Sparkline } from "@/components/tests/shared/Sparkline";
+import { AdSlot } from "@/components/ads/AdSlot";
 
 export function ResultScreen({
   slug,
@@ -134,6 +135,8 @@ export function ResultScreen({
         </Button>
       </div>
       {history.length <= 1 && <Badge tone="muted">First attempt recorded</Badge>}
+
+      <AdSlot id="test-results" />
     </div>
   );
 }

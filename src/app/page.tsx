@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import { SeoHeading, SeoSubheading } from "@/components/seo/SeoHeading";
 import { DataTable } from "@/components/seo/DataTable";
 import { StroopTest } from "@/components/tests/StroopTest";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { tests, getTestBySlug, TestCategory } from "@/data/tests";
 
 const otherTests = tests.filter((t) => t.slug !== "stroop-effect-test");
@@ -301,6 +302,7 @@ export default function Home() {
           <Button href="/tests" variant="secondary" className="mt-4">
             View All {tests.length} Tests →
           </Button>
+          <AdSlot id="homepage-popular" />
         </section>
 
         {/* How it works */}

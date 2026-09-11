@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { footerLinks } from "@/data/nav";
+import { AdSlot } from "@/components/ads/AdSlot";
 
 export function Footer() {
   return (
@@ -26,6 +27,8 @@ export function Footer() {
             </div>
           ))}
         </div>
+
+        <AdSlot id="footer" />
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-2 sm:flex-row">
           <p>© {new Date().getFullYear()} Stroop Effect Test. All rights reserved.</p>

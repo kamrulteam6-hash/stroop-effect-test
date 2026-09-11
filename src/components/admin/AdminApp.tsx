@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { tests } from "@/data/tests";
+import { AdsAdmin } from "@/components/admin/AdsAdmin";
 import "@uiw/react-md-editor/markdown-editor.css";
 
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
@@ -56,6 +57,7 @@ const BLANK_DRAFT: Draft = {
 const MAX_IMAGE_BYTES = 1.5 * 1024 * 1024;
 
 export function AdminApp() {
+  const [activeTab, setActiveTab] = useState<"blog" | "ads">("blog");
   const [authed, setAuthed] = useState<boolean | null>(null);
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState<string | null>(null);
@@ -333,12 +335,34 @@ export function AdminApp() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-foreground">Blog Admin</h1>
+        <h1 className="text-xl font-bold text-foreground">Admin</h1>
         <button onClick={handleLogout} className="text-xs font-semibold text-muted-2 hover:text-primary">
           Log out
         </button>
       </div>
 
+      <div className="mb-6 flex gap-2 border-b border-border">
+        <button
+          onClick={() => setActiveTab("blog")}
+          className={`border-b-2 px-3 py-2 text-sm font-semibold transition-colors ${
+            activeTab === "blog" ? "border-primary text-primary" : "border-transparent text-muted-2 hover:text-foreground"
+          }`}
+        >
+          Blog
+        </button>
+        <button
+          onClick={() => setActiveTab("ads")}
+          className={`border-b-2 px-3 py-2 text-sm font-semibold transition-colors ${
+            activeTab === "ads" ? "border-primary text-primary" : "border-transparent text-muted-2 hover:text-foreground"
+          }`}
+        >
+          Ads
+        </button>
+      </div>
+
+      {activeTab === "ads" && <AdsAdmin />}
+
+      {activeTab === "blog" && (
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[240px_1fr]">
         <div className="flex flex-col gap-2">
           <button
@@ -530,6 +554,7 @@ export function AdminApp() {
           </div>
         </div>
       </div>
+      )}
     </div>
   );
 }
