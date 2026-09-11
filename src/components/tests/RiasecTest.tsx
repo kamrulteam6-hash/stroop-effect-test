@@ -144,9 +144,9 @@ export function RiasecTest() {
           </div>
         </div>
 
-        <p className="min-h-[3rem] text-center text-lg font-semibold text-foreground sm:text-xl">
-          How much would you enjoy: {q.text}
-        </p>
+        <div className="flex min-h-[4.5rem] w-full items-center justify-center rounded-2xl border border-border/70 bg-surface-2 px-6 py-5 text-center shadow-sm">
+          <p className="text-lg font-semibold text-foreground sm:text-xl">How much would you enjoy: {q.text}</p>
+        </div>
 
         <div className="grid w-full grid-cols-5 gap-2">
           {labels.map((label, i) => (
