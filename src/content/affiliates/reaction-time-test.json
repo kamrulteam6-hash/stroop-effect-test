@@ -17,6 +17,34 @@
         "Good visual-motor/attention relevance.",
         "The Perplexus line has substantial"
       ]
+    },
+    {
+      "id": "37e1a8e4-3312-4b0d-903e-4a03a66ac63c",
+      "name": "Spot It! Classic Card Game",
+      "image": "https://m.media-amazon.com/images/I/81O-O21IicL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B09DNojeN",
+      "price": "23.99",
+      "rating": "5",
+      "badge": "",
+      "features": [
+        "Requires rapidly scanning cards",
+        "Need Locating matching visual symbols",
+        "Fit for visual attention and fast visual processing."
+      ]
+    },
+    {
+      "id": "144b0303-705e-4eb9-9f93-54df065c680f",
+      "name": "Educational Insights Kanoodle",
+      "image": "https://m.media-amazon.com/images/I/71eppEI+u3L._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0aZ91Gq8",
+      "price": "19.98",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Spatial/visual puzzle with 200+ challenges",
+        "A strong general cognitive-game",
+        "Best For Multi Object Tracking"
+      ]
     }
   ]
 }
