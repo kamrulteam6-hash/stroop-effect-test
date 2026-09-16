@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { tests } from "@/data/tests";
+import { AffiliateAdmin } from "@/components/admin/AffiliateAdmin";
 import "@uiw/react-md-editor/markdown-editor.css";
 
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
@@ -56,6 +57,7 @@ const BLANK_DRAFT: Draft = {
 const MAX_IMAGE_BYTES = 1.5 * 1024 * 1024;
 
 export function AdminApp() {
+  const [tab, setTab] = useState<"blog" | "affiliates">("blog");
   const [authed, setAuthed] = useState<boolean | null>(null);
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState<string | null>(null);
@@ -119,11 +121,11 @@ export function AdminApp() {
   };
 
   useEffect(() => {
-    fetch("/api/admin/posts")
+    fetch("/api/admin/session")
       .then((res) => {
         if (res.ok) {
           setAuthed(true);
-          return res.json();
+          return fetch("/api/admin/posts").then(response => response.ok ? response.json() : null);
         }
         setAuthed(false);
         return null;
@@ -133,7 +135,7 @@ export function AdminApp() {
           setPosts(data.posts);
           setRepoAccessible(data.repoAccessible ?? null);
         }
-      });
+      }).catch(() => setAuthed(false));
   }, []);
 
   const handleLogin = async (e: FormEvent) => {
@@ -333,13 +335,18 @@ export function AdminApp() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-foreground">Blog Admin</h1>
+        <h1 className="text-xl font-bold text-foreground">Site Admin</h1>
         <button onClick={handleLogout} className="text-xs font-semibold text-muted-2 hover:text-primary">
           Log out
         </button>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[240px_1fr]">
+      <div className="mb-6 flex gap-2 border-b border-border pb-4">
+        <button onClick={() => setTab("blog")} className={`rounded-xl px-4 py-2 text-sm font-semibold ${tab === "blog" ? "bg-primary text-primary-foreground" : "bg-surface-2 text-muted"}`}>Blog posts</button>
+        <button onClick={() => setTab("affiliates")} className={`rounded-xl px-4 py-2 text-sm font-semibold ${tab === "affiliates" ? "bg-primary text-primary-foreground" : "bg-surface-2 text-muted"}`}>Affiliate products</button>
+      </div>
+      <div hidden={tab !== "affiliates"}>{authed && <AffiliateAdmin />}</div>
+      <div className={tab === "blog" ? "grid grid-cols-1 gap-6 lg:grid-cols-[240px_1fr]" : "hidden"}>
         <div className="flex flex-col gap-2">
           <button
             onClick={startNewPost}

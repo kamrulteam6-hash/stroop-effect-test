@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { ResultPresence } from "@/components/affiliate/TestRecommendations";
 
 export function TestFrame({ children, className = "" }: { children: ReactNode; className?: string }) {
   // Tailwind resolves two classes on the same property by stylesheet order, not by where they
@@ -32,5 +33,5 @@ export function StatRow({ stats }: { stats: { label: string; value: string }[] }
 }
 
 export function ResultHeading({ children }: { children: ReactNode }) {
-  return <h3 className="animate-pop-in text-2xl font-bold text-foreground sm:text-3xl">{children}</h3>;
+  return <><ResultPresence /><h3 className="animate-pop-in text-2xl font-bold text-foreground sm:text-3xl">{children}</h3></>;
 }

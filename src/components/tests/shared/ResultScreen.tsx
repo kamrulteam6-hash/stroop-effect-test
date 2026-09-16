@@ -8,6 +8,7 @@ import { useCountUp } from "@/lib/useCountUp";
 import { estimatePercentile } from "@/lib/percentile";
 import { Confetti } from "@/components/tests/shared/Confetti";
 import { Sparkline } from "@/components/tests/shared/Sparkline";
+import { ResultPresence } from "@/components/affiliate/TestRecommendations";
 
 export function ResultScreen({
   slug,
@@ -73,6 +74,7 @@ export function ResultScreen({
   return (
     <div className="relative flex w-full flex-col items-center gap-6 text-center">
       <Confetti fire={showConfetti} />
+      <ResultPresence />
 
       {isNewBest && history.length > 1 && (
         <span className="animate-pop-in rounded-full bg-gold/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold shadow-sm">

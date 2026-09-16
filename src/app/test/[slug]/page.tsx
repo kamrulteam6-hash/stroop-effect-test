@@ -7,6 +7,7 @@ import { testComponents } from "@/components/tests";
 import { SectionLabel } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { DeepContentRenderer } from "@/components/seo/DeepContentRenderer";
+import { TestRecommendations } from "@/components/affiliate/TestRecommendations";
 
 export function generateStaticParams() {
   return tests.map((t) => ({ slug: t.slug }));
@@ -100,7 +101,7 @@ export default async function TestPage({
       </div>
 
       <div className="mt-10">
-        <TestComponent />
+        <TestRecommendations key={test.slug} slug={test.slug}><TestComponent /></TestRecommendations>
       </div>
 
       {seoContent && <DeepContentRenderer content={seoContent} />}

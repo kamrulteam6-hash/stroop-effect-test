@@ -1,3 +1,5 @@
+import { ResultPresence } from "@/components/affiliate/TestRecommendations";
+
 interface BreakdownItem {
   key: string;
   label: string;
@@ -21,6 +23,7 @@ export function TypeResult({
 
   return (
     <div className="flex w-full flex-col items-center gap-6 text-center">
+      <ResultPresence />
       <div className="flex flex-col items-center gap-3">
         {icon && (
           <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-b from-primary/20 to-primary/5 text-4xl shadow-lg shadow-primary/15">
