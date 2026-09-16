@@ -1,0 +1,49 @@
+{
+  "enabled": true,
+  "heading": "Want to Improve Your Multi Object Tracking Ability More?",
+  "description": "Explore These games and tools At Home. They Will Help You.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "d0a75fce-d534-4d44-a5d8-5c4b5b017e9c",
+      "name": "Educational Insights Kanoodle",
+      "image": "https://m.media-amazon.com/images/I/71eppEI+u3L._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B07gprJ1X",
+      "price": "19.98",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Spatial/visual puzzle with 200+ challenges",
+        "A strong general cognitive-game recommendation"
+      ]
+    },
+    {
+      "id": "329ff709-dacd-4c1b-aa1b-45d6b4addbfc",
+      "name": "Spot It! Classic Card Game",
+      "image": "https://m.media-amazon.com/images/I/81O-O21IicL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B01NbpxKI",
+      "price": "23.99",
+      "rating": "5",
+      "badge": "",
+      "features": [
+        "Requires rapidly scanning cards",
+        "Need locating matching visual symbols",
+        "Fit for visual attention and fast visual processing"
+      ]
+    },
+    {
+      "id": "9e62b901-7e12-4842-8b68-40124169177c",
+      "name": "Perplexus 3D Puzzle Ball",
+      "image": "https://m.media-amazon.com/images/I/816oHdw46PL._SX466_.jpg",
+      "url": "https://link.amazon/B0f9CpuDo",
+      "price": "36",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Requires continuously tracking a moving ball",
+        "A complex 3D path while controlling its position",
+        "Good visual-motor/attention relevance"
+      ]
+    }
+  ]
+}
