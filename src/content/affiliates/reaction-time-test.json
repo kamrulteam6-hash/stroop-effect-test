@@ -1,7 +1,22 @@
 {
   "enabled": false,
-  "heading": "Want to practice your reaction time?",
-  "description": "Explore games and tools for your next practice session.",
+  "heading": "Want To Improve Your Ability To Track Multiple Objects?",
+  "description": "Try These Games and Tools At Home. They Are Scientifically Proven.",
   "buttonLabel": "Buy now on Amazon",
-  "products": []
+  "products": [
+    {
+      "id": "c964c3a1-9923-4405-ad0f-0307e352cbcd",
+      "name": "Perplexus Rebel 3D Maze Game",
+      "image": "https://m.media-amazon.com/images/I/816oHdw46PL._SX466_.jpg",
+      "url": "https://link.amazon/B0bT7zObO",
+      "price": "36.00",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Requires continuously tracking a moving ball",
+        "Good visual-motor/attention relevance.",
+        "The Perplexus line has substantial"
+      ]
+    }
+  ]
 }
