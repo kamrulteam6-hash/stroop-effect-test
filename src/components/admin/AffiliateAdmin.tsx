@@ -98,7 +98,7 @@ export function AffiliateAdmin() {
         <span className="rounded-full bg-surface-2 px-3 py-1 text-xs text-muted">{dirty ? "Unsaved changes" : section.enabled ? "Enabled" : "Hidden"}</span>
       </div>
       {loading && <p role="status" className="py-10 text-sm text-muted">Loading recommendations…</p>}
-      {error && <div role="alert" className="mb-4 rounded-xl bg-danger/10 p-4 text-sm text-danger">{error} <button className="underline" disabled={saving || uploading} onClick={() => loadTest(slug)}>Reload test</button></div>}
+      {error && <div role="alert" className="mb-4 rounded-xl bg-danger/10 p-4 text-sm text-danger">{error} {loaded ? <span className="block pt-1 text-xs">Your entries are still here. Correct the field and save again.</span> : <button className="underline" disabled={saving || uploading} onClick={() => loadTest(slug)}>Retry loading</button>}</div>}
       {notice && <p role="status" className="mb-4 rounded-xl bg-success/10 p-4 text-sm text-success">{notice}</p>}
       {!loading && loaded && <>
         <fieldset disabled={saving || uploading} className="space-y-5 disabled:opacity-60">
