@@ -18,8 +18,8 @@ export function ProductRecommendations({ section, preview = false }: { section: 
   if ((!section.enabled && !preview) || !section.products.length) return null;
   const buttonLabel = !section.buttonLabel || section.buttonLabel === "Buy now on Amazon" ? "Buy now" : section.buttonLabel;
   return <section aria-label="Recommended products" className="mb-4 w-full rounded-2xl border border-primary/15 bg-gradient-to-r from-primary/5 via-surface to-gold/5 p-2.5 text-left">
-    <div className="mb-2">
-      <h2 className="text-sm font-bold leading-5 text-foreground">{section.heading}</h2>
+    <div className="mb-3 text-center">
+      <h2 className="bg-gradient-to-r from-primary via-fuchsia-600 to-pink-600 bg-clip-text text-xl font-extrabold leading-tight tracking-tight text-transparent sm:text-2xl">{section.heading}</h2>
       {section.description && <p title={section.description} className="truncate text-[11px] leading-4 text-muted">{section.description}</p>}
     </div>
     <div role="group" aria-label="Products; scroll horizontally to see more on smaller screens" tabIndex={0} className="flex items-start gap-2 overflow-x-auto overscroll-x-contain rounded-xl focus-visible:outline-2 focus-visible:outline-primary">
