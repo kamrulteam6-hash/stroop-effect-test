@@ -14,7 +14,7 @@ export default function TermsPage() {
       <div className="flex flex-col items-center gap-3 text-center">
         <SectionLabel>Legal</SectionLabel>
         <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">Terms of Service</h1>
-        <p className="text-sm text-muted-2">Last updated: August 23, 2026</p>
+        <p className="text-sm text-muted-2">Last updated: September 18, 2026</p>
       </div>
 
       <div className="mt-10 flex flex-col gap-8">
@@ -68,12 +68,11 @@ export default function TermsPage() {
         </section>
 
         <section className="flex flex-col gap-3">
-          <SeoHeading id="third-party-links-and-ads">Third-Party Links and Advertising</SeoHeading>
+          <SeoHeading id="third-party-links">Third-Party Links</SeoHeading>
           <p className="leading-relaxed text-muted">
-            The site may contain links to third-party websites and, where enabled, display advertising served by
-            third parties such as Google AdSense. We do not control and are not responsible for the content,
-            accuracy, or practices of third-party sites or advertisers. Visiting a third-party link or interacting
-            with an ad is at your own discretion and risk.
+            The site may contain links to third-party websites, including affiliate product links. We do not control
+            and are not responsible for the content, accuracy, or practices of third-party sites. Visiting a
+            third-party link is at your own discretion and risk.
           </p>
         </section>
 
