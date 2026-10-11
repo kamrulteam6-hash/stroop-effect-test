@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { OptionsBar } from "@/components/tests/shared/OptionsBar";
 import { Segmented } from "@/components/tests/shared/Segmented";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
@@ -105,7 +105,7 @@ export function ColorMemoryTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="colors" phase={phase}>
         <ResultScreen
           slug="color-memory-game"
           direction="higher"
@@ -116,13 +116,13 @@ export function ColorMemoryTest() {
           onRetry={start}
           onChangeOptions={() => setPhase("idle")}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="colors" phase={phase}>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">🎨</span>
@@ -150,12 +150,12 @@ export function ColorMemoryTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="colors" phase={phase}>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
       <div className="flex flex-col items-center gap-5">
         <span className="rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-primary">
@@ -164,7 +164,7 @@ export function ColorMemoryTest() {
         <p className="text-xs font-medium text-muted-2">
           {phase === "showing" ? "👀 Watch and listen…" : "👉 Repeat the pattern"}
         </p>
-        <div className="rounded-3xl border-2 border-border bg-surface-2 p-5 shadow-sm sm:p-6">
+        <div data-game-color-console className="rounded-3xl border-2 border-border bg-surface-2 p-5 shadow-sm sm:p-6">
           <div className="grid grid-cols-2 gap-3">
             {COLORS.map((c, index) => (
               <button
@@ -192,6 +192,6 @@ export function ColorMemoryTest() {
           </div>
         )}
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

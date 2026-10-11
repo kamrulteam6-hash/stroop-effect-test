@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { OptionsBar } from "@/components/tests/shared/OptionsBar";
 import { Segmented } from "@/components/tests/shared/Segmented";
 import { Countdown } from "@/components/tests/shared/Countdown";
@@ -125,7 +125,7 @@ export function StroopTest() {
   const interference = avgCongruent && avgIncongruent ? avgIncongruent - avgCongruent : 0;
 
   return (
-    <TestFrame>
+    <GameScene theme="stroop" phase={phase}>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
 
       {phase === "idle" && (
@@ -220,6 +220,6 @@ export function StroopTest() {
           onChangeOptions={() => setPhase("idle")}
         />
       )}
-    </TestFrame>
+    </GameScene>
   );
 }

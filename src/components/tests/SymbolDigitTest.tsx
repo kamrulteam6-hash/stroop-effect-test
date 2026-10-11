@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 const SYMBOLS = ["▲", "●", "■", "◆", "★", "▼", "☀", "♣", "⬟"];
@@ -87,7 +87,7 @@ export function SymbolDigitTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="symbol" phase={phase}>
         <ResultScreen
           slug="symbol-digit-test"
           direction="higher"
@@ -100,13 +100,13 @@ export function SymbolDigitTest() {
           shareLabel={`I matched ${correct} symbols to digits in 90 seconds on the Symbol Digit Modalities Test!`}
           onRetry={start}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="symbol" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             A key at the top pairs 9 symbols with digits 1-9. As fast as you can, type the digit that matches the
@@ -116,12 +116,12 @@ export function SymbolDigitTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="symbol" phase={phase}>
       <div className="flex w-full max-w-md flex-col items-center gap-6">
         <div className="flex w-full items-center justify-between text-xs font-semibold text-muted-2">
           <span className="rounded-full bg-success/10 px-3 py-1 text-success">✓ {correct} correct</span>
@@ -138,7 +138,7 @@ export function SymbolDigitTest() {
           {SYMBOLS.map((s, i) => (
             <div key={i} className="flex flex-col items-center gap-1 rounded-lg bg-surface py-1.5 text-center shadow-sm">
               <span className="text-lg sm:text-xl">{s}</span>
-              <span className="text-[10px] font-bold text-muted-2">{legend[i]}</span>
+              <span className="text-sm font-black text-primary">{legend[i]}</span>
             </div>
           ))}
         </div>
@@ -155,18 +155,18 @@ export function SymbolDigitTest() {
           {SYMBOLS[current]}
         </div>
 
-        <div className="grid grid-cols-9 gap-1.5 sm:gap-2">
+        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-9">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((d) => (
             <button
               key={d}
               onClick={() => answer(d)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface-2 text-sm font-bold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary/5 active:scale-90 sm:h-11 sm:w-11"
+              className="flex h-12 min-w-0 items-center justify-center rounded-xl border border-border bg-surface-2 text-sm font-bold text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary/5 active:scale-90 sm:h-11"
             >
               {d}
             </button>
           ))}
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame, ResultHeading } from "@/components/tests/shared/TestFrame";
+import { ResultHeading } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { Callout } from "@/components/seo/Callout";
 
 type Phase = "idle" | "quiz" | "reading" | "result";
@@ -96,7 +97,7 @@ export function BarnumEffectTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="barnum" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-4xl">🎭</span>
           <ResultHeading>The Reveal</ResultHeading>
@@ -153,13 +154,13 @@ export function BarnumEffectTest() {
           </Callout>
           <Button onClick={start}>Try Again</Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "reading") {
     return (
-      <TestFrame>
+      <GameScene theme="barnum" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-wide text-muted-2">✦ Your Personal Reading ✦</p>
           <div className="relative w-full max-w-md rounded-2xl border border-gold/40 bg-gradient-to-b from-gold/10 via-surface to-surface px-6 py-7">
@@ -187,13 +188,13 @@ export function BarnumEffectTest() {
             Submit Rating
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="barnum" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">🔮</span>
           <p className="max-w-sm text-sm text-muted">
@@ -204,14 +205,14 @@ export function BarnumEffectTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   const q = QUESTIONS[questionIndex];
 
   return (
-    <TestFrame>
+    <GameScene theme="barnum" phase={phase}>
       <div className="flex w-full max-w-md flex-col items-center gap-8">
         <div className="w-full">
           <div className="mb-2 flex items-center justify-between text-xs font-medium text-muted-2">
@@ -241,6 +242,6 @@ export function BarnumEffectTest() {
           ))}
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

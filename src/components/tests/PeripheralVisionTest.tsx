@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 type Zone = "near" | "far";
@@ -139,7 +139,7 @@ export function PeripheralVisionTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="peripheral" phase={phase}>
         <ResultScreen
           slug="peripheral-vision-test"
           direction="higher"
@@ -153,13 +153,13 @@ export function PeripheralVisionTest() {
           shareLabel={`I detected ${overallRate}% of flashes on the Peripheral Vision Test!`}
           onRetry={start}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="peripheral" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">👁️</span>
           <p className="max-w-sm text-sm text-muted">
@@ -170,12 +170,12 @@ export function PeripheralVisionTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame className="p-0">
+    <GameScene theme="peripheral" phase={phase} arena>
       <div className="absolute left-0 top-0 z-10 w-full px-3 pt-3">
         <div className="mx-auto flex max-w-xs items-center justify-between">
           <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-muted-2">
@@ -238,6 +238,6 @@ export function PeripheralVisionTest() {
           </div>
         )}
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

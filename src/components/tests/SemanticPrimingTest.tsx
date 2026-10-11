@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame, ResultHeading } from "@/components/tests/shared/TestFrame";
+import { ResultHeading } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { Callout } from "@/components/seo/Callout";
 
 type Phase = "idle" | "blank" | "prime" | "gap" | "target" | "result";
@@ -161,10 +162,10 @@ export function SemanticPrimingTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="words" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <ResultHeading>Your Priming Effect</ResultHeading>
-          <div className="grid w-full max-w-sm grid-cols-3 gap-3">
+          <div data-game-word-stats className="grid w-full max-w-sm grid-cols-3 gap-3">
             <div className="rounded-xl border border-border bg-surface-2 px-3 py-3 text-center">
               <div className="text-xl font-bold text-foreground">{avgRelated}ms</div>
               <div className="mt-1 text-[11px] uppercase tracking-wide text-muted-2">Related Prime</div>
@@ -189,13 +190,13 @@ export function SemanticPrimingTest() {
           </Callout>
           <Button onClick={start}>Try Again</Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="words" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             A word flashes briefly, then a target appears — decide as fast as you can whether the target is a real
@@ -205,12 +206,12 @@ export function SemanticPrimingTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="words" phase={phase}>
       <div className="flex flex-col items-center gap-8">
         <p className="text-xs font-medium text-muted-2">
           Trial {Math.min(trialIndex + 1, totalTrials || 20)} / {totalTrials || 20}
@@ -223,7 +224,7 @@ export function SemanticPrimingTest() {
             <span className="text-4xl font-black text-foreground sm:text-5xl">{currentTrial?.target}</span>
           )}
         </div>
-        <div className="flex gap-4">
+        <div data-game-word-answers className="flex gap-4">
           <Button size="lg" variant="secondary" onClick={() => respond(true)} disabled={phase !== "target"}>
             ◀ Word
           </Button>
@@ -232,6 +233,6 @@ export function SemanticPrimingTest() {
           </Button>
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

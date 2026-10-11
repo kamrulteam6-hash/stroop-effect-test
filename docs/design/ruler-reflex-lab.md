@@ -1,0 +1,7 @@
+# Ruler Drop — Reflex Lab
+
+Generated using the built-in image_gen tool. Source: public/images/games/reflex-lab.png; optimized runtime asset: public/images/games/reflex-lab.webp (1400px, quality 85, ~100 KB).
+
+Prompt: Use case: stylized-concept. Create a polished colorful 3D cartoon science laboratory environment background for an interactive browser ruler-drop reflex game. Landscape 1536x1024 composition. Playful premium casual game art, tactile rounded forms, turquoise teal walls, violet machinery, bright coral and golden yellow accents, warm studio lighting. At far left a charming small round robot lab assistant with cyan eyes next to glass beakers; far right shelves with colorful flasks and a rounded science instrument; lower edge a curved teal laboratory bench. CENTRAL 45 PERCENT of image must remain a simple uncluttered softly lit pale aqua vertical wall with subtle atmospheric depth, empty for a programmatically animated yellow ruler and UI. Keep props at outer edges. Front-facing camera, appealing dimensional materials and crisp art direction, vivid cheerful colors. No text, no letters, no numbers, no ruler, no interface, no logos, no watermark. This is an actual game background asset, not a webpage mockup.
+
+Gameplay uses DOM text and a CSS ruler, keeping legibility and input separate from artwork. The ruler motion is illustrative; equivalent distance remains calculated from measured response time. Reduced-motion mode uses a position change and a text cue.

@@ -1,0 +1,233 @@
+[
+  {
+    "label": "Iowa result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Iowa retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "playing",
+    "viewport": 320
+  },
+  {
+    "label": "Halo rating",
+    "clipped": [],
+    "page": 305,
+    "phase": "rating",
+    "viewport": 320
+  },
+  {
+    "label": "Halo result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Halo retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "intro",
+    "viewport": 320
+  },
+  {
+    "label": "Math options",
+    "clipped": [],
+    "page": 305,
+    "phase": "idle",
+    "viewport": 320
+  },
+  {
+    "label": "Math playing",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Math result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Math retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Visual memory 6x6",
+    "clipped": [],
+    "page": 305,
+    "phase": "showing",
+    "viewport": 320
+  },
+  {
+    "label": "Visual memory result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Visual memory retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "showing",
+    "viewport": 320
+  },
+  {
+    "label": "Rhythm options",
+    "clipped": [],
+    "page": 305,
+    "phase": "idle",
+    "viewport": 320
+  },
+  {
+    "label": "Rhythm playing",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Rhythm result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Rhythm retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Reflection question",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Reflection result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Reflection retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Astigmatism chart",
+    "clipped": [],
+    "page": 305,
+    "phase": "viewing",
+    "viewport": 320
+  },
+  {
+    "label": "Astigmatism equal result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Astigmatism detailed",
+    "clipped": [],
+    "page": 305,
+    "phase": "profile",
+    "viewport": 320
+  },
+  {
+    "label": "Astigmatism detailed result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Semantic gameplay",
+    "clipped": [],
+    "page": 305,
+    "phase": "prime",
+    "viewport": 320
+  },
+  {
+    "label": "Semantic result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Semantic retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "prime",
+    "viewport": 320
+  },
+  {
+    "label": "Color memory playing",
+    "clipped": [],
+    "page": 305,
+    "phase": "showing",
+    "viewport": 320
+  },
+  {
+    "label": "Color result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Color retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "showing",
+    "viewport": 320
+  },
+  {
+    "label": "Sorting playing",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Sorting result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  },
+  {
+    "label": "Sorting retry",
+    "clipped": [],
+    "page": 305,
+    "phase": "running",
+    "viewport": 320
+  },
+  {
+    "label": "Semantic corrected result",
+    "clipped": [],
+    "page": 305,
+    "phase": "result",
+    "viewport": 320
+  }
+]

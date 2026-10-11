@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 const GAPS_CENTS = [300, 200, 140, 100, 70, 50, 35, 25, 18, 12, 8, 5];
@@ -106,7 +106,7 @@ export function PitchDiscriminationTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="pitch" phase={phase}>
         <ResultScreen
           slug="pitch-discrimination-test"
           direction="lower"
@@ -120,13 +120,13 @@ export function PitchDiscriminationTest() {
           onRetry={start}
           onChangeOptions={() => setPhase("idle")}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="pitch" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">🎧</span>
           <p className="max-w-sm text-sm text-muted">
@@ -138,14 +138,14 @@ export function PitchDiscriminationTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   const wasCorrect = answered ? answered === direction : null;
 
   return (
-    <TestFrame>
+    <GameScene theme="pitch" phase={phase}>
       <div className="flex w-full max-w-sm flex-col items-center gap-6 text-center">
         <div className="w-full">
           <p className="mb-1.5 text-xs font-medium text-muted-2">
@@ -159,7 +159,7 @@ export function PitchDiscriminationTest() {
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div data-game-tones="true" className="flex items-center gap-6">
           <div className="flex flex-col items-center gap-1.5">
             <span
               className={`flex h-14 w-14 items-center justify-center rounded-full border-2 text-lg transition-all ${
@@ -217,6 +217,6 @@ export function PitchDiscriminationTest() {
           </div>
         )}
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

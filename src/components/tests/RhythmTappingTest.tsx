@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { OptionsBar } from "@/components/tests/shared/OptionsBar";
 import { Segmented } from "@/components/tests/shared/Segmented";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
@@ -130,7 +130,7 @@ export function RhythmTappingTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="rhythm" phase={phase}>
         <ResultScreen
           slug="rhythm-tapping-test"
           direction="lower"
@@ -145,13 +145,13 @@ export function RhythmTappingTest() {
           onRetry={start}
           onChangeOptions={() => setPhase("idle")}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="rhythm" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">🥁</span>
           <p className="max-w-sm text-sm text-muted">
@@ -174,7 +174,7 @@ export function RhythmTappingTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
@@ -182,7 +182,7 @@ export function RhythmTappingTest() {
   const scoredSoFar = Math.max(0, beatIndex - LEAD_IN);
 
   return (
-    <TestFrame className="p-0">
+    <GameScene theme="rhythm" phase={phase} className="p-0">
       <div
         role="button"
         tabIndex={0}
@@ -204,6 +204,7 @@ export function RhythmTappingTest() {
           {inLeadIn ? "🎧 Get ready…" : `Beat ${scoredSoFar + 1} / ${SCORED}`}
         </p>
         <div
+          data-game-drum
           className={`flex h-32 w-32 items-center justify-center rounded-full border-4 shadow-lg transition-transform ${
             tapFlash === "good"
               ? "border-success bg-gradient-to-b from-success/30 to-success/10 shadow-success/30"
@@ -242,6 +243,6 @@ export function RhythmTappingTest() {
           </div>
         )}
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

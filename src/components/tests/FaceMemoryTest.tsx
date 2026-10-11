@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 type Phase = "idle" | "studying" | "testing" | "result";
@@ -33,17 +33,28 @@ function randomFace(id: number): Face {
 }
 
 function FaceAvatar({ face, size = 96 }: { face: Face; size?: number }) {
+  const id = useId();
   return (
-    <svg viewBox="0 0 100 100" width={size} height={size}>
-      <circle cx={50} cy={55} r={32} fill={face.skin} />
-      {face.hairStyle === 0 && <path d="M18,45 a32,28 0 0,1 64,0 L82,30 A32,30 0 0,0 18,30 Z" fill={face.hair} />}
-      {face.hairStyle === 1 && <circle cx={50} cy={30} r={26} fill={face.hair} />}
-      {face.hairStyle === 2 && (
-        <path d="M20,40 Q50,5 80,40 L80,20 Q50,-5 20,20 Z" fill={face.hair} />
-      )}
-      <circle cx={38} cy={52} r={5} fill={face.eyes} />
-      <circle cx={62} cy={52} r={5} fill={face.eyes} />
-      <path d="M40,70 Q50,78 60,70" stroke="#7a4a3a" strokeWidth={3} fill="none" strokeLinecap="round" />
+    <svg aria-label="Face to remember" role="img" data-game-face="true" viewBox="0 0 100 110" width={size} height={size}>
+      <defs>
+        <linearGradient id={id} x1="0" y1="0" x2="1" y2="1"><stop stopColor={face.skin}/><stop offset="1" stopColor={face.skin}/></linearGradient>
+        <radialGradient id={id + 'light'} cx="35%" cy="25%" r="80%"><stop stopColor="#fff" stopOpacity=".3"/><stop offset="1" stopColor="#6b351c" stopOpacity=".15"/></radialGradient>
+      </defs>
+      <path d="M12 110 Q15 87 40 87 L60 87 Q85 87 88 110" fill="#547d98"/>
+      <path d="M40 75 L40 91 Q50 102 60 91 L60 75" fill={face.skin}/>
+      <ellipse cx="20" cy="55" rx="6" ry="10" fill={face.skin}/><ellipse cx="80" cy="55" rx="6" ry="10" fill={face.skin}/>
+      <path d="M20 39 Q20 15 50 15 Q80 15 80 39 L77 66 Q72 88 50 91 Q28 88 23 66 Z" fill={"url(#" + id + ")"}/>
+      <path d="M20 39 Q20 15 50 15 Q80 15 80 39 L77 66 Q72 88 50 91 Q28 88 23 66 Z" fill={"url(#" + id + "light)"}/>
+      {face.hairStyle === 0 && <path d="M19 49 Q10 12 43 9 Q82 4 82 44 L74 37 Q58 35 48 23 Q38 38 24 38 Z" fill={face.hair}/>}
+      {face.hairStyle === 1 && <path d="M18 52 Q9 32 18 18 Q27 3 50 7 Q73 1 82 24 Q88 35 80 52 L74 32 Q56 43 30 29 L25 51 Z" fill={face.hair}/>}
+      {face.hairStyle === 2 && <path d="M18 48 L19 23 Q25 11 33 12 L41 4 L49 10 L62 4 L66 12 Q83 12 83 33 L78 47 L71 26 Q45 35 26 29 L24 48 Z" fill={face.hair}/>}
+      <path d="M29 47 Q36 43 43 47 M57 47 Q64 43 71 47" stroke={face.hair} strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+      <ellipse cx="36" cy="55" rx="7" ry="5" fill="#fff8f0"/><ellipse cx="64" cy="55" rx="7" ry="5" fill="#fff8f0"/>
+      <circle cx="36" cy="55" r="4" fill={face.eyes}/><circle cx="64" cy="55" r="4" fill={face.eyes}/>
+      <circle cx="36" cy="55" r="1.8" fill="#21212b"/><circle cx="64" cy="55" r="1.8" fill="#21212b"/>
+      <circle cx="35" cy="54" r="1" fill="white"/><circle cx="63" cy="54" r="1" fill="white"/>
+      <path d="M49 55 L46 66 Q50 69 54 66" stroke="#7b473b" strokeOpacity=".35" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+      <path d="M40 75 Q50 81 60 75" stroke="#854d48" strokeWidth="2" fill="none" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -106,7 +117,7 @@ export function FaceMemoryTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="faces" phase={phase}>
         <ResultScreen
           slug="face-memory-test"
           direction="higher"
@@ -116,13 +127,13 @@ export function FaceMemoryTest() {
           extraStats={[{ label: "Correct", value: `${correct}/${testSet.length}` }]}
           onRetry={start}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="faces" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             Study {STUDY_COUNT} faces one at a time. Afterward you&apos;ll see a mix of studied faces and new ones —
@@ -132,13 +143,13 @@ export function FaceMemoryTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "studying") {
     return (
-      <TestFrame>
+      <GameScene theme="faces" phase={phase}>
         <div className="flex flex-col items-center gap-6">
           <p className="text-xs font-medium text-muted-2">
             Studying {studyIndex + 1} / {studySet.length}
@@ -148,12 +159,12 @@ export function FaceMemoryTest() {
             Next
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="faces" phase={phase}>
       <div className="flex flex-col items-center gap-6">
         <p className="text-xs font-medium text-muted-2">
           Round {testIndex + 1} / {testSet.length}
@@ -173,6 +184,6 @@ export function FaceMemoryTest() {
           </Button>
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

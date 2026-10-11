@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { OptionsBar } from "@/components/tests/shared/OptionsBar";
 import { Segmented } from "@/components/tests/shared/Segmented";
 import { ProgressRing } from "@/components/tests/shared/ProgressRing";
@@ -82,12 +82,10 @@ export function MentalMathTest() {
     if (Number(input) === problem.answer) {
       setCorrect((c) => c + 1);
       sound.play("tick");
-      setStreak((s) => {
-        const next = s + 1;
-        setBestStreak((b) => Math.max(b, next));
-        setScore((sc) => sc + 1 + Math.floor(next / 5));
-        return next;
-      });
+      const nextStreak = streak + 1;
+      setStreak(nextStreak);
+      setBestStreak((best) => Math.max(best, nextStreak));
+      setScore((currentScore) => currentScore + 1 + Math.floor(nextStreak / 5));
     } else {
       setWrong((w) => w + 1);
       setStreak(0);
@@ -101,7 +99,7 @@ export function MentalMathTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="math" phase={phase}>
         <ResultScreen
           slug="mental-math-test"
           direction="higher"
@@ -116,13 +114,13 @@ export function MentalMathTest() {
           onRetry={start}
           onChangeOptions={() => setPhase("idle")}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="math" phase={phase}>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
@@ -155,12 +153,12 @@ export function MentalMathTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="math" phase={phase}>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
       <div className="flex w-full max-w-xs flex-col items-center gap-6">
         <div className="flex w-full items-center justify-between text-xs font-medium text-muted-2">
@@ -169,10 +167,11 @@ export function MentalMathTest() {
           </span>
           <ProgressRing progress={progress} size={40} label={`${timeLeft}`} />
         </div>
-        <p className="text-5xl font-black text-foreground">{problem.text}</p>
+        <p data-game-equation className="text-5xl font-black text-foreground">{problem.text}</p>
         <input
           autoFocus
           inputMode="numeric"
+          aria-label="Your answer"
           value={input}
           onChange={(e) => setInput(e.target.value.replace(/[^-\d]/g, ""))}
           onKeyDown={(e) => e.key === "Enter" && submit()}
@@ -183,6 +182,6 @@ export function MentalMathTest() {
           Submit
         </Button>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

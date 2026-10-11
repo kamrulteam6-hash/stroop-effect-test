@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame, ResultHeading } from "@/components/tests/shared/TestFrame";
+import { ResultHeading } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { Callout } from "@/components/seo/Callout";
 
 type Phase = "idle" | "viewing" | "followup" | "profile" | "result";
@@ -114,7 +115,7 @@ export function AstigmatismTest() {
   if (phase === "result") {
     const hasProfile = Object.keys(ratings).length > 0;
     return (
-      <TestFrame>
+      <GameScene theme="optics" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <ResultHeading>{sawDifference ? "Some Lines Looked Different" : "Lines Looked Even"}</ResultHeading>
 
@@ -159,14 +160,14 @@ export function AstigmatismTest() {
           </Callout>
           <Button onClick={start}>Try Again</Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "profile") {
     const angle = ORIENTATIONS[orientationIndex];
     return (
-      <TestFrame>
+      <GameScene theme="optics" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="text-xs font-medium text-muted-2">
             Line {orientationIndex + 1} / {ORIENTATIONS.length} — {clockLabel(angle)}
@@ -187,13 +188,13 @@ export function AstigmatismTest() {
             </Button>
           </div>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "followup") {
     return (
-      <TestFrame>
+      <GameScene theme="optics" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             Let&apos;s narrow it down. You&apos;ll now see each of the 12 clock-position lines one at a time — rate
@@ -203,13 +204,13 @@ export function AstigmatismTest() {
             Start Detailed Check (12 lines)
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "viewing") {
     return (
-      <TestFrame>
+      <GameScene theme="optics" phase={phase}>
         <div className="flex flex-col items-center gap-5 text-center">
           <p className="max-w-sm text-xs text-muted-2">
             Cover one eye. From a comfortable reading distance, look at the center dot.
@@ -218,19 +219,19 @@ export function AstigmatismTest() {
           <p className="max-w-sm text-sm font-medium text-foreground">
             Do all the lines look equally dark and sharp?
           </p>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <Button variant="secondary" onClick={answerDifferent}>
               No, some look different
             </Button>
             <Button onClick={answerEqual}>Yes, all equal</Button>
           </div>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="optics" phase={phase}>
       <div className="flex flex-col items-center gap-5 text-center">
         <span className="text-4xl">🕰️</span>
         <p className="max-w-sm text-sm text-muted">
@@ -242,6 +243,6 @@ export function AstigmatismTest() {
           Start Test
         </Button>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

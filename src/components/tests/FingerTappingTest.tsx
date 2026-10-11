@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 const DURATION_S = 10;
@@ -65,7 +65,7 @@ export function FingerTappingTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="tapping" phase={phase}>
         <ResultScreen
           slug="finger-tapping-test"
           direction="higher"
@@ -99,13 +99,13 @@ export function FingerTappingTest() {
             ))}
           </div>
         </ResultScreen>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="tapping" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">👆</span>
           <p className="max-w-sm text-sm text-muted">
@@ -116,14 +116,14 @@ export function FingerTappingTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "ready1" || phase === "ready2") {
     const round = phase === "ready1" ? 1 : 2;
     return (
-      <TestFrame>
+      <GameScene theme="tapping" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">{round === 1 ? "✋" : "🤚"}</span>
           <p className="max-w-sm text-sm text-muted">
@@ -134,13 +134,13 @@ export function FingerTappingTest() {
             Go
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "between") {
     return (
-      <TestFrame>
+      <GameScene theme="tapping" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">✅</span>
           <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary">
@@ -153,14 +153,14 @@ export function FingerTappingTest() {
             Continue
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   const currentTaps = phase === "tapping1" ? taps1 : taps2;
 
   return (
-    <TestFrame>
+    <GameScene theme="tapping" phase={phase}>
       <div className="flex flex-col items-center gap-6">
         <div className="w-full max-w-xs">
           <p className="mb-1.5 text-center text-xs font-medium text-muted-2">
@@ -175,12 +175,12 @@ export function FingerTappingTest() {
         </div>
         <span className="text-6xl font-black tabular-nums text-primary">{currentTaps}</span>
         <button
-          onClick={tap}
+          data-game-tap="true" onClick={tap}
           className="flex h-40 w-40 select-none items-center justify-center rounded-full border-4 border-primary bg-gradient-to-b from-primary/25 to-primary/5 text-lg font-bold text-primary shadow-lg shadow-primary/25 transition-transform active:scale-90 sm:h-48 sm:w-48"
         >
           👆 TAP
         </button>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

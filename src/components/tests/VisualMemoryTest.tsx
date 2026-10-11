@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { OptionsBar } from "@/components/tests/shared/OptionsBar";
 import { Segmented } from "@/components/tests/shared/Segmented";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
@@ -81,7 +81,7 @@ export function VisualMemoryTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="tiles" phase={phase}>
         <ResultScreen
           slug="visual-memory-test"
           direction="higher"
@@ -95,13 +95,13 @@ export function VisualMemoryTest() {
           onRetry={start}
           onChangeOptions={() => setPhase("idle")}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="tiles" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             A few tiles will light up briefly. Memorize them, then click them back in any order.
@@ -130,12 +130,12 @@ export function VisualMemoryTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="tiles" phase={phase}>
       <div className="flex flex-col items-center gap-4">
         <div className="flex w-full max-w-sm items-center justify-between text-xs font-medium text-muted-2">
           <span>
@@ -146,7 +146,7 @@ export function VisualMemoryTest() {
             {"♡".repeat(startLives - lives)}
           </span>
         </div>
-        <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${GRID_CONFIG[gridOption].cols}, minmax(0, 1fr))` }}>
+        <div data-game-tiles className="grid gap-2" style={{ gridTemplateColumns: `repeat(${GRID_CONFIG[gridOption].cols}, minmax(0, 1fr))` }}>
           {Array.from({ length: total }).map((_, idx) => {
             const showLit = phase === "showing" && targets.has(idx);
             const showPicked = phase === "input" && picked.has(idx);
@@ -154,6 +154,7 @@ export function VisualMemoryTest() {
             return (
               <button
                 key={idx}
+                aria-label={`Tile ${idx + 1}`}
                 onClick={() => tapTile(idx)}
                 className={`rounded-lg border transition-colors ${tileClass} ${
                   showWrong
@@ -167,6 +168,6 @@ export function VisualMemoryTest() {
           })}
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

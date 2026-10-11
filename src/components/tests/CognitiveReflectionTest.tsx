@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 type Phase = "idle" | "running" | "result";
@@ -89,7 +89,7 @@ export function CognitiveReflectionTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="reflection" phase={phase}>
         <ResultScreen
           slug="cognitive-reflection-test"
           direction="higher"
@@ -99,13 +99,13 @@ export function CognitiveReflectionTest() {
           extraStats={[{ label: "Intuitive (Wrong) Answers", value: `${intuitiveCount}` }]}
           onRetry={start}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="reflection" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             Answer {QUESTIONS.length} brainteasers that have an obvious, intuitive answer — which is wrong. This test
@@ -115,18 +115,18 @@ export function CognitiveReflectionTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   const q = QUESTIONS[index];
   return (
-    <TestFrame>
+    <GameScene theme="reflection" phase={phase}>
       <div className="flex flex-col items-center gap-6">
         <p className="text-xs font-medium text-muted-2">
           Question {index + 1} / {QUESTIONS.length}
         </p>
-        <p className="max-w-md text-center text-base font-semibold text-foreground">{q.text}</p>
+        <p data-game-question className="max-w-md text-center text-base font-semibold text-foreground">{q.text}</p>
         <div className="grid grid-cols-2 gap-3">
           {q.options.map((opt) => (
             <button
@@ -139,6 +139,6 @@ export function CognitiveReflectionTest() {
           ))}
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

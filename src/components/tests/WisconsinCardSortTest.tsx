@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 type Phase = "idle" | "running" | "result";
@@ -135,7 +135,7 @@ export function WisconsinCardSortTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="sorting" phase={phase}>
         <ResultScreen
           slug="wisconsin-card-sorting-test"
           direction="higher"
@@ -148,13 +148,13 @@ export function WisconsinCardSortTest() {
           ]}
           onRetry={start}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="sorting" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             Match each card to one of the four key cards below by color, shape, or count. Nobody tells you the
@@ -165,17 +165,17 @@ export function WisconsinCardSortTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="sorting" phase={phase}>
       <div className="flex flex-col items-center gap-6">
         <p className="text-xs font-medium text-muted-2">
           Round {trialIndex + 1} / {TOTAL_TRIALS}
         </p>
-        <div className="flex h-16 items-center justify-center">
+        <div data-game-sort-target className="flex h-16 items-center justify-center">
           <CardFace card={current} size={36} />
         </div>
         {feedback && (
@@ -183,10 +183,11 @@ export function WisconsinCardSortTest() {
             {feedback === "correct" ? "Correct!" : "Wrong"}
           </p>
         )}
-        <div className="grid grid-cols-4 gap-3">
+        <div data-game-sort-cards className="grid grid-cols-4 gap-3">
           {KEY_CARDS.map((kc, i) => (
             <button
               key={i}
+              aria-label={`Match card ${i + 1}: ${kc.count} ${kc.color} ${kc.shape}${kc.count > 1 ? "s" : ""}`}
               onClick={() => choose(i)}
               disabled={!!feedback}
               className="flex h-16 w-16 items-center justify-center rounded-xl border border-border bg-surface-2 transition-colors hover:border-primary/40 disabled:opacity-60"
@@ -196,6 +197,6 @@ export function WisconsinCardSortTest() {
           ))}
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

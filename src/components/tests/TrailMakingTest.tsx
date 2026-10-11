@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { OptionsBar } from "@/components/tests/shared/OptionsBar";
 import { Segmented } from "@/components/tests/shared/Segmented";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
@@ -122,7 +122,7 @@ export function TrailMakingTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="trail" phase={phase}>
         <ResultScreen
           slug="trail-making-test"
           direction="lower"
@@ -138,13 +138,13 @@ export function TrailMakingTest() {
           onRetry={start}
           onChangeOptions={() => setPhase("idle")}
         />
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="trail" phase={phase}>
         <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
@@ -176,14 +176,14 @@ export function TrailMakingTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame className="p-0">
+    <GameScene theme="trail" phase={phase} arena>
       <SoundToggle enabled={sound.enabled} onToggle={sound.toggle} />
-      <div className="absolute left-3 top-3 z-10 flex items-center gap-2 text-xs font-semibold">
+      <div className="absolute left-3 top-3 z-10 pointer-events-none flex items-center gap-2 text-xs font-semibold">
         <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">
           Next: {dots[nextIndex]?.label ?? "—"}
         </span>
@@ -199,7 +199,7 @@ export function TrailMakingTest() {
         }}
       >
         <svg className="pointer-events-none absolute inset-0 h-full w-full">
-          <polyline points={trailPoints} fill="none" stroke="var(--color-primary)" strokeWidth={2.5} opacity={0.55} strokeLinejoin="round" />
+          <polyline points={trailPoints} fill="none" stroke="var(--color-primary)" strokeWidth={3} opacity={0.8} strokeLinejoin="round" />
         </svg>
         {dots.map((dot, index) => {
           const done = index < nextIndex;
@@ -226,6 +226,6 @@ export function TrailMakingTest() {
           );
         })}
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

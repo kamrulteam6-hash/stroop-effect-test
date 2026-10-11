@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame, ResultHeading } from "@/components/tests/shared/TestFrame";
+import { ResultHeading } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { Callout } from "@/components/seo/Callout";
 
 type Phase = "idle" | "intro" | "rating" | "result";
@@ -152,7 +153,7 @@ export function HaloEffectTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="impressions" phase={phase}>
         <div className="flex w-full flex-col items-center gap-7 text-center">
           <ResultHeading>Your Halo Effect Results</ResultHeading>
 
@@ -236,13 +237,13 @@ export function HaloEffectTest() {
           </Callout>
           <Button onClick={start}>Try Again</Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="impressions" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             You&apos;ll meet 4 fictional people, each introduced with a short story containing exactly one real
@@ -253,7 +254,7 @@ export function HaloEffectTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
@@ -261,7 +262,7 @@ export function HaloEffectTest() {
 
   if (phase === "intro") {
     return (
-      <TestFrame>
+      <GameScene theme="impressions" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-wide text-muted-2">
             Person {personIndex + 1} / {PEOPLE.length}
@@ -280,12 +281,12 @@ export function HaloEffectTest() {
             Rate {person.name}
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="impressions" phase={phase}>
       <div className="flex w-full max-w-lg flex-col items-center gap-6">
         <div className="flex items-center gap-3">
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-2xl">
@@ -301,7 +302,7 @@ export function HaloEffectTest() {
 
         <div className="flex w-full flex-col gap-4">
           {TRAITS.map((t) => (
-            <div key={t.key} className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface-2 px-4 py-3">
+            <div data-game-trait key={t.key} className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface-2 px-4 py-3">
               <span className="text-sm font-medium text-foreground">
                 {t.icon} {t.label}
               </span>
@@ -314,6 +315,6 @@ export function HaloEffectTest() {
           {personIndex + 1 >= PEOPLE.length ? "See Results" : "Next Person"}
         </Button>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

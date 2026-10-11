@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame, ResultHeading } from "@/components/tests/shared/TestFrame";
+import { ResultHeading } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { Callout } from "@/components/seo/Callout";
 
 type Phase = "idle" | "quiz" | "result";
@@ -75,7 +76,7 @@ export function HandednessTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="hands" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <ResultHeading>{result.label}</ResultHeading>
           <div className="relative flex flex-col items-center">
@@ -94,13 +95,13 @@ export function HandednessTest() {
           </Callout>
           <Button onClick={start}>Retake Test</Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="hands" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-sm text-sm text-muted">
             For 10 everyday tasks, tell us which hand you actually use — not which hand you think you should use.
@@ -109,14 +110,14 @@ export function HandednessTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   const item = ITEMS[index];
 
   return (
-    <TestFrame>
+    <GameScene theme="hands" phase={phase}>
       <div className="flex w-full max-w-lg flex-col items-center gap-8">
         <div className="w-full">
           <div className="mb-2 flex items-center justify-between text-xs font-medium text-muted-2">
@@ -136,7 +137,7 @@ export function HandednessTest() {
           <p className="text-lg font-semibold text-foreground sm:text-xl">Which hand do you use for: {item}?</p>
         </div>
 
-        <div className="grid w-full grid-cols-5 gap-2">
+        <div data-game-hands="true" className="grid w-full grid-cols-2 gap-2 sm:grid-cols-5">
           {OPTIONS.map((opt) => (
             <button
               key={opt.label}
@@ -148,6 +149,6 @@ export function HandednessTest() {
           ))}
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }

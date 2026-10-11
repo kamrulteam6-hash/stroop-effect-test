@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { TestFrame } from "@/components/tests/shared/TestFrame";
+import { GameScene } from "@/components/tests/shared/GameScene";
 import { ResultScreen } from "@/components/tests/shared/ResultScreen";
 
 type Phase = "idle" | "playing" | "result";
@@ -69,7 +69,7 @@ export function IowaGamblingTest() {
 
   if (phase === "result") {
     return (
-      <TestFrame>
+      <GameScene theme="decision" phase={phase}>
         <ResultScreen
           slug="iowa-gambling-task"
           direction="higher"
@@ -89,13 +89,13 @@ export function IowaGamblingTest() {
             come out ahead over many draws.
           </p>
         </ResultScreen>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   if (phase === "idle") {
     return (
-      <TestFrame>
+      <GameScene theme="decision" phase={phase}>
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="text-5xl">🃏</span>
           <p className="max-w-sm text-sm text-muted">
@@ -106,12 +106,12 @@ export function IowaGamblingTest() {
             Start Test
           </Button>
         </div>
-      </TestFrame>
+      </GameScene>
     );
   }
 
   return (
-    <TestFrame>
+    <GameScene theme="decision" phase={phase}>
       <div className="flex flex-col items-center gap-5">
         <div className="flex w-full max-w-sm items-center justify-between">
           <span className={`rounded-full px-3 py-1 text-xs font-bold ${money < 0 ? "bg-danger/10 text-danger" : "bg-success/10 text-success"}`}>
@@ -139,11 +139,12 @@ export function IowaGamblingTest() {
           )}
         </p>
 
-        <div className="rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
+        <div data-game-decks className="rounded-3xl border-2 border-border bg-surface-2 p-4 shadow-sm sm:p-5">
           <div className="grid grid-cols-4 gap-3">
             {(["A", "B", "C", "D"] as Deck[]).map((deck) => (
               <button
                 key={deck}
+                aria-label={`Draw from deck ${deck}`}
                 onClick={() => draw(deck)}
                 className={`flex h-24 w-16 flex-col items-center justify-center gap-1 rounded-xl border-2 bg-gradient-to-b from-primary/20 to-primary/5 text-2xl font-black text-primary shadow-sm transition-all hover:scale-105 sm:h-28 sm:w-20 ${
                   flashDeck?.deck === deck
@@ -161,6 +162,6 @@ export function IowaGamblingTest() {
           </div>
         </div>
       </div>
-    </TestFrame>
+    </GameScene>
   );
 }
