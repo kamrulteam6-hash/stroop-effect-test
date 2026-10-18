@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Improve Your Pitch Recognition?",
+  "description": "Explore these music-learning tools to practise listening carefully, comparing notes and recognizing differences in musical pitch.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "730a2044-4a07-4b09-b268-1453d145e095",
+      "name": "Berklee Music Theory: Book 1",
+      "image": "https://m.media-amazon.com/images/I/61bFqz5ESRL._SL1118_.jpg",
+      "url": "https://link.amazon/B00COFjp7",
+      "price": "24",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Listening exercises for notes, scales and intervals.",
+        "Introduces core music theory concepts.",
+        "Suitable for beginner musicians and self-study."
+      ]
+    },
+    {
+      "id": "4cf0ddfb-b59e-4d11-9e2d-59f06cabae97",
+      "name": "Korg CA-2 Chromatic Tuner",
+      "image": "https://m.media-amazon.com/images/I/81m-ilGw+yL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B04pCFcZD",
+      "price": "39",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Displays the pitch of a played musical note.",
+        "Useful for checking notes while practising an instrument.",
+        "Compact and straightforward for beginners."
+      ]
+    },
+    {
+      "id": "d810c2c2-0ec8-483b-be58-65b0b0ce1758",
+      "name": "Yamaha PSS-F30 Mini Keyboard",
+      "image": "https://m.media-amazon.com/images/I/814I0HzVXIL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0fMuS8jb",
+      "price": "52",
+      "rating": "4.6",
+      "badge": "",
+      "features": [
+        "Plays notes at different pitches on demand.",
+        "Lets users compare high and low notes repeatedly.",
+        "Useful for practising pitch matching and simple melodies."
+      ]
+    }
+  ]
+}
