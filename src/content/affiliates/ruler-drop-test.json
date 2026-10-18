@@ -1,0 +1,50 @@
+{
+  "enabled": false,
+  "heading": "Keep practicing at home",
+  "description": "Explore games and tools for your next practice session.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "bdbc4bee-531a-4169-a2dc-f7f410099205",
+      "name": "SKLZ Reaction Ball",
+      "image": "https://m.media-amazon.com/images/I/719j011bSWL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B02jgaxfs",
+      "price": "11",
+      "rating": "4.6",
+      "badge": "",
+      "features": [
+        "Irregular bounces challenge catching reflexes.",
+        "Encourages quick visual tracking and hand-eye coordination.",
+        "Compact and relatively affordable."
+      ]
+    },
+    {
+      "id": "0ed753e6-31ea-4f94-92d6-123598daf39e",
+      "name": "SKLZ Reactive Catch",
+      "image": "https://m.media-amazon.com/images/I/61kZSzQmAHL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B03pbcF3U",
+      "price": "28",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Adds a visual cue to catching practice.",
+        "Can make reaction drills more varied.",
+        "A good option for users who prefer structured sports training."
+      ]
+    },
+    {
+      "id": "eeb8099c-5f26-4b8c-807c-4c5bdbe3c37d",
+      "name": "CHAMPKEY Hand-Eye Coordination Trainer",
+      "image": "https://m.media-amazon.com/images/I/51CmCopQpRL._AC_SL1200_.jpg",
+      "url": "https://link.amazon/B0e1sKQhU",
+      "price": "64",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Irregular bounces challenge catching reflexes.",
+        "Encourages quick visual tracking and hand-eye coordination.",
+        "Compact and relatively affordable."
+      ]
+    }
+  ]
+}
