@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Practise Your Peripheral Awareness?",
+  "description": "Explore these visual-training tools and activities to practise visual scanning, tracking and awareness of objects outside your direct focus.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "df99fa57-90fc-476b-b73e-edc0684f4471",
+      "name": "Peripheral Awareness Training Chart",
+      "image": "https://m.media-amazon.com/images/I/91cbt-lNOyL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0h1g4xcV",
+      "price": "8",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Designed specifically for peripheral-awareness exercises.",
+        "Uses letters and figures for visual awareness practice.",
+        "Closely aligned with your test topic."
+      ]
+    },
+    {
+      "id": "dc0f95a3-c426-4645-9558-a55e9faca5b4",
+      "name": "Eye Tracking Perceptual Training Workbook",
+      "image": "https://m.media-amazon.com/images/I/61o-eWg6IyL._SL1294_.jpg",
+      "url": "https://link.amazon/B08I42JSH",
+      "price": "11",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Provides structured eye-tracking activities.",
+        "Useful for practising visual scanning and tracking.",
+        "A simple, screen-free option."
+      ]
+    },
+    {
+      "id": "9daed7ce-31a9-476a-a67f-6614ee76bd85",
+      "name": "Applied Vision Sports Strobe Training Glasses",
+      "image": "https://m.media-amazon.com/images/I/71jtWc4IS8L._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0bbL5ItY",
+      "price": "24",
+      "rating": "4.5",
+      "badge": "",
+      "features": [
+        "Designed for sports-vision training drills.",
+        "Can add a visual challenge to movement-based activities.",
+        "Better suited to sports enthusiasts than casual users."
+      ]
+    }
+  ]
+}
