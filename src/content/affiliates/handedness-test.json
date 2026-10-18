@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Explore Your Hand Skills?",
+  "description": "Discover practical tools for hand dexterity, coordination and everyday comfort, including options designed for left-handed users.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "b81f4d6d-3a40-465d-9546-855a2a9604d3",
+      "name": "Fiskars Left-Handed Scissors",
+      "image": "https://m.media-amazon.com/images/I/7130mb842iL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B02CgHBc5",
+      "price": "17",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Designed for comfortable left-handed cutting.",
+        "Blade orientation helps left-handed users see the cutting line.",
+        "Practical everyday accessory for people who prefer their left hand."
+      ]
+    },
+    {
+      "id": "f887e9d8-f948-4b6a-a555-61deba9f9592",
+      "name": "Prextex Multicolored 3-in-1 Yard Game Set",
+      "image": "https://m.media-amazon.com/images/I/619rFCbYFkL._AC_SL1000_.jpg",
+      "url": "https://link.amazon/B01ApxTXG",
+      "price": "23",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Stack and move objects using either hand.",
+        "Can be used for alternating-hand activities.",
+        "Offers a simple way to practise controlled reaching and grasping."
+      ]
+    },
+    {
+      "id": "6b30c121-ddf9-4f6c-af85-a133e81a3952",
+      "name": "D’Addario Varigrip Hand Exerciser",
+      "image": "https://m.media-amazon.com/images/I/81TYymxHffL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B02c2xhM0",
+      "price": "19",
+      "rating": "4.6",
+      "badge": "",
+      "features": [
+        "Allows individual fingers to work against resistance.",
+        "Useful for hand and finger exercise routines.",
+        "Popular with musicians and people practising finger control."
+      ]
+    }
+  ]
+}
