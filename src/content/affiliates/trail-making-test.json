@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Improve Your Visual Attention and Cognitive Flexibility?",
+  "description": "Try these brain games and puzzle activities at home to practise visual scanning, sequencing, planning, and switching between different rules.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "9a5782df-7c1b-4a13-8965-56927d7b963b",
+      "name": "Spot It! (Dobble)",
+      "image": "https://m.media-amazon.com/images/I/81GyTPb7PHL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0aQMyolv",
+      "price": "14",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Find matching symbols among many visual distractors.",
+        "Encourages quick target identification and accurate responses.",
+        "Simple to play in short rounds at home."
+      ]
+    },
+    {
+      "id": "8c376ade-55ae-4b8f-a888-0f0c6f56d79b",
+      "name": "ThinkFun Rush Hour",
+      "image": "https://m.media-amazon.com/images/I/81P3BsE0byL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B08I9OaOX",
+      "price": "28",
+      "rating": "4.8",
+      "badge": "",
+      "features": [
+        "Analyze a crowded board and identify possible moves.",
+        "Requires planning a sequence of actions.",
+        "Offers progressively challenging puzzles."
+      ]
+    },
+    {
+      "id": "2ba64f4d-221f-48f5-b4e3-81058e9dfe5d",
+      "name": "Maze Puzzle Book for Adults",
+      "image": "https://m.media-amazon.com/images/I/81z2Exs60rL._SL1500_.jpg",
+      "url": "https://link.amazon/B04H2iDeZ",
+      "price": "9",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Trace paths through increasingly complex mazes.",
+        "Encourages careful visual tracking and route selection.",
+        "An inexpensive, reusable-style alternative to electronic games."
+      ]
+    }
+  ]
+}
