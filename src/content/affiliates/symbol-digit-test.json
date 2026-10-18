@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Improve Your Processing Speed?",
+  "description": "Try these brain games and puzzle activities at home to practise visual scanning, symbol recognition, attention, and quick decision-making.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "c7a8189a-06ef-4f31-b04f-acc362538d71",
+      "name": "Educational Insights BrainBolt Genius",
+      "image": "https://m.media-amazon.com/images/I/71x9VNVAkbL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B05dXuqzD",
+      "price": "14",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Requires players to observe and remember sequences.",
+        "Offers a quick, interactive activity away from the screen.",
+        "Good for users interested in attention and memory challenges."
+      ]
+    },
+    {
+      "id": "351e5c53-7981-40c0-a4e9-2e5bd94ba26b",
+      "name": "Large-Print Word Search Puzzle Book for Adults",
+      "image": "https://m.media-amazon.com/images/I/91CVDzWgzCL._SL1500_.jpg",
+      "url": "https://link.amazon/B0b66i0J5",
+      "price": "15",
+      "rating": "4.6",
+      "badge": "",
+      "features": [
+        "Search for target letters and words in crowded grids.",
+        "Can be used for timed visual-search practice.",
+        "An accessible, low-cost option for home use."
+      ]
+    },
+    {
+      "id": "6d08b788-2c94-46c8-b509-70346ee58088",
+      "name": "ThinkFun Rush Hour",
+      "image": "https://m.media-amazon.com/images/I/81P3BsE0byL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B08cIISpO",
+      "price": "28",
+      "rating": "4.8",
+      "badge": "",
+      "features": [
+        "Requires players to analyze a visual arrangement.",
+        "Practices planning, rule-following and flexible thinking.",
+        "Offers challenges across different difficulty levels."
+      ]
+    }
+  ]
+}
