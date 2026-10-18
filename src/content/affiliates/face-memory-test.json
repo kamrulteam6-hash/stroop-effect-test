@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Practise Your Face Memory?",
+  "description": "Explore these memory games and face-based activities to practise noticing facial details, recognizing people and recalling visual information.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "3d94241f-7aed-4d7d-a687-c2ba9169f47b",
+      "name": "Hasbro Gaming Guess Who? Plus",
+      "image": "https://m.media-amazon.com/images/I/81mFyh0CKQL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B00CBCNXK",
+      "price": "19",
+      "rating": "4.6",
+      "badge": "",
+      "features": [
+        "Observe faces and distinguish people by their features.",
+        "Remember visual details while narrowing down possibilities.",
+        "Easy to play with family or friends."
+      ]
+    },
+    {
+      "id": "27e6542c-55a4-4cbf-b3a7-6814a98e991e",
+      "name": "Wonder Forge Disney Classic Characters Matching Game",
+      "image": "https://m.media-amazon.com/images/I/91VnMzqh+fL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0cYSnREb",
+      "price": "21",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Match character pictures and remember their locations.",
+        "Features recognizable faces and visual details.",
+        "Simple format for short memory-game sessions."
+      ]
+    },
+    {
+      "id": "f08230cd-e4d6-4323-bbba-a5d419d38ca2",
+      "name": "Melissa & Doug Flip-to-Win Memory Game",
+      "image": "https://m.media-amazon.com/images/I/81xaUCne9TL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B07B8LWtT",
+      "price": "21",
+      "rating": "4.8",
+      "badge": "",
+      "features": [
+        "Flip tiles to locate matching pictures.",
+        "Encourages remembering visual information and positions.",
+        "Reusable, screen-free activity."
+      ]
+    }
+  ]
+}
