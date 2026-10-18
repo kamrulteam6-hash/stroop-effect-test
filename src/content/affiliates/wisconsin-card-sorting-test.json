@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Practise Your Cognitive Flexibility?",
+  "description": "Try these logic games and puzzle activities at home to explore pattern recognition, problem-solving and switching between different strategies.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "adef2113-608e-40db-8a92-ff53590b5900",
+      "name": "Educational Insights Kanoodle",
+      "image": "https://m.media-amazon.com/images/I/714h8U8uv6L._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B02izDX5M",
+      "price": "18",
+      "rating": "4.6",
+      "badge": "",
+      "features": [
+        "Solve visual puzzles using different combinations of pieces.",
+        "Encourages trial-and-error problem-solving.",
+        "Affordable, compact and suitable for solo play."
+      ]
+    },
+    {
+      "id": "0d8e740d-a5cf-4e39-84d2-ace2618f2849",
+      "name": "ThinkFun Rush Hour",
+      "image": "https://m.media-amazon.com/images/I/71ztQTH+sGL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0522KBS6",
+      "price": "21",
+      "rating": "4.8",
+      "badge": "",
+      "features": [
+        "Requires planning moves under changing constraints.",
+        "Encourages trying different strategies when blocked.",
+        "Offers graded challenges from easier to harder."
+      ]
+    },
+    {
+      "id": "295b4704-8480-4721-912f-b8c74577c5ae",
+      "name": "SmartGames IQ Puzzler Pro",
+      "image": "https://m.media-amazon.com/images/I/71rgbx6P6jS._SL1500_.jpg",
+      "url": "https://link.amazon/B00aDb0jw",
+      "price": "66",
+      "rating": "4.8",
+      "badge": "",
+      "features": [
+        "Includes 2D and 3D puzzle challenges.",
+        "Requires testing alternative piece arrangements.",
+        "Compact format for individual practice."
+      ]
+    }
+  ]
+}
