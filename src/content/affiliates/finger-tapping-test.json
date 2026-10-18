@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "heading": "Want to Practise Your Finger Dexterity?",
+  "description": "Explore these hand-exercise tools to practise finger control, dexterity and repetitive movements at home.",
+  "buttonLabel": "Buy now on Amazon",
+  "products": [
+    {
+      "id": "2b2bf74f-6514-452f-8220-3b685ca1a9e5",
+      "name": "D’Addario Varigrip Hand Exerciser",
+      "image": "https://m.media-amazon.com/images/I/71Kwlopg0lL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B03qOFnKA",
+      "price": "29",
+      "rating": "4.5",
+      "badge": "Science Backed",
+      "features": [
+        "Individual finger resistance exercises.",
+        "Adjustable tension for different fingers.",
+        "Designed for musicians and dexterity practice."
+      ]
+    },
+    {
+      "id": "c76d6a63-0caa-472b-9910-409feb96ec51",
+      "name": "FitBeast Finger Strengthener",
+      "image": "https://m.media-amazon.com/images/I/81uvPPiEnoL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B065mOoVk",
+      "price": "15",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Provides resistance for individual finger movements.",
+        "Compact and portable.",
+        "A budget-friendly option for hand exercise."
+      ]
+    },
+    {
+      "id": "ef22d9d1-16ec-415e-9e56-f694308790be",
+      "name": "FlintRehab Therapy Putty",
+      "image": "https://m.media-amazon.com/images/I/717ctb1BVjL._AC_SL1500_.jpg",
+      "url": "https://link.amazon/B0epfZhph",
+      "price": "39",
+      "rating": "4.7",
+      "badge": "",
+      "features": [
+        "Practise pinching, squeezing and stretching.",
+        "Multiple resistance levels.",
+        "Useful for general finger dexterity exercises."
+      ]
+    }
+  ]
+}
